@@ -13,11 +13,7 @@ export default class ScreenLoginPage extends React.Component {
 
                   <Text>Pseudo</Text>
 
-                   <TextInput 
-                   style={styles.textinput}
-                   label='username'
-                   placeholder={'pseudonyme'}
-                   maxLength={15}
+                   <TextInput  style={styles.textinput} label='username' placeholder={'pseudonyme'} maxLength={15}
                    
                    />
 
@@ -25,33 +21,20 @@ export default class ScreenLoginPage extends React.Component {
 
                <View style={styles.Inputview}>
                   <Text>Mot de passe</Text>
-                   <TextInput 
-                    style={styles.textinput}
-                    label='password'
-                    placeholder={'mot de passe'}
-                    
-                    
-                    />
+                   <TextInput style={styles.textinput} label='password' placeholder={'mot de passe'} maxLength={15} />
                </View> 
 
                <View style={styles.buttonview}>
+
                   <Button title={'Connexion'}  style={{color: 'red', width:200,}}/>
              
                </View> 
-
-
-
-
 
             </View>
 
           </SafeAreaView>
              
-
-
        );
-
-
     }
 }
 
@@ -77,8 +60,6 @@ const styles = StyleSheet.create({
     
    },
 
-
-
    Inputview:{
        borderColor: 'black',
        borderWidth : 3, 
@@ -86,7 +67,6 @@ const styles = StyleSheet.create({
        margin :'5%',
     
    },
-
 
    textinput : {
       
@@ -106,15 +86,8 @@ const styles = StyleSheet.create({
       borderWidth : 3, 
       margin :'5%',
       width : '50%',
-      alignSelf : 'center',
+    
    
-     
-
-
    },
-
-  
-
-
 
 });
