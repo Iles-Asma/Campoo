@@ -10,13 +10,33 @@ export default class ScreenLoginPage extends React.Component {
             <View style={styles.loginview}>
 
                <View style={styles.Inputview}>
+
                   <Text>Pseudo</Text>
-                   <TextInput style={styles.textinput}/>
+
+                   <TextInput 
+                   style={styles.textinput}
+                   label='username'
+                   placeholder={'pseudonyme'}
+                   maxLength={15}
+                   
+                   />
+
                </View> 
 
                <View style={styles.Inputview}>
                   <Text>Mot de passe</Text>
-                   <TextInput style={styles.textinput}/>
+                   <TextInput 
+                    style={styles.textinput}
+                    label='password'
+                    placeholder={'mot de passe'}
+                    
+                    
+                    />
+               </View> 
+
+               <View style={styles.buttonview}>
+                  <Button title={'Connexion'}  style={{color: 'red', width:200,}}/>
+             
                </View> 
 
 
@@ -44,30 +64,27 @@ const styles = StyleSheet.create({
       borderColor: 'green',
       justifyContent :'center',
       alignItems : 'center',
+      flexDirection: 'column',
      
    },
 
   loginview: {
-      
+       
        borderWidth : 3,
        borderColor :'blue',
        width : '95%',
-       height: '80%',  
+       height: '60%',  
+    
    },
 
 
 
    Inputview:{
        borderColor: 'black',
-       borderWidth : 3,
-       margin :10,
-       flex: 0.1,
-       flexDirection :'column',
-       justifyContent : 'flex-start',
-       height:40,
-             
-
-
+       borderWidth : 3, 
+       height: '30%', 
+       margin :'5%',
+    
    },
 
 
@@ -78,8 +95,25 @@ const styles = StyleSheet.create({
        borderColor : 'red',
        width: '100%',     
 
-   }
+   },
 
+   buttonview : {
+    //    flex: 1,
+    //    justifyContent :'center',
+    //    alignItems: 'center',
+
+      borderColor: 'black',
+      borderWidth : 3, 
+      margin :'5%',
+      width : '50%',
+      alignSelf : 'center',
+   
+     
+
+
+   },
+
+  
 
 
 
