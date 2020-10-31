@@ -1,6 +1,6 @@
 
 import React from "react";
-import {  View, Text,Button, StyleSheet , SafeAreaView,StatusBar, Platform, TextInput } from "react-native";
+import {  TouchableOpacity,View, Text,Button, StyleSheet , SafeAreaView,StatusBar, Platform, TextInput } from "react-native";
 
 export default class ScreenLoginPage extends React.Component {
     render(){
@@ -9,9 +9,9 @@ export default class ScreenLoginPage extends React.Component {
            
             <View style={styles.loginview}>
 
-               <View style={styles.Inputview}>
+               <View style={styles.Inputview1}>
 
-                  <Text>Pseudo</Text>
+                  <Text   style={styles.pseudoMdp} >Pseudo</Text>
 
                    <TextInput  style={styles.textinput} label='username' placeholder={'pseudonyme'} maxLength={15}
                    
@@ -19,14 +19,20 @@ export default class ScreenLoginPage extends React.Component {
 
                </View> 
 
-               <View style={styles.Inputview}>
-                  <Text>Mot de passe</Text>
+               <View style={styles.Inputview2}>
+
+                  <Text style={styles.pseudoMdp} >Mot de passe</Text>
+
                    <TextInput style={styles.textinput} label='password' placeholder={'mot de passe'} maxLength={15} />
+
                </View> 
 
-               <View style={styles.buttonview}>
+               <View >
 
-                  <Button title={'Connexion'}  style={{color: 'red', width:200,}}/>
+                  <TouchableOpacity title={'Connexion'}  style={{ color: "white", borderRadius:5,  width:150, height:50, backgroundColor: '#4D3D64', marginTop:30, marginBottom:28, margin:75,}} >
+                     <Text style={styles.connexionText}>Connexion</Text>
+                  </TouchableOpacity>
+                 
              
                </View> 
 
@@ -41,53 +47,71 @@ export default class ScreenLoginPage extends React.Component {
 const styles = StyleSheet.create({
    container : {
       flex : 1,
-      backgroundColor :'white',
+
       paddingTop : Platform.OS === "android" ? StatusBar.currentHeight: 0,
       borderWidth : 3,
       borderColor: 'green',
-      justifyContent :'center',
-      alignItems : 'center',
+    
+      alignItems:'center',
+      justifyContent:'center',
       flexDirection: 'column',
      
    },
 
   loginview: {
        
-       borderWidth : 3,
-       borderColor :'blue',
-       width : '95%',
-       height: '60%',  
+  
+       width : 300,
+       height: 270,  
     
    },
 
-   Inputview:{
-       borderColor: 'black',
-       borderWidth : 3, 
-       height: '30%', 
-       margin :'5%',
+   Inputview1:{
+   
+
+       width :"100%",
+       marginBottom:20,
+    
     
    },
+
+   Inputview2:{
+    
+  
+      
+      width :"100%",
+     
+   
+   
+  },
 
    textinput : {
       
-       height : 40,
+       height : 30,
        borderWidth : 2,
-       borderColor : 'red',
-       width: '100%',     
+       borderColor : '#4D3D64',
+       width :"100%",
+       borderRadius:5,
+       
 
    },
 
-   buttonview : {
-    //    flex: 1,
-    //    justifyContent :'center',
-    //    alignItems: 'center',
+ 
 
-      borderColor: 'black',
-      borderWidth : 3, 
-      margin :'5%',
-      width : '50%',
-      alignSelf:'center',
-   
+   pseudoMdp:{
+      marginBottom :10,
+      marginLeft:8,
+      fontSize :25.89,
+     
    },
+   connexionText:{
+      textAlign :'center',
+      marginVertical:15,
+      fontSize:16,
+      color:'white',
+
+   }
+
+ 
 
 });
