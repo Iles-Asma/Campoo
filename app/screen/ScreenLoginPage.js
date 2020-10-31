@@ -17,7 +17,7 @@ export default class ScreenLoginPage extends React.Component {
 
                   <Text   style={styles.pseudoMdp} >Pseudo</Text>
 
-                   <TextInput  style={styles.textinput} label='username'  maxLength={15}
+                   <TextInput underlineColorAndroid='transparent'  style={styles.textinput} label='username'  maxLength={15}
                    
                    />
 
@@ -27,13 +27,15 @@ export default class ScreenLoginPage extends React.Component {
 
                   <Text style={styles.pseudoMdp} >Mot de passe</Text>
 
-                   <TextInput style={styles.textinput} label='password'  maxLength={15} />
+                   <TextInput underlineColorAndroid='transparent' style={styles.textinput} label='password'  maxLength={15} />
 
                </View> 
 
                <View >
 
-                  <TouchableOpacity title={'Connexion'}  style={{ color: "white", borderRadius:5,  width:150, height:50, backgroundColor: '#4D3D64', marginTop:30, marginBottom:28, margin:75,}} >
+                  <TouchableOpacity 
+                    title={'Connexion'}  
+                    style={{ color: "white", borderRadius:5,  width:150, height:50, backgroundColor: '#4D3D64', marginTop:30, marginBottom:28, margin:75,}} >
                      
                      <Text style={styles.connexionText}>Connexion</Text>
 
@@ -79,7 +81,6 @@ const styles = StyleSheet.create({
        width :"100%",
        marginBottom:20,
        
-    
    },
 
    Inputview2:{
@@ -89,10 +90,11 @@ const styles = StyleSheet.create({
   },
 
    textinput : {
+      
        paddingHorizontal:10,
        textAlignVertical:'center',
        height : 30,
-       borderWidth : 1.5 ,
+       borderWidth : 1 ,
        borderColor : '#4D3D64',
        width :"100%",
        borderRadius:5,  
