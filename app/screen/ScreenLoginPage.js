@@ -41,7 +41,7 @@ export default class ScreenLoginPage extends React.Component {
 
                   </TouchableOpacity>
 
-                  <TouchableOpacity title={"S'inscrire"}   >
+                  <TouchableOpacity title={"S'inscrire"}>
                      
                      <Text style={styles.register}>S'inscrire</Text>
 
