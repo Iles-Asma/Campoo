@@ -6,24 +6,19 @@ export default class ScreenLoginPage extends React.Component {
     render(){
        return(
 
-         // View principale ( Body)
           <SafeAreaView style={styles.container} >  
 
-             <Image style={{width:300, height:300,  left:-110.16, top :10, }} source={require("../../assets/images/Poulpe.png")}/>
-             <Image style={{width:500, height:500,   left:125.16, top :30,  zIndex:-5,  }} source={require("../../assets/images/Baleine.png")}/>
-             <Image style={{width:100, height:100, left:275,top:-780, }} source={require("../../assets/images/logoCampoo.png")}/>
-
+             <Image style={{width:300, height:300, left:-110.16, top :10, }} source={require("../../assets/images/Poulpe.png")}/>
+             <Image style={{width:500, height:500, left:125.16,  top :30,  }} source={require("../../assets/images/Baleine.png")}/>
+             <Image style={{width:100, height:100, left:275,     top:-780, }} source={require("../../assets/images/logoCampoo.png")}/>
            
-            <View style={styles.loginview}>   
-        
-         
+            <View style={styles.loginview}>    
+
                <View style={styles.Inputview1}>
+        
+                  <Text style={styles.pseudoMdp} >Pseudo</Text>
 
-                  <Text   style={styles.pseudoMdp} >Pseudo</Text>
-
-                   <TextInput underlineColorAndroid='transparent'  style={styles.textinput} label='username'  maxLength={15}
-                   
-                   />
+                   <TextInput underlineColorAndroid='transparent'  style={styles.textinput} label='username'  maxLength={15}/>
 
                </View> 
 
@@ -31,11 +26,11 @@ export default class ScreenLoginPage extends React.Component {
 
                   <Text style={styles.pseudoMdp} >Mot de passe</Text>
 
-                   <TextInput underlineColorAndroid='transparent' style={styles.textinput} label='password'  maxLength={15} />
+                   <TextInput underlineColorAndroid='transparent' style={styles.textinput} label='password'  maxLength={15}/>
 
                </View> 
 
-               <View >
+               <View>
 
                   <TouchableOpacity 
                     title={'Connexion'}  
@@ -63,6 +58,7 @@ export default class ScreenLoginPage extends React.Component {
 }
 
 const styles = StyleSheet.create({
+
    container : {
       flex : 1,
       paddingTop : Platform.OS === "android" ? StatusBar.currentHeight: 0,
@@ -71,7 +67,7 @@ const styles = StyleSheet.create({
    },
 
   loginview: {
-     alignSelf:'center',
+       alignSelf:'center',
        top:-660,
        width : 300,
        height: 270,  
