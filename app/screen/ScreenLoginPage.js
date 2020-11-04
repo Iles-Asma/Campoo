@@ -1,6 +1,7 @@
 
 import React from "react";
 import {  TouchableOpacity,View, Text,Button, StyleSheet , SafeAreaView,StatusBar, Platform, TextInput,Image } from "react-native";
+import InputCampoo from "../components/InputCampoo";
 
 export default class ScreenLoginPage extends React.Component {
     render(){
@@ -14,21 +15,9 @@ export default class ScreenLoginPage extends React.Component {
            
             <View style={styles.loginview}>    
 
-               <View style={styles.Inputview1}>
-        
-                  <Text style={styles.pseudoMdp} >Pseudo</Text>
+               <InputCampoo name="Pseudo" style={styles.Inputview1}/>
 
-                   <TextInput underlineColorAndroid='transparent'  style={styles.textinput} label='username'  maxLength={15}/>
-
-               </View> 
-
-               <View style={styles.Inputview2}>
-
-                  <Text style={styles.pseudoMdp} >Mot de passe</Text>
-
-                   <TextInput underlineColorAndroid='transparent' style={styles.textinput} label='password'  maxLength={15}/>
-
-               </View> 
+               <InputCampoo name="Mot de passe" secure={true}/>
 
                <View>
 
@@ -77,10 +66,7 @@ const styles = StyleSheet.create({
    },
 
    Inputview1:{
-      
-       width :"100%",
-       marginBottom:20,
-       
+       marginBottom:20
    },
 
    Inputview2:{
