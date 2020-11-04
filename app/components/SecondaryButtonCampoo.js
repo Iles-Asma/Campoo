@@ -1,31 +1,20 @@
 import React from 'react';
 
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
-
-
 export default class SecondaryButtonCampoo extends React.Component {
     render(){
 
-
         return(
 
-   
                 <TouchableOpacity>
 
                     <Text style={styles.register}>{this.props.children}</Text>
 
-
-
                 </TouchableOpacity>
-
-
  
         );
 
-
     }
-
-
 
 }
 
@@ -38,8 +27,5 @@ const styles = StyleSheet.create ({
         fontSize:15,
   
      },
-
-
-
 
 })
