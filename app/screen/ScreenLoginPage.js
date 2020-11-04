@@ -1,7 +1,9 @@
 
 import React from "react";
 import {  TouchableOpacity,View, Text,Button, StyleSheet , SafeAreaView,StatusBar, Platform, TextInput,Image } from "react-native";
+import ButtonLoginCampoo from "../components/ButtonLoginCampoo";
 import InputCampoo from "../components/InputCampoo";
+import SecondaryButtonCampoo from "../components/SecondaryButtonCampoo";
 
 export default class ScreenLoginPage extends React.Component {
     render(){
@@ -19,24 +21,12 @@ export default class ScreenLoginPage extends React.Component {
 
                <InputCampoo name="Mot de passe" secure={true}/>
 
-               <View>
-
-                  <TouchableOpacity 
-                    title={'Connexion'}  
-                    style={{ color: "white", borderRadius:5,  width:150, height:50, backgroundColor: '#4D3D64', marginTop:30, marginBottom:28, margin:75,}} >
-                     
-                     <Text style={styles.connexionText}>Connexion</Text>
-
-                  </TouchableOpacity>
-
-                  <TouchableOpacity title={"S'inscrire"}>
-                     
-                     <Text style={styles.register}>S'inscrire</Text>
-
-                  </TouchableOpacity>
+           
+               <ButtonLoginCampoo>Connexion</ButtonLoginCampoo>
                  
-             
-               </View> 
+               <SecondaryButtonCampoo>Mot de passe oublié</SecondaryButtonCampoo>
+                 
+               <SecondaryButtonCampoo>S'incrire</SecondaryButtonCampoo>
 
             </View>
 
@@ -109,6 +99,18 @@ const styles = StyleSheet.create({
       fontSize:15,
 
    },
+
+   button:{ 
+      color: "white", 
+      borderRadius:5, 
+      width:150, 
+      height:50, 
+      backgroundColor: '#4D3D64', 
+      marginTop:30, 
+      marginBottom:28, 
+      alignSelf :'center',
+      
+    }
 
  
 
