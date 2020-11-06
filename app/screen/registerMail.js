@@ -4,6 +4,7 @@ import{StyleSheet, Image, StatusBar, SafeAreaView, View, Text} from 'react-nativ
 
 import InputCampoo from  "../components/InputCampoo";
 import ButtonCampoo from "../components/ButtonCampoo"; 
+import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';
 
 
 
@@ -28,11 +29,14 @@ export default class RegisterMail extends React.Component {
 
               <View style={styles.mailView}>
 
-                 <InputCampoo name="Email etudiant" style={styles.InputView} /> 
+                 <InputCampoo name="Email etudiant" style={styles.InputView}/> 
 
                  <Text style={styles.textMail}>Pour que Crapoo vérifie que tu es un étudiant du campus !</Text>
 
                   <ButtonCampoo style={styles.button}>Suivant</ButtonCampoo>
+
+
+                  <SecondaryButtonCampoo  style={styles.login}>Se connecter</SecondaryButtonCampoo>
 
               </View>
 
@@ -61,13 +65,6 @@ const styles  = StyleSheet.create({
     paddingTop : Platform.OS === "android" ? StatusBar.currentHeight: 0,
     flexDirection: 'column',  
  
-       
-    },
-
-    InputView:{
-        alignSelf:'center',
-        top:30,
-
     },
 
     logo:{
@@ -77,11 +74,33 @@ const styles  = StyleSheet.create({
 
     },
 
+    InputView:{
+        alignSelf:'center',
+        top:30,
+
+    },
+
+    mailView:{
+    
+        height:209,
+        width:324,
+        alignSelf:'center',
+
+    },
+
+    button: {
+        alignSelf:'center',
+        top:60,
+
+    },
+
+   
+
     crapoo :{
-        width:580.74, 
+        width:580, 
         height:500, 
         left:-34, 
-        top:-50,
+        top:-40,
 
     },
 
@@ -95,19 +114,16 @@ const styles  = StyleSheet.create({
 
      },
 
-     button: {
+    
+
+
+     login:{
          alignSelf:'center',
-         top:60,
+         top:65,
 
      },
 
-     mailView:{
-    
-         height:209,
-         width:324,
-         alignSelf:'center',
-
-     }
+     
 
 
 
