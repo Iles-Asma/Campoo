@@ -2,7 +2,7 @@ import React from 'react';
 
 import {TouchableOpacity,  Text, StyleSheet} from 'react-native';
 
-export default class ButtonLoginCampoo  extends React.Component {
+export default class ButtonCampoo  extends React.Component {
 
     render(){
 

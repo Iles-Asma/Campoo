@@ -1,7 +1,7 @@
 
 import React from "react";
 import {  View, StyleSheet ,SafeAreaView ,StatusBar , Platform, Image } from "react-native";
-import ButtonLoginCampoo from "../components/ButtonLoginCampoo";
+import ButtonCampoo from "../components/ButtonCampoo";
 import InputCampoo from "../components/InputCampoo";
 import SecondaryButtonCampoo from "../components/SecondaryButtonCampoo";
 
@@ -22,7 +22,7 @@ export default class ScreenLoginPage extends React.Component {
                <InputCampoo name="Mot de passe" secure={true}/>
 
            
-               <ButtonLoginCampoo style={styles.button}>Connexion</ButtonLoginCampoo>
+               <ButtonCampoo style={styles.button}>Connexion</ButtonCampoo>
 
                <View style={styles.buttonContainer}>
                  
