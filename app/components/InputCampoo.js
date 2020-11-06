@@ -1,5 +1,6 @@
 import React from 'react';
 import {Text, StyleSheet, View, TextInput} from 'react-native';
+import LabelCampoo from './LabelCampoo';
 
 export default class InputCampoo extends React.Component 
 
@@ -13,7 +14,7 @@ export default class InputCampoo extends React.Component
 
          <View style={[styles.inputView, this.props.style]}>
         
-            <Text style={styles.label} >{this.props.name}</Text>
+            <LabelCampoo style={styles.label}>{this.props.name}</LabelCampoo>
 
             <TextInput  style={styles.textInput} label='username' secureTextEntry={this.props.secure}  maxLength={15}/>
 
@@ -33,12 +34,8 @@ const styles = StyleSheet.create({
     }, label:{
         marginBottom :10,
         marginLeft:8,
-        fontSize :25.89,
-        color: '#4D3D64'
-       
      }, textInput : {
         paddingHorizontal:10,
-        textAlignVertical:'center',
         height : 30,
         borderWidth : 1 ,
         borderColor : '#4D3D64',

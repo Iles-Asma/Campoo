@@ -1,6 +1,6 @@
 
 import React from "react";
-import {  TouchableOpacity,View, Text,Button, StyleSheet , SafeAreaView,StatusBar, Platform, TextInput,Image } from "react-native";
+import {  View, StyleSheet ,SafeAreaView ,StatusBar , Platform, Image } from "react-native";
 import ButtonLoginCampoo from "../components/ButtonLoginCampoo";
 import InputCampoo from "../components/InputCampoo";
 import SecondaryButtonCampoo from "../components/SecondaryButtonCampoo";
@@ -22,11 +22,15 @@ export default class ScreenLoginPage extends React.Component {
                <InputCampoo name="Mot de passe" secure={true}/>
 
            
-               <ButtonLoginCampoo>Connexion</ButtonLoginCampoo>
+               <ButtonLoginCampoo style={styles.button}>Connexion</ButtonLoginCampoo>
+
+               <View style={styles.buttonContainer}>
                  
-               <SecondaryButtonCampoo>Mot de passe oublié</SecondaryButtonCampoo>
+                  <SecondaryButtonCampoo style={styles.secondaryButton}>Mot de passe oublié</SecondaryButtonCampoo>
                  
-               <SecondaryButtonCampoo>S'incrire</SecondaryButtonCampoo>
+                  <SecondaryButtonCampoo style={styles.secondaryButton}>S'incrire</SecondaryButtonCampoo>
+
+               </View>
 
             </View>
 
@@ -42,46 +46,16 @@ const styles = StyleSheet.create({
       flex : 1,
       paddingTop : Platform.OS === "android" ? StatusBar.currentHeight: 0,
       flexDirection: 'column',
-      
    },
-
   loginview: {
        alignSelf:'center',
        top:-660,
        width : 300,
        height: 270,  
        zIndex:5,
-       
-    
    },
-
    Inputview1:{
        marginBottom:20
-   },
-
-   Inputview2:{
-       
-      width :"100%",
-     
-  },
-
-   textinput : {
-      
-       paddingHorizontal:10,
-       textAlignVertical:'center',
-       height : 30,
-       borderWidth : 1 ,
-       borderColor : '#4D3D64',
-       width :"100%",
-       borderRadius:5,  
-
-   },
-
-   pseudoMdp:{
-      marginBottom :10,
-      marginLeft:8,
-      fontSize :25.89,
-     
    },
    connexionText:{
 
@@ -91,7 +65,6 @@ const styles = StyleSheet.create({
       color:'white',
 
    },
-
    register:{ 
       alignSelf:'center',
       marginVertical:-20,
@@ -99,19 +72,17 @@ const styles = StyleSheet.create({
       fontSize:15,
 
    },
-
    button:{ 
-      color: "white", 
-      borderRadius:5, 
-      width:150, 
-      height:50, 
-      backgroundColor: '#4D3D64', 
-      marginTop:30, 
-      marginBottom:28, 
-      alignSelf :'center',
-      
-    }
+      marginTop:30,
+      alignSelf :'center'
+    },
 
- 
+    buttonContainer: {
+      borderColor:'red',
+    },
+    secondaryButton: {
+      alignSelf:'center',
+      marginTop:10
+    }
 
 });

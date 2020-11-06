@@ -6,7 +6,7 @@ export default class SecondaryButtonCampoo extends React.Component {
 
         return(
 
-                <TouchableOpacity>
+                <TouchableOpacity style={this.props.style}>
 
                     <Text style={styles.register}>{this.props.children}</Text>
 
@@ -21,11 +21,8 @@ export default class SecondaryButtonCampoo extends React.Component {
 const styles = StyleSheet.create ({
 
     register:{ 
-        alignSelf:'center',
-        marginVertical:-20,
         color:'#62BBC5',
-        fontSize:15,
-  
+        fontSize:14,
      },
 
 })

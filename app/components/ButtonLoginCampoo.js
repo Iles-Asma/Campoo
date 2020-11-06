@@ -8,7 +8,7 @@ export default class ButtonLoginCampoo  extends React.Component {
 
         return(
        
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={[styles.button, this.props.style]}>
 
                     <Text style={styles.connexionText}>{this.props.children}</Text>
 
@@ -33,16 +33,11 @@ const styles = StyleSheet.create ({
      },
 
      button :{
-
         color: "white", 
         borderRadius:5, 
         width:150, 
         height:50, 
         backgroundColor: '#4D3D64', 
-        marginTop:30, 
-        marginBottom:28, 
-        alignSelf :'center',
-    
      }
 
 });
