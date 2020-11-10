@@ -16,7 +16,7 @@ export default class InputCampoo extends React.Component
         
             <LabelCampoo style={styles.label}>{this.props.name}</LabelCampoo>
 
-            <TextInput style={styles.textInput} secureTextEntry={this.props.secure}  maxLength={15}/>
+            <TextInput style={styles.textInput} secureTextEntry={this.props.secure}  maxLength={40}/>
 
          </View>
 
