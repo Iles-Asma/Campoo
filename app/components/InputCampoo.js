@@ -31,16 +31,19 @@ const styles = StyleSheet.create({
     inputView:{
         width : 300
         
-    }, label:{
-        marginBottom :10,
+    },
+    label:{
+        marginBottom :36,
         marginLeft:8,
-     }, textInput : {
+     }, 
+    textInput : {
         paddingHorizontal:10,
         height : 30,
         borderWidth : 1 ,
         borderColor : '#4D3D64',
         width :"100%",
-        borderRadius:5
+        borderRadius:5,
+
     }
 
 })

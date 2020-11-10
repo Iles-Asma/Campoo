@@ -26,7 +26,7 @@ const styles = StyleSheet.create ({
     connexionText:{
         
         textAlign :'center',
-        marginVertical:15,
+        marginVertical:14,
         fontSize:16,
         color:'white',
   
