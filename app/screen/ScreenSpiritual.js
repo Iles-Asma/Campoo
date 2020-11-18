@@ -42,7 +42,7 @@ export default class ScreenSpiritual extends React.Component {
                    <ButtonCampoo style={styles.button}>Suivant</ButtonCampoo>
 
 
-                   <SecondaryButtonCampoo  style={styles.retour}>Se connecter</SecondaryButtonCampoo>
+                   <SecondaryButtonCampoo  style={styles.retour}>Passer</SecondaryButtonCampoo>
 
             
               </View>
