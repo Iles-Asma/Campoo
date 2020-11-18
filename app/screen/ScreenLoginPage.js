@@ -11,15 +11,15 @@ export default class ScreenLoginPage extends React.Component {
 
           <SafeAreaView style={styles.container} >  
 
-             <Image style={{width:300, height:300, left:-110.16, top :10, }} source={require("../../assets/images/Poulpe.png")}/>
-             <Image style={{width:500, height:500, left:125.16,  top :30,  }} source={require("../../assets/images/Baleine.png")}/>
-             <Image style={{width:100, height:100, left:275,     top:-780, }} source={require("../../assets/images/logoCampoo.png")}/>
+             <Image style={{width:218.83, height:219.17, left:-80.42, top :10, }} source={require("../../assets/images/baloostudent.png")}/>
+             <Image style={{width:618.23, height:629.49, left:119,  top :-90,  }} source={require("../../assets/images/ponpondroite.png")}/>
+             <Image style={{width:100, height:100, left:275, top:-780,  }} source={require("../../assets/images/logoCampoo.png")}/>
            
             <View style={styles.loginview}>    
 
                <InputCampoo name="Pseudo" style={styles.Inputview1}/>
 
-               <InputCampoo name="Mot de passe" secure={true}/>
+               <InputCampoo name="Mot de passe" secure={true} style={styles.Inputview1}/>
 
            
                <ButtonCampoo style={styles.button}>Connexion</ButtonCampoo>
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
        top:-660,
        width : 300,
        height: 270,  
-       zIndex:5,
+     
    },
    Inputview1:{
        marginBottom:20

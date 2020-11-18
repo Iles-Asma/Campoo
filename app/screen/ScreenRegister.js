@@ -27,15 +27,15 @@ export default class ScreenRegister extends React.Component {
               <View style={styles.mailView}>
 
                   
-              <Text style={styles.textMail}>{this.props.description}</Text>
+              
 
-                 <InputCampoo name={this.props.name} style={styles.InputView}/> 
+                 <InputCampoo name={this.props.name} style={styles.InputView} description={this.props.description}/> 
             
 
                   <ButtonCampoo style={styles.button}>Suivant</ButtonCampoo>
 
 
-                  <SecondaryButtonCampoo  style={styles.retour}>Se connecter</SecondaryButtonCampoo>
+                  <SecondaryButtonCampoo  style={styles.retour}></SecondaryButtonCampoo>
 
             
               </View>
@@ -74,6 +74,8 @@ const styles  = StyleSheet.create({
     InputView:{
 
         alignSelf:'center',
+      
+        
         
     },
 
@@ -99,14 +101,6 @@ const styles  = StyleSheet.create({
         top:20,
     },
 
-     textMail:{
-
-        fontSize:11,
-        textAlign:'center',
-        color:'#4D3D64',
-        top:70,
-       
-     },
 
      retour:{
          alignSelf:'center',

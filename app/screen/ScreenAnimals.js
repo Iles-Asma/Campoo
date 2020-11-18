@@ -42,7 +42,7 @@ export default class ScreenAnimals extends React.Component {
                    <ButtonCampoo style={styles.button}>Suivant</ButtonCampoo>
 
 
-                   <SecondaryButtonCampoo  style={styles.retour}>Passer</SecondaryButtonCampoo>
+        <SecondaryButtonCampoo  style={styles.retour}>{this.props.name}</SecondaryButtonCampoo>
 
             
               </View>

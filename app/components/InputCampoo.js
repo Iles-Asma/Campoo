@@ -15,6 +15,8 @@ export default class InputCampoo extends React.Component
          <View style={[styles.inputView, this.props.style]}>
         
             <LabelCampoo style={styles.label}>{this.props.name}</LabelCampoo>
+
+            <Text style={styles.textMail}>{this.props.description}</Text>
            
             <TextInput style={styles.textInput} secureTextEntry={this.props.secure}  maxLength={40}/>
 
@@ -34,8 +36,9 @@ const styles = StyleSheet.create({
         
     },
     label:{
-        marginBottom :53,
+      
         marginLeft:8,
+        marginBottom:15,
      }, 
     textInput : {
         paddingHorizontal:10,
@@ -46,6 +49,16 @@ const styles = StyleSheet.create({
         borderRadius:5,
 
     },
+    
+    textMail:{
+        marginBottom:10,
+
+        fontSize:11,
+        textAlign:'center',
+        color:'#4D3D64',
+  
+       
+     },
  
 
 
