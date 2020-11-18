@@ -22,8 +22,9 @@ export default class App extends React.Component {
     //<ScreenRegister name="Batiment" description="Si tu viens d'Harvard, c'est ici qu'il faut le dire." url={require("./assets/images/elephun.png")}/>
     //<ScreenRegister name="Question personnelle" description="Crapoo a une mémoire d'éléphant mais il se peut que toi non !" url={require("./assets/images/baloothinking.png")}/>
      //<ScreenRegister name="Reponse personnelle" description="Ah tu as donc choisi cette question ? Très bien, Crapoo aimerait bien en connaître la réponse..." url={require("./assets/images/baloothinking.png")} />  
-     <ScreenAnimals name="Animal Spirituel" description="Crapoo te propose de sélectionner parmi tout un tas d'animaux celui auquel tu t'associes le plus !" url={require("./assets/images/balooSpiritual.png")}/>
-    
+     //<ScreenAnimals name="Animal Spirituel" description="Crapoo te propose de sélectionner parmi tout un tas d'animaux celui auquel tu t'associes le plus !" url={require("./assets/images/balooSpiritual.png")}/>
+     <ScreenRegister name="Code de verification" description = " Malgré ses grosses pinces, Crapoo est parvenu à t'envoyer un code de vérification par mail." url={require("./assets/images/balooSpiritual.png")} />
+     
     
     
     

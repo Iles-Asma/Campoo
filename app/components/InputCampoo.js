@@ -15,7 +15,7 @@ export default class InputCampoo extends React.Component
          <View style={[styles.inputView, this.props.style]}>
         
             <LabelCampoo style={styles.label}>{this.props.name}</LabelCampoo>
-
+           
             <TextInput style={styles.textInput} secureTextEntry={this.props.secure}  maxLength={40}/>
 
          </View>
@@ -45,6 +45,8 @@ const styles = StyleSheet.create({
         width :"100%",
         borderRadius:5,
 
-    }
+    },
+ 
+
 
 })

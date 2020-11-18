@@ -90,8 +90,8 @@ const styles  = StyleSheet.create({
     },
 
     spiritAnimal:{
-        width :112,
-        height:106.5,
+        width :110,
+        height:104,
         alignSelf:'center',
 
     },
