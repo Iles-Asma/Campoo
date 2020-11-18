@@ -1,6 +1,6 @@
 import React from 'react';
 
-import{StyleSheet, Image, StatusBar, SafeAreaView, View, Text} from 'react-native';
+import{StyleSheet, Image, StatusBar, SafeAreaView, View, Text, Button} from 'react-native';
 
 import InputCampoo from  "../components/InputCampoo";
 import ButtonCampoo from "../components/ButtonCampoo"; 
@@ -10,7 +10,7 @@ import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';
 
 
 
-export default class RegisterMail extends React.Component {
+export default class ScreenRegister extends React.Component {
 
     render(){
 
@@ -27,20 +27,21 @@ export default class RegisterMail extends React.Component {
               <View style={styles.mailView}>
 
                   
-              <Text style={styles.textMail}>Pour que Crapoo vérifie que tu es un étudiant du campus !</Text>
+              <Text style={styles.textMail}>{this.props.description}</Text>
 
-                 <InputCampoo name="Email etudiant" style={styles.InputView}/> 
+                 <InputCampoo name={this.props.name} style={styles.InputView}/> 
             
 
                   <ButtonCampoo style={styles.button}>Suivant</ButtonCampoo>
 
 
-                  <SecondaryButtonCampoo  style={styles.login}>Se connecter</SecondaryButtonCampoo>
+                  <SecondaryButtonCampoo  style={styles.retour}>Se connecter</SecondaryButtonCampoo>
 
+            
               </View>
 
               <View>
-                 <Image style={styles.crapoo} source={require("../../assets/images/CrapooEtud.png")}/>
+                 <Image style={styles.crapoo} source={this.props.url}/>
               </View>
 
             </SafeAreaView>
@@ -92,10 +93,10 @@ const styles  = StyleSheet.create({
     },
 
     crapoo :{
-        width:480, 
+        width:460, 
         height:400, 
-        left:-10, 
-        top:-10,
+        left:75.27, 
+        top:20,
     },
 
      textMail:{
@@ -107,7 +108,7 @@ const styles  = StyleSheet.create({
        
      },
 
-     login:{
+     retour:{
          alignSelf:'center',
          marginTop:10,
 

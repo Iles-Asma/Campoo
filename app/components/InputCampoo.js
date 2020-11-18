@@ -29,11 +29,12 @@ export default class InputCampoo extends React.Component
 const styles = StyleSheet.create({
 
     inputView:{
-        width : 300
+        width : 300,
+        
         
     },
     label:{
-        marginBottom :36,
+        marginBottom :53,
         marginLeft:8,
      }, 
     textInput : {
