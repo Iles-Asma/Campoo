@@ -4,7 +4,7 @@ import ScreenRegister from './app/screen/ScreenRegister';
 //import { render } from 'react-dom';
 //import { StyleSheet, Text, View } from 'react-native';
 import ScreenLoginPage from './app/screen/ScreenLoginPage';
-import ScreenSpiritual from './app/screen/ScreenSpiritual';
+import ScreenSpiritual from './app/screen/ScreenAnimals';
 
 
 
