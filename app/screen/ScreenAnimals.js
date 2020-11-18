@@ -11,7 +11,7 @@ import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';
 
 
 
-export default class ScreenSpiritual extends React.Component {
+export default class ScreenAnimals extends React.Component {
 
     render(){
 
