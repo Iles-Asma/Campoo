@@ -26,9 +26,7 @@ export default class ScreenRegister extends React.Component {
 
               <View style={styles.mailView}>
 
-                  
-              
-
+                
                  <InputCampoo name={this.props.name} style={styles.InputView} description={this.props.description}/> 
             
 

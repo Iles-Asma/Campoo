@@ -14,8 +14,8 @@ export default class App extends React.Component {
   render() {
 
     return (
-      <ScreenLoginPage/>
-     //<ScreenRegister name="Email etudiant" description="Pour que Crapoo vérifie que tu es un étudiant du campus !" url={require("./assets/images/elephun.png")}/>
+      //<ScreenLoginPage/>
+     <ScreenRegister name="Email etudiant" description="Pour que Crapoo vérifie que tu es un étudiant du campus !" url={require("./assets/images/elephun.png")}/>
      //<ScreenRegister name="Nom" description="À qui Crapoo a-t-il affaire ?" url={require("./assets/images/balooidentity.png")}/>
     //<ScreenRegister name="Mot de passe"  description="Pour ta sécurité, Crapoo te recommande d'utiliser 6 caractères." url={require("./assets/images/baloopassword.png")} />
     //<ScreenRegister name="Date d'anniversaire" description="Quand est-ce que Crapoo doit te célébrer ?" url={require("./assets/images/baloobirthday.png")}/>
