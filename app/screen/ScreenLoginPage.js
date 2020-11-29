@@ -12,7 +12,7 @@ export default class ScreenLoginPage extends React.Component {
           <SafeAreaView style={styles.container} >  
 
              <Image style={{width:218.83, height:219.17, left:-80.42, top :10, }} source={require("../../assets/images/baloostudent.png")}/>
-             <Image style={{width:618.23, height:629.49, left:119,  top :-90,  }} source={require("../../assets/images/ponpondroite.png")}/>
+             <Image style={{width:518.23, height:529.49, left:135,  top :40,  }} source={require("../../assets/images/ponpondroite.png")}/>
              <Image style={{width:100, height:100, left:275, top:-780,  }} source={require("../../assets/images/logoCampoo.png")}/>
            
             <View style={styles.loginview}>    
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
    },
   loginview: {
        alignSelf:'center',
-       top:-800,
+       top:-700,
        width : 300,
        height: 270,  
      

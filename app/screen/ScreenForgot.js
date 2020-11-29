@@ -39,7 +39,7 @@ export default class ScreenForgot extends React.Component {
               </View>
 
               <View>
-                 <Image style={styles.baloo} source={this.props.url}/>
+                 <Image style={styles.crapoo} source={this.props.url}/>
               </View>
 
             </SafeAreaView>
@@ -92,7 +92,7 @@ const styles  = StyleSheet.create({
 
     },
 
-    baloo :{
+    crapoo :{
         width:460, 
         height:400, 
         left:75.27, 
