@@ -2,16 +2,15 @@ import React from 'react';
 
 import{StyleSheet, Image, StatusBar, SafeAreaView, View, Text, Button} from 'react-native';
 
-
+import InputCampoo from  "../components/InputCampoo";
 import ButtonCampoo from "../components/ButtonCampoo"; 
-import LabelCampoo from '../components/LabelCampoo';
 import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';
 
 
 
 
 
-export default class ScreenAnimals extends React.Component {
+export default class ScreenForgot extends React.Component {
 
     render(){
 
@@ -25,24 +24,16 @@ export default class ScreenAnimals extends React.Component {
                  
               </View>
 
-              <View style={styles.spiritualView}>
+              <View style={styles.forgotView}>
 
-               <LabelCampoo style={styles.spiritLabel}>{this.props.name}</LabelCampoo> 
-
-                  
-                <Text style={styles.textSpiritual}>{this.props.description}</Text>
                 
-              <View>
-                 <Image style={styles.spiritAnimal} source={require("../../assets/images/spiritianimal.png")}/>
-                 
-              </View>
-
+                 <InputCampoo name={this.props.name} style={styles.InputView} description={this.props.description}/> 
             
 
-                   <ButtonCampoo style={styles.button}>Suivant</ButtonCampoo>
+                  <ButtonCampoo style={styles.button}>Suivant</ButtonCampoo>
 
 
-        <SecondaryButtonCampoo  style={styles.retour}>{this.props.name}</SecondaryButtonCampoo>
+                  <SecondaryButtonCampoo  style={styles.retour}></SecondaryButtonCampoo>
 
             
               </View>
@@ -81,22 +72,12 @@ const styles  = StyleSheet.create({
     InputView:{
 
         alignSelf:'center',
+      
+        
         
     },
 
-    spiritLabel:{
-        marginBottom:15,
-        marginLeft:10,
-    },
-
-    spiritAnimal:{
-        width :110,
-        height:104,
-        alignSelf:'center',
-
-    },
-
-    spiritualView:{
+    forgotView:{
 
         height:250,
         width:324,
@@ -106,7 +87,7 @@ const styles  = StyleSheet.create({
 
     button: {
         alignSelf:'center',
-        marginTop:20,
+        marginTop:58,
         marginBottom:0,
 
     },
@@ -118,15 +99,6 @@ const styles  = StyleSheet.create({
         top:20,
     },
 
-     textSpiritual:{
-
-        fontSize:11,
-        textAlign:'center',
-        color:'#4D3D64',
-        marginBottom:10,
-        
-       
-     },
 
      retour:{
          alignSelf:'center',

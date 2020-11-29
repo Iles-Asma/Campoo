@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
    },
   loginview: {
        alignSelf:'center',
-       top:-660,
+       top:-800,
        width : 300,
        height: 270,  
      

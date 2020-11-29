@@ -24,7 +24,7 @@ export default class ScreenRegister extends React.Component {
                  
               </View>
 
-              <View style={styles.mailView}>
+              <View style={styles.registerView}>
 
                 
                  <InputCampoo name={this.props.name} style={styles.InputView} description={this.props.description}/> 
@@ -39,7 +39,7 @@ export default class ScreenRegister extends React.Component {
               </View>
 
               <View>
-                 <Image style={styles.crapoo} source={this.props.url}/>
+                 <Image style={styles.baloo} source={this.props.url}/>
               </View>
 
             </SafeAreaView>
@@ -77,7 +77,7 @@ const styles  = StyleSheet.create({
         
     },
 
-    mailView:{
+    registerView:{
 
         height:250,
         width:324,
@@ -92,7 +92,7 @@ const styles  = StyleSheet.create({
 
     },
 
-    crapoo :{
+    baloo :{
         width:460, 
         height:400, 
         left:75.27, 

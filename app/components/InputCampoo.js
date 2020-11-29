@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         
     },
     label:{
-      
+        
         marginLeft:8,
         marginBottom:15,
      }, 
