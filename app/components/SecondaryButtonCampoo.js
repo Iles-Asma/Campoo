@@ -23,6 +23,7 @@ const styles = StyleSheet.create ({
     register:{ 
         color:'#62BBC5',
         fontSize:14,
+  
      },
 
 })

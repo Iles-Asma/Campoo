@@ -32,8 +32,10 @@ export default class ScreenRegister extends React.Component {
 
                   <ButtonCampoo style={styles.button}>Suivant</ButtonCampoo>
 
+                  <SecondaryButtonCampoo  style={styles.Retour}>retour</SecondaryButtonCampoo>
 
-                  <SecondaryButtonCampoo  style={styles.retour}></SecondaryButtonCampoo>
+
+                
 
             
               </View>
@@ -100,9 +102,9 @@ const styles  = StyleSheet.create({
     },
 
 
-     retour:{
+     Retour:{
          alignSelf:'center',
-         marginTop:10,
+         marginTop:20,
 
      },
 
