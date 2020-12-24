@@ -2,7 +2,7 @@
 import React from 'react';
 import ScreenRegister from './app/screen/ScreenRegister';
 import ScreenForgot from './app/screen/ScreenForgot';
-//import { render } from 'react-dom';
+import { render } from 'react-dom';
 //import { StyleSheet, Text, View } from 'react-native';
 import ScreenLoginPage from './app/screen/ScreenLoginPage';
 import ScreenAnimals from './app/screen/ScreenAnimals';
