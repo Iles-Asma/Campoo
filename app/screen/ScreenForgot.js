@@ -1,49 +1,33 @@
 import React from 'react';
 
-import{StyleSheet, Image, StatusBar, SafeAreaView, View, Text, Button} from 'react-native';
+import{StyleSheet, Image, StatusBar, SafeAreaView, View,Platform, Text, Button} from 'react-native';
 
 import InputCampoo from  "../components/InputCampoo";
 import ButtonCampoo from "../components/ButtonCampoo"; 
 import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';
 
-
-
-
-
 export default class ScreenForgot extends React.Component {
 
     render(){
 
-
         return (
 
             <SafeAreaView style={styles.container}>
-
-              <View>
-                 <Image style={styles.logo} source={require("../../assets/images/logoCampoo.png")}/>
-                 
-              </View>
-
+      
+                   <Image style={styles.logoCampoo} source={require("../../assets/images/LogoCampoo.png")}/> 
+                   <Image style={styles.baloo} source={this.props.url}/>
+                
               <View style={styles.forgotView}>
 
-                
                  <InputCampoo name={this.props.name} style={styles.InputView} description={this.props.description}/> 
             
-
                   <ButtonCampoo style={styles.button}>Suivant</ButtonCampoo>
 
+                  <SecondaryButtonCampoo  style={styles.retour}>Retour</SecondaryButtonCampoo>
 
-                  <SecondaryButtonCampoo  style={styles.retour}></SecondaryButtonCampoo>
-
-            
-              </View>
-
-              <View>
-                 <Image style={styles.crapoo} source={this.props.url}/>
               </View>
 
             </SafeAreaView>
-
 
         );
     }
@@ -55,48 +39,53 @@ export default class ScreenForgot extends React.Component {
 const styles  = StyleSheet.create({
 
    container:{
+
     flex : 1,
     paddingTop : Platform.OS === "android" ? StatusBar.currentHeight: 0,
-    flexDirection: 'column',  
+    justifyContent:'flex-start',
+    alignItems:'center', 
+    backgroundColor:'#F0F0F3',
  
     },
 
-    logo:{
+    logoCampoo:{
 
-        width:100, 
-        height:100, 
-        left:275,
-
+        position:'absolute',
+        width:115, 
+        height:115, 
+        marginTop:20,
+        left:260
+     
     },
 
     InputView:{
 
         alignSelf:'center',
-      
-        
         
     },
 
     forgotView:{
 
-        height:250,
-        width:324,
-        alignSelf:'center',
+        height:290,
+        width:300,
+        top:118,
      
     },
 
     button: {
+
         alignSelf:'center',
-        marginTop:58,
-        marginBottom:0,
+        marginTop:82,
+        marginBottom:10,
 
     },
 
-    crapoo :{
-        width:460, 
-        height:400, 
-        left:75.27, 
-        top:20,
+    baloo :{
+        position:"absolute",
+        width:559, 
+        height:438, 
+        left:38, 
+        top:440,
     },
 
 

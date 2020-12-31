@@ -26,8 +26,12 @@ export default class LabelCampoo extends React.Component
 
 const styles = StyleSheet.create({
     label: {
+
         fontSize :25.89,
-        color: '#4D3D64'
+        color: '#4D3D64',
+        // marginBottom:69,
+       
+       
     },
 
   

@@ -1,58 +1,40 @@
 import React from 'react';
-
-import{StyleSheet, Image, StatusBar, SafeAreaView, View, Text, Button} from 'react-native';
-
-
+import{StyleSheet, Image, StatusBar, SafeAreaView, View, Platform,Text, Button} from 'react-native';
 import ButtonCampoo from "../components/ButtonCampoo"; 
 import LabelCampoo from '../components/LabelCampoo';
 import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';
-
-
-
-
 
 export default class ScreenAnimals extends React.Component {
 
     render(){
 
-
         return (
 
             <SafeAreaView style={styles.container}>
 
-              <View>
-                 <Image style={styles.logo} source={require("../../assets/images/logoCampoo.png")}/>
+               <Image style={styles.logoCampoo} source={require("../../assets/images/LogoCampoo.png")}/> 
+               <Image style={styles.baloo} source={this.props.url}/>     
                  
-              </View>
+                <View style={styles.spiritualView}>
 
-              <View style={styles.spiritualView}>
+                     <LabelCampoo style={styles.spiritLabel}>{this.props.name}</LabelCampoo>                  
+                     <Text style={styles.textSpiritual}>{this.props.description}</Text>
 
-               <LabelCampoo style={styles.spiritLabel}>{this.props.name}</LabelCampoo> 
+                   <View  style={styles.Pdpview} >
 
-                  
-                <Text style={styles.textSpiritual}>{this.props.description}</Text>
-                
-              <View>
-                 <Image style={styles.spiritAnimal} source={require("../../assets/images/spiritianimal.png")}/>
-                 
-              </View>
+                        <Image  source={require("../../assets/images/PDP.png")}/> 
 
-            
+                   </View>
+                      
+                        <ButtonCampoo style={styles.button}>Suivant</ButtonCampoo>
 
-                   <ButtonCampoo style={styles.button}>Suivant</ButtonCampoo>
+                         <SecondaryButtonCampoo  style={styles.retour1}>Passer</SecondaryButtonCampoo>
 
+                         <SecondaryButtonCampoo  style={styles.retour2}>retour</SecondaryButtonCampoo>
 
-        <SecondaryButtonCampoo  style={styles.retour}>{this.props.name}</SecondaryButtonCampoo>
-
-            
-              </View>
-
-              <View>
-                 <Image style={styles.baloo} source={this.props.url}/>
-              </View>
+                </View>
 
             </SafeAreaView>
-
 
         );
     }
@@ -64,17 +46,21 @@ export default class ScreenAnimals extends React.Component {
 const styles  = StyleSheet.create({
 
    container:{
+
     flex : 1,
     paddingTop : Platform.OS === "android" ? StatusBar.currentHeight: 0,
-    flexDirection: 'column',  
+    flexDirection: 'column', 
+    backgroundColor:"#F0F0F3", 
  
     },
 
-    logo:{
-
-        width:100, 
-        height:100, 
-        left:275,
+    logoCampoo:{
+        position:'absolute',
+        width:115, 
+        height:115, 
+        marginTop:20,
+        left:260
+     
 
     },
 
@@ -85,54 +71,88 @@ const styles  = StyleSheet.create({
     },
 
     spiritLabel:{
-        marginBottom:15,
-        marginLeft:10,
+        marginBottom:9,
+        
     },
 
-    spiritAnimal:{
-        width :110,
-        height:104,
+     Pdpview:{
+        
+       // backgroundColor:"white",
+        position:'absolute',
+        width :115,
+        height:115,
+        top:69,
+        alignItems:'center',
         alignSelf:'center',
-
+        marginBottom:30,
+        // borderColor:'white',
+     
+        // borderRadius:100,
+        // shadowColor: "#000",
+        // shadowOffset: {
+        //       width:0,
+        //       height: 7,
+        //  },
+        //   shadowOpacity: 1,
+        //   shadowRadius:100,
+        //   elevation: 20,
+      
     },
-
+  
     spiritualView:{
 
-        height:250,
-        width:324,
+        top:138,
+        height:290,
+        width:300,
         alignSelf:'center',
+
      
     },
 
     button: {
         alignSelf:'center',
-        marginTop:20,
-        marginBottom:0,
+        marginTop:157,
+        shadowColor: "#000",
+        shadowOffset: {
+           width:0,
+           height: 7,
+        },
+        shadowOpacity: 1,
+        shadowRadius:7,
+        elevation: 20,
 
     },
 
     baloo :{
-        width:460, 
-        height:400, 
-        left:75.27, 
-        top:20,
+        position:"absolute",
+        width:559, 
+        height:438, 
+        left:50, 
+        top:440,
     },
 
      textSpiritual:{
 
         fontSize:11,
-        textAlign:'center',
-        color:'#4D3D64',
-        marginBottom:10,
-        
+        textAlign:'left',
+        color:'#9B84D2',
        
      },
 
-     retour:{
+     retour1:{
+
          alignSelf:'center',
          marginTop:10,
 
      },
+     retour2:{
+
+        alignSelf:'center',
+        marginTop:3,
+        
+    },
+     
+     
 
     
 
