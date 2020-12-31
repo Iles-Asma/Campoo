@@ -11,16 +11,10 @@
 //     state = {
 //         question: 'Dans quelle ville est né votre père ?'
 //       };
-
-
    
 //     render(){
-
-       
+   
 //         return(
-            
-        
-
           
 //         <Picker
 //             selectedValue={this.state.question}
@@ -30,8 +24,6 @@
 //             <Picker.Item label="text" value="text" />
 //         </Picker>
 //         );
-
-
 
 //     }
 // }
