@@ -1,5 +1,5 @@
 import React from 'react';
-import{StyleSheet, Image, StatusBar, SafeAreaView, View, Platform,Text, Button} from 'react-native';
+import{StyleSheet, Image, StatusBar, SafeAreaView, View, Platform,Text} from 'react-native';
 import ButtonCampoo from "../components/ButtonCampoo"; 
 import LabelCampoo from '../components/LabelCampoo';
 import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';

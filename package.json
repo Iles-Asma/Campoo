@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-picker/picker": "^1.9.8",
     "cli": "^1.0.1",
     "expo": "~39.0.2",
     "expo-status-bar": "~1.0.2",

@@ -1,11 +1,12 @@
 //import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import ScreenRegister from './app/screen/ScreenRegister';
-import ScreenForgot from './app/screen/ScreenForgot';
-import ScreenLoginPage from './app/screen/ScreenLoginPage';
-import ScreenAnimals from './app/screen/ScreenAnimals';
-import ScreenForgotPswdCampoo from './app/screen/ScreenForgotPswdCampoo';
-import ScreenPswdCampoo from './app/screen/ScreenPswdCampoo';
+import ScreenRegister from './src/screens/ScreenRegister';
+import ScreenForgot from './src/screens/ScreenForgot';
+import ScreenLoginPage from './src/screens/ScreenLoginPage';
+import ScreenAnimals from './src/screens/ScreenAnimals';
+import ScreenForgotPswdCampoo from './src/screens/ScreenForgotPswdCampoo';
+import ScreenPswdCampoo from './src/screens/ScreenPswdCampoo';
+import PickerCampoo from './src/components/PickerCampoo';
 
 // La navigation se mettra en place via react-navigation 
 
@@ -13,7 +14,9 @@ export default class App extends React.Component {
   render() {
 
     return (
-     <ScreenLoginPage/>
+
+     <PickerCampoo/>
+     //<ScreenLoginPage/>
      // <ScreenPswdCampoo description="Pour ta sécurité, Baloo te recommande d’utiliser au moins 6 caractères."  url={require("./assets/images/Baloo-Blob-Securité.png")}/>
      // <ScreenRegister name="Email étudiant" description="Pour que Baloo vérifie que tu es bien un étudiant du campus !" url={require("./assets/images/Blob-Baloo-Etudiant.png")}/>
      //<ScreenRegister name="Nom" description="À qui Baloo a-il affaire ?" url={require("./assets/images/Baloo-Blob-Identité.png")}/>
@@ -33,7 +36,6 @@ export default class App extends React.Component {
      //<ScreenForgot name="Confirmer nouveau mot de passe" description="Par mesure de sécurité, Crapoo aimerait que tu renseignes une seconde fois ton mot de passe." url={require("./assets/images/baloopassword.png")}/>
     
     );
-
 
 
   }
