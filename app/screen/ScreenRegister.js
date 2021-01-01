@@ -50,7 +50,7 @@ const styles  = StyleSheet.create({
     flexDirection: 'column', 
     justifyContent:'flex-start',
     alignItems:'center', 
-    backgroundColor:'#F0F0F3',
+
     
  
     },

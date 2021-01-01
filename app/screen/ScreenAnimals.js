@@ -50,7 +50,7 @@ const styles  = StyleSheet.create({
     flex : 1,
     paddingTop : Platform.OS === "android" ? StatusBar.currentHeight: 0,
     flexDirection: 'column', 
-    backgroundColor:"#F0F0F3", 
+    
  
     },
 

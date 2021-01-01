@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {TouchableOpacity,  Text, StyleSheet} from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, View} from 'react-native';
 
 export default class ButtonCampoo  extends React.Component {
 
@@ -10,9 +10,9 @@ export default class ButtonCampoo  extends React.Component {
         return(
        
                 <TouchableOpacity style={[styles.button, this.props.style]}>
-
-                    <Text style={styles.connexionText}>{this.props.children}</Text>
-
+                    <View style={styles.touchable}>
+                        <Text style={styles.connexionText}>{this.props.children}</Text>
+                    </View>
                 </TouchableOpacity>
 
         );
@@ -32,7 +32,18 @@ const styles = StyleSheet.create ({
         color:'white',
   
      },
-
+     touchable: {
+        
+        
+         color: "white", 
+         borderRadius:15, 
+         width:150, 
+         height:50, 
+         backgroundColor: '#4D3D64', 
+         alignSelf:'center',
+        
+        },
+  
      
 
      button :{
@@ -40,16 +51,12 @@ const styles = StyleSheet.create ({
         borderRadius:15, 
         width:150, 
         height:50, 
-        backgroundColor: '#4D3D64', 
-     },
+       // backgroundColor: '#4D3D64', 
+        
+    },
 
 
-    //  inner:{
-
-    //     alignItems:'center',
-    //     justifyContent:'center',
-
-    //  },
+   
 
  
 

@@ -32,7 +32,7 @@ export default class ScreenLoginPage extends React.Component {
 
                          <LabelCampoo style={styles.labelMotDePasse}>Mot de passe</LabelCampoo>
                      
-                        <InputCampooSignup name="Mot de passe" secure={true} style={styles.InputMotDePasse}/>
+                         <InputCampooSignup name="Mot de passe" secure={true} style={styles.InputMotDePasse}/>
                    
                          <ButtonCampoo style={styles.button}>Connexion</ButtonCampoo>
                   </View>
@@ -60,9 +60,8 @@ const styles = StyleSheet.create({
       flex : 1,
       paddingTop : Platform.OS === "android" ? StatusBar.currentHeight: 1,
       flexDirection: 'column',
-      justifyContent:'center',
       alignItems:'center',
-      backgroundColor:'#F0F0F3',
+  
      
    },
 
@@ -85,8 +84,8 @@ const styles = StyleSheet.create({
    },
  
   loginview: {
-   
-     top:20,
+    
+     top:227,
      width : 300,
      height: 364,  
      
@@ -98,7 +97,6 @@ const styles = StyleSheet.create({
       paddingBottom:0,
      
   },
-
 
    InputMotDePasse:{
  
@@ -117,7 +115,6 @@ const styles = StyleSheet.create({
 
    button:{ 
 
-      marginTop:57,
       alignSelf :'center',
       shadowColor: "#000",
       shadowOffset: {

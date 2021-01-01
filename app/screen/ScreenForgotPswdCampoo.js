@@ -56,7 +56,7 @@ const styles  = StyleSheet.create({
        paddingTop : Platform.OS === "android" ? StatusBar.currentHeight: 0,
        justifyContent:'flex-start',
        alignItems:'center', 
-       backgroundColor:'#F0F0F3',
+    
  
     },
 
@@ -90,7 +90,8 @@ const styles  = StyleSheet.create({
 
     InputView2:{
 
-        marginBottom:75,
+        marginBottom:57,
+
         
     },
 

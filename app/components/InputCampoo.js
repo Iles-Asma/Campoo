@@ -17,6 +17,8 @@ export default class InputCampoo extends React.Component {
 
                <Text style={styles.textInfo}>{this.props.info}</Text>
 
+               <Text style={styles.textDescription} ></Text>                                                 
+
             </View>
 
         );
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
         paddingHorizontal:12,
         height : 30,
         borderWidth : 1 ,
-        borderColor:'#FFFFFF',
+        borderColor:'#4D3D64',
         width :"100%",
         borderRadius:10,
 
