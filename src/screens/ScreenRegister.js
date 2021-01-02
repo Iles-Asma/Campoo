@@ -84,7 +84,7 @@ const styles  = StyleSheet.create({
 
         alignSelf:'center',
         marginBottom:10,
-        marginTop:82,
+        marginTop:57,
         // Drop Shadow 
         shadowColor: "#000",
         shadowOffset: {

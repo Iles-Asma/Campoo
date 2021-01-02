@@ -6,10 +6,19 @@ import SecondaryButtonCampoo from "../components/SecondaryButtonCampoo";
 import LabelCampoo from "../components/LabelCampoo";
 import InputCampooSignup from  "../components/InputCampooSignup";
 
-export default class ScreenLoginPage extends React.Component {
+
+export default function ScreenLoginPage  ({ navigation }) {
+
+   const pressHandler = () => {
+      navigation.navigate('PickerCampoo') ;
+   };
+
+   const pressHandler1 = () => {
+      navigation.navigate('ScreenAnimals') ;
+   }
 
    //    <StatusBar style="dark" />
-    render(){
+    //render(){
 
        return(
           
@@ -34,14 +43,14 @@ export default class ScreenLoginPage extends React.Component {
                      
                          <InputCampooSignup name="Mot de passe" secure={true} style={styles.InputMotDePasse}/>
                    
-                         <ButtonCampoo style={styles.button}>Connexion</ButtonCampoo>
+                         <ButtonCampoo style={styles.button} onPress={pressHandler}>Connexion</ButtonCampoo>
                   </View>
 
                <View>
                  
                   <SecondaryButtonCampoo style={styles.secondaryButton1}>Mot de passe oublié</SecondaryButtonCampoo>
                  
-                  <SecondaryButtonCampoo style={styles.secondaryButton2}>S'incrire</SecondaryButtonCampoo>
+                  <SecondaryButtonCampoo style={styles.secondaryButton2} onPress={pressHandler1} >S'incrire</SecondaryButtonCampoo>
 
                </View>
 
@@ -49,8 +58,8 @@ export default class ScreenLoginPage extends React.Component {
 
           </SafeAreaView>
              
-       );
-    }
+      );
+    
 }
 
 const styles = StyleSheet.create({

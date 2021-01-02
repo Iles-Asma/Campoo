@@ -6,7 +6,7 @@ export default class SecondaryButtonCampoo extends React.Component {
 
         return(
 
-                <TouchableOpacity style={this.props.style}>
+                <TouchableOpacity style={this.props.style} onPress={this.props.onPress}>
 
                     <Text style={styles.register}>{this.props.children}</Text>
 

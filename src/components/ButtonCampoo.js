@@ -9,7 +9,7 @@ export default class ButtonCampoo extends React.Component {
 
         return(
        
-                <TouchableOpacity style={[styles.button, this.props.style]}>
+                <TouchableOpacity style={[styles.button, this.props.style]}  onPress={this.props.onPress}>
                     <View style={styles.touchable}>
                         <Text style={styles.connexionText}>{this.props.children}</Text>
                     </View>

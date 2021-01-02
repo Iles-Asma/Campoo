@@ -7,6 +7,7 @@ import ScreenAnimals from './src/screens/ScreenAnimals';
 import ScreenForgotPswdCampoo from './src/screens/ScreenForgotPswdCampoo';
 import ScreenPswdCampoo from './src/screens/ScreenPswdCampoo';
 import PickerCampoo from './src/components/PickerCampoo';
+import Navigator  from './src/routes/HomeStackCampoo';
 
 // La navigation se mettra en place via react-navigation 
 
@@ -15,10 +16,12 @@ export default class App extends React.Component {
 
     return (
 
-     <PickerCampoo/>
-     //<ScreenLoginPage/>
-     // <ScreenPswdCampoo description="Pour ta sécurité, Baloo te recommande d’utiliser au moins 6 caractères."  url={require("./assets/images/Baloo-Blob-Securité.png")}/>
-     // <ScreenRegister name="Email étudiant" description="Pour que Baloo vérifie que tu es bien un étudiant du campus !" url={require("./assets/images/Blob-Baloo-Etudiant.png")}/>
+     <Navigator />
+
+     //<PickerCampoo/>
+    //<ScreenLoginPage/>
+     //<ScreenPswdCampoo description="Pour ta sécurité, Baloo te recommande d’utiliser au moins 6 caractères."  url={require("./assets/images/Baloo-Blob-Securité.png")}/>
+     //<ScreenRegister name="Email étudiant" description="Pour que Baloo vérifie que tu es bien un étudiant du campus !" url={require("./assets/images/Blob-Baloo-Etudiant.png")}/>
      //<ScreenRegister name="Nom" description="À qui Baloo a-il affaire ?" url={require("./assets/images/Baloo-Blob-Identité.png")}/>
      //<ScreenRegister name="Date de naissance" description="Quand est-ce que Baloo doit te célébrer ?" url={require("./assets/images/blob-baloo-fête.png")}/>
      //<ScreenRegister name="Pseudonyme" description="C’est ainsi que Baloo te ferais valoir auprès des autres utilisateurs." url={require("./assets/images/blob-baloo-fête.png")}/>

@@ -9,7 +9,7 @@ import {Picker} from '@react-native-picker/picker';
 export default class PickerCampoo extends React.Component {
 
    state = {
-        question: 'tamere',
+        question: 'javascript',
       };
 
       render(){
@@ -23,7 +23,7 @@ export default class PickerCampoo extends React.Component {
                selectedValue={this.state.question}
                
                 onValueChange={(itemValue, itemIndex) => this.setState({question: itemValue})}>
-               <Picker.Item label="Tamere" value="tamere" />
+               <Picker.Item label="javascript" value="javascript" />
                <Picker.Item label="JavaScript" value="js" />
                <Picker.Item label="JavaScript" value="js" />
                <Picker.Item label="JavaScript" value="js" />
