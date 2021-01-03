@@ -1,41 +1,122 @@
-import {createStackNavigator} from 'react-navigation-stack';
-import {createAppContainer} from 'react-navigation';
-import ScreenLoginCampoo from '../screens/ScreenLoginCampoo'; 
-import PickerCampoo from '../components/PickerCampoo';
-import AnimalSignupCampoo  from '../screens/AnimalSignupCampoo';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createAppContainer } from 'react-navigation';
+import ScreenLoginCampoo from '../screens/ScreenLoginCampoo';
+import AnimalSignupCampoo from '../screens/AnimalSignupCampoo';
+import MailSignUpCampoo from '../screens/MailSignUpCampoo';
+import BatSignupCampoo from '../screens/BatSignupCampoo';
+import NameSignupCampoo from '../screens/NameSignupCampoo';
+import DobSignupCampoo from '../screens/DobSignupCampoo';
+import PseudoSignupCampoo from '../screens/PseudoSignupCampoo';
+import MdpSignupCampoo from '../screens/MdpOResetCampoo';
+import QSecretSignupCampoo from '../screens/QSecretSignupCampoo';
+import RSecretSignupCampoo from '../screens/RSecretSignupCampoo';
+import CVerifSignupCampoo from '../screens/CVerifSignupCampoo';
 
 // // fonction qui sert a cree une nouvelle stack de navigation , ou l'on passe un objet dans lequel on dit quel different ecran nous voulons enregistrer
 
 const screens = {
 
-     CampooSignup : {
-        screen :ScreenLoginCampoo,
-        navigationOptions :{
-           headerShown: false,
-        
-         }
-    
-       },
-
-     PickerCampoo :{
-        screen :  PickerCampoo,
-        navigationOptions :{
-          headerShown: false,
-      
-         }
-     
-    },
-
-   AnimalSignupCampoo:{
-        screen :AnimalSignupCampoo,
-         navigationOptions :{
-           headerShown: false,
-    
-          }
+  ScreenLoginCampoo: {
+    screen: ScreenLoginCampoo,
+    navigationOptions: {
+      headerShown: false,
 
     }
 
-  }
-  const HomeStackCampoo = createStackNavigator(screens);
+  },
 
-  export default createAppContainer(HomeStackCampoo);
+
+  MailSignUpCampoo: {
+    screen: MailSignUpCampoo,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+  },
+
+  BatSignupCampoo: {
+    screen: BatSignupCampoo,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+  },
+
+
+  NameSignupCampoo: {
+    screen: NameSignupCampoo,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+  },
+
+  DobSignupCampoo: {
+    screen: DobSignupCampoo,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+  },
+
+  PseudoSignupCampoo: {
+    screen: PseudoSignupCampoo,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+  },
+
+  MdpSignupCampoo: {
+    screen: MdpSignupCampoo,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+  },
+
+  QSecretSignupCampoo: {
+    screen: QSecretSignupCampoo,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+  },
+
+  RSecretSignupCampoo: {
+    screen: RSecretSignupCampoo,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+  },
+
+  AnimalSignupCampoo: {
+    screen: AnimalSignupCampoo,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+  },
+
+  CVerifSignupCampoo: {
+    screen: CVerifSignupCampoo,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+
+  },
+
+}
+
+const HomeStackCampoo = createStackNavigator(screens);
+
+export default createAppContainer(HomeStackCampoo);

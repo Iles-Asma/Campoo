@@ -5,29 +5,36 @@ import ButtonCampoo from "../components/ButtonCampoo";
 import LabelCampoo from '../components/LabelCampoo';
 import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';
 
-export default class NameSignupCampoo extends React.Component {
+export default class QSecretSignupCampoo extends React.Component {
 
     render() {
+
         const { navigation } = this.props;
 
         const pressHandler = () => {
-            navigation.push('DobSignupCampoo');
+            navigation.push('RSecretSignupCampoo');
+
         }
 
+
+        //! Mettre un picker
 
         return (
 
             <SafeAreaView style={styles.container}>
 
+
                 <Image style={styles.logoCampoo} source={require("../../assets/images/LogoCampoo.png")} />
-                <Image style={styles.baloo} source={require("../../assets/images/Blob-Baloo-Etudiant.png")} />
+                <Image style={styles.baloo} source={require("../../assets/images/Baloo-Blob-Thinkin.png")} />
 
-                <View style={styles.nameView}>
-                    <LabelCampoo style={styles.nameLabel}>Nom</LabelCampoo>
-                    <Text style={styles.textName}>À qui Baloo a-il affaire ?</Text>
+                <View style={styles.QsView}>
+                    <LabelCampoo style={styles.QsLabel}>Question secrète</LabelCampoo>
+                    <Text style={styles.textQs}>Baloo a une mémoire d’éléphant mais il se peut que toi non !</Text>
+
                     <InputCampooSignup style={styles.InputView} />
+                    <Text style={styles.textQsInfo}>La réponse te permettra de réinitialiser ton mot de passe</Text>
 
-                    <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
+                    <ButtonCampoo style={styles.button} onPres={pressHandler}>Suivant</ButtonCampoo>
                     <SecondaryButtonCampoo style={styles.retour}>retour</SecondaryButtonCampoo>
 
                 </View>
@@ -70,19 +77,28 @@ const styles = StyleSheet.create({
 
     },
 
-    nameLabel: {
+    QsLabel: {
         marginBottom: 9,
 
     },
 
 
 
-    nameView: {
+    QsView: {
 
         top: 138,
         height: 290,
         width: 300,
         alignSelf: 'center',
+
+
+    },
+
+    textQsInfo: {
+        marginTop: 21,
+        textAlign: 'center',
+        fontSize: 12,
+        color: '#EB7653',
 
 
     },
@@ -109,9 +125,9 @@ const styles = StyleSheet.create({
         top: 440,
     },
 
-    textName: {
+    textQs: {
 
-        fontSize: 11,
+        fontSize: 12,
         textAlign: 'left',
         color: '#9B84D2',
 
