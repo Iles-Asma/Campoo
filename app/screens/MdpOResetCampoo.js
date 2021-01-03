@@ -116,14 +116,6 @@ const styles = StyleSheet.create({
 
         alignSelf: 'center',
         marginBottom: 7,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 5,
-            height: 15,
-        },
-        shadowOpacity: 0.1,
-        shadowRadius: 7,
-        elevation: 14,
 
     },
 

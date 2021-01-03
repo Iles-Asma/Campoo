@@ -26,30 +26,24 @@ export default class MdpSignupCampoo extends React.Component {
 
                 <View style={styles.PswdView}>
 
-                    <View>
+                    <LabelCampoo style={styles.Pswd1}>Mot de passe</LabelCampoo>
 
-                        <LabelCampoo style={styles.Pswd1}>Mot de passe</LabelCampoo>
-                        <Text style={styles.textMdp}>Pour ta sécurité, Baloo te recommande d’utiliser au moins 6 caractères.</Text>
+                    <Text style={styles.textMdp}>Pour ta sécurité, Baloo te recommande d’utiliser au moins 6 caractères.</Text>
 
-                        <InputCampooSignup secure={true} style={styles.InputView1} />
+                    <InputCampooSignup secure={true} style={styles.InputView1} />
 
-                    </View>
+                    <LabelCampoo style={styles.Pswd2}>Vérification</LabelCampoo>
 
-                    <View>
+                    <InputCampooSignup secure={true} style={styles.InputView2} />
 
-                        <LabelCampoo style={styles.Pswd2}>Vérification</LabelCampoo>
 
-                        <InputCampooSignup secure={true} style={styles.InputView2} />
 
-                    </View>
-
-                    <ButtonCampoo style={styles.button} onPress={pressHandler} >Suivant</ButtonCampoo>
-
-                    <SecondaryButtonCampoo style={styles.retour}>Retour</SecondaryButtonCampoo>
-
+                    <SecondaryButtonCampoo style={styles.retour} c>Retour</SecondaryButtonCampoo>
+                    <ButtonCampoo style={styles.button} >Suivant</ButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour} c>Retour</SecondaryButtonCampoo>
                 </View>
 
-            </SafeAreaView>
+            </SafeAreaView >
 
         );
     }
@@ -124,14 +118,6 @@ const styles = StyleSheet.create({
 
         alignSelf: 'center',
         marginBottom: 7,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 5,
-            height: 15,
-        },
-        shadowOpacity: 0.1,
-        shadowRadius: 7,
-        elevation: 14,
 
     },
 

@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
 
     Pdpview: {
 
-        // backgroundColor:"white",
+
         position: 'absolute',
         width: 115,
         height: 115,
@@ -90,17 +90,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         alignSelf: 'center',
         marginBottom: 30,
-        // borderColor:'white',
-
-        // borderRadius:100,
-        // shadowColor: "#000",
-        // shadowOffset: {
-        //       width:0,
-        //       height: 7,
-        //  },
-        //   shadowOpacity: 1,
-        //   shadowRadius:100,
-        //   elevation: 20,
 
     },
 
@@ -117,14 +106,6 @@ const styles = StyleSheet.create({
     button: {
         alignSelf: 'center',
         marginTop: 157,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 7,
-        },
-        shadowOpacity: 1,
-        shadowRadius: 7,
-        elevation: 20,
 
     },
 

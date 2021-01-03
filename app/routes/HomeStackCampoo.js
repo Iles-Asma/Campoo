@@ -115,7 +115,7 @@ const screens = {
 
   },
 
-}
+};
 
 const HomeStackCampoo = createStackNavigator(screens);
 

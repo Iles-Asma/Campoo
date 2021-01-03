@@ -92,14 +92,6 @@ const styles = StyleSheet.create({
     button: {
         marginTop: 57,
         alignSelf: 'center',
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 7,
-        },
-        shadowOpacity: 1,
-        shadowRadius: 7,
-        elevation: 20,
 
     },
 
