@@ -4,7 +4,7 @@ import ButtonCampoo from "../components/ButtonCampoo";
 import LabelCampoo from '../components/LabelCampoo';
 import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';
 
-export default class ScreenAnimals extends React.Component {
+export default class AnimalSignupCampoo extends React.Component {
 
     render(){
 
@@ -13,12 +13,12 @@ export default class ScreenAnimals extends React.Component {
             <SafeAreaView style={styles.container}>
 
                <Image style={styles.logoCampoo} source={require("../../assets/images/LogoCampoo.png")}/> 
-               <Image style={styles.baloo} source={this.props.url}/>     
+               <Image style={styles.baloo} source={require("../../assets/images/Component-1.png")}/>     
                  
                 <View style={styles.spiritualView}>
 
-                     <LabelCampoo style={styles.spiritLabel}>{this.props.name}</LabelCampoo>                  
-                     <Text style={styles.textSpiritual}>{this.props.description}</Text>
+                     <LabelCampoo style={styles.spiritLabel}>Animal Spirituel</LabelCampoo>                  
+                     <Text style={styles.textSpiritual}>Baloo te propose de sélectionner, parmi tout un tas d’animaux, celui auquel tu t’associes le plus !</Text>
 
                    <View  style={styles.Pdpview} >
 

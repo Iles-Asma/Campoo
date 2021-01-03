@@ -5,7 +5,7 @@ import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';
 import InputCampooSignup from '../components/InputCampooSignup';
 import LabelCampoo from '../components/LabelCampoo';
 
-export default class ScreenPswdCampoo extends React.Component {
+export default class MdpSignupCampoo extends React.Component {
 
     render(){
 
@@ -14,15 +14,16 @@ export default class ScreenPswdCampoo extends React.Component {
             <SafeAreaView style={styles.container}>
       
                    <Image style={styles.logoCampoo} source={require("../../assets/images/LogoCampoo.png")}/> 
-                   <Image style={styles.baloo} source={this.props.url}/>
+                   <Image style={styles.baloo} source={require("../../assets/images/Baloo-Blob-Securité.png")}/>
             
-              <View style={styles.PswdView}>
+               <View style={styles.PswdView}>
 
                     <View>
 
                        <LabelCampoo style={styles.Pswd1}>Mot de passe</LabelCampoo>
+                       <Text style={styles.textMdp}>Pour ta sécurité, Baloo te recommande d’utiliser au moins 6 caractères.</Text>
 
-                       <InputCampooSignup secure={true} style={styles.InputView1} description={this.props.description}/>
+                       <InputCampooSignup secure={true} style={styles.InputView1}/>
                  
                     </View>
 
@@ -71,6 +72,14 @@ const styles  = StyleSheet.create({
      
     },
 
+    textMdp:{
+        fontSize:11,
+        textAlign:'left',
+        color:'#9B84D2',
+       
+
+    },
+
     Pswd1:{
 
         marginBottom:9,
@@ -91,7 +100,7 @@ const styles  = StyleSheet.create({
 
     InputView2:{
 
-        marginBottom:75,
+        marginBottom:57,
   
     },
     

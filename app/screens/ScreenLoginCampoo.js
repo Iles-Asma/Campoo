@@ -1,24 +1,35 @@
 import React from "react";
 import {  View, StyleSheet ,SafeAreaView ,StatusBar , Platform, Image} from "react-native";
 import ButtonCampoo from "../components/ButtonCampoo";
-import InputCampoo from "../components/InputCampoo";
+
 import SecondaryButtonCampoo from "../components/SecondaryButtonCampoo";
 import LabelCampoo from "../components/LabelCampoo";
 import InputCampooSignup from  "../components/InputCampooSignup";
 
 
-export default function ScreenLoginPage  ({ navigation }) {
+export default class ScreenLoginPage extends React.Component  {
 
-   const pressHandler = () => {
-      navigation.navigate('PickerCampoo') ;
-   };
+   /// if functionnal component  do :  function ({navigation})
+   // const pressHandler = () => {   
+   //    navigation.push('PickerCampoo') ;
+   // };
 
-   const pressHandler1 = () => {
-      navigation.navigate('ScreenAnimals') ;
-   }
+   // const pressHandler1 = () => {
+   //    navigation.push('ScreenAnimals') ;
+   // }
 
    //    <StatusBar style="dark" />
-    //render(){
+    render(){
+
+         const {navigation} = this.props;
+
+             const pressHandler = () => {
+            navigation.push('PickerCampoo') ;
+          };
+   
+           const pressHandler1 = () => {
+            navigation.push('AnimalSignupCampoo') ;
+          }
 
        return(
           
@@ -59,6 +70,7 @@ export default function ScreenLoginPage  ({ navigation }) {
           </SafeAreaView>
              
       );
+   }
     
 }
 
