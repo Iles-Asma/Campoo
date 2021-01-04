@@ -7,7 +7,7 @@ import BatSignupCampoo from '../screens/BatSignupCampoo';
 import NameSignupCampoo from '../screens/NameSignupCampoo';
 import DobSignupCampoo from '../screens/DobSignupCampoo';
 import PseudoSignupCampoo from '../screens/PseudoSignupCampoo';
-import MdpSignupCampoo from '../screens/MdpOResetCampoo';
+import MdpSignupCampoo from '../screens/MdpSignupCampoo';
 import QSecretSignupCampoo from '../screens/QSecretSignupCampoo';
 import RSecretSignupCampoo from '../screens/RSecretSignupCampoo';
 import CVerifSignupCampoo from '../screens/CVerifSignupCampoo';

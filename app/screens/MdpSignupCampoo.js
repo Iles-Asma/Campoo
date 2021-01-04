@@ -37,10 +37,8 @@ export default class MdpSignupCampoo extends React.Component {
                     <InputCampooSignup secure={true} style={styles.InputView2} />
 
 
-
-                    <SecondaryButtonCampoo style={styles.retour} c>Retour</SecondaryButtonCampoo>
-                    <ButtonCampoo style={styles.button} >Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour} c>Retour</SecondaryButtonCampoo>
+                    <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour}>Retour</SecondaryButtonCampoo>
                 </View>
 
             </SafeAreaView >
