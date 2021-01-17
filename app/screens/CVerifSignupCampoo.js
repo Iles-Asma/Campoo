@@ -8,6 +8,11 @@ import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';
 export default class CVerifSignupCampoo extends React.Component {
 
     render() {
+        const { navigation } = this.props;
+
+        const pressHandler = () => {
+            navigation.goBack();
+        }
 
         return (
 

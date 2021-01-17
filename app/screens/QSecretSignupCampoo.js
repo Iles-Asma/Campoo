@@ -35,7 +35,7 @@ export default class QSecretSignupCampoo extends React.Component {
                     <Text style={styles.textQsInfo}>La réponse te permettra de réinitialiser ton mot de passe</Text>
 
                     <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour}>retour</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour} onPress={ () => navigation.goBack() }>retour</SecondaryButtonCampoo>
 
                 </View>
 
