@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "'Fira code'"
+    "editor.fontFamily": "'Victor Mono'",
+    "editor.fontSize": 16
 }

@@ -38,7 +38,7 @@ export default class MdpSignupCampoo extends React.Component {
 
 
                     <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour}>Retour</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() }>Retour</SecondaryButtonCampoo>
                 </View>
 
             </SafeAreaView >

@@ -30,7 +30,7 @@ export default class BatSignupCampoo extends React.Component {
                     <Text style={styles.textBat}>Si tu viens d'Harvard, c'est ici qu'il faut le dire.</Text>
                     <InputCampooSignup style={styles.InputView} />
                     <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour}>retour</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() }>retour</SecondaryButtonCampoo>
 
                 </View>
 

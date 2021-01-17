@@ -20,7 +20,7 @@ export default class MdpOMailCampoo extends React.Component {
                     <Text style={styles.textMail}>Pour que Baloo vérifie que tu es bien un étudiant du campus !</Text>
                     <InputCampooSignup style={styles.InputView} />
                     <ButtonCampoo style={styles.button} onPres={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour}>retour</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() }>retour</SecondaryButtonCampoo>
 
                 </View>
 

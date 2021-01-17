@@ -13,6 +13,8 @@ export default class AnimalSignupCampoo extends React.Component {
             navigation.push('CVerifSignupCampoo');
         }
 
+
+
         return (
 
             <SafeAreaView style={styles.container}>
@@ -31,11 +33,11 @@ export default class AnimalSignupCampoo extends React.Component {
 
                     </View>
 
-                    <ButtonCampoo style={styles.button} onPres={pressHandler}>Suivant</ButtonCampoo>
+                    <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
 
-                    <SecondaryButtonCampoo style={styles.retour1}>Passer</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour1} >Passer</SecondaryButtonCampoo>
 
-                    <SecondaryButtonCampoo style={styles.retour2}>retour</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour2} onPress={() =>  navigation.goBack() }>retour</SecondaryButtonCampoo>
 
                 </View>
 

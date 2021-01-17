@@ -31,7 +31,7 @@ export default class DobSignupCampoo extends React.Component {
                     <Text style={styles.textDob}>Quand est-ce que Baloo doit te célébrer ?</Text>
                     <InputCampooSignup style={styles.InputView} />
                     <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour}>retour</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() }>retour</SecondaryButtonCampoo>
 
                 </View>
 

@@ -29,7 +29,7 @@ export default class MdpOQSecretCampoo extends React.Component {
 
 
                     <ButtonCampoo style={styles.button}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour}>retour</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() }>retour</SecondaryButtonCampoo>
 
                 </View>
 

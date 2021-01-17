@@ -29,7 +29,7 @@ export default class MailSignUpCampoo extends React.Component {
                     <InputCampooSignup style={styles.InputView} />
 
                     <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour} >retour</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() } >retour</SecondaryButtonCampoo>
 
                 </View>
 

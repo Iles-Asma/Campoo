@@ -24,7 +24,7 @@ export default class CVerifSignupCampoo extends React.Component {
 
                     <ButtonCampoo style={styles.button}>Valider</ButtonCampoo>
                     <SecondaryButtonCampoo style={styles.resend}>Renvoyer un e-mail</SecondaryButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour}>retour</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() }>retour</SecondaryButtonCampoo>
 
                 </View>
 
