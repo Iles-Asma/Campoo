@@ -1,6 +1,9 @@
-node_modules
-
-
-
+ node_modules
+.vscode
+.expo-shared
+.expo
 .expo/packager-info.json
 .expo/settings.json
+
+'~
+node_modules
