@@ -14,6 +14,7 @@ export default class MailSignUpCampoo extends React.Component {
 
         const pressHandler = () => {
             navigation.push('BatSignupCampoo');
+
         };
 
         return (
@@ -25,11 +26,14 @@ export default class MailSignUpCampoo extends React.Component {
 
                 <View style={styles.mailView}>
                     <LabelCampoo style={styles.mailLabel}>Email étudiant</LabelCampoo>
+
                     <Text style={styles.textMail}>Pour que Baloo vérifie que tu es bien un étudiant du campus !</Text>
+
                     <InputCampooSignup style={styles.InputView} />
 
                     <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() } >retour</SecondaryButtonCampoo>
+
+                    <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()} >retour</SecondaryButtonCampoo>
 
                 </View>
 
@@ -116,10 +120,5 @@ const styles = StyleSheet.create({
         marginTop: 10,
 
     },
-
-
-
-
-
 
 })

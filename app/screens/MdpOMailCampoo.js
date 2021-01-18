@@ -13,14 +13,20 @@ export default class MdpOMailCampoo extends React.Component {
             <SafeAreaView style={styles.container}>
 
                 <Image style={styles.logoCampoo} source={require("../../assets/images/LogoCampoo.png")} />
+                
                 <Image style={styles.baloo} source={require("../../assets/images/Blob-Baloo-Etudiant.png")} />
 
                 <View style={styles.mailView}>
-                    <LabelCampoo style={styles.mailLabel}>Email étudiant</LabelCampoo>
-                    <Text style={styles.textMail}>Pour que Baloo vérifie que tu es bien un étudiant du campus !</Text>
-                    <InputCampooSignup style={styles.InputView} />
-                    <ButtonCampoo style={styles.button} onPres={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() }>retour</SecondaryButtonCampoo>
+
+                     <LabelCampoo style={styles.mailLabel}>Email étudiant</LabelCampoo>
+                    
+                     <Text style={styles.textMail}>Pour que Baloo vérifie que tu es bien un étudiant du campus !</Text>
+                    
+                     <InputCampooSignup style={styles.InputView} />
+                   
+                     <ButtonCampoo style={styles.button} onPres={pressHandler}>Suivant</ButtonCampoo>
+                   
+                     <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() }>retour</SecondaryButtonCampoo>
 
                 </View>
 
@@ -36,11 +42,9 @@ export default class MdpOMailCampoo extends React.Component {
 const styles = StyleSheet.create({
 
     container: {
-
         flex: 1,
-
         // test pour detecter la platform
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 1,
         flexDirection: 'column',
 
 
@@ -57,7 +61,6 @@ const styles = StyleSheet.create({
     },
 
     InputView: {
-
         alignSelf: 'center',
 
     },
@@ -68,21 +71,17 @@ const styles = StyleSheet.create({
     },
 
 
-
     mailView: {
-
         top: 138,
         height: 290,
         width: 300,
         alignSelf: 'center',
-
 
     },
 
     button: {
         marginTop: 57,
         alignSelf: 'center',
-
 
     },
 
@@ -95,7 +94,6 @@ const styles = StyleSheet.create({
     },
 
     textMail: {
-
         fontSize: 11,
         textAlign: 'left',
         color: '#9B84D2',
@@ -103,7 +101,6 @@ const styles = StyleSheet.create({
     },
 
     retour: {
-
         alignSelf: 'center',
         marginTop: 10,
 
