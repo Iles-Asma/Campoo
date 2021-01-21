@@ -13,18 +13,14 @@ import HomeFeedCampoo from './app/screens/HomeFeedCampoo';
 
 // La navigation se mettra en place via react-navigation 
 
-export default class App extends React.Component {
+export default class App extends React.Component { 
 
   render() {
 
     return (
 
       <Navigator />
-<<<<<<< HEAD
     
-=======
-      // <HomeFeedCampoo/>
->>>>>>> parent of 930962a2... Merge branch 'master' of https://github.com/AntoineAssanvo/Campoo
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
       //<ScreenLoginPage/>      
