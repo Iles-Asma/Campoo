@@ -19,7 +19,8 @@ export default class App extends React.Component {
 
     return (
 
-      <Navigator />
+      //<Navigator />
+      <HomeFeedCampoo/>
     
       // <MailSignupCampoo />
       //<NameSignupCampoo/>

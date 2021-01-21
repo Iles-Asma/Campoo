@@ -2,7 +2,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import ScreenLoginCampoo from '../screens/ScreenLoginCampoo';
 import AnimalSignupCampoo from '../screens/AnimalSignupCampoo';
-import MailSignUpCampoo from '../screens/MailSignUpCampoo';
+// import MailSignUpCampoo from '../screens/MailSignUpCampoo';
 import BatSignupCampoo from '../screens/BatSignupCampoo';
 import NameSignupCampoo from '../screens/NameSignupCampoo';
 import DobSignupCampoo from '../screens/DobSignupCampoo';
@@ -24,14 +24,14 @@ const screens = {
   },
 
 
-  MailSignUpCampoo: {
-    screen: MailSignUpCampoo,
-    navigationOptions: {
-      headerShown: false,
+  // MailSignUpCampoo: {
+  //   screen: MailSignUpCampoo,
+  //   navigationOptions: {
+  //     headerShown: false,
 
-    }
+  //   }
 
-  },
+  // },
 
   BatSignupCampoo: {
     screen: BatSignupCampoo,
