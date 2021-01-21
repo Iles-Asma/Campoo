@@ -7,3 +7,7 @@
 
 '~\.npm-global
 node_modules
+package.json
+.expo/settings.json
+.expo/packager-info.json
+.expo/packager-info.json
