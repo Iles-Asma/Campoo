@@ -8,8 +8,6 @@ import NameSignupCampoo from '../screens/NameSignupCampoo';
 import DobSignupCampoo from '../screens/DobSignupCampoo';
 import PseudoSignupCampoo from '../screens/PseudoSignupCampoo';
 import MdpSignupCampoo from '../screens/MdpSignupCampoo';
-import QSecretSignupCampoo from '../screens/QSecretSignupCampoo';
-import RSecretSignupCampoo from '../screens/RSecretSignupCampoo';
 import CVerifSignupCampoo from '../screens/CVerifSignupCampoo';
 
 // // fonction qui sert a cree une nouvelle stack de navigation , ou l'on passe un objet dans lequel on dit quel different ecran nous voulons enregistrer
@@ -80,21 +78,7 @@ const screens = {
     }
   },
 
-  QSecretSignupCampoo: {
-    screen: QSecretSignupCampoo,
-    navigationOptions: {
-      headerShown: false,
 
-    }
-  },
-
-  RSecretSignupCampoo: {
-    screen: RSecretSignupCampoo,
-    navigationOptions: {
-      headerShown: false,
-
-    }
-  },
 
   AnimalSignupCampoo: {
     screen: AnimalSignupCampoo,

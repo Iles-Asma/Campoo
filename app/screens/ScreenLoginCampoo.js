@@ -8,16 +8,6 @@ import InputCampooSignup from "../components/InputCampooSignup";
 
 export default class ScreenLoginPage extends React.Component {
 
-   /// if functionnal component  do :  function ({navigation})
-   // const pressHandler = () => {   
-   //    navigation.push('MailSignupCampoo') ;
-   // };
-
-   // const pressHandler1 = () => {
-   //    navigation.push('ScreenAnimals') ;
-   // }
-
-   //    <StatusBar style="dark" />
    render() {
 
       const { navigation } = this.props;

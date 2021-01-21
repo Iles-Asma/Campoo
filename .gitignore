@@ -1,1 +1,9 @@
+ node_modules
+.vscode\.react
+.expo-shared
+.expo
+.expo/packager-info.json
+.expo/settings.json
+
+'~\.npm-global
 node_modules
