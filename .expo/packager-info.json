@@ -1,20 +1,16 @@
-<<<<<<< HEAD
 {
   "devToolsPort": 19002,
-<<<<<<< HEAD
+
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-=======
+
   "expoServerPort": 19000,
   "packagerPort": 19001,
   "packagerPid": 12440,
->>>>>>> parent of 930962a2... Merge branch 'master' of https://github.com/AntoineAssanvo/Campoo
+
   "expoServerNgrokUrl": null,
   "packagerNgrokUrl": null,
   "ngrokPid": null,
   "webpackServerPort": null
 }
-=======
-{}
->>>>>>> 084286ff9f90b06373792347bc94f8e47ccf6be5
