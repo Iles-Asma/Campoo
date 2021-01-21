@@ -20,7 +20,7 @@ export default class PseudoSignupCampoo extends React.Component {
             <SafeAreaView style={styles.container}>
 
 
-                <Image style={styles.logoCampoo} source={require("../../assets/images/LogoCampoo.png")} />
+                <Image style={styles.logoCampoo} source={require("../../assets/images/logoCampoo.png")} />
                 <Image style={styles.baloo} source={require("../../assets/images/blob-baloo-fête.png")} />
 
                 <View style={styles.pseudoView}>

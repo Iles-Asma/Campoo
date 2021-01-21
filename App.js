@@ -20,7 +20,11 @@ export default class App extends React.Component {
     return (
 
       <Navigator />
+<<<<<<< HEAD
     
+=======
+      // <HomeFeedCampoo/>
+>>>>>>> parent of 930962a2... Merge branch 'master' of https://github.com/AntoineAssanvo/Campoo
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
       //<ScreenLoginPage/>      
