@@ -10,8 +10,7 @@
   "dependencies": {
     "@react-native-community/masked-view": "0.1.10",
     "@react-native-picker/picker": "^1.9.8",
-    "@react-navigation/bottom-tabs": "^5.11.3",
-    "@react-navigation/native": "^5.9.0",
+    "@react-navigation/native": "^5.9.1",
     "cli": "^1.0.1",
     "expo": "^39.0.5",
     "expo-status-bar": "~1.0.2",
