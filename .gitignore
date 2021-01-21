@@ -9,4 +9,9 @@
 node_modules
 .expo/packager-info.json
 .expo/packager-info.json
+
 .expo/web/package-info.json
+
+.expo/packager-info.json
+
+
