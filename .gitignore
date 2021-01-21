@@ -1,5 +1,5 @@
  node_modules
-.vscode
+.vscode\.react
 .expo-shared
 .expo
 .expo/packager-info.json
