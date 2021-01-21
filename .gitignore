@@ -9,4 +9,8 @@
 node_modules
 .expo/packager-info.json
 .expo/packager-info.json
+<<<<<<< HEAD
 .expo/packager-info.json
+=======
+
+>>>>>>> a8bd82292d5a050a440b4f871f9e70353723ff16
