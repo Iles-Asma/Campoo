@@ -11,3 +11,5 @@ node_modules
 .expo\packager-info.json
 .expo\packager-info.json
 *.json
+.expo/packager-info.json
+.expo/settings.json

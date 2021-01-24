@@ -10,6 +10,7 @@ import MdpSignupCampoo from "./app/screens/MdpSignupCampoo";
 import CVerifSignupCampoo from './app/screens/CVerifSignupCampoo';
 import MdpOMailCampoo from './app/screens/MdpOMailCampoo';
 import HomeFeedCampoo from './app/screens/HomeFeedCampoo';
+import EventCampoo from './app/screens/EventCampoo';
 
 // La navigation se mettra en place via react-navigation 
 
@@ -21,6 +22,7 @@ export default class App extends React.Component {
 
       //<Navigator />
       <HomeFeedCampoo/>
+      //<EventCampoo/>
     
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
