@@ -1,7 +1,10 @@
 
 import React from 'react';
-import { StyleSheet, Image, StatusBar , SafeAreaView, View, Platform, Text } from 'react-native';
-export default class HomeFeedCampoo extends React.Component{
+
+import { StyleSheet, Image,ImageBackground, StatusBar , SafeAreaView, View, Platform, Text } from 'react-native';
+//  import ReglageIcon from 'assets/images/reglage.svg';
+//  const image = { uri: "../assets/imgProfil/Badeaubleu.png" };
+export default class UserProfil extends React.Component{
    
     render() {
 
@@ -9,12 +12,19 @@ export default class HomeFeedCampoo extends React.Component{
 
            <SafeAreaView style={styles.container}>
 
+                {/* <Image style={styles.baloo} source={require("../../assets/images/.png")} /> */}
+                <View style={styles.profilIdContainer}>
+                <View style={[styles.profilSetings, styles.gap]}>
 
-                <View style={styles.profilId}>
-                 <Text>
-                     HELLO f
-                 </Text> 
-                {/* <Image style={{ ... }} source={require("../../assets/images/BAloo-violet.png")} /> */}
+
+      {/* <Text style={styles.text}>Inside</Text> */}
+    
+                 <View style={styles.profilPics}></View>
+                 <View style={[styles.profilReglage, styles.gap]}></View>
+                 <View style={[styles.profilModif, styles.gap]}></View>
+                 
+                  </View>
+               
                </View>
 
                <View style={styles.profil}> 
@@ -41,7 +51,7 @@ const styles = StyleSheet.create({
     container: {
  
        flex: 1,
-        
+        position:'relative',
        flexDirection: 'column',
         backgroundColor:'red',
          alignItems: 'center',
@@ -49,9 +59,12 @@ const styles = StyleSheet.create({
  
  
     },
-    profilId:{
+    // gap:{
+    //     marginRight: 10,
+    // },
+    profilIdContainer:{
         flex:0,
-        height:'20%',
+        height:'30%', 
         width:'100%',
         // flexDirection: 'row',
         alignItems: 'center',
@@ -60,6 +73,7 @@ const styles = StyleSheet.create({
 
     },
     profil:{
+        flex:0.1,
         height:'5%',
         // flex:10,
         
@@ -69,6 +83,42 @@ const styles = StyleSheet.create({
         // justifyContent: 'center',
         backgroundColor:'black',
 
+    },
+    profilSetings:{
+        flex:1,
+        width:'100%',
+        
+        position:'relative',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+
+    },
+
+    profilPics:{
+        flex: 1,
+        
+        width: 130,
+        height: 130,
+        borderRadius: 130 / 2,
+        backgroundColor:'black',
+    },
+    profilReglage:{
+        width: 30,
+        height: 30,
+        position:'absolute',
+        right:75,
+        borderRadius: 30 / 2,
+        backgroundColor:'black',
+
+    },
+    profilModif:{
+        width: 30,
+        height: 30,
+        position:'absolute',
+        right:30,
+        borderRadius: 30 / 2,
+        backgroundColor:'black',
     },
  
 
