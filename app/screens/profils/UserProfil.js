@@ -12,9 +12,9 @@ export default class UserProfil extends React.Component{
 
            <SafeAreaView style={styles.container}>
 
-                {/* <Image style={styles.baloo} source={require("../../assets/images/.png")} /> */}
+                <Image source={require("assets/images/PDP.png")} />
                 <View style={styles.profilIdContainer}>
-                <View style={[styles.profilSetings, styles.gap]}>
+                <View style={[styles.profilSettings, styles.gap]}>
 
 
       {/* <Text style={styles.text}>Inside</Text> */}
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
         backgroundColor:'black',
 
     },
-    profilSetings:{
+    profilSettings:{
         flex:1,
         width:'100%',
         
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     },
 
     profilPics:{
-        flex: 1,
+       
         
         width: 130,
         height: 130,
