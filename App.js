@@ -11,18 +11,20 @@ import CVerifSignupCampoo from './app/screens/CVerifSignupCampoo';
 import MdpOMailCampoo from './app/screens/MdpOMailCampoo';
 import HomeFeedCampoo from './app/screens/HomeFeedCampoo';
 import UserProfil from './app/screens/profils/UserProfil';
-
+import ChooseTags from './app/screens/profils/ChooseTags';
+import PickerCampoo from './app/components/PickerCampoo';
 // La navigation se mettra en place via react-navigation 
 
 export default class App extends React.Component { 
 
-  render() {
+  render() { 
 
     return (
-
+      // <PickerCampoo/>
       //<Navigator /> 
       // <HomeFeedCampoo/>
-   <UserProfil/> 
+      <ChooseTags/>
+  //  <UserProfil/> 
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
       //<ScreenLoginPage/>      

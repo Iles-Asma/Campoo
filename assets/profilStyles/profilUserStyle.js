@@ -4,13 +4,12 @@ const styles ={
     container: {
  
        flex: 1,
+       marginLeft:10,
+       marginRight:15,
         position:'relative',
        flexDirection: 'column',
         backgroundColor:'#fff',
          alignItems: 'center',
-        // justifyContent: 'center',
- 
- 
     },
     // gap:{
     //     marginRight: 10,
@@ -31,8 +30,6 @@ const styles ={
     profilInfoContainer:{
         flex:0,
         height:'10%',
-        // flex:10,
-        
         width:'100%',
       
         alignItems: 'center',
@@ -42,8 +39,7 @@ const styles ={
     },
     profilSettings:{
         flex:1,
-        width:'100%',
-        
+        width:'100%',   
         position:'relative',
         justifyContent: 'center',
         alignItems: 'center',
@@ -52,13 +48,9 @@ const styles ={
     },
 
     profilPics:{
-       
-        
         width: 130,
         height: 130,
         borderRadius: 130 / 2,
-      
-        // backgroundColor:'black',
     },
     profilReglage:{
         width: 25,
@@ -91,8 +83,8 @@ const styles ={
         width:'100%',
         
         position:'relative',
-        paddingLeft:10,
-        paddingRight:15,
+        // paddingLeft:10,
+        // paddingRight:15,
         justifyContent: 'space-between',
         backgroundColor:'',
 
@@ -108,8 +100,8 @@ const styles ={
         
     },
     bioBloc:{
-        flex:0.9,
-        width:20,
+        
+        width:'70%',
         alignSelf:'center',
         fontSize:14,
         
@@ -118,11 +110,28 @@ const styles ={
        
        
     },
-    tagTitle:{
-        flex:0,
-        paddingLeft:15,
+    tagsContainer:{
+        flex:1,
         width:'100%',
-        justifyContent: 'flex-start'
+        marginTop:5,
+ 
+  
+    
+    },
+    tagsContent:{
+    flex:0,
+    width:'100%',
+    marginBottom:25,
+    flexDirection:'row',
+    justifyContent:'space-between',
+   
+    
+    },
+    tagTitle:{
+        height:30,
+        marginTop:10,
+        width:'100%',
+       
     }
 
 
