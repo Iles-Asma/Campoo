@@ -14,7 +14,7 @@ export default class HomeFeedCampoo extends React.Component{
                  <PostCampoo/>
                  <PostCampoo/>
                  <PostCampoo/>
-                 <PostCampoo/>
+                 
 
                                
               </ScrollView>

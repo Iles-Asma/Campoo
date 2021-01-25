@@ -16,19 +16,30 @@ export default class CVerifSignupCampoo extends React.Component {
 
         return (
 
+
+           // code de verification 
+
+           // safeAreaview : zone de securite pour telephone a encoche 
+
             <SafeAreaView style={styles.container}>
 
+              
+                <Image style={styles.logoCampoo} source={require("../../assets/images/logoCampoo.png")}/>
 
-                <Image style={styles.logoCampoo} source={require("../../assets/images/logoCampoo.png")} />
                 <Image style={styles.baloo} source={require("../../assets/images/Blob-baloo-phone.png")} />
 
                 <View style={styles.CfView}>
-                    <LabelCampoo style={styles.CfLabel}>Code de vérification</LabelCampoo>
-                    <Text style={styles.textCf}>Malgré son manque de mains, Baloo, est parvenu à t’envoyer un code de vérification par mail.</Text>
-                    <InputCampooSignup style={styles.InputView} />
+
+                    <LabelCampoo style={styles.codeVerif_Label}>Code de vérification</LabelCampoo>
+
+                    <Text style={styles.codeVerif_Text}>Malgré son manque de mains, Baloo, est parvenu à t’envoyer un code de vérification par mail.</Text>
+
+                    <InputCampooSignup style={styles.codeVerif_Input}/>
 
                     <ButtonCampoo style={styles.button}>Valider</ButtonCampoo>
+                    
                     <SecondaryButtonCampoo style={styles.resend}>Renvoyer un e-mail</SecondaryButtonCampoo>
+
                     <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() }>retour</SecondaryButtonCampoo>
 
                 </View>
@@ -65,13 +76,13 @@ const styles = StyleSheet.create({
 
     },
 
-    InputView: {
+    codeVerif_Input: {
 
         alignSelf: 'center',
 
     },
 
-    CfLabel: {
+    codeVerif_Label: {
         marginBottom: 9,
 
     },
@@ -104,7 +115,7 @@ const styles = StyleSheet.create({
         top: 440,
     },
 
-    textCf: {
+    codeVerif_Text: {
 
         fontSize: 12,
         textAlign: 'left',

@@ -7,9 +7,9 @@ import NameSignupCampoo from "./app/screens/NameSignupCampoo";
 import DobSignupCampoo from "./app/screens/DobSignupCampoo";
 import PseudoSignupCampoo from './app/screens/PseudoSignupCampoo';
 import MdpSignupCampoo from "./app/screens/MdpSignupCampoo";
-import CVerifSignupCampoo from './app/screens/CVerifSignupCampoo';
+import CodeVerifSignupCampoo from './app/screens/CodeVerifSignupCampoo';
 import MdpOMailCampoo from './app/screens/MdpOMailCampoo';
-import HomeFeedCampoo from './app/screens/HomeFeedCampoo';
+ import HomeFeedCampoo from './app/screens/HomeFeedCampoo';
 import EventCampoo from './app/screens/EventCampoo';
 
 // La navigation se mettra en place via react-navigation 

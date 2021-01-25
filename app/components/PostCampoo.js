@@ -7,9 +7,10 @@ export default class HomeFeedCampoo extends React.Component{
 
         return(
 
+
+              //  post integrale
              
                 <View style={styles.post_Item}>
-
 
                     <View style={styles.post_AssoProfile}>
 
@@ -19,13 +20,20 @@ export default class HomeFeedCampoo extends React.Component{
 
                     </View>
 
+                        {/* description du poste  */}
+
                             <Text style= {styles.post_description}>Belle photo!</Text>
+
+ 
+                      {/* container de l'image du post */}
 
                     <View style={styles.image_Container}>
 
                             <Image style={styles.post_Image} source={require("../../assets/images/imagePost-Test.png")}/>
                 
                     </View>
+
+                    {/* container partage et ajouter un commentaire  au post */}
 
 
                     <View style={styles.reaction_container}>
@@ -104,6 +112,8 @@ const styles = StyleSheet.create ({
         
     },
 
+    // container ( div ) contenant l'image 
+
     image_Container:{
         width:344,
         alignSelf:'center',
@@ -115,6 +125,8 @@ const styles = StyleSheet.create ({
        
 
     },
+
+    // l'image en elle meme
  
 
     post_Image:{
@@ -123,6 +135,9 @@ const styles = StyleSheet.create ({
      
     
     },
+
+
+    
 
     reaction_container:{
         flex:1,
