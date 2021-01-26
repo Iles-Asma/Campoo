@@ -23,8 +23,8 @@ export default class App extends React.Component {
       // <PickerCampoo/>
       //<Navigator /> 
       // <HomeFeedCampoo/>
-      <ChooseTags/>
-  //  <UserProfil/> 
+      // <ChooseTags/>
+   <UserProfil/> 
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
       //<ScreenLoginPage/>      

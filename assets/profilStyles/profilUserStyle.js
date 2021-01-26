@@ -11,9 +11,6 @@ const styles ={
         backgroundColor:'#fff',
          alignItems: 'center',
     },
-    // gap:{
-    //     marginRight: 10,
-    // },
     colorViolet:{
         color:'#4D3D64'
     },
@@ -57,7 +54,7 @@ const styles ={
         height: 25,
         position:'absolute',
         right:75,
-        
+       
         
 
     },
@@ -81,20 +78,21 @@ const styles ={
         flexDirection:'row',
         height:'35%',
         width:'100%',
-        
+        alignItems:'center',
         position:'relative',
         // paddingLeft:10,
         // paddingRight:15,
-        justifyContent: 'space-between',
+        
+        // justifyContent: 'space-between',
         backgroundColor:'',
 
     },
     iconsBat:{
         flex:0,
-        position:'relative',
-        left:7,
+        // position:'relative',
+        // left:7,
         alignSelf:'center',
-       
+       marginLeft:10,
         width: 75,
         height: 65,
         
@@ -102,34 +100,40 @@ const styles ={
     bioBloc:{
         
         width:'70%',
+        height:'100%',
         alignSelf:'center',
         fontSize:14,
-        
+        marginLeft:25,
         marginTop:15,
         textAlign:'justify',
+        flexShrink: 1, 
        
        
     },
     tagsContainer:{
         flex:1,
         width:'100%',
-        marginTop:5,
+        // marginTop:5,
+        
+       
  
   
     
     },
     tagsContent:{
-    flex:0,
+    flex:1,
     width:'100%',
     marginBottom:25,
     flexDirection:'row',
-    justifyContent:'space-between',
-   
+    flexWrap:'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
     
     },
     tagTitle:{
         height:30,
-        marginTop:10,
+        marginLeft:20,
+        marginTop:18,
         width:'100%',
        
     }
