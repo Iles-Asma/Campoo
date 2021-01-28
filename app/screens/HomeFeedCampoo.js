@@ -2,6 +2,8 @@ import React from 'react';
 import { ScrollView, StyleSheet, SafeAreaView,StatusBar,} from 'react-native';
 import PostCampoo from "../components/PostCampoo";
 
+
+
 export default class HomeFeedCampoo extends React.Component{
    
     render() {

@@ -1,7 +1,7 @@
 //import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import Navigator from './app/routes/HomeStackCampoo';
-import MailSignUpCampoo from "./app/screens/MailSignUpCampoo";
+// import MailSignUpCampoo from "./app/screens/MailSignUpCampoo";
 import BatSignupCampoo from "./app/screens/BatSignupCampoo";
 import NameSignupCampoo from "./app/screens/NameSignupCampoo";
 import DobSignupCampoo from "./app/screens/DobSignupCampoo";
@@ -12,6 +12,7 @@ import MdpOMailCampoo from './app/screens/MdpOMailCampoo';
 import HomeFeedCampoo from './app/screens/HomeFeedCampoo';
 import EventCampoo from './app/screens/EventCampoo';
 
+
 // La navigation se mettra en place via react-navigation 
 
 export default class App extends React.Component { 
@@ -21,7 +22,7 @@ export default class App extends React.Component {
     return (
 
       //<Navigator />
-      <HomeFeedCampoo/>
+     <HomeFeedCampoo/>
       //<EventCampoo/>
     
       // <MailSignupCampoo />

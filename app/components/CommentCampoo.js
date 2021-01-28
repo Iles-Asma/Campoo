@@ -12,6 +12,16 @@ export default class CommentCampoo extends React.compoment{
 
             <View style={styles.comment_Container}>
 
+                <View>
+
+                    <Image style={styles.user_Profile }       />
+                    <Text>  
+
+                    </Text>
+
+
+                </View>
+
                 <Text style={styles.comment_Text}>
 
                 </Text>
@@ -43,6 +53,8 @@ const styles = StyleSheet.create({
     },
 
     comment_Text:{
+
+
         
 
     }

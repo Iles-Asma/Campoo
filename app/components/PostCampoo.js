@@ -1,5 +1,6 @@
 import React from 'react';
-import {  Text, View, Image, StyleSheet,} from 'react-native';
+import {  Text, View, Image, StyleSheet,} from 'react-native'
+import SvgComponent from '../components/SvgComponent'
 
 export default class HomeFeedCampoo extends React.Component{
    
@@ -40,7 +41,7 @@ export default class HomeFeedCampoo extends React.Component{
 
                             <Image style={styles.post_Reaction} source={require("../../assets/images/Bouton-commentaire.png")}/>
 
-                            <Image style={styles.post_Reaction} source={require("../../assets/images/Boutton-partage.png")}/>
+                            <SvgComponent style={styles.post_Reaction}/>
 
                     </View>
                    
