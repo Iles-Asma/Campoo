@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import { StyleSheet, SafeAreaView,ScrollView, View, Text } from 'react-native';
+import { StyleSheet,StatusBar, SafeAreaView,ScrollView, View, Text } from 'react-native';
 import UserTags from '../../components/UserTags';
 
 export default class ChooseTags extends React.Component {
@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
     container: {
  
         flex: 1,
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         // marginLeft:15,
         // marginRight:15,
          position:'relative',

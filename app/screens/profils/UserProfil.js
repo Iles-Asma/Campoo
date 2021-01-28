@@ -3,8 +3,8 @@
 import React from 'react';
 
 import { StyleSheet,ScrollView,TextInput, Image,ImageBackground, StatusBar , SafeAreaView, View, Text } from 'react-native';
-
-import UserTags from '../../components/UserTags';
+import SettingsSvg from '../../components/SettingsSvg';
+import Tags from '../../components/Tags';
 // L'importation du style
 import styles from '../../../assets/profilStyles/profilUserStyle.js';
  
@@ -27,7 +27,7 @@ export default class UserProfil extends React.Component{
                  <Image source={require("../../../assets/imgProfil/Badeaubleu.png")} style={styles.profilPics}></Image>
 
             
-                 <Image  source={require("../../../assets/imgProfil/reglage.png")} style={[styles.profilReglage, styles.gap]}></Image>
+                 <SettingsSvg style={[styles.profilReglage, styles.gap]}  />
 
 
 
@@ -57,35 +57,19 @@ export default class UserProfil extends React.Component{
 
     <View style={styles.tagsContainer}>
         <View style={styles.tagsContent}>
-             <UserTags/>
-             <UserTags/>
-             <UserTags/>      
+             <Tags/>
+             <Tags/>
+             <Tags/>      
        
 
     
-             <UserTags/>
-             <UserTags/>
-             <UserTags/>      
+             <Tags/>
+             <Tags/>
+             <Tags/>      
         </View>
         
      </View>
 
-
- {/* <ScrollView showsVerticalScrollIndicator={false} >
-                         
-{/* Les differents tags */}
-                {/* <View style={styles.tagsContainer}>
-        <View style={styles.tagsContent}>
-             <UserTags/>
-             <UserTags/>
-             <UserTags/>      
-      
-             <UserTags/>
-             <UserTags/>
-             <UserTags/>      
-       </View>
-       </View>
-    </ScrollView> */} 
             </SafeAreaView>
 
 

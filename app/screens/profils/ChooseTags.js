@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { StyleSheet, SafeAreaView,ScrollView, View, Text } from 'react-native';
-import UserTags from '../../components/UserTags';
+import Tags from '../../components/Tags';
 
 export default class ChooseTags extends React.Component {
 
@@ -21,26 +21,29 @@ export default class ChooseTags extends React.Component {
 
                 <View style={styles.tagsContainer}>
         <View style={styles.tagsContent}>
-             <UserTags/>
-             <UserTags/>
-             <UserTags/>      
+             <Tags/>
+             <Tags/>
+             <Tags/>      
       
-             <UserTags/>
-             <UserTags/>
-             <UserTags/>      
+             <Tags/>
+             <Tags/>
+             <Tags/>      
        
-             <UserTags/>
-             <UserTags/>
-             <UserTags/>      
+             <Tags/>
+             <Tags/>
+             <Tags/>      
     
-             <UserTags/>
-             <UserTags/>
-             <UserTags/>      
+             <Tags/>
+             <Tags/>
+             <Tags/>      
        
-             <UserTags/>
-             <UserTags/>
-             <UserTags/>      
-   
+             <Tags/>
+             <Tags/>
+             <Tags/> 
+                  
+             <Tags/>
+             <Tags/>
+             <Tags/>  
              </View>
              </View>
              

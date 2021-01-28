@@ -11,10 +11,18 @@ import MdpSignupCampoo from '../screens/MdpSignupCampoo';
 import CVerifSignupCampoo from '../screens/CVerifSignupCampoo';
 import UserProfil from '../screens/profils/UserProfil';
 import ChooseTags from '../screens/profils/ChooseTags';
+import CategoriesTags from '../screens/CategoriesTags';
  
 // // fonction qui sert a cree une nouvelle stack de navigation , ou l'on passe un objet dans lequel on dit quel different ecran nous voulons enregistrer
 
 const screens = {
+// La page ou le trois categories de tags seront affiché
+  ScreenLoginCampoo: {
+    screen: CategoriesTags,
+    navigationOptions: {
+      headerShown: false,
+    }
+  },
 
   // Screens PROFIL
   ScreenLoginCampoo: {

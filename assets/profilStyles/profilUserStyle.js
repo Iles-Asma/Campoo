@@ -6,6 +6,7 @@ const styles ={
        flex: 1,
        marginLeft:10,
        marginRight:15,
+       paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         position:'relative',
        flexDirection: 'column',
         backgroundColor:'#fff',

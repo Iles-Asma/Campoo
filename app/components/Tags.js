@@ -2,20 +2,35 @@
 
 import React from 'react';
 
-import { StyleSheet, View, Text} from 'react-native';
+import { StyleSheet,TouchableOpacity, View, Text} from 'react-native';
 
-export default class UserTags extends React.Component
+export default class Tags extends React.Component
 
 {
+    constructor(props) {
+        super(props);
+        this.state = {
+          bgColor: ""
+        }
+      }
+    
+    
+      boxClick = (e) => {
+        this.setState({
+          bgColor: "red"
+        })
+      }
+    
+    
         render()
 
     {
 
         return(
         // creation du composant unique tag static
-           <View style={styles.tagShape}> 
+           <TouchableOpacity style={styles.tagShape} > 
            {/* <Text style={styles.tagName} >Action</Text> */}
-           </View>
+           </TouchableOpacity>
       
            
         );
@@ -28,7 +43,7 @@ const styles = StyleSheet.create({
 
 // La forme du tags
     tagShape: {
-        height:100,
+        height:50,
         flex:0,
         justifyContent:'center',
         alignItems:'center',
@@ -37,9 +52,9 @@ const styles = StyleSheet.create({
         marginHorizontal:10 ,
       
          marginBottom:20,
-        borderRadius: 10,
-        borderWidth: 5,
-         borderColor:'#4D3D64', 
+        borderRadius: 50,
+        
+         backgroundColor:'#4D3D64', 
         // backgroundColor:'#FFEEE9',
        
        

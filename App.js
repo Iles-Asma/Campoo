@@ -13,6 +13,7 @@ import HomeFeedCampoo from './app/screens/HomeFeedCampoo';
 import UserProfil from './app/screens/profils/UserProfil';
 import ChooseTags from './app/screens/profils/ChooseTags';
 import PickerCampoo from './app/components/PickerCampoo';
+import CategoriesTags from './app/screens/CategoriesTags';
 // La navigation se mettra en place via react-navigation 
 
 export default class App extends React.Component { 
@@ -23,8 +24,9 @@ export default class App extends React.Component {
       // <PickerCampoo/>
       //<Navigator /> 
       // <HomeFeedCampoo/>
-      // <ChooseTags/>
-   <UserProfil/> 
+      // <CategoriesTags/>
+      <ChooseTags/>
+  //  <UserProfil/> 
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
       //<ScreenLoginPage/>      
