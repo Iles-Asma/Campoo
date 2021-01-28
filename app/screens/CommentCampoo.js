@@ -1,5 +1,7 @@
 import React from 'react'
-import { View, StyleSheet} from 'react-native'
+import { StyleSheet, StatusBar, ScrollView} from 'react-native';
+
+
 
  
 
@@ -9,32 +11,40 @@ export default class CommentCampoo extends React.Component {
 
         return(
 
+            <ScrollView style={styles.container} showsVerticalScrollIndicator={false}> 
 
 
+            </ScrollView>
 
-
-
+            
+          
 
         );
-
-
 
 
     }
 
 
 
-
-}
-
-
-const style = StyleSheet.create ({
-
-   
+};
 
 
+const styles = StyleSheet.create({
 
 
+     container: {
+        flex: 1,
+        //  pour detecter la platform
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        flexDirection: 'column',
+        justifyContent:'center',
+        
+        alignItems:'center',
 
 
-})
+    },
+
+
+});
+
+

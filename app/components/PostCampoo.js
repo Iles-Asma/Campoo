@@ -1,6 +1,8 @@
 import React from 'react';
-import {  Text, View, Image, StyleSheet,} from 'react-native'
-import SvgComponent from '../components/SvgComponent'
+import { Text, View, Image, StyleSheet,} from 'react-native';
+import  {COLORS}  from "../../assets/themes/ThemeCampoo";
+
+
 
 export default class HomeFeedCampoo extends React.Component{
    
@@ -41,7 +43,7 @@ export default class HomeFeedCampoo extends React.Component{
 
                             <Image style={styles.post_Reaction} source={require("../../assets/images/Bouton-commentaire.png")}/>
 
-                            <SvgComponent style={styles.post_Reaction}/>
+                            
 
                     </View>
                    
@@ -80,13 +82,12 @@ const styles = StyleSheet.create ({
         width:355,
         height: '100%',
         borderWidth:1,
-        borderColor:'#DCD5E7',
+        borderColor:COLORS.primary,
         marginTop:9,
         borderRadius:9,
         
 
     },
-
    
     post_AssoProfile:{
         marginTop:11,
