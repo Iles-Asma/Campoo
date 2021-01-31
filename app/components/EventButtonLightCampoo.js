@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Text, StyleSheet, TouchableOpacity, View} from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, View, TouchableNativeFeedback} from 'react-native';
 
 export default class EventButtonCampoo extends React.Component {
 
@@ -11,11 +11,11 @@ export default class EventButtonCampoo extends React.Component {
 
             
        
-                <TouchableOpacity style={[this.props.style]}  onPress={this.props.onPress}>
+                <TouchableNativeFeedback  onPress={this.props.onPress}>
                     <View style={styles.touchableEvent}>
                         <Text style={styles.EventText}>{this.props.children}</Text>
                     </View>
-                </TouchableOpacity>
+                </TouchableNativeFeedback>
 
         );
 
@@ -29,16 +29,13 @@ const styles = StyleSheet.create ({
         
         textAlign :'center',
         alignSelf:'center',
-        marginTop:12,
-       
+        marginTop:12,       
         fontSize:16,
         color:'#4D3D64',
   
      },
      touchableEvent: {
-        
-        
-         color: "white", 
+         color:'#4D3D64',
          borderRadius:5, 
          width:170, 
          height:50, 
@@ -47,21 +44,7 @@ const styles = StyleSheet.create ({
         
         },
   
-     
 
-     button :{
-        color: "white", 
-        borderRadius:5, 
-        width:170, 
-        height:50, 
-       
-        
-    },
-
-
-   
-
- 
 
  
 });

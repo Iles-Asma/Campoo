@@ -10,10 +10,22 @@ export default class EventCampoo extends React.Component{
         return(
 
             <SafeAreaView style={styles.container}>
-                 <View style={styles.event_Buttons}>
 
-                         <EventButtonCampoo>Evenements du Campus</EventButtonCampoo>
-                       <EventButtonCampooLight style={styles.button_User}>Tes evenements</EventButtonCampooLight>
+                 <View style={styles.event_ButtonsContainer}>
+
+
+
+
+                      <View style={styles.event_Buttons}>
+
+                          <EventButtonCampoo>Evenements du Campus</EventButtonCampoo>
+
+                           <EventButtonCampooLight style={styles.button_User}>Tes evenements</EventButtonCampooLight> 
+
+
+                      </View>
+
+                         
 
 
                  </View>
@@ -27,6 +39,7 @@ export default class EventCampoo extends React.Component{
                     <Image style={styles.event_Image} source={require("../../assets/images/imagePost-Test.png")}/>
 
                     <View style={styles.event_Description} >
+                    <Text style={styles.TitleEvent} >TITRE DE L'EVENEMENT</Text>
 
                         <Text style={styles.event_Text} >
                         Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -64,8 +77,12 @@ export default class EventCampoo extends React.Component{
                   <View style={styles.event_Container}>
 
                     <Image style={styles.event_Image} source={require("../../assets/images/imagePost-Test.png")}/>
+                   
 
                     <View style={styles.event_Description} >
+                    <Text style={styles.TitleEvent}>TITRE DE L'EVENEMENT</Text>
+
+                        
 
                         <Text style={styles.event_Text} >
                         Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -75,6 +92,7 @@ export default class EventCampoo extends React.Component{
                         <View style={styles.Meta_like}>
                             <View>
                                <Text style={styles.DataHeure} >05/09 - 17h20</Text>
+                               
                                <Text style={styles.DataHeure} >Lieu- Adresse</Text>
 
                             </View>
@@ -151,49 +169,49 @@ const styles =  StyleSheet.create ({
 
     },
 
+    event_ButtonsContainer:{
+        width: '100%',
+        // backgroundColor: 'red',
+        height:70,        
+
+    },
+
     event_Buttons:{
-        marginTop:10,
         flex:1,
         flexDirection:'row',
-        justifyContent: 'space-evenly',
-
-        width: "100%",
-        height:10,
-        backgroundColor:'white',
-
-        zIndex:999,
-        
-       
-
-
-        
+        alignItems:'center',
+        alignSelf:'center',
+        justifyContent:'space-around',
+        // borderWidth:1,
+        height:60,
+        width:355,
 
     },
 
     button_User:{
 
         backgroundColor:'white',
+       
+
+    },
+
+    TitleEvent:{
+        fontSize:25,
+        
+        paddingLeft:-10,
 
     },
 
     event_Container:{
-        marginTop:40,
+        marginTop:20,
         borderWidth:2,
         borderColor:'#4D3D64',
         borderRadius:5,
         flex:1,
         alignSelf:'center',
         borderWidth:1,
-
-
-
         width:345,
-        
-        height:380,
-
-
-
-
+        height:390,
     },
 
     event_Image:{
@@ -206,30 +224,41 @@ const styles =  StyleSheet.create ({
     },
 
     event_Description:{
-        margin:10,
-
+        marginLeft:10,
+        marginRight:10,
+       
     },
 
     event_Text:{
-        marginBottom:11,
+        
+       
 
     },
 
     DataHeure:{
+        marginTop:1,
         fontSize:20,
+        
 
     },
 
     like_Button: {
         width:36,
         height:36,
+        marginTop:10,
+       
 
     },
 
     Meta_like:{
+        height:41,
+        width:323,
         flex:1,
         flexDirection:'row',
         justifyContent:"space-between", 
+       
+       
+      
 
     }
 
