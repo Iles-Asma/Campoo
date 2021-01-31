@@ -31,6 +31,7 @@ inputStyleBio:{
     borderWidth:3,
     marginTop:10,
 borderRadius:30,
+paddingTop:15,
 padding:15,
 fontSize:17,
 color:'#4D3D64',
