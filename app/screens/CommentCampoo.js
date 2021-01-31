@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, StatusBar, ScrollView, SafeAreaView} from 'react-native';
+import { StyleSheet, StatusBar, ScrollView, SafeAreaView, Platform} from 'react-native';
 import PostCampoo from '../components/PostCampoo';
 import UserCommentCampoo from '../components/UserCommentCampoo';
 

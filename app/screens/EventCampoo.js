@@ -1,6 +1,6 @@
 import React from 'react'
 import EventButtonCampoo from '../components/EventButtonCampoo';
-import { ScrollView, StyleSheet, SafeAreaView,StatusBar,View, Image,Text} from 'react-native';
+import { ScrollView, StyleSheet, SafeAreaView,StatusBar,View, Image,Text, Platform} from 'react-native';
 import EventButtonCampooLight from '../components/EventButtonLightCampoo';
 
 export default class EventCampoo extends React.Component{

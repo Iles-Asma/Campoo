@@ -1,5 +1,5 @@
 import React from 'react'
-import {SafeAreaView, StyleSheet, Image, View,StatusBar,Text} from 'react-native';
+import {SafeAreaView, StyleSheet, Image, View,StatusBar,Text, Platform} from 'react-native';
 
 
 

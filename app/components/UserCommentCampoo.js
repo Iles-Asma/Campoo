@@ -91,14 +91,7 @@ const styles = StyleSheet.create ({
 
     user_commentContainer:{
 
-
         alignSelf:'center',
-        
-
-
-        
-        
-
 
         width:284,
         height:'auto',

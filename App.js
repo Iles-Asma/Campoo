@@ -25,9 +25,9 @@ export default class App extends React.Component {
 
       //<Navigator />
      //<HomeFeedCampoo/>
-      //<EventCampoo/>
+      <EventCampoo/>
       //<CommentCampoo/>
-      <EventDetailCampoo/>
+      //<EventDetailCampoo/>
     
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
