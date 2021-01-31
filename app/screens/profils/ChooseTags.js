@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import { StyleSheet, StatusBar,SafeAreaView,ScrollView, View, Text } from 'react-native';
+import { StyleSheet,TouchableOpacity ,StatusBar,SafeAreaView,ScrollView, View, Text } from 'react-native';
 import Tags from '../../components/Tags';
 import TitlePage from '../../components/TitlePage';
 export default class ChooseTags extends React.Component {
@@ -13,8 +13,19 @@ export default class ChooseTags extends React.Component {
         return (
 
             <SafeAreaView style={styles.container}>
-            {/* Titre de l'onglet */}
-              <TitlePage >Choisis un tag</TitlePage> 
+            
+              {/* La navigation du haut */}
+           <View style={styles.topNav}> 
+           
+           <TouchableOpacity onPress=''>
+           <Text> Annuler</Text>
+            </TouchableOpacity> 
+             <Text  style={styles.secondTitle}>Modification du Profil</Text>
+            <TouchableOpacity onPress=''>
+           <Text> OK</Text>
+            </TouchableOpacity> 
+ 
+             </View>
  <ScrollView showsVerticalScrollIndicator={false} >
                          
 {/* Les differents tags */}
@@ -67,6 +78,9 @@ const styles = StyleSheet.create({
          position:'relative',
    // test pour detecter la platform
    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+   marginLeft:15,
+   marginRight:15,
+   
    flexDirection: 'column',
          backgroundColor:'#fff',
           alignItems: 'center',
@@ -90,5 +104,18 @@ const styles = StyleSheet.create({
         marginTop:10,
         width:'100%',
        
+    },
+    secondTitle:{
+        fontSize:20,
+        fontWeight:'bold',
+        color:'#4D3D64',
+    },
+    topNav:{
+        flex:0,
+        justifyContent:"space-between",
+        width:'100%',
+        height:35,
+        flexDirection:'row',
+    
     },
 });

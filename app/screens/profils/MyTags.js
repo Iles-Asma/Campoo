@@ -15,7 +15,7 @@ export default class MyTags extends React.Component {
 
             <SafeAreaView style={styles.container}>
             {/* Titre de l'onglet */}
-              <TitlePage>Tes Tags</TitlePage>
+              <TitlePage>Tes tags</TitlePage>
 
    <View style={styles.myTagsContainer} > 
             
@@ -52,10 +52,14 @@ export default class MyTags extends React.Component {
             
             </ScrollView>
            </View>
+
+           {/*Texte additionnel informatif  */}
            <View style={styles.infoModif}>
                 <Text style={styles.infoTags}>Tu peux supprimer tes tags en appuyant dessus !</Text>
+
+                {/* Composant btn */}
              <View style={styles.btnModifcation}>
-            <ButtonTag> Modifies tes tags </ButtonTag>
+            <ButtonTag> Ajouter des tags </ButtonTag>
             </View>
            </View>
             </SafeAreaView>
@@ -65,7 +69,7 @@ export default class MyTags extends React.Component {
     }
 
 }
-
+// style generale
 const styles = StyleSheet.create({
 
     container: {

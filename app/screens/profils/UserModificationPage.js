@@ -11,77 +11,88 @@ import InputModifProfil from '../../components/InputModifProfil';
 import InputBioProfil from '../../components/InputBioProfil';
  
 import ButtonTag from '../../components/ButtonTag';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default class UserModificationPage extends React.Component{
    
     render() {  
        
         return(
+            // contenu generale
 
            <SafeAreaView style={styles.container}>
-{/* Contenaire  */}
+
+           {/* La navigation du haut */}
+           <View style={styles.topNav}> 
+           
+          <TouchableOpacity onPress=''>
+          <Text> Annuler</Text>
+           </TouchableOpacity> 
+            <Text style={styles.secondTitle}>Modification du Profil</Text>
+           <TouchableOpacity onPress=''>
+          <Text> OK</Text>
+           </TouchableOpacity> 
+
+            </View>
+
+{/* Contenaire des information a modifier */}
 <ScrollView showsVerticalScrollIndicator={false} >
+{/* Profil de l'image */}
             <View style={styles.profilModificationContainer}>
               
-                <View style={[styles.profilSettings, styles.gap]}>
-
-
-  
-    {/* Profil de l'image */}
+    
                  <Image source={require("../../../assets/imgProfil/Badeaubleu.png")} style={styles.profilPics}></Image>
-                  </View>
-               
+                   
                </View>
 
 
-               <View style={styles.modificationContent}> 
-               <LabelCampoo style={styles.nameLabel}>Pseudonyme</LabelCampoo>
+<View style={styles.modificationContent}> 
 
-              <InputModifProfil placeholder='Edudd77' />
+     <LabelCampoo style={styles.nameLabel}>Pseudonyme</LabelCampoo>
 
-       <Text style={styles.infoInput}>Ton pseudo doit rester raisonnable.</Text>
-       
-       <LabelCampoo style={styles.nameLabel}>Biographie Bio?</LabelCampoo>          
+    <InputModifProfil placeholder='Edudd77' />
+
+    <Text style={styles.infoInput}>Ton pseudo doit rester raisonnable.</Text>
+
+
+ <LabelCampoo style={styles.nameLabel}>Biographie Bio?</LabelCampoo>  
+
 <InputBioProfil placeholder='Decris toi :)'/>
 
 <Text style={styles.infoInput}>Ta bio doit te reflèter, ne soit pas vulgaire!</Text>
 
+
+{/* Iput Option */}
 <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo> 
 
 <PickerBatiments/>
+{/* Parti Modification de tags */}
 
-
-<LabelCampoo style={styles.nameLabel}>Modifies tes tags :</LabelCampoo>
+<LabelCampoo style={styles.nameLabel}> Tes tags :</LabelCampoo>
 <View style={styles.tagsContainer}>
-        <View style={styles.tagsContent}>
+     <View style={styles.tagsContent}>
 
          
 
-        <Tags> + Tag</Tags>
-            <Tags> + Tag</Tags>
-            <Tags> + Tag</Tags>     
+        <Tags> x Tag</Tags>
+        <Tags> x Tag</Tags>
+        <Tags> x Tag</Tags>     
       
-           <Tags> + Tag</Tags>
-           <Tags> + Tag</Tags>
-          <Tags> + Tag</Tags> 
-        </View>
+        <Tags> x Tag</Tags>
+        <Tags> x Tag</Tags>
+        <Tags> x Tag</Tags> 
         
-     </View>
-<View style={styles.btnContainer} >
-<ButtonTag> Tes tags </ButtonTag>
+    </View>
 </View>
-               </View> 
 
-                 
+    <View style={styles.btnContainer} >
+<ButtonTag> Modifies es tags </ButtonTag>
+    </View>
 
-  
-            
-{/* les 6 tags figurants sur le profil utilisateur */}
 
-    
+ </View>
      </ScrollView>
-
-            </SafeAreaView>
+</SafeAreaView>
 
 
 
@@ -171,6 +182,19 @@ const styles = StyleSheet.create({
         marginTop:10,
         width:'100%',
        
+    },
+    secondTitle:{
+        fontSize:20,
+        fontWeight:'bold',
+        color:'#4D3D64',
+    },
+    topNav:{
+        flex:0,
+        justifyContent:"space-between",
+        width:'100%',
+        height:35,
+        flexDirection:'row',
+    
     },
 
 

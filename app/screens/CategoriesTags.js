@@ -16,11 +16,11 @@ export default class CategoriesTags extends React.Component {
 
             <SafeAreaView style={styles.container}>
             {/* Titre de l'onglet */}
-            <Text style={styles.titleText}>Choisis une Catégorie</Text> 
+            <Text style={styles.titleText}>Choisis une catégorie</Text> 
               
  <ScrollView showsVerticalScrollIndicator={false} >
                          
-{/* Les differents tags */}
+{/* Les differentes categories de tags */}
 
                 <View style={styles.categorieContainer}>
 
@@ -48,9 +48,6 @@ export default class CategoriesTags extends React.Component {
              <Image style={styles.categorieShape}  source={require("../../assets/categories/art.png")}  ></Image>
         
              </TouchableOpacity>
-             {/* <Categorie> </Categorie>
-             <Categorie> </Categorie>
-             <Categorie> </Categorie>         */}
    
  
              </View>

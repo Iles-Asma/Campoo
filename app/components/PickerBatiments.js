@@ -64,7 +64,7 @@ export default class PickerBatiments extends React.Component {
           
       
     }
-  //export default  PickerCampoo;
+
 
   const styles = StyleSheet.create({
     container: {
@@ -80,7 +80,7 @@ export default class PickerBatiments extends React.Component {
         paddingTop: 13,
         paddingHorizontal: 10,
         paddingBottom: 12,
-        borderWidth: 5,
+        borderWidth: 3,
         borderColor:'#4D3D64',
         borderRadius: 30,
         backgroundColor: 'white',

@@ -14,7 +14,7 @@ export default class InputModifProfil extends React.Component
     {
 
         return(
-        // creation du composant unique inpute static
+        // creation du composant unique input Profil static
         <TextInput style={[styles.inputStyle]}        placeholder={this.props.placeholder} maxLength={30}  
           />
         );
@@ -24,10 +24,10 @@ export default class InputModifProfil extends React.Component
 }
 
 const styles = StyleSheet.create({
-// La forme generale des titre
+// La forme generale des inputs
 inputStyle:{
     height:40,
-    borderWidth:5,
+    borderWidth:3,
 borderRadius:30,
 paddingLeft:15,
 fontSize:17,

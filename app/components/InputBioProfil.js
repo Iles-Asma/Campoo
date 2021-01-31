@@ -14,7 +14,7 @@ export default class InputBioProfil extends React.Component
     {
 
         return(
-        // creation du composant unique inpute static
+        // creation du composant unique bio static
         <TextInput style={styles.inputStyleBio}   multiline
         numberOfLines={3} placeholder={this.props.placeholder} maxLength={150} />
         );
@@ -24,11 +24,11 @@ export default class InputBioProfil extends React.Component
 }
 
 const styles = StyleSheet.create({
-// La forme generale des titre
+// La forme generale de la bio
 inputStyleBio:{
     height:200,
     width:'100%',
-    borderWidth:5,
+    borderWidth:3,
     marginTop:10,
 borderRadius:30,
 padding:15,
