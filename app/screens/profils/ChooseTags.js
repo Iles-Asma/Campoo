@@ -1,9 +1,9 @@
 'use strict';
 
 import React from 'react';
-import { StyleSheet, SafeAreaView,ScrollView, View, Text } from 'react-native';
+import { StyleSheet, StatusBar,SafeAreaView,ScrollView, View, Text } from 'react-native';
 import Tags from '../../components/Tags';
-
+import TitlePage from '../../components/TitlePage';
 export default class ChooseTags extends React.Component {
 
  
@@ -14,36 +14,38 @@ export default class ChooseTags extends React.Component {
 
             <SafeAreaView style={styles.container}>
             {/* Titre de l'onglet */}
-              <Text style={styles.titleText}>Choisis un tag</Text> 
+              <TitlePage >Choisis un tag</TitlePage> 
  <ScrollView showsVerticalScrollIndicator={false} >
                          
 {/* Les differents tags */}
 
                 <View style={styles.tagsContainer}>
         <View style={styles.tagsContent}>
-             <Tags/>
-             <Tags/>
-             <Tags/>      
+
+        <Tags> + Tag</Tags>
+            <Tags> + Tag</Tags>
+            <Tags> + Tag</Tags>     
       
-             <Tags/>
-             <Tags/>
-             <Tags/>      
-       
-             <Tags/>
-             <Tags/>
-             <Tags/>      
-    
-             <Tags/>
-             <Tags/>
-             <Tags/>      
-       
-             <Tags/>
-             <Tags/>
-             <Tags/> 
-                  
-             <Tags/>
-             <Tags/>
-             <Tags/>  
+           <Tags> + Tag</Tags>
+           <Tags> + Tag</Tags>
+          <Tags> + Tag</Tags> 
+
+          <Tags> + Tag</Tags>
+           <Tags> + Tag</Tags>
+            <Tags> + Tag</Tags>       
+         <Tags> + Tag</Tags>
+
+            <Tags> + Tag</Tags>
+            <Tags> + Tag</Tags>     
+      
+           <Tags> + Tag</Tags>
+           <Tags> + Tag</Tags>
+          <Tags> + Tag</Tags> 
+
+          <Tags> + Tag</Tags>
+           <Tags> + Tag</Tags>
+            <Tags> + Tag</Tags>       
+         
              </View>
              </View>
              
@@ -63,17 +65,12 @@ const styles = StyleSheet.create({
         flex: 1,
 
          position:'relative',
-
+   // test pour detecter la platform
+   paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+   flexDirection: 'column',
          backgroundColor:'#fff',
           alignItems: 'center',
          
-     },
-     titleText:{
-         height:55,
-         marginTop:20,
-         fontSize:25,
-         fontWeight:'500',
-         color:'#4D3D64'
      },
     tagsContainer:{
         flex:1,

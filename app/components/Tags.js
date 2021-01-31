@@ -7,20 +7,7 @@ import { StyleSheet,TouchableOpacity, View, Text} from 'react-native';
 export default class Tags extends React.Component
 
 {
-    constructor(props) {
-        super(props);
-        this.state = {
-          bgColor: ""
-        }
-      }
-    
-    
-      boxClick = (e) => {
-        this.setState({
-          bgColor: "red"
-        })
-      }
-    
+
     
         render()
 
@@ -29,7 +16,7 @@ export default class Tags extends React.Component
         return(
         // creation du composant unique tag static
            <TouchableOpacity style={styles.tagShape} > 
-           {/* <Text style={styles.tagName} >Action</Text> */}
+            <Text style={styles.tagName}>{this.props.children}</Text> 
            </TouchableOpacity>
       
            
@@ -63,6 +50,7 @@ const styles = StyleSheet.create({
     tagName:{
         fontSize:20,
         fontWeight:'bold',
+        color:'white'
     }
 
   

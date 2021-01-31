@@ -10,7 +10,9 @@ import PseudoSignupCampoo from '../screens/PseudoSignupCampoo';
 import MdpSignupCampoo from '../screens/MdpSignupCampoo';
 import CVerifSignupCampoo from '../screens/CVerifSignupCampoo';
 import UserProfil from '../screens/profils/UserProfil';
-import ChooseTags from '../screens/profils/ChooseTags';
+import ChooseTags from '../screens/profils/MyTags';
+import MyTags from '../screens/profils/ChooseTags';
+import UserModificationPage from '../screens/profils/UserModificationPage';
 import CategoriesTags from '../screens/CategoriesTags';
  
 // // fonction qui sert a cree une nouvelle stack de navigation , ou l'on passe un objet dans lequel on dit quel different ecran nous voulons enregistrer
@@ -25,13 +27,27 @@ const screens = {
   },
 
   // Screens PROFIL
-  ScreenLoginCampoo: {
+  ScreenLoginCampoo: { 
     screen: UserProfil,
     navigationOptions: {
       headerShown: false,
 
     }
 
+  },
+  ScreenLoginCampoo: {
+    screen: UserModificationPage,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+  },
+  ScreenLoginCampoo: {
+    screen: MyTags,
+    navigationOptions: {
+      headerShown: false,
+    }
   },
   ScreenLoginCampoo: {
     screen: ChooseTags,

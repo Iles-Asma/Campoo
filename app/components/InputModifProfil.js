@@ -1,0 +1,39 @@
+'use strict';
+
+import React from 'react';
+
+import { StyleSheet, View, TextInput} from 'react-native';
+
+export default class InputModifProfil extends React.Component
+
+{
+
+    
+        render()
+
+    {
+
+        return(
+        // creation du composant unique inpute static
+        <TextInput style={[styles.inputStyle]}        placeholder={this.props.placeholder} maxLength={30}  
+          />
+        );
+
+    }
+
+}
+
+const styles = StyleSheet.create({
+// La forme generale des titre
+inputStyle:{
+    height:40,
+    borderWidth:5,
+borderRadius:30,
+paddingLeft:15,
+fontSize:17,
+color:'#4D3D64',
+borderColor:'#4D3D64',
+},
+
+  
+})

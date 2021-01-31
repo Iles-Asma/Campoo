@@ -4,10 +4,11 @@ const styles ={
     container: {
  
        flex: 1,
+       paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
        marginLeft:10,
        marginRight:15,
-       paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        position:'relative',
+       
+        position:'relative', 
        flexDirection: 'column',
         backgroundColor:'#fff',
          alignItems: 'center',

@@ -3,7 +3,7 @@
 import React from 'react';
 import { StyleSheet,TouchableOpacity,StatusBar, SafeAreaView,ScrollView, Image,View, Text } from 'react-native';
 import Categorie from '../components/Categorie';
-
+// import TitlePage from '../../components/TitlePage';
 export default class CategoriesTags extends React.Component {
 
    

@@ -12,6 +12,9 @@ import MdpOMailCampoo from './app/screens/MdpOMailCampoo';
 import HomeFeedCampoo from './app/screens/HomeFeedCampoo';
 import UserProfil from './app/screens/profils/UserProfil';
 import ChooseTags from './app/screens/profils/ChooseTags';
+import MyTags from './app/screens/profils/MyTags';
+import UserModificationPage from './app/screens/profils/UserModificationPage';
+
 import PickerCampoo from './app/components/PickerCampoo';
 import CategoriesTags from './app/screens/CategoriesTags';
 // La navigation se mettra en place via react-navigation 
@@ -25,8 +28,10 @@ export default class App extends React.Component {
       //<Navigator /> 
       // <HomeFeedCampoo/>
       // <CategoriesTags/>
-      <ChooseTags/>
-  //  <UserProfil/> 
+      // <ChooseTags/>
+      // <MyTags/>
+      <UserModificationPage/>
+   /* <UserProfil/>  */
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
       //<ScreenLoginPage/>      
