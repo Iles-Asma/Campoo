@@ -4,7 +4,7 @@ import React from 'react';
 import { StyleSheet,StatusBar,TouchableOpacity, SafeAreaView,ScrollView, View, Text } from 'react-native';
 import Tags from '../../components/Tags';
 import TitlePage from '../../components/TitlePage';
-import ButtonTag  from "../../components/ButtonTag";
+import ButtonLarge  from "../../components/ButtonLarge";
 export default class MyTags extends React.Component {
 
  
@@ -59,7 +59,7 @@ export default class MyTags extends React.Component {
 
                 {/* Composant btn */}
              <View style={styles.btnModifcation}>
-            <ButtonTag> Ajouter des tags </ButtonTag>
+            <ButtonLarge style={styles.BgColor}> Ajouter des tags </ButtonLarge>
             </View>
            </View>
             </SafeAreaView>
@@ -126,5 +126,8 @@ const styles = StyleSheet.create({
      SizeOnScroll:{
          height:'7%',
      },
+     BgColor:{
+        backgroundColor:'#4D3D64',
+     }
      
 });

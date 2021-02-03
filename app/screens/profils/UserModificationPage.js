@@ -10,7 +10,7 @@ import LabelCampoo from "../../components/LabelCampoo";
 import InputModifProfil from '../../components/InputModifProfil';
 import InputBioProfil from '../../components/InputBioProfil';
  
-import ButtonTag from '../../components/ButtonTag';
+import ButtonLarge from '../../components/ButtonLarge';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default class UserModificationPage extends React.Component{
@@ -77,7 +77,7 @@ export default class UserModificationPage extends React.Component{
         <Tags> x Tag</Tags>
         <Tags> x Tag</Tags>
         <Tags> x Tag</Tags>     
-      
+       
         <Tags> x Tag</Tags>
         <Tags> x Tag</Tags>
         <Tags> x Tag</Tags> 
@@ -86,7 +86,7 @@ export default class UserModificationPage extends React.Component{
 </View>
 
     <View style={styles.btnContainer} >
-<ButtonTag> Modifies es tags </ButtonTag>
+<ButtonLarge> Modifies es tags </ButtonLarge>
     </View>
 
 

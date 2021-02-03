@@ -14,6 +14,8 @@ import ChooseTags from '../screens/profils/MyTags';
 import MyTags from '../screens/profils/ChooseTags';
 import UserModificationPage from '../screens/profils/UserModificationPage';
 import CategoriesTags from '../screens/CategoriesTags';
+import SettingPage from '../screens/settings/SettingPage';
+import ChangeName from '../screens/settings/ChangeName';
  
 // // fonction qui sert a cree une nouvelle stack de navigation , ou l'on passe un objet dans lequel on dit quel different ecran nous voulons enregistrer
 
@@ -25,7 +27,23 @@ const screens = {
       headerShown: false,
     }
   },
-
+    // Screens Settings
+    ScreenLoginCampoo: { 
+      screen: SettingPage,
+      navigationOptions: {
+        headerShown: false,
+  
+      }
+  
+    },
+    ScreenLoginCampoo: { 
+      screen: ChangeName,
+      navigationOptions: {
+        headerShown: false,
+  
+      }
+  
+    },
   // Screens PROFIL
   ScreenLoginCampoo: { 
     screen: UserProfil,
