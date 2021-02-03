@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text, Button } from 'react-native';
-import ButtonCampoo from "../components/ButtonCampoo";
-import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';
-import InputCampooSignup from '../components/InputCampooSignup';
-import LabelCampoo from '../components/LabelCampoo';
+import ButtonCampoo from "../../components/ButtonCampoo";
+import SecondaryButtonCampoo from '../../components/SecondaryButtonCampoo';
+import InputCampooSignup from '../../components/InputCampooSignup';
+import LabelCampoo from '../../components/LabelCampoo';
 
 export default class MdpSignupCampoo extends React.Component {
 

@@ -1,17 +1,17 @@
 import React from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
-import InputCampooSignup from "../components/InputCampooSignup"
-import ButtonCampoo from "../components/ButtonCampoo";
-import LabelCampoo from '../components/LabelCampoo';
-import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';
+import InputCampooSignup from "../../components/InputCampooSignup"
+import ButtonCampoo from "../../components/ButtonCampoo";
+import LabelCampoo from '../../components/LabelCampoo';
+import SecondaryButtonCampoo from '../../components/SecondaryButtonCampoo';
 
-export default class NameSignupCampoo extends React.Component {
+export default class PseudoSignupCampoo extends React.Component {
 
     render() {
         const { navigation } = this.props;
 
         const pressHandler = () => {
-            navigation.push('DobSignupCampoo');
+            navigation.push('MdpSignupCampoo');
         }
 
 
@@ -19,12 +19,13 @@ export default class NameSignupCampoo extends React.Component {
 
             <SafeAreaView style={styles.container}>
 
-                <Image style={styles.logoCampoo} source={require("../../assets/images/logoCampoo.png")} />
-                <Image style={styles.baloo} source={require("../../assets/images/Blob-Baloo-Etudiant.png")} />
 
-                <View style={styles.nameView}>
-                    <LabelCampoo style={styles.nameLabel}>Nom</LabelCampoo>
-                    <Text style={styles.textName}>À qui Baloo a-il affaire ?</Text>
+                <Image style={styles.logoCampoo} source={require("../../assets/images/logoCampoo.png")} />
+                <Image style={styles.baloo} source={require("../../assets/images/blob-baloo-fête.png")} />
+
+                <View style={styles.pseudoView}>
+                    <LabelCampoo style={styles.pseudoLabel}>Pseudonyme</LabelCampoo>
+                    <Text style={styles.textPseudo}>C’est ainsi que Baloo te ferais valoir auprès des autres utilisateurs.</Text>
                     <InputCampooSignup style={styles.InputView} />
 
                     <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
@@ -70,14 +71,14 @@ const styles = StyleSheet.create({
 
     },
 
-    nameLabel: {
+    pseudoLabel: {
         marginBottom: 9,
 
     },
 
 
 
-    nameView: {
+    pseudoView: {
 
         top: 138,
         height: 290,
@@ -91,7 +92,6 @@ const styles = StyleSheet.create({
         marginTop: 57,
         alignSelf: 'center',
 
-
     },
 
     baloo: {
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         top: 440,
     },
 
-    textName: {
+    textPseudo: {
 
         fontSize: 11,
         textAlign: 'left',

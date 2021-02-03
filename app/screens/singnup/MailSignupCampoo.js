@@ -1,37 +1,39 @@
 import React from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
-import InputCampooSignup from "../components/InputCampooSignup"
-import ButtonCampoo from "../components/ButtonCampoo";
-import LabelCampoo from '../components/LabelCampoo';
-import SecondaryButtonCampoo from '../components/SecondaryButtonCampoo';
+import InputCampooSignup from "../../components/InputCampooSignup"
+import ButtonCampoo from "../../components/ButtonCampoo";
+import LabelCampoo from '../../components/LabelCampoo';
+import SecondaryButtonCampoo from '../../components/SecondaryButtonCampoo';
 
-export default class DobSignupCampoo extends React.Component {
 
-    //! Mettre un picker
+export default class MailSignUpCampoo extends React.Component {
 
     render() {
+
         const { navigation } = this.props;
 
         const pressHandler = () => {
-            navigation.push('PseudoSignupCampoo');
-        }
+            navigation.push('BatSignupCampoo');
 
+        };
 
         return (
 
             <SafeAreaView style={styles.container}>
 
-
-
                 <Image style={styles.logoCampoo} source={require("../../assets/images/logoCampoo.png")} />
-                <Image style={styles.baloo} source={require("../../assets/images/blob-baloo-fête.png")} />
+                <Image style={styles.baloo} source={require("../../assets/images/Blob-Baloo-Etudiant.png")} />
 
-                <View style={styles.dobView}>
-                    <LabelCampoo style={styles.dobLabel}>Date de Naissance</LabelCampoo>
-                    <Text style={styles.textDob}>Quand est-ce que Baloo doit te célébrer ?</Text>
+                <View style={styles.mailView}>
+                    <LabelCampoo style={styles.mailLabel}>Email étudiant</LabelCampoo>
+
+                    <Text style={styles.textMail}>Pour que Baloo vérifie que tu es bien un étudiant du campus !</Text>
+
                     <InputCampooSignup style={styles.InputView} />
+
                     <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() }>retour</SecondaryButtonCampoo>
+
+                    <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()} >retour</SecondaryButtonCampoo>
 
                 </View>
 
@@ -73,14 +75,14 @@ const styles = StyleSheet.create({
 
     },
 
-    dobLabel: {
+    mailLabel: {
         marginBottom: 9,
 
     },
 
 
 
-    dobView: {
+    mailView: {
 
         top: 138,
         height: 290,
@@ -104,7 +106,7 @@ const styles = StyleSheet.create({
         top: 440,
     },
 
-    textDob: {
+    textMail: {
 
         fontSize: 11,
         textAlign: 'left',
@@ -118,10 +120,5 @@ const styles = StyleSheet.create({
         marginTop: 10,
 
     },
-
-
-
-
-
 
 })

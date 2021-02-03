@@ -1,9 +1,9 @@
 import React from "react";
 import { View, StyleSheet, SafeAreaView, StatusBar, Platform, Image } from "react-native";
-import ButtonCampoo from "../components/ButtonCampoo";
-import SecondaryButtonCampoo from "../components/SecondaryButtonCampoo";
-import LabelCampoo from "../components/LabelCampoo";
-import InputCampooSignup from "../components/InputCampooSignup";
+import ButtonCampoo from "../../components/ButtonCampoo";
+import SecondaryButtonCampoo from "../../components/SecondaryButtonCampoo";
+import LabelCampoo from "../../components/LabelCampoo";
+import InputCampooSignup from "../../components/InputCampooSignup";
 
 
 export default class ScreenLoginPage extends React.Component {
