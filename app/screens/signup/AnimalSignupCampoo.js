@@ -19,8 +19,8 @@ export default class AnimalSignupCampoo extends React.Component {
 
             <SafeAreaView style={styles.container}>
 
-                <Image style={styles.logoCampoo} source={require("../../assets/images/logoCampoo.png")} />
-                <Image style={styles.baloo} source={require("../../assets/images/Component-1.png")} />
+                <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+                <Image style={styles.baloo} source={require("../../../assets/images/Component-1.png")} />
 
                 <View style={styles.spiritualView}>
 
@@ -29,7 +29,7 @@ export default class AnimalSignupCampoo extends React.Component {
 
                     <View style={styles.Pdpview} >
 
-                        <Image source={require("../../assets/images/PDP.png")} />
+                        <Image source={require("../../../assets/images/PDP.png")} />
 
                     </View>
 

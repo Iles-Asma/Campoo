@@ -6,7 +6,7 @@ import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/SecondaryButtonCampoo';
 
 
-export default class MailSignUpCampoo extends React.Component {
+export default class MailSignupCampoo extends React.Component {
 
     render() {
 
@@ -21,8 +21,8 @@ export default class MailSignUpCampoo extends React.Component {
 
             <SafeAreaView style={styles.container}>
 
-                <Image style={styles.logoCampoo} source={require("../../assets/images/logoCampoo.png")} />
-                <Image style={styles.baloo} source={require("../../assets/images/Blob-Baloo-Etudiant.png")} />
+                <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+                <Image style={styles.baloo} source={require("../../../assets/images/Blob-Baloo-Etudiant.png")} />
 
                 <View style={styles.mailView}>
                     <LabelCampoo style={styles.mailLabel}>Email étudiant</LabelCampoo>

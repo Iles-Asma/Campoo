@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {View, Image, Text, StyleSheet } from 'react-native';
-import  {COLORS}  from "../../assets/themes/ThemeCampoo";
+import  {CAMPOO}  from "../../assets/themes/ThemeCampoo";
 
 
 
@@ -65,7 +65,7 @@ const styles = StyleSheet.create ({
         
        
         borderWidth:1,
-        borderColor:COLORS.primary,
+        borderColor:CAMPOO.primary,
         marginTop:9,
         alignSelf:"flex-end",
         borderRadius:5,

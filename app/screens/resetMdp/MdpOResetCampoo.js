@@ -13,8 +13,8 @@ export default class MdpSignupCampoo extends React.Component {
 
             <SafeAreaView style={styles.container}>
 
-                <Image style={styles.logoCampoo} source={require("../../assets/images/logoCampoo.png")} />
-                <Image style={styles.baloo} source={require("../../assets/images/Baloo-Blob-Securité.png")} />
+                <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+                <Image style={styles.baloo} source={require("../../../assets/images/Baloo-Blob-Securité.png")} />
 
                 <View style={styles.PswdView}>
 

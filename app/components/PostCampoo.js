@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, Image, StyleSheet,} from 'react-native';
-import  {COLORS}  from "../../assets/themes/ThemeCampoo";
+import  {CAMPOO}  from "../../assets/themes/ThemeCampoo";
 
 
 
@@ -82,7 +82,7 @@ const styles = StyleSheet.create ({
         width:355,
         height: '100%',
         borderWidth:1,
-        borderColor:COLORS.primary,
+        borderColor:CAMPOO.primary,
         marginTop:9,
         borderRadius:9,
         

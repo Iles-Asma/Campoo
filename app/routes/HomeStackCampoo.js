@@ -1,14 +1,14 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
-import ScreenLoginCampoo from '../screens/ScreenLoginCampoo';
-import AnimalSignupCampoo from '../screens/AnimalSignupCampoo';
-// import MailSignUpCampoo from '../screens/MailSignUpCampoo';
-import BatSignupCampoo from '../screens/BatSignupCampoo';
-import NameSignupCampoo from '../screens/NameSignupCampoo';
-import DobSignupCampoo from '../screens/DobSignupCampoo';
-import PseudoSignupCampoo from '../screens/PseudoSignupCampoo';
-import MdpSignupCampoo from '../screens/MdpSignupCampoo';
-import CodeVerifSignupCampoo from '../screens/CodeVerifSignupCampoo';
+import ScreenLoginCampoo from '../screens/login/ScreenLoginCampoo';
+import AnimalSignupCampoo from '../screens/signup/AnimalSignupCampoo';
+import MailSignupCampoo from '../screens/signup/MailSignupCampoo';
+import BatSignupCampoo from '../screens/signup/BatSignupCampoo';
+import NameSignupCampoo from '../screens/signup/NameSignupCampoo';
+import DobSignupCampoo from '../screens/signup/DobSignupCampoo';
+import PseudoSignupCampoo from '../screens/signup/PseudoSignupCampoo';
+import MdpSignupCampoo from '../screens/signup/MdpSignupCampoo';
+import CodeVerifSignupCampoo from '../screens/signup/CodeVerifSignupCampoo';
 
 // // fonction qui sert a cree une nouvelle stack de navigation , ou l'on passe un objet dans lequel on dit quel different ecran nous voulons enregistrer
 
@@ -24,14 +24,14 @@ const screens = {
   },
 
 
-  // MailSignUpCampoo: {
-  //   screen: MailSignUpCampoo,
-  //   navigationOptions: {
-  //     headerShown: false,
+  MailSignUpCampoo: {
+    screen: MailSignupCampoo,
+    navigationOptions: {
+      headerShown: false,
 
-  //   }
+   }
 
-  // },
+  },
 
   BatSignupCampoo: {
     screen: BatSignupCampoo,
