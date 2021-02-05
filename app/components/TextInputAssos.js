@@ -1,23 +1,32 @@
 import React from 'react';
 import { TextInput, StyleSheet, View, Text } from 'react-native';
+import {CAMPOO} from '../../assets/themes/ThemeCampoo';
+import IconImage from '../../assets/svg/ImageIcon';
 
-export default class TextInputAssos extends Component {
+export default class TextInputAssos extends React.Component {
     render() {
         return (
-            <View style={styles.MainContainer}>
 
-                <Text  style={styles.titleTextarea}>Que souhaiter vous dire ?</Text>
 
-                <TextInput   
+            <View style={styles.TextAreaContainer}>
+
+                <Text style={styles.TextAreaTitle} >Que souhaiter vous dire ?</Text>
+
+                <TextInput
+
+                    
 
                     style={styles.TextAreaCampoo}
                     underlineColorAndroid="transparent"
                     placeholder={""}
                     placeholderTextColor={"#9E9E9E"}
-                    numberOfLines={10}
+                    numberOfLines={20}
                     multiline={true}>  
-                    
+
+                
                 </TextInput>
+                
+                <IconImage   style={styles.IconTextrea} />
 
             </View>
         )
@@ -26,29 +35,53 @@ export default class TextInputAssos extends Component {
 
 const styles = StyleSheet.create({
 
-    MainContainer : {
-
-        flex: 1,
-      
-    
-        flexDirection: 'column',
-        justifyContent:'center',
-        alignItems:'center',
-
+    TextAreaContainer:{
+        width:300,
+        height:175,
+        alignSelf:'center',
+        marginVertical:50,
+        
 
     },
 
+    IconTextrea:{
+
+        position:'absolute',
+        flex:1,
+        flexDirection:'column',
+        justifyContent:'flex-end',
+       
+
+        margin:8,
+
+    },
+
+    TextAreaTitle: {
+
+        textAlign:'center',
+        
+        fontSize:16,
+        fontWeight:'bold',
+        color:CAMPOO.primary,
+
+    },
+
+   
+
 
     TextAreaCampoo:{
- 
-        textAlign: 'center',
-        height: 50,
+        marginTop:15,
+
+        color:CAMPOO.primary,
+        
+        padding:10,
+        textAlignVertical: 'top',
         borderWidth: 2,
-        borderColor: '#9E9E9E',
-        borderRadius: 20 ,
+        borderColor: CAMPOO.primary,
+        borderRadius: 10 ,
         backgroundColor : "#FFFFFF",
-        height: 150
-         
+        height: 175,
+        width:300,
         }
 
   
