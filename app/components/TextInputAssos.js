@@ -26,7 +26,15 @@ export default class TextInputAssos extends React.Component {
                 
                 </TextInput>
                 
-                <IconImage   style={styles.IconTextrea} />
+                <IconImage  style={styles.IconTextrea}/>
+                
+                <View>
+
+                  <Text style={styles.caracterLimit}>Limite de xxx caracteères</Text>
+
+                </View>
+
+                
 
             </View>
         )
@@ -37,21 +45,23 @@ const styles = StyleSheet.create({
 
     TextAreaContainer:{
         width:300,
-        height:175,
+        height:215,
         alignSelf:'center',
-        marginVertical:50,
+        marginTop:70,
+        flex:1,       
+        marginBottom:0,
         
 
     },
 
+    caracterLimit : {
+        bottom:40,
+        textAlign:'right',
+        
+    },
+
     IconTextrea:{
-
-        position:'absolute',
-        flex:1,
-        flexDirection:'column',
-        justifyContent:'flex-end',
-       
-
+        bottom:40,
         margin:8,
 
     },
@@ -65,9 +75,6 @@ const styles = StyleSheet.create({
         color:CAMPOO.primary,
 
     },
-
-   
-
 
     TextAreaCampoo:{
         marginTop:15,
