@@ -34,8 +34,8 @@ export default class App extends React.Component {
       // <MyTags/>
       // <UserModificationPage/>
       // <SettingPage/>
-      <ChangeName/>
-    // <UserProfil/>  
+      // <ChangeName/>
+    <UserProfil/>  
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
       //<ScreenLoginPage/>      
