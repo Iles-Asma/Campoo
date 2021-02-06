@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { StyleSheet,StatusBar,TouchableOpacity, SafeAreaView,ScrollView, View, Text } from 'react-native';
-
+import TopNav from "../../components/TopNav";
 import ButtonSettings from '../../components/ButtonSettings';
 import ButtonCampoo from '../../components/ButtonCampoo';
 import ButtonLarge  from "../../components/ButtonLarge";
@@ -19,7 +19,7 @@ return
         return (
 
             <SafeAreaView style={styles.container}>
-    
+    <TopNav>Réglage</TopNav>
  <View style={styles.settingsContent}>          
  <ScrollView style={styles.SizeOnScroll} showsVerticalScrollIndicator={false} >
                          
@@ -70,8 +70,8 @@ return
 
 <View style={styles.GeneraleBtnContainer}>
 
-<ButtonCampoo>Déconnexion</ButtonCampoo>
-<ButtonLarge style={styles.leaveBtn}>Supprimer mon compte</ButtonLarge>
+<ButtonCampoo><Text style={styles.logOut}  > Déconnexion</Text></ButtonCampoo>
+<TouchableOpacity ><Text style={styles.leaveBtn}> Supprimer mon compte</Text></TouchableOpacity>
 
 
 </View>
@@ -128,11 +128,15 @@ const styles = StyleSheet.create({
          alignItems:'center',
          color:'#fff',
      },
+     logOut:{
+         fontWeight:'bold',
+     },
      leaveBtn:{
+         
          zIndex:200,
          marginTop:15,
          borderRadius:15, 
-         backgroundColor:'#EB7653',
+         color:'#EB7653',
          
         
      }

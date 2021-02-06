@@ -16,12 +16,12 @@ export default class ChooseTags extends React.Component {
             
               {/* La navigation du haut */}
            <View style={styles.topNav}> 
-           
-           <TouchableOpacity onPress=''>
+           {/* Le opPress à mettre */}
+           <TouchableOpacity >
            <Text> Annuler</Text>
             </TouchableOpacity> 
              <Text  style={styles.secondTitle}>Modification du Profil</Text>
-            <TouchableOpacity onPress=''>
+            <TouchableOpacity >
            <Text> OK</Text>
             </TouchableOpacity> 
  

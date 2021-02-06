@@ -6,7 +6,8 @@ import { StyleSheet,Picker,ScrollView,TextInput, Image,ImageBackground, StatusBa
 import LabelCampoo from "../../components/LabelCampoo";
 import InputModifProfil from '../../components/InputModifProfil';
 import InputBioProfil from '../../components/InputBioProfil';
- 
+ import ArrowLSvg from "../../components/ArrowLSvg";
+ import TopNav from "../../components/TopNav";
 import ButtonCampoo from '../../components/ButtonCampoo';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -18,11 +19,23 @@ export default class ChangeName extends React.Component{
             // contenu generale
 
            <SafeAreaView style={styles.container}>
+  {/* La navigation du haut */}
+  <View style={styles.topNav}>
+            
+            {/*Le onPress a mettre  */}
+           <TouchableOpacity >
+           <ArrowLSvg/>
+            </TouchableOpacity> 
+            <View style={styles.namePage}>
+             <Text style={styles.secondTitle}>Réglage</Text>
+             </View>
+ 
+             </View>
 
-
+             {/* <TopNav>Réglage</TopNav> */}
 <View style={styles.modificationContent}> 
 
-     <LabelCampoo style={styles.nameLabel}>Prénom:</LabelCampoo>
+     <LabelCampoo style={styles.nameLabel}>Prénom</LabelCampoo>
 
     <InputModifProfil placeholder='Edudd77' />
 
@@ -73,7 +86,31 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
 
-    }
+    },    namePage:{
+        flex:0,
+        justifyContent:'center',
+     width:'100%',
+     flexDirection:'row',
+       
+    },
+    secondTitle:{
+        
+        fontSize:20,
+        
+        fontWeight:'bold',
+        color:'#4D3D64',
+       
+    },
+    topNav:{
+        flex:0,
+       
+        width:'100%',
+        height:40,
+        flexDirection:'row',
+        borderBottomWidth:2,
+        borderColor:'rgba(158, 150, 150, .3)',
+    
+    },
 
  
  });

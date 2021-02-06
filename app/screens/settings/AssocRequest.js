@@ -9,11 +9,12 @@ import InputCampoo from "../../components/InputCampoo";
 import LabelCampoo from "../../components/LabelCampoo";
 import InputModifProfil from '../../components/InputModifProfil';
 import InputBioProfil from '../../components/InputBioProfil';
- import PenSvg from "../../components/PenSvg";
+ import  ArrowLSvg from "../../components/ArrowLSvg";
 import ButtonLarge from '../../components/ButtonLarge';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import ButtonCampoo from '../../components/ButtonCampoo';
 
-export default class UserModificationPage extends React.Component{
+export default class AssocRequest extends React.Component{
    
     render() {  
        
@@ -23,48 +24,45 @@ export default class UserModificationPage extends React.Component{
            <SafeAreaView style={styles.container}>
 
            {/* La navigation du haut */}
-           <View style={styles.topNav}> 
+           <View style={styles.topNav}>
+            
            {/*Le onPress a mettre  */}
           <TouchableOpacity >
-          <Text> Annuler</Text>
+          <ArrowLSvg/>
            </TouchableOpacity> 
-            <Text style={styles.secondTitle}>Modification du Profil</Text>
-           <TouchableOpacity >
-          <Text> OK</Text>
-           </TouchableOpacity> 
+           <View style={styles.namePage}>
+            <Text style={styles.secondTitle}>Réglage</Text>
+            </View>
 
             </View>
 
 {/* Contenaire des information a modifier */}
 <ScrollView showsVerticalScrollIndicator={false} >
-{/* Profil de l'image */}
-            <View style={styles.profilModificationContainer}>
- <View style={styles.penModif}>  
-<TouchableOpacity>
-         
-    <PenSvg/>
-    
-</TouchableOpacity>    
- </View>   
-        <Image source={require("../../../assets/imgProfil/Badeaubleu.png")} style={styles.profilPics}></Image>
-                   
-               </View>
-
 
 <View style={styles.modificationContent}> 
 
-     <LabelCampoo style={styles.nameLabel}>Pseudonyme</LabelCampoo>
+     <LabelCampoo style={styles.nameLabel}>Prends en photo le justificatif
+d’association !</LabelCampoo>
 
-    <InputModifProfil placeholder='Edudd77' />
+  <InputBioProfil placeholder='Decris toi :)'/> 
 
-    <Text style={styles.infoInput}>Ton pseudo doit rester raisonnable.</Text>
+    <Text style={styles.infoInput}>Pour plus d'iformations sur les documents à transmettre visite notre FAQ</Text>
 
 
- <LabelCampoo style={styles.nameLabel}>Biographie Bio?</LabelCampoo>  
+ <LabelCampoo style={styles.nameLabel}>Quel est le nom de l’asso ??</LabelCampoo>  
 
-<InputBioProfil placeholder='Decris toi :)'/>
 
-<Text style={styles.infoInput}>Ta bio doit te reflèter, ne soit pas vulgaire!</Text>
+<InputModifProfil placeholder='ex: BDE Staps' />
+
+
+<LabelCampoo style={styles.nameLabel}>Nom sur Campoo </LabelCampoo>  
+
+
+<InputModifProfil placeholder='ex: BDE Staps UGE' />
+
+<LabelCampoo style={styles.nameLabel}>Biographie</LabelCampoo>
+
+  <InputBioProfil placeholder='Decris ton association en quelques mots'/> 
 
 
 {/* Iput Option */}
@@ -73,25 +71,9 @@ export default class UserModificationPage extends React.Component{
 <PickerBatiments/>
 {/* Parti Modification de tags */}
 
-<LabelCampoo style={styles.nameLabel}> Tes tags :</LabelCampoo>
-<View style={styles.tagsContainer}>
-     <View style={styles.tagsContent}>
-
-         
-
-        <Tags> x Tag</Tags>
-        <Tags> x Tag</Tags>
-        <Tags> x Tag</Tags>     
-       
-        <Tags> x Tag</Tags>
-        <Tags> x Tag</Tags>
-        <Tags> x Tag</Tags> 
-        
-    </View>
-</View>
 
     <View style={styles.btnContainer} >
-<ButtonLarge> Modifies es tags </ButtonLarge>
+<ButtonCampoo> Valide </ButtonCampoo>
     </View>
 
 
@@ -113,8 +95,8 @@ const styles = StyleSheet.create({
  
        flex: 1,
        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-       marginLeft:15,
-       marginRight:15,
+       marginLeft:20,
+       marginRight:20,
        
         position:'relative', 
        flexDirection: 'column',
@@ -128,16 +110,11 @@ const styles = StyleSheet.create({
         flex:0,
         height:'25%', 
         width:'100%',
-        flexDirection: 'row',
+        // flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor:'white',
 
-    },
-    penModif:{
-        position:"absolute",
-        zIndex:100,
-       
     },
     profilPics:{
         width: 130,
@@ -166,46 +143,36 @@ const styles = StyleSheet.create({
         color:'#4D3D64'
     },
     btnContainer:{
-        flex:1,
+        flex:2,
         width:'100%',
-       
         marginVertical:20,
-       
         justifyContent:'center',
         alignItems:'center',
         
     },
-    tagsContainer:{
-        flex:1,
-        width:'100%',
-        marginTop:5,
-    },
-    tagsContent:{
-    flex:1,
-    width:'100%',
-    marginBottom:25,
-    flexWrap:'wrap',
-    flexDirection:'row', 
-    justifyContent: 'center',
-    alignItems: 'center',
-    },
-    tagTitle:{
-        height:30,
-        marginTop:10,
-        width:'100%',
+    namePage:{
+        flex:0,
+        justifyContent:'center',
+     width:'100%',
+     flexDirection:'row',
        
     },
     secondTitle:{
+        
         fontSize:20,
+        
         fontWeight:'bold',
         color:'#4D3D64',
+       
     },
     topNav:{
         flex:0,
-        justifyContent:"space-between",
+       
         width:'100%',
-        height:35,
+        height:40,
         flexDirection:'row',
+        borderBottomWidth:2,
+        borderColor:'rgba(158, 150, 150, .3)',
     
     },
 

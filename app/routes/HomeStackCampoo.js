@@ -16,19 +16,20 @@ import UserModificationPage from '../screens/profils/UserModificationPage';
 import CategoriesTags from '../screens/CategoriesTags';
 import SettingPage from '../screens/settings/SettingPage';
 import ChangeName from '../screens/settings/ChangeName';
+import AssocRequest from '../screens/settings/AssocRequest';
  
 // // fonction qui sert a cree une nouvelle stack de navigation , ou l'on passe un objet dans lequel on dit quel different ecran nous voulons enregistrer
 
 const screens = {
 // La page ou le trois categories de tags seront affiché
-  ScreenLoginCampoo: {
+CategoriesTags: {
     screen: CategoriesTags,
     navigationOptions: {
       headerShown: false,
     }
   },
     // Screens Settings
-    ScreenLoginCampoo: { 
+    SettingPage: { 
       screen: SettingPage,
       navigationOptions: {
         headerShown: false,
@@ -36,7 +37,15 @@ const screens = {
       }
   
     },
-    ScreenLoginCampoo: { 
+    AssocRequest: { 
+      screen: AssocRequest,
+      navigationOptions: {
+        headerShown: false,
+  
+      }
+  
+    },
+    ChangeName: { 
       screen: ChangeName,
       navigationOptions: {
         headerShown: false,
@@ -45,7 +54,7 @@ const screens = {
   
     },
   // Screens PROFIL
-  ScreenLoginCampoo: { 
+  UserProfil: { 
     screen: UserProfil,
     navigationOptions: {
       headerShown: false,
@@ -53,7 +62,7 @@ const screens = {
     }
 
   },
-  ScreenLoginCampoo: {
+  UserModificationPage: {
     screen: UserModificationPage,
     navigationOptions: {
       headerShown: false,
@@ -61,13 +70,13 @@ const screens = {
     }
 
   },
-  ScreenLoginCampoo: {
+  MyTags: {
     screen: MyTags,
     navigationOptions: {
       headerShown: false,
     }
   },
-  ScreenLoginCampoo: {
+  ChooseTags: {
     screen: ChooseTags,
     navigationOptions: {
       headerShown: false,

@@ -19,6 +19,7 @@ import PickerCampoo from './app/components/PickerCampoo';
 import CategoriesTags from './app/screens/CategoriesTags';
 import SettingPage from './app/screens/settings/SettingPage';
 import ChangeName from './app/screens/settings/ChangeName';
+import AssocRequest from './app/screens/settings/AssocRequest';
 // La navigation se mettra en place via react-navigation 
 
 export default class App extends React.Component { 
@@ -32,10 +33,12 @@ export default class App extends React.Component {
       // <CategoriesTags/>
       // <ChooseTags/>
       // <MyTags/>
-      // <UserModificationPage/>
-      // <SettingPage/>
+      // <AssocRequest/>
+      /* <UserModificationPage/> */
+      <SettingPage/>
       // <ChangeName/>
-    <UserProfil/>  
+    // <UserProfil/>  
+
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
       //<ScreenLoginPage/>      
