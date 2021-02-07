@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, TextInput } from 'react-native'
+import { Text, StyleSheet, View, TextInput, Image } from 'react-native'
+import { CAMPOO } from '../../assets/themes/ThemeCampoo'
 
 
 export default class InputCommentCampoo extends Component {
@@ -10,8 +11,24 @@ export default class InputCommentCampoo extends Component {
                     underlineColorAndroid="transparent"
                     placeholder={""}
                     placeholderTextColor={"#9E9E9E"}
+                    maxLength={150}
 
-                ></TextInput>
+                />
+
+                <View>
+
+                    <Image style={styles.arrowSend} source={require("../../assets/images/arrow-send.png")} />
+
+
+                </View>
+
+
+
+
+
+
+
+
 
             </View>
         )
@@ -29,6 +46,15 @@ const styles = StyleSheet.create({
 
 
     inputText: {
+        width: 300,
+        height: 37,
+        margin: 10,
+        borderWidth: 2,
+        borderRadius: 10,
+        borderColor: CAMPOO.primary,
+        padding: 10,
+
+
 
 
     },
