@@ -1,29 +1,29 @@
 import React from 'react';
 
-import {TouchableOpacity, Text, StyleSheet} from 'react-native';
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 export default class SecondaryButtonCampoo extends React.Component {
-    render(){
+    render() {
 
-        return(
+        return (
 
-                <TouchableOpacity style={this.props.style} onPress={this.props.onPress}>
+            <TouchableOpacity style={this.props.style} onPress={this.props.onPress}>
 
-                    <Text style={styles.register}>{this.props.children}</Text>
+                <Text style={styles.register}>{this.props.children}</Text>
 
-                </TouchableOpacity>
- 
+            </TouchableOpacity>
+
         );
 
     }
 
 }
 
-const styles = StyleSheet.create ({
+const styles = StyleSheet.create({
 
-    register:{ 
-        color:'#62BBC5',
-        fontSize:14,
-  
-     },
+    register: {
+        color: '#62BBC5',
+        fontSize: 14,
 
-})
+    },
+
+}) 

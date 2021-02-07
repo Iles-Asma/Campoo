@@ -1,33 +1,29 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, ScrollView, SafeAreaView, StatusBar, Image } from 'react-native'
-import PostCampoo from '../components/PostCampoo';
 
-export default class AssoFeedCampoo extends Component {
+export default class AssoEventCampoo extends Component {
     render() {
         return (
+
             <SafeAreaView style={styles.container}>
-                <View style={styles.assoAddpost}>
-
-                    <Image style={styles.addPostBtn} source={require("../../assets/images/Boutton-ajout.png")} />
 
 
+
+                <View style={styles.addEventAssos}>
+                    <Image style={styles.addEventBtn} source={require("../../assets/images/Boutton-ajout.png")} />
 
                 </View>
+                <ScrollView>
 
-                <ScrollView showsVerticalScrollIndicator={false}>
-
-                    <PostCampoo />
-                    <PostCampoo />
-                    <PostCampoo />
 
                 </ScrollView>
             </SafeAreaView>
+
         )
-    };
+    }
 }
 
 const styles = StyleSheet.create({
-
     container: {
         flex: 1,
         //  pour detecter la platform
@@ -40,7 +36,7 @@ const styles = StyleSheet.create({
 
     },
 
-    assoAddpost: {
+    addEventAssos: {
         width: '100%',
         height: 60,
 
@@ -48,18 +44,9 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',
 
 
-
-
-
-
-
-
-
-
-
     },
 
-    addPostBtn: {
+    addEventBtn: {
         width: 38,
         height: 38,
         marginRight: 35,
@@ -73,4 +60,3 @@ const styles = StyleSheet.create({
 
 
 })
-

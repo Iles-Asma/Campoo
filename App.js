@@ -15,28 +15,34 @@ import CommentCampoo from './app/screens/CommentCampoo';
 import EventDetailCampoo from './app/screens/EventDetailCampoo';
 import TextInputAssos from './app/components/TextInputAssos';
 import ScreenLoginPage from './app/screens/login/ScreenLoginCampoo';
+import AssoFeedCampoo from './app/screens/AssoFeedCampoo';
+import AssoEventCampoo from './app/screens/AssoEventCampoo';
+import InputCommentCampoo from "./app/components/InputCommentCampoo";
 
 
 // La navigation se mettra en place via react-navigation 
 
-export default class App extends React.Component { 
+export default class App extends React.Component {
 
   render() {
 
     return (
+      //<AssoFeedCampoo />
+      // <AssoEventCampoo />
+      <InputCommentCampoo />
 
       //<Navigator />
-     //<HomeFeedCampoo/>
-      //<EventCampoo/>
-      //<CommentCampoo/>
+      //<HomeFeedCampoo/>
+      //<EventCampoo />
+      //<CommentCampoo />
       //<EventDetailCampoo/>
 
       //<TextInputAssos/>
-    
+
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
 
-      <ScreenLoginPage/>     
+      // <ScreenLoginPage/>     
 
       //<DobSignupCampoo />
       //<PseudoSignupCampoo/>
