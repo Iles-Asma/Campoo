@@ -23,54 +23,60 @@ return
  <View style={styles.settingsContent}>          
  <ScrollView style={styles.SizeOnScroll} showsVerticalScrollIndicator={false} >
                          
-{/* Les differents tags */}
-
+{/* Les differentes rubrique */}
+{/* Titre */}
 <View style={styles.settingsTitle}>
     <Text > Compte </Text>
 </View>
+
+{/* Rubrique */}
         <TouchableOpacity>
             <ButtonSettings> Prénom</ButtonSettings>
         </TouchableOpacity>   
-
+{/* Rubrique */}
         <TouchableOpacity>
             <ButtonSettings> Mot de passe</ButtonSettings>
         </TouchableOpacity> 
-
+{/* Rubrique */}
                 <TouchableOpacity>
             <ButtonSettings> Devenir un compte associatif</ButtonSettings>
         </TouchableOpacity> 
 
+{/* Titre de la rubrique */}
 <View style={styles.settingsTitle}>
     <Text > Contactez-nous </Text>
 </View>
-
+{/* Rubrique */}
         <TouchableOpacity>
             <ButtonSettings> Aide et assistance</ButtonSettings>
         </TouchableOpacity> 
 
+{/* Titre... */}
 <View style={styles.settingsTitle}>
     <Text > Communauté </Text>
 </View>
-
+{/* Rubrique */}
         <TouchableOpacity>
             <ButtonSettings> Régles de la Communauté</ButtonSettings>
         </TouchableOpacity> 
-
+{/* Titre */}
         <View style={styles.settingsTitle}>
     <Text > Mentions légales </Text>
 </View>
-
+{/* Rubrique */}
         <TouchableOpacity>
             <ButtonSettings> Politique de Confidentailité</ButtonSettings>
         </TouchableOpacity> 
-
+{/* Rubrique */}
         <TouchableOpacity>
             <ButtonSettings> Conditions générales d’utilisation</ButtonSettings>
         </TouchableOpacity> 
-
+{/* Titre */}
 <View style={styles.GeneraleBtnContainer}>
-
+{/* Btn deconnexion */}
 <ButtonCampoo><Text style={styles.logOut}  > Déconnexion</Text></ButtonCampoo>
+
+{/* BTN Suppression */}
 <TouchableOpacity ><Text style={styles.leaveBtn}> Supprimer mon compte</Text></TouchableOpacity>
 
 

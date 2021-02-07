@@ -39,6 +39,8 @@ export default class UserModificationPage extends React.Component{
 <ScrollView showsVerticalScrollIndicator={false} >
 {/* Profil de l'image */}
             <View style={styles.profilModificationContainer}>
+
+{/* Shadow Pen */}
  <View style={styles.penModif}>  
 <TouchableOpacity>
          
@@ -46,11 +48,12 @@ export default class UserModificationPage extends React.Component{
     
 </TouchableOpacity>    
  </View>   
+ {/* Image */}
         <Image source={require("../../../assets/imgProfil/Badeaubleu.png")} style={styles.profilPics}></Image>
                    
                </View>
 
-
+{/* Input et label pour les odification */}
 <View style={styles.modificationContent}> 
 
      <LabelCampoo style={styles.nameLabel}>Pseudonyme</LabelCampoo>
@@ -60,7 +63,7 @@ export default class UserModificationPage extends React.Component{
     <Text style={styles.infoInput}>Ton pseudo doit rester raisonnable.</Text>
 
 
- <LabelCampoo style={styles.nameLabel}>Biographie Bio?</LabelCampoo>  
+ <LabelCampoo style={styles.nameLabel}>Biographie </LabelCampoo>  
 
 <InputBioProfil placeholder='Decris toi :)'/>
 
@@ -71,6 +74,7 @@ export default class UserModificationPage extends React.Component{
 <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo> 
 
 <PickerBatiments/>
+
 {/* Parti Modification de tags */}
 
 <LabelCampoo style={styles.nameLabel}> Tes tags :</LabelCampoo>
@@ -137,6 +141,9 @@ const styles = StyleSheet.create({
     penModif:{
         position:"absolute",
         zIndex:100,
+        backgroundColor:'rgba(158, 150, 150, .5)',
+        padding:50,
+        borderRadius: 60 / 1,
        
     },
     profilPics:{

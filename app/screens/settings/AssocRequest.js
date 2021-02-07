@@ -48,30 +48,30 @@ d’association !</LabelCampoo>
 
     <Text style={styles.infoInput}>Pour plus d'iformations sur les documents à transmettre visite notre FAQ</Text>
 
-
+{/* Nom de l'asso */}
  <LabelCampoo style={styles.nameLabel}>Quel est le nom de l’asso ??</LabelCampoo>  
 
 
 <InputModifProfil placeholder='ex: BDE Staps' />
 
-
+{/* Nom sur campoo ou changement en adresse mail */}
 <LabelCampoo style={styles.nameLabel}>Nom sur Campoo </LabelCampoo>  
 
 
 <InputModifProfil placeholder='ex: BDE Staps UGE' />
 
+{/* Bio */}
 <LabelCampoo style={styles.nameLabel}>Biographie</LabelCampoo>
 
   <InputBioProfil placeholder='Decris ton association en quelques mots'/> 
 
 
-{/* Iput Option */}
+{/* Input Option */}
 <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo> 
 
 <PickerBatiments/>
-{/* Parti Modification de tags */}
 
-
+{/* Validation */}
     <View style={styles.btnContainer} >
 <ButtonCampoo> Valide </ButtonCampoo>
     </View>
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     nameLabel:{
        
         fontSize:30,
-        marginTop:15,
+        marginTop:20,
         marginBottom:5,
         fontWeight:'bold',
     },

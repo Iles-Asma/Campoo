@@ -13,6 +13,30 @@ export default class PickerBatiments extends React.Component {
             BatName: undefined,
             items: [
                 {
+                    label: 'Aucun',
+                    value: 'Aucun',
+                },
+                {
+                    label: 'Alexandra Davis Neel',
+                    value: 'Alexandra Davis Neel',
+                },
+                {
+                    label: 'Albert Camus',
+                    value: 'Albert Camus',
+                },
+                {
+                    label: "Bois de l'étang",
+                    value: "Bois de l'étang",
+                },
+                {
+                    label: 'Clément Ader',
+                    value: 'Clément Ader',
+                },
+                {
+                    label: 'Copernic',
+                    value: 'Copernic',
+                },
+                {
                     label: 'ESIEE',
                     value: 'ESIEE',
                 },
@@ -21,9 +45,20 @@ export default class PickerBatiments extends React.Component {
                     value: 'IUT',
                 },
                 {
-                    label: 'Copernic',
-                    value: 'Copernic',
+                    label: 'Lavoisier',
+                    value: 'Lavoisier',
                 },
+                
+                {
+                    label: 'Pont & Chaussées',
+                    value: 'Pont & Chaussées',
+                },
+                
+               
+                
+                
+                
+                
             ],
         };
     }

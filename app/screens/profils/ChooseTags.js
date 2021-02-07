@@ -20,7 +20,7 @@ export default class ChooseTags extends React.Component {
            <TouchableOpacity >
            <Text> Annuler</Text>
             </TouchableOpacity> 
-             <Text  style={styles.secondTitle}>Modification du Profil</Text>
+             <Text  style={styles.secondTitle}>Choisis tes tags</Text>
             <TouchableOpacity >
            <Text> OK</Text>
             </TouchableOpacity> 

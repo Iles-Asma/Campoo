@@ -30,14 +30,20 @@ export default class App extends React.Component {
       // <PickerCampoo/>
       //<Navigator /> 
       // <HomeFeedCampoo/>
+
+
       // <CategoriesTags/>
       // <ChooseTags/>
-      // <MyTags/>
+      // <MyTags/> 
+      // <UserProfil/>  
+
+
+      // -------------------------SETTINGS
       // <AssocRequest/>
-      /* <UserModificationPage/> */
+      //  <UserModificationPage/> 
       <SettingPage/>
       // <ChangeName/>
-    // <UserProfil/>  
+     // -------------------------SETTINGS
 
       // <MailSignupCampoo />
       //<NameSignupCampoo/>

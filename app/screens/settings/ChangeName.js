@@ -33,8 +33,10 @@ export default class ChangeName extends React.Component{
              </View>
 
              {/* <TopNav>Réglage</TopNav> */}
-<View style={styles.modificationContent}> 
 
+        {/* Contenu */}
+<View style={styles.modificationContent}> 
+{/* Le label Prénom */}
      <LabelCampoo style={styles.nameLabel}>Prénom</LabelCampoo>
 
     <InputModifProfil placeholder='Edudd77' />
