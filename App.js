@@ -19,7 +19,17 @@ import AssoFeedCampoo from './app/screens/AssoFeedCampoo';
 import AssoEventCampoo from './app/screens/AssoEventCampoo';
 import InputCommentCampoo from "./app/components/InputCommentCampoo";
 
+import UserProfil from './app/screens/profils/UserProfil';
+import ChooseTags from './app/screens/profils/ChooseTags';
+import MyTags from './app/screens/profils/MyTags';
+import UserModificationPage from './app/screens/profils/UserModificationPage';
 
+
+import CategoriesTags from './app/screens/CategoriesTags';
+import SettingPage from './app/screens/settings/SettingPage';
+import ChangeName from './app/screens/settings/ChangeName';
+import AssocRequest from './app/screens/settings/AssocRequest';
+import EventUserCampoo from './app/screens/EventUserCampoo'
 // La navigation se mettra en place via react-navigation 
 
 export default class App extends React.Component {
@@ -28,16 +38,36 @@ export default class App extends React.Component {
 
     return (
       //<AssoFeedCampoo />
-      // <AssoEventCampoo />
-      <InputCommentCampoo />
+      //<AssoEventCampoo />
+      //<InputCommentCampoo />
+      <EventUserCampoo />
 
       //<Navigator />
       //<HomeFeedCampoo/>
       //<EventCampoo />
+
       //<CommentCampoo />
       //<EventDetailCampoo/>
 
-      //<TextInputAssos/>
+      //<TextInputAssos />
+
+      // <PickerCampoo/>
+      //<Navigator /> 
+      // <HomeFeedCampoo/>
+
+
+      // <CategoriesTags/>
+      // <ChooseTags/>
+      //<MyTags />
+      // <UserProfil/>  
+
+
+      // -------------------------SETTINGS
+      //<AssocRequest />
+      //<UserModificationPage />
+      //<SettingPage />
+      //<ChangeName />
+      // -------------------------SETTINGS
 
       // <MailSignupCampoo />
       //<NameSignupCampoo/>

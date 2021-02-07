@@ -1,6 +1,7 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import ScreenLoginCampoo from '../screens/login/ScreenLoginCampoo';
+
 import AnimalSignupCampoo from '../screens/signup/AnimalSignupCampoo';
 import MailSignupCampoo from '../screens/signup/MailSignupCampoo';
 import BatSignupCampoo from '../screens/signup/BatSignupCampoo';
@@ -10,9 +11,91 @@ import PseudoSignupCampoo from '../screens/signup/PseudoSignupCampoo';
 import MdpSignupCampoo from '../screens/signup/MdpSignupCampoo';
 import CodeVerifSignupCampoo from '../screens/signup/CodeVerifSignupCampoo';
 
+
+// import AnimalSignupCampoo from '../screens/AnimalSignupCampoo';
+// import MailSignUpCampoo from '../screens/MailSignUpCampoo';
+// import BatSignupCampoo from '../screens/BatSignupCampoo';
+// import NameSignupCampoo from '../screens/NameSignupCampoo';
+// import DobSignupCampoo from '../screens/DobSignupCampoo';
+// import PseudoSignupCampoo from '../screens/PseudoSignupCampoo';
+// import MdpSignupCampoo from '../screens/MdpSignupCampoo';
+// import CVerifSignupCampoo from '../screens/CVerifSignupCampoo';
+import UserProfil from '../screens/profils/UserProfil';
+import ChooseTags from '../screens/profils/MyTags';
+import MyTags from '../screens/profils/ChooseTags';
+import UserModificationPage from '../screens/profils/UserModificationPage';
+import CategoriesTags from '../screens/CategoriesTags';
+import SettingPage from '../screens/settings/SettingPage';
+import ChangeName from '../screens/settings/ChangeName';
+import AssocRequest from '../screens/settings/AssocRequest';
+
 // // fonction qui sert a cree une nouvelle stack de navigation , ou l'on passe un objet dans lequel on dit quel different ecran nous voulons enregistrer
 
 const screens = {
+  // La page ou le trois categories de tags seront affiché
+  CategoriesTags: {
+    screen: CategoriesTags,
+    navigationOptions: {
+      headerShown: false,
+    }
+  },
+  // Screens Settings
+  SettingPage: {
+    screen: SettingPage,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+  },
+  AssocRequest: {
+    screen: AssocRequest,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+  },
+  ChangeName: {
+    screen: ChangeName,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+  },
+  // Screens PROFIL
+  UserProfil: {
+    screen: UserProfil,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+  },
+  UserModificationPage: {
+    screen: UserModificationPage,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+  },
+  MyTags: {
+    screen: MyTags,
+    navigationOptions: {
+      headerShown: false,
+    }
+  },
+  ChooseTags: {
+    screen: ChooseTags,
+    navigationOptions: {
+      headerShown: false,
+
+    }
+
+  },
+  //
 
   ScreenLoginCampoo: {
     screen: ScreenLoginCampoo,
@@ -29,7 +112,7 @@ const screens = {
     navigationOptions: {
       headerShown: false,
 
-   }
+    }
 
   },
 
