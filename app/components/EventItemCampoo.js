@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, Image, TouchableOpacity } from 'react-native'
-
+import { Text, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import Dots from '../../assets/svg/Dots'
 import { CAMPOO } from '../../assets/themes/ThemeCampoo'
 import LabelCampoo from './LabelCampoo'
