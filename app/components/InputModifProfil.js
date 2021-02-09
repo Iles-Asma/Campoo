@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     // La forme generale des inputs
     inputStyle: {
         height: 40,
-        borderWidth: 3,
+        borderWidth: 2,
         borderRadius: 10,
         paddingLeft: 15,
         fontSize: 17,
