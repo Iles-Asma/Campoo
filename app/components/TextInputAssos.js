@@ -41,7 +41,7 @@ export default class TextInputAssos extends React.Component {
 const styles = StyleSheet.create({
 
     TextAreaContainer: {
-        width: 330,
+        width: 300,
         height: 215,
         alignSelf: 'center',
 
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
     },
 
     TextAreaCampoo: {
-        marginTop: 15,
+        marginTop: 5,
 
         color: CAMPOO.primary,
 
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
         borderColor: CAMPOO.primary,
         borderRadius: 10,
         backgroundColor: "#FFFFFF",
-        height: 175,
+        height: 200,
         width: '100%',
     }
 
