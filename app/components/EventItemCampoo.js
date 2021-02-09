@@ -12,10 +12,10 @@ export default class EventItemCampoo extends Component {
             <View style={styles.containerEvent}>
 
                 <View style={styles.subcontainerEvent}>
-                    <View style={styles.image_Container}>
+                    <View style={styles.imageContainer}>
 
 
-                        <Image style={styles.post_Image} source={require("../../assets/images/imagePost-Test.png")} />
+                        <Image style={styles.eventImage} source={require("../../assets/images/imagePost-Test.png")} />
 
                     </View>
 
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         borderColor: CAMPOO.primary,
     },
 
-    image_Container: {
+    imageContainer: {
         width: 325,
         // alignSelf: 'center',
         height: "auto",
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
 
     },
-    post_Image: {
+    eventImage: {
         width: 325,
         height: 173,
         borderRadius: 5,
