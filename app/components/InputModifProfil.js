@@ -2,21 +2,17 @@
 
 import React from 'react';
 
-import { StyleSheet, View, TextInput} from 'react-native';
+import { StyleSheet, View, TextInput } from 'react-native';
 
-export default class InputModifProfil extends React.Component
+export default class InputModifProfil extends React.Component {
 
-{
 
-    
-        render()
+    render() {
 
-    {
-
-        return(
-        // creation du composant unique input Profil static
-        <TextInput style={[styles.inputStyle]}        placeholder={this.props.placeholder} maxLength={30}  
-          />
+        return (
+            // creation du composant unique input Profil static
+            <TextInput style={[styles.inputStyle]} placeholder={this.props.placeholder} maxLength={30}
+            />
         );
 
     }
@@ -24,16 +20,16 @@ export default class InputModifProfil extends React.Component
 }
 
 const styles = StyleSheet.create({
-// La forme generale des inputs
-inputStyle:{
-    height:40,
-    borderWidth:3,
-borderRadius:30,
-paddingLeft:15,
-fontSize:17,
-color:'#4D3D64',
-borderColor:'#4D3D64',
-},
+    // La forme generale des inputs
+    inputStyle: {
+        height: 40,
+        borderWidth: 3,
+        borderRadius: 10,
+        paddingLeft: 15,
+        fontSize: 17,
+        color: '#4D3D64',
+        borderColor: '#4D3D64',
+    },
 
-  
+
 })
