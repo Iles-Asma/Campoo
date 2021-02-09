@@ -45,7 +45,7 @@ export default class AssocRequest extends React.Component {
                         <LabelCampoo style={styles.nameLabel}>Nom de l'évenement</LabelCampoo>
 
                         {/* Nom de l'event */}
-                        <InputModifProfil placeholder="Aso Uge" />
+                        <InputModifProfil placeholder="Asso Uge" />
 
                         {/* detaill de l'evenent */}
 
