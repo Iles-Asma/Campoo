@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, ScrollView, SafeAreaView, StatusBar, Image } from 'react-native'
+import { Text, StyleSheet, View, ScrollView, SafeAreaView, StatusBar, Image, TouchableOpacity } from 'react-native'
+
+import EventItemCampoo from '../components/EventItemCampoo'
 
 export default class AssoEventCampoo extends Component {
     render() {
@@ -10,10 +12,38 @@ export default class AssoEventCampoo extends Component {
 
 
                 <View style={styles.addEventAssos}>
-                    <Image style={styles.addEventBtn} source={require("../../assets/images/Boutton-ajout.png")} />
+
+                    <TouchableOpacity>
+                        <Image style={styles.addEventBtn} source={require("../../assets/images/Boutton-ajout.png")} />
+                    </TouchableOpacity>
+
 
                 </View>
                 <ScrollView>
+
+                    <EventItemCampoo
+
+                        title="TITRE DE L'EVENEMENT"
+
+                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+
+                        date='17/05/2020'
+
+                        hours='18h20'
+
+                        location='2 rue ta soeur tire au flanc' />
+
+                    <EventItemCampoo
+
+                        title="TITRE DE L'EVENEMENT"
+
+                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+
+                        date='17/05/2020'
+
+                        hours='18h20'
+
+                        location='2 rue ta soeur tire au flanc' />
 
 
                 </ScrollView>
@@ -39,6 +69,7 @@ const styles = StyleSheet.create({
     addEventAssos: {
         width: '100%',
         height: 60,
+
 
         justifyContent: 'center',
         alignItems: 'flex-end',
