@@ -3,17 +3,17 @@
 import React, { useState } from 'react';
 
 import { StyleSheet, Picker, ScrollView, TextInput, Image, ImageBackground, StatusBar, SafeAreaView, View, Text } from 'react-native';
-import Tags from '../../components/Tags';
-import PickerBatiments from "../../components/PickerBatiments";
-import InputCampoo from "../../components/InputCampoo";
-import LabelCampoo from "../../components/LabelCampoo";
-import InputModifProfil from '../../components/InputModifProfil';
-import InputBioProfil from '../../components/InputBioProfil';
-import ArrowLSvg from "../../components/ArrowLSvg";
-import ButtonLarge from '../../components/ButtonLarge';
+// import Tags from '../../components/Tags';
+import PickerBatiments from "../components/PickerBatiments";
+import InputCampoo from "../components/InputCampoo";
+import LabelCampoo from "../components/LabelCampoo";
+import InputModifProfil from '../components/InputModifProfil';
+import InputBioProfil from '../components/InputBioProfil';
+import ArrowLSvg from "../components/ArrowLSvg";
+import ButtonLarge from '../components/ButtonLarge';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import ButtonCampoo from '../../components/ButtonCampoo';
-import TextInputAssos from '../../components/TextInputAssos';
+import ButtonCampoo from '../components/ButtonCampoo';
+import TextInputAssos from '../components/TextInputAssos';
 
 export default class AssocRequest extends React.Component {
 
@@ -32,44 +32,43 @@ export default class AssocRequest extends React.Component {
                         <ArrowLSvg />
                     </TouchableOpacity>
                     <View style={styles.namePage}>
-                        <Text style={styles.secondTitle}>Réglage</Text>
+                        <Text style={styles.secondTitle}>Création d'évenement</Text>
                     </View>
 
                 </View>
 
-                {/* Contenaire des information a modifier */}
+                {/* Contenaire de information a entree*/}
                 <ScrollView showsVerticalScrollIndicator={false} >
 
                     <View style={styles.modificationContent}>
 
-                        <LabelCampoo style={styles.nameLabel}>Prends en photo le justificatif d’association !</LabelCampoo>
+                        <LabelCampoo style={styles.nameLabel}>Nom de l'évenement</LabelCampoo>
 
-                        <InputBioProfil placeholder='Decris toi :)' />
+                        <TextInputAssos placeholder='' />
 
-                        <Text style={styles.infoInput}>Pour plus d'iformations sur les documents à transmettre visite notre FAQ</Text>
-
-                        {/* Nom de l'asso */}
-                        <LabelCampoo style={styles.nameLabel}>Quel est le nom de l’asso ??</LabelCampoo>
+                        {/* Date de l'event */}
+                        <LabelCampoo style={styles.nameLabel}>Date de l'évenement</LabelCampoo>
 
 
-                        <InputModifProfil placeholder='ex: BDE Staps' />
+                        <InputModifProfil placeholder="18/07/2020" />
 
-                        {/* Nom sur campoo ou changement en adresse mail */}
-                        <LabelCampoo style={styles.nameLabel}>Nom sur Campoo </LabelCampoo>
+                        {/* heure de l'event */}
+                        <LabelCampoo style={styles.nameLabel}>Heure de l'évenement</LabelCampoo>
 
+                        <InputModifProfil placeholder="18h30" />
 
-                        <InputModifProfil placeholder='ex: BDE Staps UGE' />
-
-                        {/* Bio */}
-                        <LabelCampoo style={styles.nameLabel}>Biographie</LabelCampoo>
-
-                        <InputBioProfil placeholder='Decris ton association en quelques mots' />
 
 
                         {/* Input Option */}
                         <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo>
 
                         <PickerBatiments />
+
+                        {/* date et lieu de l'event */}
+                        <LabelCampoo style={styles.nameLabel}>Lieu/adresse</LabelCampoo>
+
+                        <InputBioProfil placeholder='2 rue albert....' />
+
 
                         {/* Validation */}
                         <View style={styles.btnContainer} >

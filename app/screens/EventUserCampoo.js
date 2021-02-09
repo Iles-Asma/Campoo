@@ -75,8 +75,6 @@ export default class EventUserCampoo extends React.Component{
                   </View>
 
 
-
-
                   <View style={styles.event_Container}>
 
                     <Image style={styles.event_Image} source={require("../../assets/images/imagePost-Test.png")}/>
@@ -84,9 +82,7 @@ export default class EventUserCampoo extends React.Component{
 
                     <View style={styles.event_Description} >
                     <Text style={styles.TitleEvent}>TITRE DE L'EVENEMENT</Text>
-
-                        
-
+ 
                         <Text style={styles.event_Text} >
                         Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                        
@@ -114,37 +110,11 @@ export default class EventUserCampoo extends React.Component{
 
                       </View>
 
-
-
                   </View>
-
-
-                    
-
-
-                   
-
-
-
-
 
               </ScrollView>
 
-
-
-
-
-
-
-
             </SafeAreaView>
-
-
-
-
-
-
-
 
         );
 

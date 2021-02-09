@@ -24,12 +24,6 @@ export default class InputCommentCampoo extends Component {
 
 
 
-
-
-
-
-
-
             </View>
         )
     }

@@ -19,6 +19,7 @@ import AssoFeedCampoo from './app/screens/AssoFeedCampoo';
 import AssoEventCampoo from './app/screens/AssoEventCampoo';
 import InputCommentCampoo from "./app/components/InputCommentCampoo";
 
+import CreateEventCampoo from './app/screens/CreateEventCampoo';
 import UserProfil from './app/screens/profils/UserProfil';
 import ChooseTags from './app/screens/profils/ChooseTags';
 import MyTags from './app/screens/profils/MyTags';
@@ -40,10 +41,10 @@ export default class App extends React.Component {
       //<AssoFeedCampoo />
       //<AssoEventCampoo />
       //<InputCommentCampoo />
-      <EventUserCampoo />
+      //<EventUserCampoo />
 
       //<Navigator />
-      //<HomeFeedCampoo/>
+      //<HomeFeedCampoo />
       //<EventCampoo />
 
       //<CommentCampoo />
@@ -60,6 +61,12 @@ export default class App extends React.Component {
       // <ChooseTags/>
       //<MyTags />
       // <UserProfil/>  
+
+      //------------
+
+      <CreateEventCampoo />
+
+      //--------------
 
 
       // -------------------------SETTINGS

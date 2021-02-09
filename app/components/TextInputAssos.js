@@ -10,15 +10,12 @@ export default class TextInputAssos extends React.Component {
 
             <View style={styles.TextAreaContainer}>
 
-                <Text style={styles.TextAreaTitle} >Que souhaiter vous dire ?</Text>
-
                 <TextInput
-
 
 
                     style={styles.TextAreaCampoo}
                     underlineColorAndroid="transparent"
-                    placeholder={""}
+                    placeholder={this.props.placeholder}
                     placeholderTextColor={"#9E9E9E"}
                     numberOfLines={20}
                     multiline={true}>
@@ -44,10 +41,10 @@ export default class TextInputAssos extends React.Component {
 const styles = StyleSheet.create({
 
     TextAreaContainer: {
-        width: 300,
+        width: 330,
         height: 215,
         alignSelf: 'center',
-        marginTop: 70,
+
         flex: 1,
         marginBottom: 0,
 
@@ -88,7 +85,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: "#FFFFFF",
         height: 175,
-        width: 300,
+        width: '100%',
     }
 
 

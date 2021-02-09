@@ -37,7 +37,7 @@ export default class AnimalSignupCampoo extends React.Component {
 
                     <SecondaryButtonCampoo style={styles.retour1} >Passer</SecondaryButtonCampoo>
 
-                    <SecondaryButtonCampoo style={styles.retour2} onPress={() =>  navigation.goBack() }>retour</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour2} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
 
                 </View>
 

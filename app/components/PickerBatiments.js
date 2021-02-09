@@ -1,10 +1,10 @@
-import React,  { useState }  from "react";
-import { View, Text,Alert, StyleSheet, SafeAreaView } from "react-native";
+import React, { useState } from "react";
+import { View, Text, Alert, StyleSheet, SafeAreaView } from "react-native";
 // import {Picker} from '@react-native-picker/picker';
 import RNPickerSelect from 'react-native-picker-select';
 
 export default class PickerBatiments extends React.Component {
-        constructor(props) {
+    constructor(props) {
         super(props);
 
         this.inputRefs = {};
@@ -48,28 +48,28 @@ export default class PickerBatiments extends React.Component {
                     label: 'Lavoisier',
                     value: 'Lavoisier',
                 },
-                
+
                 {
                     label: 'Pont & Chaussées',
                     value: 'Pont & Chaussées',
                 },
-                
-               
-                
-                
-                
-                
+
+
+
+
+
+
             ],
         };
     }
 
-  
 
-      render(){
-     
-   
-         return(
-           
+
+    render() {
+
+
+        return (
+
             <SafeAreaView style={styles.container}>
 
                 <RNPickerSelect
@@ -83,40 +83,40 @@ export default class PickerBatiments extends React.Component {
                             BatName: value,
                         });
                     }}
-                   
-                    style={{...pickerSelectStyles }}
+
+                    style={{ ...pickerSelectStyles }}
                     value={this.state.BatName}
                     ref={(el) => {
                         this.inputRefs.picker = el;
                     }}
                 />
-        
-          
-             </SafeAreaView>
 
-          );
-       }
-          
-      
+
+            </SafeAreaView>
+
+        );
     }
 
 
-  const styles = StyleSheet.create({
+}
+
+
+const styles = StyleSheet.create({
     container: {
-     
-      paddingTop: 40,
-      alignItems: "center"
+
+        paddingTop: 40,
+        alignItems: "center"
     }
-  });
-  const pickerSelectStyles = StyleSheet.create({
+});
+const pickerSelectStyles = StyleSheet.create({
     inputIOS: {
-        marginTop:5,
+        marginTop: 5,
         fontSize: 16,
         paddingTop: 13,
         paddingHorizontal: 10,
         paddingBottom: 12,
         borderWidth: 3,
-        borderColor:'#4D3D64',
+        borderColor: '#4D3D64',
         borderRadius: 30,
         backgroundColor: 'white',
         color: 'black',
