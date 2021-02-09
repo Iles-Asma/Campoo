@@ -49,7 +49,7 @@ export default class AssocRequest extends React.Component {
 
                         {/* detaill de l'evenent */}
 
-                        <LabelCampoo style={styles.nameLabel}>Descriptif de l'event</LabelCampoo>
+                        <LabelCampoo style={styles.nameLabel}>Descriptif de l'évenement</LabelCampoo>
 
                         <TextInputAssos placeholder='' />
 
