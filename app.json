@@ -4,9 +4,9 @@
     "slug": "Campoo",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/LogoCampoo.png",
+    "icon": "./assets/SplashLogoCampoo.png",
     "splash": {
-      "image": "./assets/images/LogoCampoo.png",
+      "image": "./assets/SplashLogoCampoo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -20,7 +20,7 @@
       "supportsTablet": true
     },
     "web": {
-      "favicon": "./assets/images/LogoCampoo.png"
+      "favicon": "./assets/images/SplashLogoCampoo.png"
     }
   }
 }

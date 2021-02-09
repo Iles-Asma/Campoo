@@ -45,15 +45,7 @@ export default class EventItemCampoo extends Component {
 
                     </View>
 
-
-
-
                 </View>
-
-
-
-
-
 
             </View>
 
@@ -67,59 +59,58 @@ const styles = StyleSheet.create({
         marginTop: 15,
         padding: 10,
         flex: 1,
-        width: 345,
-        height: 375,
+        width: '100%',
+        alignSelf: 'center',
+        height: 'auto',
         borderWidth: 1,
         borderRadius: 5,
         borderColor: CAMPOO.primary,
+
     },
 
+
     imageContainer: {
-        width: 325,
-        // alignSelf: 'center',
+        width: '100%',
         height: "auto",
-        // marginTop: 8,
-        // marginHorizontal: 8,
         marginBottom: 10,
 
     },
     eventImage: {
-        width: 325,
-        height: 173,
+        width: '100%',
+        height: 175,
         borderRadius: 5,
 
 
     },
     dotsContainer: {
-
         justifyContent: 'center',
 
     },
 
 
     subcontainerEvent: {
-        // padding: 10,
-        alignSelf: 'center',
 
-        height: 355,
-        width: 325,
+        alignSelf: 'center',
+        height: "auto",
+        width: '100%',
 
     },
 
     data: {
         fontSize: 16,
+        color: CAMPOO.primary,
 
     },
 
     eventDetail: {
-        width: 325,
-        height: 105,
+        width: '100%',
+        height: 'auto',
         // alignSelf: 'center',
 
     },
 
     textEvent: {
-        width: 325,
+        width: '100%',
         height: 'auto',
         color: CAMPOO.primary,
 
@@ -131,15 +122,11 @@ const styles = StyleSheet.create({
     },
 
     eventData: {
-
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
-
-        width: 325,
-        // alignSelf: 'center',
-
-        marginTop: 5,
+        width: '100%',
+        marginTop: 6,
 
     },
 

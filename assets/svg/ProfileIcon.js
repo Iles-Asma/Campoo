@@ -1,22 +1,22 @@
 import * as React from "react"
 import Svg, { Path } from "react-native-svg"
 
-function Dots(props) {
+function ProfileIcon(props) {
     return (
         <Svg
-            width={35}
-            height={35}
+            width={24}
+            height={24}
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             {...props}
         >
             <Path
-                d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-2.66-5.33-4-8-4z"
                 fill="#4D3D64"
             />
         </Svg>
     )
 }
 
-export default Dots;
+export default ProfileIcon

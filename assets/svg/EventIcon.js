@@ -1,7 +1,7 @@
 import * as React from "react"
 import Svg, { Path } from "react-native-svg"
 
-function AddPictures(props) {
+function EventIcon(props) {
     return (
         <Svg
             width={24}
@@ -12,11 +12,11 @@ function AddPictures(props) {
             {...props}
         >
             <Path
-                d="M19 7v2.99s-1.99.01-2 0V7h-3s.01-1.99 0-2h3V2h2v3h3v2h-3zm-3 4V8h-3V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-8h-3zM5 19l3-4 2 3 3-4 4 5H5z"
+                d="M16 13h-3c-.55 0-1 .45-1 1v3c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-3c0-.55-.45-1-1-1zm0-10v1H8V3c0-.55-.45-1-1-1s-1 .45-1 1v1H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 002 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-1V3c0-.55-.45-1-1-1s-1 .45-1 1zm2 17H6c-.55 0-1-.45-1-1V9h14v10c0 .55-.45 1-1 1z"
                 fill="#4D3D64"
             />
         </Svg>
     )
 }
 
-export default AddPictures
+export default EventIcon

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, ScrollView, SafeAreaView, StatusBar, Image, TouchableOpacity } from 'react-native'
+import AddButton from '../../assets/svg/AddButton'
+import ArrowLSvg from '../components/ArrowLSvg'
 
 import EventItemCampoo from '../components/EventItemCampoo'
 
@@ -11,39 +13,87 @@ export default class AssoEventCampoo extends Component {
 
 
 
+
                 <View style={styles.addEventAssos}>
 
-                    <TouchableOpacity>
-                        <Image style={styles.addEventBtn} source={require("../../assets/images/Boutton-ajout.png")} />
-                    </TouchableOpacity>
+                    <View >
+                        <TouchableOpacity>
+                            <ArrowLSvg />
+                        </TouchableOpacity>
 
+                    </View>
+
+                    <View >
+                        <TouchableOpacity>
+                            <AddButton />
+                        </TouchableOpacity>
+                    </View>
 
                 </View>
-                <ScrollView>
 
-                    <EventItemCampoo
 
-                        title="TITRE DE L'EVENEMENT"
+                <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
-                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+                    <View style={styles.containerEvent}>
 
-                        date='17/05/2020'
+                        <EventItemCampoo
 
-                        hours='18h20'
+                            title="TITRE DE L'EVENEMENT"
 
-                        location='2 rue ta soeur tire au flanc' />
+                            eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
 
-                    <EventItemCampoo
+                            date='17/05/2020'
 
-                        title="TITRE DE L'EVENEMENT"
+                            hours='18h20'
 
-                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+                            location='2 rue ta soeur tire au flanc' />
 
-                        date='17/05/2020'
+                        <EventItemCampoo
 
-                        hours='18h20'
+                            title="TITRE DE L'EVENEMENT"
 
-                        location='2 rue ta soeur tire au flanc' />
+                            eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+
+                            date='17/05/2020'
+
+                            hours='18h20'
+
+                            location='2 rue ta soeur tire au flanc' />
+
+
+                        <EventItemCampoo
+
+                            title="TITRE DE L'EVENEMENT"
+
+                            eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+
+                            date='17/05/2020'
+
+                            hours='18h20'
+
+                            location='2 rue ta soeur tire au flanc' />
+
+
+                        <EventItemCampoo
+
+                            title="TITRE DE L'EVENEMENT"
+
+                            eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+
+                            date='17/05/2020'
+
+                            hours='18h20'
+
+                            location='2 rue ta soeur tire au flanc' />
+
+
+
+
+
+                    </View>
+
+
+
 
 
                 </ScrollView>
@@ -57,34 +107,51 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         //  pour detecter la platform
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 1,
         flexDirection: 'column',
         justifyContent: 'center',
 
+
+
         alignItems: 'center',
+
+
+
+    },
+
+    containerEvent: {
+        width: '100%',
+
+
+    },
+
+    scrollContainer: {
+        width: '90%',
+
 
 
     },
 
     addEventAssos: {
-        width: '100%',
+        width: '90%',
         height: 60,
 
 
-        justifyContent: 'center',
-        alignItems: 'flex-end',
+
+        flex: 0,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+
+        zIndex: 3,
 
 
     },
 
-    addEventBtn: {
-        width: 38,
-        height: 38,
-        marginRight: 35,
 
 
 
-    },
+
 
 
 
