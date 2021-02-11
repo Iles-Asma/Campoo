@@ -1,8 +1,10 @@
 import React from 'react';
-import { Text, View, Image, StyleSheet, } from 'react-native';
+import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { CAMPOO } from "../../assets/themes/ThemeCampoo";
 import Dots from '../../assets/svg/Dots';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import CommentButton from '../../assets/svg/CommentButton';
+import ShareButton from '../../assets/svg/ShareButton';
+
 
 
 
@@ -15,56 +17,60 @@ export default class HomeFeedCampoo extends React.Component {
 
             //  post integrale
 
-            <View style={styles.post_Item}>
+            <View style={styles.containerPost}>
+
+                <View style={styles.subcontainerPost}>
+                    <View style={styles.headerPost} >
 
 
-                <View style={styles.containerInfoProfile} >
+                        <View style={styles.headerPostContent}>
+
+                            <Image source={require("../../assets/images/AssoProfile.png")} />
+
+                            <Text style={styles.postAssoName} >{this.props.AssoName}</Text>
+
+                        </View>
 
 
-                    <View style={styles.post_AssoProfile}>
-
-                        <Image source={require("../../assets/images/AssoProfile.png")} />
-
-                        <Text style={styles.post_AssoName} >Lapin Associe</Text>
+                        <TouchableOpacity>
+                            <Dots />
+                        </TouchableOpacity>
 
                     </View>
 
 
-                    <TouchableOpacity>
-                        <Dots />
-                    </TouchableOpacity>
+                    {/* description du poste  */}
+
+                    <Text style={styles.postDescription}>{this.props.description}</Text>
+
+                    {/* container de l'image du post */}
+
+                    <View style={styles.imageContainer}>
+
+                        <Image style={styles.postImage} source={require("../../assets/images/imagePost-Test.png")} />
+
+                    </View>
+
+                    {/* container partage et ajouter un commentaire  au post */}
+
+                    <View style={styles.reaction_container}>
+
+                        <TouchableOpacity>
+                            <ShareButton />
+                        </TouchableOpacity>
+
+                        <TouchableOpacity>
+                            <CommentButton />
+                        </TouchableOpacity>
 
 
 
-
-
-
-                </View>
-
-
-                {/* description du poste  */}
-
-                <Text style={styles.post_description}>Belle photo!</Text>
-
-
-                {/* container de l'image du post */}
-
-                <View style={styles.image_Container}>
-
-                    <Image style={styles.post_Image} source={require("../../assets/images/imagePost-Test.png")} />
-
-                </View>
-
-                {/* container partage et ajouter un commentaire  au post */}
-
-
-                <View style={styles.reaction_container}>
-
-                    <Image style={styles.post_Reaction} source={require("../../assets/images/Bouton-commentaire.png")} />
-
+                    </View>
 
 
                 </View>
+
+
 
             </View>
 
@@ -77,40 +83,49 @@ export default class HomeFeedCampoo extends React.Component {
 const styles = StyleSheet.create({
 
 
-    containerInfoProfile: {
+    headerPost: {
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '100%',
-        paddingHorizontal: 15,
 
 
     },
 
-    post_Item: {
+    containerPost: {
         flex: 1,
-        width: 355,
-        height: '100%',
+        padding: 10,
+        width: '100%',
+        height: 'auto',
         borderWidth: 1,
         borderColor: CAMPOO.primary,
-        marginTop: 9,
+        marginTop: 15,
         borderRadius: 9,
 
 
     },
 
-    post_AssoProfile: {
-        marginTop: 11,
-        marginBottom: 14,
+    subcontainerEvent: {
+
+        alignSelf: 'center',
+        height: "auto",
+        width: '100%',
+
+    },
+
+
+    headerPostContent: {
+        height: 70,
         flex: 1,
         flexDirection: 'row',
         alignItems: "center",
+
         //marginLeft: 10.5,
 
     },
 
-    post_AssoName: {
+    postAssoName: {
         marginLeft: 9.5,
         fontSize: 16.5,
 
@@ -118,17 +133,17 @@ const styles = StyleSheet.create({
     },
 
 
-    post_description: {
-        fontSize: 11,
-        color: '#4D3D64',
-        marginLeft: 10.5,
+    postDescription: {
+
+        color: CAMPOO.primary,
+
 
     },
 
     // container ( div ) contenant l'image 
 
-    image_Container: {
-        width: 344,
+    imageContainer: {
+        width: '100%',
         alignSelf: 'center',
         height: "auto",
         marginTop: 14,
@@ -139,9 +154,10 @@ const styles = StyleSheet.create({
     // l'image en elle meme
 
 
-    post_Image: {
+    postImage: {
+        width: '100%',
         height: 200,
-        borderRadius: 6,
+        borderRadius: 5,
 
 
     },
@@ -155,17 +171,9 @@ const styles = StyleSheet.create({
         height: 36,
         justifyContent: 'space-between',
         marginBottom: 10,
+        alignItems: 'center',
+
 
     },
-
-    post_Reaction: {
-
-        width: 36,
-        height: 36,
-        marginRight: 17,
-        marginLeft: 17,
-
-
-    }
 
 })

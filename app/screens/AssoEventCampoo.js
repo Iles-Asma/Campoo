@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Text, StyleSheet, View, ScrollView, SafeAreaView, StatusBar, Image, TouchableOpacity } from 'react-native'
 import AddButton from '../../assets/svg/AddButton'
 import ArrowLSvg from '../components/ArrowLSvg'
 
 import EventItemCampoo from '../components/EventItemCampoo'
 
-export default class AssoEventCampoo extends Component {
+export default class AssoEventCampoo extends React.Component {
     render() {
         return (
 
@@ -14,22 +14,7 @@ export default class AssoEventCampoo extends Component {
 
 
 
-                <View style={styles.addEventAssos}>
 
-                    <View >
-                        <TouchableOpacity>
-                            <ArrowLSvg />
-                        </TouchableOpacity>
-
-                    </View>
-
-                    <View >
-                        <TouchableOpacity>
-                            <AddButton />
-                        </TouchableOpacity>
-                    </View>
-
-                </View>
 
 
                 <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
@@ -97,6 +82,22 @@ export default class AssoEventCampoo extends Component {
 
 
                 </ScrollView>
+                {/* <View style={styles.addEventAssos}> */}
+
+
+                <TouchableOpacity style={styles.arrowLeft}>
+                    <ArrowLSvg />
+                </TouchableOpacity>
+
+
+
+
+                <TouchableOpacity style={styles.addButton}>
+                    <AddButton />
+                </TouchableOpacity>
+
+
+                {/* </View> */}
             </SafeAreaView>
 
         )
@@ -117,17 +118,42 @@ const styles = StyleSheet.create({
 
 
 
+
     },
+
+    addButton: {
+        position: 'absolute',
+        top: 40,
+        right: '5%',
+        shadowColor: "#000000",
+        shadowOpacity: 0.5,
+        shadowRadius: 4,
+        shadowOffset: {
+            height: 1,
+            width: 0
+        },
+    },
+
+    arrowLeft: {
+        position: 'absolute',
+        top: 40,
+        left: '5%',
+        padding: 10,
+
+
+    },
+
 
     containerEvent: {
         width: '100%',
+        paddingTop: 30,
 
 
     },
 
     scrollContainer: {
         width: '90%',
-
+        paddingTop: 30,
 
 
     },
@@ -135,18 +161,18 @@ const styles = StyleSheet.create({
     addEventAssos: {
         width: '90%',
         height: 60,
-
-
-
+        backgroundColor: 'transparent',
         flex: 0,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
 
-        zIndex: 3,
+
+
 
 
     },
+
 
 
 

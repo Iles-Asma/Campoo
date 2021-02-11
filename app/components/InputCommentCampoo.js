@@ -1,25 +1,28 @@
-import React, { Component } from 'react'
-import { Text, StyleSheet, View, TextInput, Image } from 'react-native'
+import React from 'react';
+import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native'
 import { CAMPOO } from '../../assets/themes/ThemeCampoo'
+import SendButton from '../../assets/svg/SendButton'
 
 
-export default class InputCommentCampoo extends Component {
+
+export default class InputCommentCampoo extends React.Component {
     render() {
         return (
-            <View style={styles.InputCommentContainer}>
-                <TextInput style={styles.inputText}
-                    underlineColorAndroid="transparent"
-                    placeholder={""}
-                    placeholderTextColor={"#9E9E9E"}
-                    maxLength={150}
+            <View style={styles.Container}>
 
-                />
+                <View style={styles.subContainer}>
 
-                <View>
+                    <TextInput style={styles.inputText}
+                        underlineColorAndroid="transparent"
+                        placeholder={""}
+                        placeholderTextColor={"#9E9E9E"}
+                        maxLength={150}
 
-                    <Image style={styles.arrowSend} source={require("../../assets/images/arrow-send.png")} />
+                    />
 
-
+                    <TouchableOpacity>
+                        <SendButton />
+                    </TouchableOpacity>
                 </View>
 
 
@@ -30,17 +33,24 @@ export default class InputCommentCampoo extends Component {
 }
 
 const styles = StyleSheet.create({
-    InputCommentContainer: {
+    Container: {
         width: '100%',
         height: 57,
-        borderWidth: 1,
-        top: 50,
+        borderColor: 'white',
+    },
+    subContainer: {
+        width: '80%',
+        alignSelf: 'center',
+        flex: 0,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
 
     },
 
 
     inputText: {
-        width: 300,
+        width: "80%",
         height: 37,
         margin: 10,
         borderWidth: 2,

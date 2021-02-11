@@ -1,26 +1,37 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, ScrollView, SafeAreaView, StatusBar, Image } from 'react-native'
+import { Text, StyleSheet, View, ScrollView, SafeAreaView, StatusBar, TouchableOpacity } from 'react-native'
 import PostCampoo from '../components/PostCampoo';
+import AddButton from '../../assets/svg/AddButton'
 
 export default class AssoFeedCampoo extends Component {
     render() {
         return (
             <SafeAreaView style={styles.container}>
-                <View style={styles.assoAddpost}>
-
-                    <Image style={styles.addPostBtn} source={require("../../assets/images/Boutton-ajout.png")} />
 
 
+                <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
-                </View>
+                    <View style={styles.containerAssoFeed}>
 
-                <ScrollView showsVerticalScrollIndicator={false}>
+                        <PostCampoo
+                            AssoName="Lapin Associe"
+                            description="La description du post" />
+                        <PostCampoo />
+                        <PostCampoo />
+                        <PostCampoo />
 
-                    <PostCampoo />
-                    <PostCampoo />
-                    <PostCampoo />
+                    </View>
+
+
 
                 </ScrollView>
+                <TouchableOpacity style={styles.abc}>
+                    <AddButton />
+                </TouchableOpacity>
+
+
+
+
             </SafeAreaView>
         )
     };
@@ -34,41 +45,46 @@ const styles = StyleSheet.create({
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         flexDirection: 'column',
         justifyContent: 'center',
-
         alignItems: 'center',
 
+    },
+
+
+
+    scrollContainer: {
+        width: '90%',
+        paddingTop: 30,
 
     },
 
     assoAddpost: {
-        width: '100%',
+        width: '90%',
         height: 60,
-
-        justifyContent: 'center',
-        alignItems: 'flex-end',
-
-
-
-
-
-
-
-
-
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        flexDirection: 'row',
 
 
     },
 
-    addPostBtn: {
-        width: 38,
-        height: 38,
-        marginRight: 35,
-
-
-
+    abc: {
+        position: 'absolute',
+        top: 40,
+        right: 20,
+        shadowColor: "#000000",
+        shadowOpacity: 0.8,
+        shadowRadius: 3,
+        shadowOffset: {
+            height: 1,
+            width: 0
+        },
     },
 
 
+    containerAssoFeed: {
+        width: '100%',
+
+    },
 
 
 
