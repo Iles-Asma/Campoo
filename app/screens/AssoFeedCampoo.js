@@ -25,7 +25,7 @@ export default class AssoFeedCampoo extends Component {
 
 
                 </ScrollView>
-                <TouchableOpacity style={styles.abc}>
+                <TouchableOpacity style={styles.addButton}>
                     <AddButton />
                 </TouchableOpacity>
 
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
 
     },
 
-    abc: {
+    addButton: {
         position: 'absolute',
         top: 40,
         right: 20,
