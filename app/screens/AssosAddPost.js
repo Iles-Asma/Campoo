@@ -4,6 +4,7 @@ import LabelCampoo from '../components/LabelCampoo';
 import TextInputAssos from '../components/TextInputAssos';
 import ArrowLSvg from '../components/ArrowLSvg'
 import SendButton from '../../assets/svg/SendButton'
+import HeaderAddPost from '../components/HeaderAddPost'
 
 
 export default class AssosAddPost extends Component {
@@ -13,17 +14,7 @@ export default class AssosAddPost extends Component {
 
 
                 {/* header du screen */}
-                <View style={styles.headerAddPost}>
-
-                    <TouchableOpacity style={styles.arrowLeft}>
-                        <ArrowLSvg />
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                        <SendButton />
-                    </TouchableOpacity>
-
-                </View>
+                <HeaderAddPost />
 
                 {/* titre de la zone de texte */}
 
@@ -70,10 +61,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
 
     },
-    arrowLeft: {
-        // padding: 10,
 
-    },
 
 
 
