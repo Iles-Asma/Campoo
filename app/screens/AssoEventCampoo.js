@@ -22,6 +22,7 @@ export default class AssoEventCampoo extends React.Component {
                     <View style={styles.containerEvent}>
 
                         <EventItemCampoo
+                            image={require("../../assets/images/imagePost-Test.png")}
 
                             title="TITRE DE L'EVENEMENT"
 
@@ -34,19 +35,7 @@ export default class AssoEventCampoo extends React.Component {
                             location='2 rue ta soeur tire au flanc' />
 
                         <EventItemCampoo
-
-                            title="TITRE DE L'EVENEMENT"
-
-                            eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
-
-                            date='17/05/2020'
-
-                            hours='18h20'
-
-                            location='2 rue ta soeur tire au flanc' />
-
-
-                        <EventItemCampoo
+                            image={require("../../assets/images/imagePost-Test.png")}
 
                             title="TITRE DE L'EVENEMENT"
 
@@ -60,6 +49,21 @@ export default class AssoEventCampoo extends React.Component {
 
 
                         <EventItemCampoo
+                            image={require("../../assets/images/imagePost-Test.png")}
+
+                            title="TITRE DE L'EVENEMENT"
+
+                            eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+
+                            date='17/05/2020'
+
+                            hours='18h20'
+
+                            location='2 rue ta soeur tire au flanc' />
+
+
+                        <EventItemCampoo
+                            image={require("../../assets/images/imagePost-Test.png")}
 
                             title="TITRE DE L'EVENEMENT"
 
@@ -161,7 +165,7 @@ const styles = StyleSheet.create({
     addEventAssos: {
         width: '90%',
         height: 60,
-        backgroundColor: 'transparent',
+
         flex: 0,
         flexDirection: 'row',
         justifyContent: 'space-between',

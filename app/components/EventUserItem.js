@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
-import Dots from '../../assets/svg/Dots'
+import LikeButton from '../../assets/svg/LikeButton'
 import { CAMPOO } from '../../assets/themes/ThemeCampoo'
 import LabelCampoo from './LabelCampoo'
 
@@ -38,7 +38,9 @@ export default class EventItemCampoo extends Component {
                         <View style={styles.dotsContainer}>
 
                             <TouchableOpacity>
-                                <Dots />
+
+                                <LikeButton />
+
                             </TouchableOpacity>
 
                         </View>

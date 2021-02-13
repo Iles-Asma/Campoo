@@ -1,21 +1,18 @@
 import React from 'react';
 
-import { Text, StyleSheet, TouchableNativeFeedback, View } from 'react-native';
+import { Text, View } from 'react-native';
+
 
 export default class EventButtonCampoo extends React.Component {
 
     render() {
 
-
         return (
 
+            <View style={this.props.style}>
+                <Text style={this.props.style}>{this.props.children}</Text>
+            </View>
 
-
-            <TouchableNativeFeedback style={[this.props.style]} onPress={this.props.onPress}>
-                <View style={styles.touchableEvent}>
-                    <Text style={styles.EventText}>{this.props.children}</Text>
-                </View>
-            </TouchableNativeFeedback>
 
         );
 
@@ -24,28 +21,24 @@ export default class EventButtonCampoo extends React.Component {
 }
 
 
-const styles = StyleSheet.create({
-    EventText: {
+// const styles = StyleSheet.create({
+//     EventText: {
+//         fontSize: 16,
+//         color: 'white',
 
-        textAlign: 'center',
-        alignSelf: 'center',
-        marginTop: 12,
+//     },
+//     touchableEvent: {
+//         flex: 0,
+//         justifyContent: 'center',
+//         alignItems: 'center',
+//         color: "white",
+//         borderRadius: 5,
+//         // width: 170,
+//         // height: 50,
+//         // backgroundColor: '#4D3D64',
+//         //  alignSelf:'center',
 
-        fontSize: 16,
-        color: 'white',
-
-    },
-    touchableEvent: {
-
-
-        color: "white",
-        borderRadius: 5,
-        width: 170,
-        height: 50,
-        backgroundColor: '#4D3D64',
-        //  alignSelf:'center',
-
-    },
+//     },
 
 
 
@@ -57,4 +50,4 @@ const styles = StyleSheet.create({
 
 
 
-});
+// });

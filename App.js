@@ -41,7 +41,7 @@ export default class App extends React.Component {
 
     return (
       //<AssoFeedCampoo />
-      //<AssoEventCampoo />
+      <AssoEventCampoo />
       //<InputCommentCampoo />
       //<EventUserCampoo />
       //<EventItemCampoo />
@@ -53,8 +53,8 @@ export default class App extends React.Component {
       //<HomeFeedCampoo />
       //<EventCampoo />
 
-      <CommentCampoo />
-      //<EventDetailCampoo/>
+      //<CommentCampoo />
+      //<EventDetailCampoo />
 
       //<TextInputAssos />
 
