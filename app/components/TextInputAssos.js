@@ -1,37 +1,33 @@
 import React from 'react';
-import { TextInput, StyleSheet, View, Text } from 'react-native';
+import { TextInput, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { CAMPOO } from '../../assets/themes/ThemeCampoo';
 import IconImage from '../../assets/svg/ImageIcon';
+
 
 export default class TextInputAssos extends React.Component {
     render() {
         return (
 
-
+            // conatainer de la zone de texte
             <View style={styles.TextAreaContainer}>
 
+                {/* zone de texte */}
                 <TextInput
-
 
                     style={styles.TextAreaCampoo}
                     underlineColorAndroid="transparent"
                     placeholder={this.props.placeholder}
                     placeholderTextColor={"#9E9E9E"}
                     numberOfLines={20}
-                    multiline={true}>
+                    multiline={true}
+                    maxLength={300} />
 
+                <TouchableOpacity style={styles.IconTextrea}>
+                    <IconImage />
+                </TouchableOpacity>
+                {/* afffichage limite de caractere */}
 
-                </TextInput>
-
-                <IconImage style={styles.IconTextrea} />
-
-                <View>
-
-                    <Text style={styles.caracterLimit}>Limite de xxx caracteères</Text>
-
-                </View>
-
-
+                <Text style={styles.caracterLimit}>{this.props.limitCaracter}</Text>
 
             </View>
         )
@@ -41,8 +37,8 @@ export default class TextInputAssos extends React.Component {
 const styles = StyleSheet.create({
 
     TextAreaContainer: {
-        width: 300,
-        height: 215,
+        width: '80%',
+        height: 'auto',
         alignSelf: 'center',
 
         flex: 1,
@@ -51,15 +47,18 @@ const styles = StyleSheet.create({
 
     },
 
+
     caracterLimit: {
         bottom: 40,
         textAlign: 'right',
+
 
     },
 
     IconTextrea: {
         bottom: 40,
-        margin: 8,
+        padding: 10,
+
 
     },
 

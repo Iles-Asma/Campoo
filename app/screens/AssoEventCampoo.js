@@ -93,7 +93,7 @@ export default class AssoEventCampoo extends React.Component {
 
 
                 <TouchableOpacity style={styles.addButton}>
-                    <AddButton />
+                    <AddButton couleur="red" />
                 </TouchableOpacity>
 
 
