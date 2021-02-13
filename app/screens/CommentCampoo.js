@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, StatusBar, ScrollView, SafeAreaView, Platform, View, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, StatusBar, ScrollView, SafeAreaView, Platform, View, } from 'react-native';
 import PostCampoo from '../components/PostCampoo';
 import UserCommentCampoo from '../components/UserCommentCampoo';
 import InputCommentCampoo from '../components/InputCommentCampoo';
@@ -21,10 +21,14 @@ export default class CommentCampoo extends React.Component {
 
 
 
+
+
+
                 <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
-
                     <PostCampoo AssoName='Lapin Associe' />
+
+
                     <UserCommentCampoo
                         comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
                     <UserCommentCampoo
@@ -49,12 +53,9 @@ export default class CommentCampoo extends React.Component {
 
                 </ScrollView>
 
-                <KeyboardAvoidingView>
-
-                    <InputCommentCampoo />
 
 
-                </KeyboardAvoidingView>
+                <InputCommentCampoo />
 
 
             </SafeAreaView>
@@ -92,6 +93,7 @@ const styles = StyleSheet.create({
         paddingTop: 20,
 
     },
+
 
 
 });

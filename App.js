@@ -53,7 +53,7 @@ export default class App extends React.Component {
       //<HomeFeedCampoo />
       //<EventCampoo />
 
-      //<CommentCampoo />
+      <CommentCampoo />
       //<EventDetailCampoo/>
 
       //<TextInputAssos />
@@ -85,7 +85,7 @@ export default class App extends React.Component {
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
 
-      <ScreenLoginPage />
+      //<ScreenLoginPage />
 
       //<DobSignupCampoo />
       //<PseudoSignupCampoo/>

@@ -1,5 +1,6 @@
 import React from 'react'
-import { StyleSheet, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, TouchableOpacity, Text } from 'react-native'
+import { CAMPOO } from '../../assets/themes/ThemeCampoo';
 import ArrowLSvg from '../components/ArrowLSvg';
 
 
@@ -10,9 +11,23 @@ export default class HeaderReturn extends React.Component {
 
             <View style={styles.headerReturn}>
 
+
+
+
                 <TouchableOpacity >
                     <ArrowLSvg />
                 </TouchableOpacity>
+
+                <Text style={styles.titleHeader}>{this.props.headerTitle}</Text>
+
+
+
+
+
+
+
+
+
 
 
             </View>
@@ -31,6 +46,24 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%',
         height: 50,
+
+
+
+    },
+
+    titleHeader: {
+
+
+
+
+        fontSize: 25,
+        color: CAMPOO.primary,
+        fontWeight: 'bold',
+
+
+
+
+
 
 
     },
