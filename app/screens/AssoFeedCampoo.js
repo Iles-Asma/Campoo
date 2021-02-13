@@ -14,8 +14,8 @@ export default class AssoFeedCampoo extends Component {
                     <View style={styles.containerAssoFeed}>
 
                         <PostCampoo
-                            AssoName="Lapin Associe"
-                            description="La description du post" />
+                            name='Lapin Associe'
+                            description='la description du post' />
                         <PostCampoo />
                         <PostCampoo />
                         <PostCampoo />
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
 
     scrollContainer: {
         width: '90%',
-        paddingTop: 30,
+        paddingTop: 50,
 
     },
 
@@ -69,14 +69,14 @@ const styles = StyleSheet.create({
 
     addButton: {
         position: 'absolute',
-        top: 40,
+        top: 50,
         right: 20,
         shadowColor: "#000000",
-        shadowOpacity: 0.8,
-        shadowRadius: 3,
+        shadowOpacity: 0.3,
+        shadowRadius: 4,
         shadowOffset: {
-            height: 1,
-            width: 0
+            height: 3,
+            width: 3
         },
     },
 

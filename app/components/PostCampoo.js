@@ -4,6 +4,7 @@ import { CAMPOO } from "../../assets/themes/ThemeCampoo";
 import Dots from '../../assets/svg/Dots';
 import CommentButton from '../../assets/svg/CommentButton';
 import ShareButton from '../../assets/svg/ShareButton';
+import ProfileHeaderCampoo from './ProfileHeaderCampoo';
 
 
 
@@ -20,7 +21,7 @@ export default class HomeFeedCampoo extends React.Component {
             //  post integrale
 
             <View style={styles.containerPost}>
-
+                {/* 
                 <View style={styles.subcontainerPost}>
                     <View style={styles.headerPost} >
 
@@ -38,43 +39,47 @@ export default class HomeFeedCampoo extends React.Component {
                             <Dots />
                         </TouchableOpacity>
 
-                    </View>
+                    </View> */}
+
+                <ProfileHeaderCampoo>
+                    <Text style={styles.post_AssoName}>{this.props.name}</Text>
+                </ProfileHeaderCampoo>
 
 
-                    {/* description du poste  */}
+                {/* description du poste  */}
 
-                    <Text style={styles.postDescription}>{this.props.description}</Text>
+                < Text style={styles.postDescription} >{this.props.description}</ Text>
 
-                    {/* container de l'image du post */}
+                {/* container de l'image du post */}
 
-                    <View style={styles.imageContainer}>
+                <View View style={styles.imageContainer} >
 
-                        <Image style={styles.postImage} source={require("../../assets/images/imagePost-Test.png")} />
+                    <Image style={styles.postImage} source={require("../../assets/images/imagePost-Test.png")} />
 
-                    </View>
+                </View >
 
-                    {/* container partage et ajouter un commentaire  au post */}
+                {/* container partage et ajouter un commentaire  au post */}
 
-                    <View style={styles.reaction_container}>
+                < View style={styles.reaction_container} >
 
-                        <TouchableOpacity>
-                            <ShareButton />
-                        </TouchableOpacity>
+                    <TouchableOpacity>
+                        <ShareButton />
+                    </TouchableOpacity>
 
-                        <TouchableOpacity>
-                            <CommentButton />
-                        </TouchableOpacity>
-
-
-
-                    </View>
-
-
-                </View>
+                    <TouchableOpacity>
+                        <CommentButton />
+                    </TouchableOpacity>
 
 
 
-            </View>
+                </ View>
+
+
+            </View >
+
+
+
+
 
 
         );

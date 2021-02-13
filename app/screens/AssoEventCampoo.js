@@ -123,21 +123,21 @@ const styles = StyleSheet.create({
 
     addButton: {
         position: 'absolute',
-        top: 40,
+        top: 50,
         right: '5%',
         shadowColor: "#000000",
-        shadowOpacity: 0.5,
+        shadowOpacity: 0.3,
         shadowRadius: 4,
         shadowOffset: {
-            height: 1,
-            width: 0
+            height: 3,
+            width: 3
         },
     },
 
     arrowLeft: {
         position: 'absolute',
-        top: 40,
-        left: '5%',
+        top: 54,
+        left: '3%',
         padding: 10,
 
 

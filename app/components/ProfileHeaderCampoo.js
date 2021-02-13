@@ -4,7 +4,7 @@ import { Text, Image, StyleSheet, View, TouchableOpacity } from 'react-native'
 import { CAMPOO } from "../../assets/themes/ThemeCampoo";
 import Dots from '../../assets/svg/Dots';
 
-export default class ProfileHeaderCampoo extends Component {
+export default class ProfileHeaderCampoo extends React.Component {
     render() {
         return (
             <View style={styles.containerInfoProfile} >
@@ -14,7 +14,7 @@ export default class ProfileHeaderCampoo extends Component {
 
                     <Image source={require("../../assets/images/AssoProfile.png")} />
 
-                    <Text style={styles.post_AssoName}>{this.props.name}</Text>
+                    <Text style={styles.post_AssoName}>{this.props.children}</Text>
 
                 </View>
 
@@ -40,19 +40,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         width: '100%',
-        paddingHorizontal: 15,
 
-
-    },
-
-    post_Item: {
-        flex: 1,
-        width: 355,
-        height: '100%',
-        borderWidth: 1,
-        borderColor: CAMPOO.primary,
-        marginTop: 9,
-        borderRadius: 9,
 
 
     },
@@ -70,6 +58,7 @@ const styles = StyleSheet.create({
     post_AssoName: {
         marginLeft: 9.5,
         fontSize: 16.5,
+        color: CAMPOO.primary,
 
 
     },

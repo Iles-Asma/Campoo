@@ -17,7 +17,11 @@ export default class UserCommentCampoo extends React.Component {
 
             <View style={styles.user_CommentItem} >
 
-                <ProfileHeaderCampoo name='lapin associe' />
+                <ProfileHeaderCampoo>
+
+                    <Text style={styles.post_AssoName}>{this.props.name}</Text>
+
+                </ProfileHeaderCampoo>
 
                 <View style={styles.user_commentContainer}>
 
@@ -57,6 +61,7 @@ const styles = StyleSheet.create({
         width: "90%",
         height: 'auto',
         borderWidth: 1,
+        padding: 10,
 
 
 
@@ -67,18 +72,9 @@ const styles = StyleSheet.create({
 
     },
 
-    comment_AssoProfile: {
-        marginTop: 11,
-        marginBottom: 14,
-        flex: 1,
-        flexDirection: 'row',
-        alignItems: "center",
-        marginLeft: 10.5,
 
-
-    },
     post_AssoName: {
-        marginLeft: 9.5,
+        // marginLeft: 9.5,
         fontSize: 16.5,
 
 
@@ -88,7 +84,7 @@ const styles = StyleSheet.create({
 
         alignSelf: 'center',
 
-        width: "90%",
+        width: "100%",
         height: 'auto',
         marginBottom: 30,
 
@@ -98,6 +94,7 @@ const styles = StyleSheet.create({
     },
 
     user_commentDescription: {
+        width: '100%',
 
 
 
@@ -106,8 +103,8 @@ const styles = StyleSheet.create({
 
     commentImage: {
 
-        width: 32,
-        height: 32,
+        width: 24,
+        height: 24,
 
 
     },
