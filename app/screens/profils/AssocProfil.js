@@ -5,32 +5,32 @@ import React from 'react';
 import { StyleSheet,ScrollView,TextInput, Image,ImageBackground, StatusBar,TouchableOpacity, SafeAreaView, View, Text } from 'react-native';
 import SettingsSvg from '../../components/SettingsSvg';
 import PenSvg from '../../components/PenSvg';
-import Tags from '../../components/Tags';
+import PostCampoo from '../../components/PostCampoo';
 
  
 
-export default class UserProfil extends React.Component{
+export default class AssocProfil extends React.Component{
    
     render() {   
  
         return(
-
+<ScrollView showsVerticalScrollIndicator={false} >
            <SafeAreaView style={styles.container}>
 {/* Contenaire  */}
-            <View style={styles.profilIdContainer}>
+            <View style={styles.assocIdContainer}>
               
-                <View style={[styles.profilSettings, styles.gap]}>
+                <View style={[styles.assocSettings, styles.gap]}>
 
 
   
     {/* Profil de l'image */}
-                 <Image source={require("../../../assets/imgProfil/Badeaubleu.png")} style={styles.profilPics}></Image>
+                 <Image source={require("../../../assets/imgAssoc/AssocImg.png")} style={styles.profilPics}></Image>
 
                  <TouchableOpacity style={[styles.profilReglage]}>
                  <SettingsSvg   />
                  </TouchableOpacity>
 
-                 <TouchableOpacity style={[styles.profilModif]}>
+                 <TouchableOpacity style={[styles.assocModif]}>
                  <PenSvg/>
                  </TouchableOpacity>
                   </View>
@@ -39,9 +39,9 @@ export default class UserProfil extends React.Component{
 
 {/* Le pseudo et nom de l'user */}
                <View style={styles.profilInfoContainer}> 
-                <Text style={[styles.Pname, styles.colorViolet ]}> Entoinee</Text>
+                <Text style={[styles.Pname, styles.colorViolet ]}>BDE Staps</Text>
 
-                <Text style={[styles.nickName, styles.colorViolet]}> LeBgDu667</Text>
+                <Text style={[styles.nickName, styles.colorViolet]}> BDE Staps</Text>
                
                </View>
 
@@ -49,44 +49,32 @@ export default class UserProfil extends React.Component{
                icone de son batiment et la description du profil */}
                <View style={styles.BioContainer}>
                <Image source={require("../../../assets/imgProfil/esieeIcon.png")} style={[styles.iconsBat, styles.gap]} ></Image>
-               <Text style={[styles.bioBloc, styles.colorViolet]} > Nouvelle musique disponible sur toutes les platformes allez check  Nouvelle musique disponible sur toutes les platformes allez check Nouvelle musique disponible sur toutes les platformes allez check</Text>
+
+               <Text style={[styles.bioBloc, styles.colorViolet]} > Bienvenue sur le profil de l’association de débats de l’ESIEE</Text>
                </View>
 
                
-                   <Text style={[styles.colorViolet, styles.tagTitle]}>Centre d'intérêts:</Text>
+                   <Text style={[styles.colorViolet, styles.postTitle]}>Post</Text>
             
 {/* les tags figurants sur le profil utilisateur */}
 
-    <View style={styles.tagsContainer}>
-        <View style={styles.tagsContent}>
+    {/* <View style={styles.tagsContainer}>
+        <View style={styles.tagsContent}> */}
 
-             <Tags> Musique</Tags>
-             <Tags> Cinema</Tags>
-             <Tags> Restaux</Tags>     
+             {/* <PostCampoo/> 
+             <PostCampoo/>
+               <PostCampoo/>   */}
+             {/* <PostCampoo> </PostCampoo>
+             <PostCampoo> </PostCampoo>      */}
        
-
-    
-            <Tags> Livres</Tags>
-            <Tags> Musées</Tags>
-            <Tags> Natation</Tags> 
-
-            <Tags> Musique</Tags>
-             <Tags> Cinema</Tags>
-             <Tags> Restaux</Tags>     
-       
-
-    
-            <Tags> Livres</Tags>
-            <Tags> Musées</Tags>
-            <Tags> Natation</Tags>
-     
+{/* 
         </View>
         
-     </View>
+     </View> */}
 
             </SafeAreaView>
 
-
+            </ScrollView>
 
 
         );
@@ -110,9 +98,9 @@ const styles = StyleSheet.create({
     colorViolet:{
         color:'#4D3D64'
     },
-    profilIdContainer:{
-        flex:0,
-        height:'20%', 
+    assocIdContainer:{
+        flex:1,
+        height:'10%', 
         width:'100%',
         // flexDirection: 'row',
         alignItems: 'center',
@@ -121,16 +109,16 @@ const styles = StyleSheet.create({
 
     },
     profilInfoContainer:{
-        flex:0,
+        flex:1,
         height:'10%',
         width:'100%',
-      
+      marginTop:5,
         alignItems: 'center',
         justifyContent: 'center',
         // backgroundColor:'white',
 
     },
-    profilSettings:{
+    assocSettings:{
         flex:1,
         width:'100%',   
         position:'relative',
@@ -154,7 +142,7 @@ const styles = StyleSheet.create({
         
 
     },
-    profilModif:{
+    assocModif:{
         width: 25,
         height: 25,
         position:'absolute',
@@ -170,7 +158,7 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
     },
     BioContainer:{
-        flex:0.3,
+        flex:1,
         flexDirection:'row',
         height:'35%',
         width:'100%',
@@ -204,15 +192,15 @@ const styles = StyleSheet.create({
         fontSize:14,
         marginLeft:25,
         marginTop:15,
-        textAlign:'justify',
+        // textAlign:'justify',
         flexShrink: 1, 
        
        
     },
     tagsContainer:{
         flex:1,
-        width:'100%',
-        // marginTop:5,
+        // width:'100%',
+        // // marginTop:5,
         
        
  
@@ -220,16 +208,16 @@ const styles = StyleSheet.create({
     
     },
     tagsContent:{
-    flex:1,
-    width:'100%',
-    marginBottom:25,
-    flexDirection:'row',
-    flexWrap:'wrap',
-    justifyContent: 'center',
-    alignItems: 'center',
+    // flex:1,
+    // width:'100%',
+    // marginBottom:25,
+    // // // flexDirection:'row',
+    // // flexWrap:'wrap',
+    // justifyContent: 'center',
+    // alignItems: 'center',
     
     },
-    tagTitle:{
+    postTitle:{
         height:30,
         fontSize:17,
         fontWeight:'bold',

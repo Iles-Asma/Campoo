@@ -20,14 +20,21 @@ import AssoEventCampoo from './app/screens/AssoEventCampoo';
 import InputCommentCampoo from "./app/components/InputCommentCampoo";
 
 import CreateEventCampoo from './app/screens/CreateEventCampoo';
+
 import UserProfil from './app/screens/profils/UserProfil';
+
+import AssocProfil from './app/screens/profils/AssocProfil';
+import ViewAssocProfil from './app/screens/profils/ViewAssocProfil';
 import ChooseTags from './app/screens/profils/ChooseTags';
 import MyTags from './app/screens/profils/MyTags';
+
 import UserModificationPage from './app/screens/profils/UserModificationPage';
 
+import AssocModificationPage from './app/screens/profils/AssocModificationPage';
 
 import CategoriesTags from './app/screens/CategoriesTags';
 import SettingPage from './app/screens/settings/SettingPage';
+import DeleteAccount from './app/screens/settings/DeleteAccount';
 import ChangeName from './app/screens/settings/ChangeName';
 import AssocRequest from './app/screens/settings/AssocRequest';
 import EventUserCampoo from './app/screens/EventUserCampoo'
@@ -40,10 +47,10 @@ export default class App extends React.Component {
 
     return (
       //<AssoFeedCampoo />
-      <AssoEventCampoo />
+      // <AssoEventCampoo />
       //<InputCommentCampoo />
-      //<EventUserCampoo />
-      //<EventItemCampoo />
+   //
+     // <EventItemCampoo />
 
 
 
@@ -51,7 +58,7 @@ export default class App extends React.Component {
       //<HomeFeedCampoo />
       //<EventCampoo />
 
-      //<CommentCampoo />
+      // <CommentCampoo />
       //<EventDetailCampoo/>
 
       //<TextInputAssos />
@@ -62,10 +69,12 @@ export default class App extends React.Component {
 
 
       // <CategoriesTags/>
-      // <ChooseTags/>
-      //<MyTags />
-      // <UserProfil/>  
+     // <ChooseTags/>
+      // <MyTags />
 
+      // <UserProfil/>  
+      // <AssocProfil/>
+      // <ViewAssocProfil/>
       //------------
 
       //<CreateEventCampoo />
@@ -76,9 +85,11 @@ export default class App extends React.Component {
       // -------------------------SETTINGS
       //<AssocRequest />
       //<UserModificationPage />
+     // <AssocModificationPage/>
       //<SettingPage />
       //<ChangeName />
-      // -------------------------SETTINGS
+      <DeleteAccount/>
+      //  -------------------------SETTINGS
 
       // <MailSignupCampoo />
       //<NameSignupCampoo/>

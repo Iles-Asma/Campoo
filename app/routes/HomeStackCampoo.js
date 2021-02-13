@@ -21,12 +21,23 @@ import CodeVerifSignupCampoo from '../screens/signup/CodeVerifSignupCampoo';
 // import MdpSignupCampoo from '../screens/MdpSignupCampoo';
 // import CVerifSignupCampoo from '../screens/CVerifSignupCampoo';
 import UserProfil from '../screens/profils/UserProfil';
+
+import AssocProfil from '../screens/profils/AssocProfil';
+
 import ChooseTags from '../screens/profils/MyTags';
+
 import MyTags from '../screens/profils/ChooseTags';
+
 import UserModificationPage from '../screens/profils/UserModificationPage';
+
+import AssocModificationPage from '../screens/profils/AssocModificationPage';
+
 import CategoriesTags from '../screens/CategoriesTags';
+
 import SettingPage from '../screens/settings/SettingPage';
+
 import ChangeName from '../screens/settings/ChangeName';
+
 import AssocRequest from '../screens/settings/AssocRequest';
 
 // // fonction qui sert a cree une nouvelle stack de navigation , ou l'on passe un objet dans lequel on dit quel different ecran nous voulons enregistrer
@@ -71,7 +82,13 @@ const screens = {
       headerShown: false,
 
     }
+  },
+  AssocProfil: {
+    screen: AssocProfil,
+    navigationOptions: {
+      headerShown: false,
 
+    }
   },
   UserModificationPage: {
     screen: UserModificationPage,
@@ -79,7 +96,13 @@ const screens = {
       headerShown: false,
 
     }
+  },
+  AssocModificationPage: {
+    screen: AssocModificationPage,
+    navigationOptions: {
+      headerShown: false,
 
+    }
   },
   MyTags: {
     screen: MyTags,

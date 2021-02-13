@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Text, StyleSheet, TouchableOpacity, View} from 'react-native';
 
-export default class ButtonLarge extends React.Component {
+export default class MiniBtn extends React.Component {
 
     render(){
 
@@ -11,7 +11,7 @@ export default class ButtonLarge extends React.Component {
        
                 <TouchableOpacity style={[styles.button, this.props.style]}  onPress={this.props.onPress}>
                     <View style={styles.touchable}>
-                        <Text style={styles.Text}>{this.props.children}</Text>
+                        <Text style={styles.miniText}>{this.props.children}</Text>
                     </View>
                 </TouchableOpacity>
 
@@ -24,11 +24,12 @@ export default class ButtonLarge extends React.Component {
 
 
 const styles = StyleSheet.create ({
-    Text:{
+    miniText:{
         
         textAlign :'center',
         marginVertical:14,
         fontSize:16,
+        fontWeight:'bold',
         color:'white',
   
      },
@@ -37,7 +38,7 @@ const styles = StyleSheet.create ({
         
          color: "white", 
          borderRadius:15, 
-         width:250, 
+         width:100, 
          height:50, 
          backgroundColor: '#4D3D64', 
          alignSelf:'center',
@@ -46,14 +47,14 @@ const styles = StyleSheet.create ({
   
      
 
-     button :{
-        color: "white", 
-        borderRadius:15, 
-        width:150, 
-        height:50, 
-       // backgroundColor: '#4D3D64', 
+    //  button :{
+    //     color: "white", 
+    //     borderRadius:15, 
+    //     width:150, 
+    //     height:50, 
+    //    // backgroundColor: '#4D3D64', 
         
-    },
+    // },
 
 
    
