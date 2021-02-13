@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         height: 'auto',
         borderWidth: 1,
         borderColor: CAMPOO.primary,
-        marginTop: 15,
+        marginBottom: 15,
         borderRadius: 9,
 
 

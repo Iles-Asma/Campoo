@@ -1,34 +1,66 @@
 import React from 'react'
-import { StyleSheet, StatusBar, ScrollView, SafeAreaView, Platform} from 'react-native';
+import { StyleSheet, StatusBar, ScrollView, SafeAreaView, Platform, View, KeyboardAvoidingView } from 'react-native';
 import PostCampoo from '../components/PostCampoo';
 import UserCommentCampoo from '../components/UserCommentCampoo';
+import InputCommentCampoo from '../components/InputCommentCampoo';
+import HeaderReturn from '../components/HeaderReturn';
 
 
 
- 
+
 
 export default class CommentCampoo extends React.Component {
 
-    render(){
+    render() {
 
-        return(
+        return (
 
-           <SafeAreaView style={styles.container}>
+            <SafeAreaView style={styles.container}>
 
-               <ScrollView  showsVerticalScrollIndicator={false}> 
-
-              <PostCampoo/>
-              <UserCommentCampoo/>
-              <UserCommentCampoo/>
-
-            
+                <HeaderReturn />
 
 
-            </ScrollView>
-           </SafeAreaView>
 
-            
-          
+                <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
+
+
+                    <PostCampoo AssoName='Lapin Associe' />
+                    <UserCommentCampoo
+                        comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+                    <UserCommentCampoo
+                        comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+
+                    <UserCommentCampoo
+                        comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+
+                    <UserCommentCampoo
+                        comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+                    <UserCommentCampoo
+                        comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+                    <UserCommentCampoo
+                        comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+
+
+
+                </ScrollView>
+
+                <KeyboardAvoidingView>
+
+                    <InputCommentCampoo />
+
+
+                </KeyboardAvoidingView>
+
+
+            </SafeAreaView>
+
+
+
 
         );
 
@@ -43,15 +75,21 @@ export default class CommentCampoo extends React.Component {
 const styles = StyleSheet.create({
 
 
-     container: {
+    container: {
         flex: 1,
         //  pour detecter la platform
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
 
         flexDirection: 'column',
-        justifyContent:'center',
-        alignItems:'center',
+        justifyContent: 'center',
+        alignItems: 'center',
 
+
+    },
+
+    scrollContainer: {
+        width: '90%',
+        paddingTop: 20,
 
     },
 

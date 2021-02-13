@@ -17,33 +17,11 @@ export default class UserCommentCampoo extends React.Component {
 
             <View style={styles.user_CommentItem} >
 
-
-                {/* <View>
-
-
-
-                    <View style={styles.comment_AssoProfile}>
-
-                        <Image style={styles.commentImage} source={require("../../assets/images/AssoProfile.png")} />
-
-                        <Text style={styles.post_AssoName} >Lapin Associe</Text>
-
-                    </View>
-                </View> */}
-
                 <ProfileHeaderCampoo name='lapin associe' />
-
-
-
-
-
 
                 <View style={styles.user_commentContainer}>
 
-                    <Text style={styles.user_commentDescription}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-                    </Text>
+                    <Text style={styles.user_commentDescription}>{this.props.comment}</Text>
 
 
                 </View>
@@ -76,11 +54,12 @@ const styles = StyleSheet.create({
 
     user_CommentItem: {
         flex: 1,
-        width: 330,
+        width: "90%",
         height: 'auto',
-
-
         borderWidth: 1,
+
+
+
         borderColor: CAMPOO.primary,
         marginTop: 9,
         alignSelf: "flex-end",
@@ -109,9 +88,10 @@ const styles = StyleSheet.create({
 
         alignSelf: 'center',
 
-        width: 284,
+        width: "90%",
         height: 'auto',
         marginBottom: 30,
+
 
 
 
