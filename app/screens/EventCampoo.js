@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     titleButton1: {
 
         height: 50,
-        fontSize: 16,
+        fontSize: 15,
         color: 'white',
     },
 

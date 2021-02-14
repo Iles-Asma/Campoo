@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
 
     addButton: {
         position: 'absolute',
-        top: 50,
-        right: 20,
+        top: '4%',
+        right: 30,
         shadowColor: "#000000",
         shadowOpacity: 0.3,
         shadowRadius: 4,

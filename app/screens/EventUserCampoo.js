@@ -40,6 +40,7 @@ export default class EventUserCampoo extends React.Component {
                     </View>
 
                     <EventUserItem
+                        image={require("../../assets/images/imagePost-Test.png")}
                         title="TITRE DE L'EVENEMENT"
 
                         eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
@@ -54,6 +55,7 @@ export default class EventUserCampoo extends React.Component {
 
 
                     <EventUserItem
+                        image={require("../../assets/images/imagePost-Test.png")}
 
                         title="TITRE DE L'EVENEMENT"
 
@@ -66,6 +68,7 @@ export default class EventUserCampoo extends React.Component {
                         location='2 rue ta soeur tire au flanc' />
 
                     <EventUserItem
+                        image={require("../../assets/images/imagePost-Test.png")}
 
                         title="TITRE DE L'EVENEMENT"
 
@@ -151,7 +154,7 @@ const styles = StyleSheet.create({
     titleButton1: {
 
         height: 50,
-        fontSize: 16,
+        fontSize: 15,
         color: CAMPOO.primary,
     },
 

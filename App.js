@@ -1,6 +1,8 @@
 //import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import Navigator from './app/routes/HomeStackCampoo';
+
+
+
 import MailSignUpCampoo from "./app/screens/signup/MailSignupCampoo";
 import BatSignupCampoo from "./app/screens/signup/BatSignupCampoo";
 import NameSignupCampoo from "./app/screens/signup/NameSignupCampoo";
@@ -40,28 +42,33 @@ export default class App extends React.Component {
   render() {
 
     return (
-      //<AssoFeedCampoo />
-      <AssoEventCampoo />
+      //<Navigator /> 
+
+      // ------------------------ Component 
+      //<AssosAddPost />
       //<InputCommentCampoo />
       //<EventUserCampoo />
       //<EventItemCampoo />
+      //<TextInputAssos />
+      // <PickerCampoo/>
+
+      // ------------------------ Component 
+
       //<AssosAddPost />
 
 
+      //------------------------screeens 
 
-      //<Navigator />
+      //AssoFeedCampoo />
+      //<AssoEventCampoo />
       //<HomeFeedCampoo />
       //<EventCampoo />
-
-      //<CommentCampoo />
+      //<Navigator />
+      <CommentCampoo />
       //<EventDetailCampoo />
+      //<HomeFeedCampoo />
 
-      //<TextInputAssos />
-
-      // <PickerCampoo/>
-      //<Navigator /> 
-      // <HomeFeedCampoo/>
-
+      //------------------------screeens 
 
       // <CategoriesTags/>
       // <ChooseTags/>
@@ -85,7 +92,7 @@ export default class App extends React.Component {
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
 
-      //<ScreenLoginPage />
+      //----------------------- SIGNUP
 
       //<DobSignupCampoo />
       //<PseudoSignupCampoo/>
@@ -97,6 +104,17 @@ export default class App extends React.Component {
       //<MdpOResetCampoo/>
       //<MdpOMailCampoo/>
       //<BatSignupCampoo />
+
+      //----------------------- SIGNUP
+
+
+      //-------------------------LOGIN
+
+      //<ScreenLoginPage />
+
+      //-------------------------LOGIN
+
+
 
 
     );
