@@ -6,9 +6,9 @@ import Svg, { Circle, Path } from "react-native-svg"
 function AddButton(props) {
     return (
         <Svg
-            width={38}
-            height={38}
-            viewBox="0 0 38 38"
+            width={50}
+            height={50}
+            viewBox="0 0 50 50"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             {...props}

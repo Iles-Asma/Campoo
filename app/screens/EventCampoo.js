@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '45%',
-        borderRadius: 0,
+        borderRadius: 5,
         height: 50,
         paddingHorizontal: 40,
         textAlign: 'center',

@@ -37,7 +37,7 @@ export default class TextInputAssos extends React.Component {
 const styles = StyleSheet.create({
 
     TextAreaContainer: {
-        width: '80%',
+        width: '90%',
         height: 'auto',
         alignSelf: 'center',
 

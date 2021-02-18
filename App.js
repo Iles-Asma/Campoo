@@ -26,7 +26,7 @@ import UserProfil from './app/screens/profils/UserProfil';
 import ChooseTags from './app/screens/profils/ChooseTags';
 import MyTags from './app/screens/profils/MyTags';
 import UserModificationPage from './app/screens/profils/UserModificationPage';
-
+import Navigator from './app/routes/HomeStackCampoo'
 
 import CategoriesTags from './app/screens/CategoriesTags';
 import SettingPage from './app/screens/settings/SettingPage';
@@ -42,31 +42,36 @@ export default class App extends React.Component {
   render() {
 
     return (
-      //<Navigator /> 
+      //<Navigator />
 
       // ------------------------ Component 
-      //<AssosAddPost />
+
       //<InputCommentCampoo />
-      //<EventUserCampoo />
-      //<EventItemCampoo />
+
+
+      //<CommentCampoo />
+
+
       //<TextInputAssos />
-      // <PickerCampoo/>
+
 
       // ------------------------ Component 
-
-      //<AssosAddPost />
 
 
       //------------------------screeens 
 
-      //AssoFeedCampoo />
-      //<AssoEventCampoo />
-      //<HomeFeedCampoo />
+      //<AssoFeedCampoo />
+      <AssoEventCampoo />
+      //<AssosAddPost />
+
+
+      //<HomeFeedCampoo /> //cote etudiant
       //<EventCampoo />
+      //<EventUserCampoo />
       //<Navigator />
-      <CommentCampoo />
+
       //<EventDetailCampoo />
-      //<HomeFeedCampoo />
+
 
       //------------------------screeens 
 
@@ -92,7 +97,7 @@ export default class App extends React.Component {
       // <MailSignupCampoo />
       //<NameSignupCampoo/>
 
-      //----------------------- SIGNUP
+      //----------------------- SIGNUP SCREENS
 
       //<DobSignupCampoo />
       //<PseudoSignupCampoo/>
@@ -105,7 +110,7 @@ export default class App extends React.Component {
       //<MdpOMailCampoo/>
       //<BatSignupCampoo />
 
-      //----------------------- SIGNUP
+      //----------------------- SIGNUP S SCREENS
 
 
       //-------------------------LOGIN

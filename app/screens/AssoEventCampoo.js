@@ -127,8 +127,8 @@ const styles = StyleSheet.create({
 
     addButton: {
         position: 'absolute',
-        top: 50,
-        right: '5%',
+        top: 53,
+        right: '3%',
         shadowColor: "#000000",
         shadowOpacity: 0.3,
         shadowRadius: 4,
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
 
     containerEvent: {
         width: '100%',
-        paddingTop: 30,
+        paddingTop: 20,
 
 
     },
