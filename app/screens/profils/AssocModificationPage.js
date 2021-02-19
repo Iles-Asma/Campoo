@@ -69,12 +69,12 @@ export default class AssocModificationPage extends React.Component{
 
 <Text style={styles.infoInput}>Ta bio doit te reflèter, ne soit pas vulgaire!</Text>
 
-
+<View style={styles.btnContainer}>
 {/* Iput Option */}
 <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo> 
 
 <PickerBatiments/>
-
+</View>
  </View>
      </ScrollView>
 </SafeAreaView>
@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
        flexDirection: 'column',
         backgroundColor:'#fff',
         //  alignItems: 'center',
+
     },
     colorViolet:{
         color:'#4D3D64',
@@ -131,6 +132,7 @@ const styles = StyleSheet.create({
         flex:1,
         justifyContent:'flex-start',
         width:'100%',
+    
     },
     nameLabel:{
        
@@ -161,6 +163,11 @@ const styles = StyleSheet.create({
         flexDirection:'row',
     
     },
+    btnContainer:{
+        flex:0,
+         height:200,
+        
+    }
 
 
  

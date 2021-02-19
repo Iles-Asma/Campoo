@@ -68,12 +68,12 @@ export default class App extends React.Component {
       // <HomeFeedCampoo/>
 
 
-      // <CategoriesTags/>
+       <CategoriesTags/>
      // <ChooseTags/>
       // <MyTags />
 
       // <UserProfil/>  
-      // <AssocProfil/>
+       // <AssocProfil/>
       // <ViewAssocProfil/>
       //------------
 
@@ -84,11 +84,13 @@ export default class App extends React.Component {
 
       // -------------------------SETTINGS
       //<AssocRequest />
-      //<UserModificationPage />
-     // <AssocModificationPage/>
-      //<SettingPage />
+     // <UserModificationPage />
+      //
+    // <AssocModificationPage/>
+     // <SettingPage />
       //<ChangeName />
-      <DeleteAccount/>
+      //
+      //  <DeleteAccount/>
       //  -------------------------SETTINGS
 
       // <MailSignupCampoo />

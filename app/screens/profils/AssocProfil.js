@@ -62,8 +62,8 @@ export default class AssocProfil extends React.Component{
         <View style={styles.tagsContent}> */}
 
              {/* <PostCampoo/> 
-             <PostCampoo/>
-               <PostCampoo/>   */}
+             <PostCampoo/> */}
+               {/* <PostCampoo/>   */}
              {/* <PostCampoo> </PostCampoo>
              <PostCampoo> </PostCampoo>      */}
        

@@ -3,7 +3,7 @@
 import React from 'react';
 import { StyleSheet,TouchableOpacity,StatusBar, SafeAreaView,ScrollView, Image,View, Text } from 'react-native';
 import Categorie from '../components/Categorie';
-// import TitlePage from '../../components/TitlePage';
+import JeuxVideos from '../../assets/svg/JeuxVideos';
 export default class CategoriesTags extends React.Component {
 
    
@@ -28,6 +28,9 @@ export default class CategoriesTags extends React.Component {
              <TouchableOpacity>
              
              <Image style={styles.categorieShape}  source={require("../../assets/categories/cinema.png")}  ></Image>
+             <View> 
+             <JeuxVideos style={styles.categorieShape}></JeuxVideos>
+             </View>
         
              </TouchableOpacity>
 
@@ -94,7 +97,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     },
     categorieShape:{
-        width:365,
+        width: 300,
         height:125,
         flex:0,
         justifyContent:'center',
