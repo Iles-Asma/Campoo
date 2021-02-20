@@ -1,4 +1,4 @@
-import { createStackNavigator, createAppContainer, createBottomTabNavigator } from 'react-navigation'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import ScreenLoginCampoo from '../screens/login/ScreenLoginCampoo';
 import AnimalSignupCampoo from '../screens/signup/AnimalSignupCampoo';
@@ -181,38 +181,59 @@ import AssocRequest from '../screens/settings/AssocRequest';
 
 
 
+const Tab = createBottomTabNavigator();
+
+function Navigator() {
+  return (
+    <Tab.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        headerShown: false
+      }}
+    >
+      <Tab.Screen
+        name="Feed"
+        component={Feed}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({ color, size }) => (
+          
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Notifications"
+        component={Notifications}
+        options={{
+          tabBarLabel: 'Updates',
+          tabBarIcon: ({ color, size }) => (
+            
+          ),
+
+        }}
+      />
+
+      <Tab.Screen
+        name="Settings1"
+        component={SettingsScreen}
+        options={{
+          title: 'My profile',
+          tabBarIcon: ({ size, focused, color }) => {
+            return (
+              <Image
+                style={{ width: size, height: size }}
+                source={{
+                  uri: 'image url',
+                }}
+              />
+            );
+          },
+        }}
+      />
+    </Tab.Navigator>
+  );
+}
 
 
-const CampooTabNavigator = createBottomTabNavigator({
 
-  Home: {
-    component={ HomeFeedCampoo },
-    navigationOptions: {
-      headerShown: false,
-
-    },
-  },
-
-  Event: {
-    component={ EventCampoo },
-    navigationOptions: {
-      headerShown: false,
-
-    },
-  },
-
-  Profile: {
-    component={ UserProfil },
-    navigationOptions: {
-      headerShown: false,
-
-    },
-  },
-
-
-
-})
-
-
-
-export default createAppContainer(HomeStackCampoo);
+export default createAppContainer(CampooTabNavigator);

@@ -1,4 +1,4 @@
-import 'react-native-gesture-handler';
+// import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -39,6 +39,7 @@ import AssocRequest from './app/screens/settings/AssocRequest';
 import EventUserCampoo from './app/screens/EventUserCampoo'
 import EventItemCampoo from './app/components/EventItemCampoo';
 import AssosAddPost from './app/screens/AssosAddPost';
+import HomeStackCampoo from './app/routes/HomeStackCampoo';
 
 
 
@@ -64,7 +65,14 @@ export default class App extends React.Component {
     // const Stack = createStackNavigator();
 
     return (
-      //<Navigator />
+
+      <NavigationContainer>
+
+        <Navigator />
+      </NavigationContainer>
+
+
+
 
       // ------------------------ Component 
 
@@ -118,7 +126,7 @@ export default class App extends React.Component {
 
 
       //----------------------- SIGNUP SCREENS
-       // <MailSignupCampoo />
+      // <MailSignupCampoo />
       //<NameSignupCampoo/>
       //<DobSignupCampoo />
       //<PseudoSignupCampoo/>
@@ -141,14 +149,14 @@ export default class App extends React.Component {
       //-------------------------LOGIN
 
 
-/*
-================================================
-
-    Permet de Setup la naviagtion  dans ce fichier 
-                   
-=================================================
-
-*/
+      /*
+      ================================================
+      
+          Permet de Setup la naviagtion  dans ce fichier 
+                         
+      =================================================
+      
+      */
 
 
 
