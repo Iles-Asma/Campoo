@@ -176,6 +176,9 @@ const styles = StyleSheet.create({
         width: '100%',
         alignItems: 'center',
         position: 'relative',
+        borderBottomWidth: 1,
+        paddingBottom: 15,
+        borderColor: 'rgba(158, 150, 150, .5)',
         // paddingLeft:10,
         // paddingRight:15,
 
@@ -229,6 +232,7 @@ const styles = StyleSheet.create({
     tagTitle: {
         height: 30,
         fontSize: 17,
+        fontWeight: 'bold',
         marginLeft: 20,
         marginTop: 18,
         width: '100%',

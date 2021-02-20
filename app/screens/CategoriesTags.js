@@ -3,7 +3,7 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, StatusBar, SafeAreaView, ScrollView, Image, View, Text } from 'react-native';
 import Categorie from '../components/Categorie';
-// import TitlePage from '../../components/TitlePage';
+
 export default class CategoriesTags extends React.Component {
 
 
@@ -24,25 +24,25 @@ export default class CategoriesTags extends React.Component {
 
                     <View style={styles.categorieContainer}>
 
-
+                        {/* cinema */}
                         <TouchableOpacity>
 
                             <Image style={styles.categorieShape} source={require("../../assets/categories/cinema.png")}  ></Image>
 
                         </TouchableOpacity>
-
+                        {/* jeux video */}
                         <TouchableOpacity>
 
                             <Image style={styles.categorieShape} source={require("../../assets/categories/games.png")}  ></Image>
 
                         </TouchableOpacity>
-
+                        {/* sport */}
                         <TouchableOpacity>
 
                             <Image style={styles.categorieShape} source={require("../../assets/categories/sport.png")}  ></Image>
 
                         </TouchableOpacity>
-
+                        {/* art */}
                         <TouchableOpacity>
 
                             <Image style={styles.categorieShape} source={require("../../assets/categories/art.png")}  ></Image>
@@ -66,43 +66,44 @@ const styles = StyleSheet.create({
     container: {
 
         flex: 1,
+        width: '100%',
+        justifyContent: 'center',
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         position: 'relative',
-        margin: 10,
+
         backgroundColor: '#fff',
-        alignItems: 'center',
-
-    },
-    test: {
-
-        //  borderRadius:30,
-        //  borderWidth:5,
+        //   alignItems: 'center',
 
     },
     titleText: {
+        flex: 0,
         height: 55,
         marginTop: 20,
         fontSize: 25,
         fontWeight: '500',
-        color: '#4D3D64'
+        color: '#4D3D64',
+        justifyContent: 'center',
+        alignSelf: 'center',
     },
     categorieContainer: {
-        flex: 0,
-        width: '100%',
-        height: 'auto',
-        justifyContent: 'center',
-        alignItems: 'center',
+        // flex:0,
+        //  width:'100%',
+        //   height:'auto',
+
+        //   justifyContent: 'center',
+
     },
     categorieShape: {
-        width: "70%",
-        height: 125,
+
+        width: '85%',
+        height: 100,
         flex: 0,
         justifyContent: 'center',
-        alignItems: 'center',
-        marginHorizontal: 10,
+        alignSelf: 'center',
+        marginBottom: 15,
+        //   marginHorizontal:8,
+        borderRadius: 15,
 
-        marginBottom: 20,
-        borderRadius: 30,
         //  borderWidth:5,
     },
 });

@@ -110,7 +110,9 @@ const styles = StyleSheet.create({
 
     },
     settingsContent: {
-        marginTop: 40,
+        flex:2,
+        marginTop: 10,
+        
 
     },
     settingsTitle: {
