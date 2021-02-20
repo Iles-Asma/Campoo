@@ -4,6 +4,7 @@ import ButtonCampoo from "../../components/ButtonCampoo";
 import SecondaryButtonCampoo from "../../components/SecondaryButtonCampoo";
 import LabelCampoo from "../../components/LabelCampoo";
 import InputCampooSignup from "../../components/InputCampooSignup";
+import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 
 export default class ScreenLoginPage extends React.Component {
@@ -20,7 +21,8 @@ export default class ScreenLoginPage extends React.Component {
 
          <SafeAreaView style={styles.container} >
 
-            <Image style={{ width: 115, height: 115, left: 260, top: 0, marginTop: 16, position: 'absolute', }} source={require("../../../assets/images/LogoCampoo.png")} />
+            {/* <Image style={{ width: 115, height: 115, left: 260, top: 0, marginTop: 16, position: 'absolute', }} source={require("../../../assets/images/LogoCampoo.png")} /> */}
+            <LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
             <Image style={{ width: 271.64, height: 271.64, left: -102.73, top: 49.27, position: 'absolute' }} source={require("../../../assets/images/Baloo-accueil.png")} />
             <Image style={{ width: 519.75, height: 394.37, left: 86, top: 576, position: 'absolute' }} source={require("../../../assets/images/BAloo-violet.png")} />
 

@@ -87,14 +87,14 @@ const styles = StyleSheet.create({
         color: '#4D3D64'
     },
     categorieContainer: {
-        flex: 2,
+        flex: 0,
         width: '100%',
-        height: '100%',
+        height: 'auto',
         justifyContent: 'center',
         alignItems: 'center',
     },
     categorieShape: {
-        width: 365,
+        width: "70%",
         height: 125,
         flex: 0,
         justifyContent: 'center',

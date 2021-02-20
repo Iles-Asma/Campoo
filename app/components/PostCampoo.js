@@ -110,11 +110,9 @@ const styles = StyleSheet.create({
         marginBottom: 15,
         borderRadius: 9,
 
-
     },
 
     subcontainerEvent: {
-
         alignSelf: 'center',
         height: "auto",
         width: '100%',

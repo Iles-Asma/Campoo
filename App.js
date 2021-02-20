@@ -1,5 +1,8 @@
-//import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 
 
 
@@ -16,8 +19,9 @@ import EventCampoo from './app/screens/EventCampoo';
 import CommentCampoo from './app/screens/CommentCampoo';
 import EventDetailCampoo from './app/screens/EventDetailCampoo';
 import TextInputAssos from './app/components/TextInputAssos';
-import ScreenLoginPage from './app/screens/login/ScreenLoginCampoo';
 import AssoFeedCampoo from './app/screens/AssoFeedCampoo';
+import ScreenLoginPage from './app/screens/login/ScreenLoginCampoo';
+
 import AssoEventCampoo from './app/screens/AssoEventCampoo';
 import InputCommentCampoo from "./app/components/InputCommentCampoo";
 
@@ -35,11 +39,29 @@ import AssocRequest from './app/screens/settings/AssocRequest';
 import EventUserCampoo from './app/screens/EventUserCampoo'
 import EventItemCampoo from './app/components/EventItemCampoo';
 import AssosAddPost from './app/screens/AssosAddPost';
+
+
+
 // La navigation se mettra en place via react-navigation 
+
+// function EventStackScreen() {
+//   return (
+//     <SettingsStack.Navigator>
+//       <SettingsStack.Screen name="Evenement du campus " component={EventCampoo} />
+//       <SettingsStack.Screen name="Tes Evenements" component={EventUserCampoo} />
+//     </SettingsStack.Navigator>
+//   );
+// }
+
+
 
 export default class App extends React.Component {
 
+
   render() {
+
+
+    // const Stack = createStackNavigator();
 
     return (
       //<Navigator />
@@ -61,7 +83,7 @@ export default class App extends React.Component {
       //------------------------screeens 
 
       //<AssoFeedCampoo />
-      <AssoEventCampoo />
+      //<AssoEventCampoo />
       //<AssosAddPost />
 
 
@@ -75,7 +97,7 @@ export default class App extends React.Component {
 
       //------------------------screeens 
 
-      // <CategoriesTags/>
+      //<CategoriesTags />
       // <ChooseTags/>
       //<MyTags />
       // <UserProfil/>  
@@ -94,11 +116,10 @@ export default class App extends React.Component {
       //<ChangeName />
       // -------------------------SETTINGS
 
-      // <MailSignupCampoo />
-      //<NameSignupCampoo/>
 
       //----------------------- SIGNUP SCREENS
-
+       // <MailSignupCampoo />
+      //<NameSignupCampoo/>
       //<DobSignupCampoo />
       //<PseudoSignupCampoo/>
       //<MdpSignupCampoo/>
@@ -120,7 +141,29 @@ export default class App extends React.Component {
       //-------------------------LOGIN
 
 
+/*
+================================================
 
+    Permet de Setup la naviagtion  dans ce fichier 
+                   
+=================================================
+
+*/
+
+
+
+      // <NavigationContainer>
+      //   <Stack.Navigator>
+      //     <Stack.Screen
+      //       options={{ headerShown: false, }}
+      //       name="CAMPOO" component={ScreenLoginPage} />
+
+      //     <Stack.Screen name="Accueil" component={HomeFeedCampoo} />
+      //     <Stack.Screen name="Evenement" component={EventStackScreen} />
+      //     <Stack.Screen name="Profil" component={UserProfil} />
+
+      //   </Stack.Navigator>
+      // </NavigationContainer>
 
     );
 

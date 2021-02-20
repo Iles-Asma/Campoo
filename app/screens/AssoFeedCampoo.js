@@ -22,8 +22,6 @@ export default class AssoFeedCampoo extends Component {
 
                     </View>
 
-
-
                 </ScrollView>
                 <TouchableOpacity style={styles.addButton}>
                     <AddButton />
