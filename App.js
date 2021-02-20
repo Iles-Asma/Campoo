@@ -39,6 +39,7 @@ import ChangeName from './app/screens/settings/ChangeName';
 import AssocRequest from './app/screens/settings/AssocRequest';
 import EventUserCampoo from './app/screens/EventUserCampoo'
 import EventItemCampoo from './app/components/EventItemCampoo';
+
 // La navigation se mettra en place via react-navigation 
 
 export default class App extends React.Component {
