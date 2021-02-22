@@ -56,10 +56,10 @@ export default class AssocProfil extends React.Component{
                
                    <Text style={[styles.colorViolet, styles.postTitle]}>Post</Text>
             
-{/* les tags figurants sur le profil utilisateur */}
+{/* les posts figurants sur le profil utilisateur */}
 
-    {/* <View style={styles.tagsContainer}>
-        <View style={styles.tagsContent}> */}
+    {/* <View style={styles.postsContainer}>
+        <View style={styles.postsContent}> */}
 
              {/* <PostCampoo/> 
              <PostCampoo/> */}
@@ -167,17 +167,12 @@ const styles = StyleSheet.create({
         borderBottomWidth:1,
         paddingBottom:15,
         borderColor:'rgba(158, 150, 150, .5)',
-        // paddingLeft:10,
-        // paddingRight:15,
-        
-        // justifyContent: 'space-between',
-        // backgroundColor:'',
+ 
 
     },
     iconsBat:{
         flex:0,
-        // position:'relative',
-        // left:7,
+ 
         alignSelf:'center',
        marginLeft:10,
         width: 75,
@@ -192,22 +187,18 @@ const styles = StyleSheet.create({
         fontSize:14,
         marginLeft:25,
         marginTop:15,
-        // textAlign:'justify',
+     
         flexShrink: 1, 
        
        
     },
-    tagsContainer:{
+    postsContainer:{
         flex:1,
-        // width:'100%',
-        // // marginTop:5,
-        
-       
  
   
     
     },
-    tagsContent:{
+    postsContent:{
     // flex:1,
     // width:'100%',
     // marginBottom:25,
