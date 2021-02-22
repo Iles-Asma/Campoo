@@ -20,11 +20,14 @@ export default class HomeFeedCampoo extends React.Component {
 
 
                         <PostCampoo
-                            AssoName="Lapin Associe"
+                            name="Lapin Associe"
                             description="La description du post" />
-                        <PostCampoo />
-                        <PostCampoo />
-                        <PostCampoo />
+                        <PostCampoo name="Lapin Associe"
+                            description="La description du post" />
+                        <PostCampoo name="Lapin Associe"
+                            description="La description du post" />
+                        <PostCampoo name="Lapin Associe"
+                            description="La description du post" />
 
 
 

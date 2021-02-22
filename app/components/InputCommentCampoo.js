@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
 
 
     inputText: {
-        width: "80%",
+        width: "90%",
         height: 37,
         margin: 10,
         borderWidth: 2,

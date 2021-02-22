@@ -1,4 +1,11 @@
+
+import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeIcon from '../../assets/svg/HomeIcon';
+
+import EventIcon from '../../assets/svg/EventIcon';
+import ProfileIcon from '../../assets/svg/ProfileIcon';
+
 
 import ScreenLoginCampoo from '../screens/login/ScreenLoginCampoo';
 import AnimalSignupCampoo from '../screens/signup/AnimalSignupCampoo';
@@ -33,193 +40,62 @@ import SettingPage from '../screens/settings/SettingPage';
 import ChangeName from '../screens/settings/ChangeName';
 
 import AssocRequest from '../screens/settings/AssocRequest';
+import { createStackNavigator } from '@react-navigation/stack';
+import EventUserCampoo from '../screens/EventUserCampoo';
+import EventDetailCampoo from '../screens/EventDetailCampoo';
+import CommentCampoo from '../screens/CommentCampoo';
 
-// // fonction qui sert a cree une nouvelle stack de navigation , ou l'on passe un objet dans lequel on dit quel different ecran nous voulons enregistrer
-// const HomeStackCampoo = createStackNavigator({
-// La page ou le trois categories de tags seront affiché
-// CategoriesTags: {
-//   screen: CategoriesTags,
-//   navigationOptions: {
-//     headerShown: false,
+
+
+// const EventStack = createStackNavigator();
+
+// export default class EventStackScreen extends React.Component {
+//   render() {
+//     return (
+//       <EventStack.Navigator>
+//         <EventStack.Screen name="Settings" component={EventCampoo} />
+//         <EventStack.Screen name="Details" component={EventUserCampoo} />
+//       </EventStack.Navigator>
+//     );
 //   }
-// },
-// // Screens Settings
-// SettingPage: {
-//   screen: SettingPage,
-//   navigationOptions: {
-//     headerShown: false,
+// }
 
-//   }
+const HomeStack = createStackNavigator();
+function HomeStackScreen() {
+  return (
+    <HomeStack.Navigator>
+      <HomeStack.Screen name="feed" component={HomeFeedCampoo} options={{ headerShown: false }} />
+      <HomeStack.Screen name="commentaire" component={CommentCampoo} options={{ headerShown: false }} />
 
-// },
-// AssocRequest: {
-//   screen: AssocRequest,
-//   navigationOptions: {
-//     headerShown: false,
-
-//   }
-
-// },
-// ChangeName: {
-//   screen: ChangeName,
-//   navigationOptions: {
-//     headerShown: false,
-
-//   }
-
-// },
-// // Screens PROFIL
-// UserProfil: {
-//   screen: UserProfil,
-//   navigationOptions: {
-//     headerShown: false,
-
-//   }
-
-// },
-// UserModificationPage: {
-//   screen: UserModificationPage,
-//   navigationOptions: {
-//     headerShown: false,
-
-//   }
-
-// },
-// MyTags: {
-//   screen: MyTags,
-//   navigationOptions: {
-//     headerShown: false,
-//   }
-// },
-// ChooseTags: {
-//   screen: ChooseTags,
-//   navigationOptions: {
-//     headerShown: false,
-
-//   }
-
-// },
-//
-
-//   ScreenLoginCampoo: {
-//     screen: ScreenLoginCampoo,
-//     navigationOptions: {
-//       headerShown: false,
-
-//     }
-
-//   },
+    </HomeStack.Navigator>
+  );
+}
 
 
-//   MailSignupCampoo: {
-//     screen: MailSignupCampoo,
-//     navigationOptions: {
-//       headerShown: false,
+const EventStack = createStackNavigator();
+function EventStackScreen() {
+  return (
+    <EventStack.Navigator>
+      <EventStack.Screen name="Evenement" component={EventCampoo} options={{ headerShown: false }} />
+      <EventStack.Screen name="Detail de l'evenement" component={EventDetailCampoo} options={{ headerShown: false }} />
+      <EventStack.Screen name="Tes evenements" component={EventUserCampoo} options={{ headerShown: false }} />
+    </EventStack.Navigator>
+  );
+}
 
-//     }
+const ProfilStack = createStackNavigator();
+function ProfilStackScreen() {
+  return (
+    <ProfilStack.Navigator>
+      <ProfilStack.Screen name="mon profil" component={UserProfil} options={{ headerShown: false }} />
+      <ProfilStack.Screen name="parametre" component={SettingPage} options={{ headerShown: false }} />
+      <ProfilStack.Screen name="modifier mon compte" component={UserModificationPage} options={{ headerShown: false }} />
 
-//   },
-//   }
-// },
-// AssocProfil: {
-//   screen: AssocProfil,
-//   navigationOptions: {
-//     headerShown: false,
-
-//   }
-// },
-// UserModificationPage: {
-//   screen: UserModificationPage,
-//   navigationOptions: {
-//     headerShown: false,
-
-//   }
-// },
-// AssocModificationPage: {
-//   screen: AssocModificationPage,
-//   navigationOptions: {
-//     headerShown: false,
-
-//   }
-// },
-// MyTags: {
-//   screen: MyTags,
-//   navigationOptions: {
-//     headerShown: false,
-//   }
-// },
-// ChooseTags: {
-//   screen: ChooseTags,
-//   navigationOptions: {
-//     headerShown: false,
-
-//   BatSignupCampoo: {
-//     screen: BatSignupCampoo,
-//     navigationOptions: {
-//       headerShown: false,
-
-//     }
-
-//   },
+    </ProfilStack.Navigator>
+  );
+}
 
 
-//   NameSignupCampoo: {
-//     screen: NameSignupCampoo,
-//     navigationOptions: {
-//       headerShown: false,
-
-//     }
-
-//   },
-
-//   DobSignupCampoo: {
-//     screen: DobSignupCampoo,
-//     navigationOptions: {
-//       headerShown: false,
-
-//     }
-
-//   },
-
-//   PseudoSignupCampoo: {
-//     screen: PseudoSignupCampoo,
-//     navigationOptions: {
-//       headerShown: false,
-
-//     }
-
-//   },
-
-//   MdpSignupCampoo: {
-//     screen: MdpSignupCampoo,
-//     navigationOptions: {
-//       headerShown: false,
-
-//     }
-//   },
-
-
-
-//   AnimalSignupCampoo: {
-//     screen: AnimalSignupCampoo,
-//     navigationOptions: {
-//       headerShown: false,
-
-//     }
-
-//   },
-
-//   CodeVerifSignupCampoo: {
-//     screen: CodeVerifSignupCampoo,
-//     navigationOptions: {
-//       headerShown: false,
-
-//     }
-
-
-//   },
-
-// };
 
 
 
@@ -227,57 +103,63 @@ import AssocRequest from '../screens/settings/AssocRequest';
 
 const Tab = createBottomTabNavigator();
 
-function Navigator() {
-  return (
-    <Tab.Navigator
-      initialRouteName="Home"
-      screenOptions={{
-        headerShown: false
-      }}
-    >
-      <Tab.Screen
-        name="Feed"
-        component={Feed}
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color, size }) => (
-          
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Notifications"
-        component={Notifications}
-        options={{
-          tabBarLabel: 'Updates',
-          tabBarIcon: ({ color, size }) => (
-            
-          ),
+export default class Navigator extends React.Component {
+  render() {
 
-        }}
-      />
+    return (
+      <Tab.Navigator
+      >
+        <Tab.Screen
+          name="accueil"
+          component={HomeStackScreen}
+          options={{
 
-      <Tab.Screen
-        name="Settings1"
-        component={SettingsScreen}
-        options={{
-          title: 'My profile',
-          tabBarIcon: ({ size, focused, color }) => {
-            return (
-              <Image
-                style={{ width: size, height: size }}
-                source={{
-                  uri: 'image url',
-                }}
-              />
-            );
-          },
-        }}
-      />
-    </Tab.Navigator>
-  );
+
+            tabBarIcon: () => {
+              return (
+                <HomeIcon />
+
+
+              );
+            },
+          }}
+        />
+        <Tab.Screen
+          name="Evenement"
+          component={EventStackScreen}
+          options={{
+
+
+            tabBarIcon: () => {
+              return (
+                <EventIcon />
+
+
+              );
+            },
+          }}
+
+        />
+
+        <Tab.Screen
+          name="Profil"
+          component={ProfilStackScreen}
+          options={{
+
+            tabBarIcon: ({ size, focused, color }) => {
+              return (
+                <ProfileIcon />
+
+
+              );
+            },
+          }}
+
+        />
+      </Tab.Navigator>
+    );
+  }
 }
 
 
 
-export default createAppContainer(CampooTabNavigator);

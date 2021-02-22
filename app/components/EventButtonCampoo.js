@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Text, View } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
 
 export default class EventButtonCampoo extends React.Component {
@@ -9,9 +9,13 @@ export default class EventButtonCampoo extends React.Component {
 
         return (
 
-            <View style={this.props.style}>
-                <Text style={this.props.style}>{this.props.children}</Text>
-            </View>
+
+            <TouchableOpacity style={[this.props.style]} onPress={this.props.onPress}>
+                <View style={this.props.style}>
+                    <Text style={this.props.style}>{this.props.children}</Text>
+                </View>
+            </TouchableOpacity>
+
 
 
         );

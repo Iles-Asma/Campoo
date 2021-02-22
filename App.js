@@ -1,5 +1,5 @@
-// import 'react-native-gesture-handler';
 import React from 'react';
+import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -80,7 +80,6 @@ export default class App extends React.Component {
       // <EventItemCampoo />
 
       <NavigationContainer>
-
         <Navigator />
       </NavigationContainer>
 
@@ -94,7 +93,7 @@ export default class App extends React.Component {
 
       //<CommentCampoo />
 
-      // <CommentCampoo />
+      //<CommentCampoo />
       //<EventDetailCampoo/>
 
       //<TextInputAssos />
@@ -123,7 +122,7 @@ export default class App extends React.Component {
       //<CategoriesTags />
       // <ChooseTags/>
       //<MyTags />
-      // <UserProfil/>  
+      //<UserProfil />
       // <CategoriesTags/>
       // <ChooseTags/>
       // <MyTags />

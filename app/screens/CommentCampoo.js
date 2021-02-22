@@ -1,5 +1,7 @@
 import React from 'react'
-import { StyleSheet, StatusBar, ScrollView, SafeAreaView, Platform, View, } from 'react-native';
+import { StyleSheet, ScrollView, SafeAreaView, Platform, View, KeyboardAvoidingView } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+
 import PostCampoo from '../components/PostCampoo';
 import UserCommentCampoo from '../components/UserCommentCampoo';
 import InputCommentCampoo from '../components/InputCommentCampoo';
@@ -15,7 +17,12 @@ export default class CommentCampoo extends React.Component {
 
         return (
 
+
+
+
+
             <SafeAreaView style={styles.container}>
+                <StatusBar style='auto' />
 
                 <HeaderReturn />
 
@@ -30,18 +37,23 @@ export default class CommentCampoo extends React.Component {
                     />
 
 
+
                     <UserCommentCampoo
+
                         name='Lapin Associe'
                         comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
                     <UserCommentCampoo
+                        name='Lapin Associe'
                         comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
 
 
                     <UserCommentCampoo
+                        name='Lapin Associe'
                         comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
 
 
                     <UserCommentCampoo
+                        name='Lapin Associe'
                         comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
 
                     <UserCommentCampoo
@@ -65,6 +77,7 @@ export default class CommentCampoo extends React.Component {
 
 
 
+
         );
 
 
@@ -78,10 +91,11 @@ export default class CommentCampoo extends React.Component {
 const styles = StyleSheet.create({
 
 
+
     container: {
         flex: 1,
         //  pour detecter la platform
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 30,
 
         flexDirection: 'column',
         justifyContent: 'center',
@@ -101,3 +115,63 @@ const styles = StyleSheet.create({
 });
 
 
+
+{/* <SafeAreaView style={styles.mainContainer}>
+
+<KeyboardAvoidingView behavior='padding' enabled={true} style={styles.container} >
+    <StatusBar style='auto' />
+
+
+    <HeaderReturn />
+
+
+
+
+
+
+    <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
+
+        <PostCampoo name='Lapin Associe'
+        />
+
+
+
+        <UserCommentCampoo
+
+            name='Lapin Associe'
+            comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+        <UserCommentCampoo
+            name='Lapin Associe'
+            comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+
+        <UserCommentCampoo
+            name='Lapin Associe'
+            comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+
+        <UserCommentCampoo
+            name='Lapin Associe'
+            comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+        <UserCommentCampoo
+            comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+        <UserCommentCampoo
+            comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+
+
+
+    </ScrollView>
+
+
+
+    <InputCommentCampoo />
+
+
+
+</KeyboardAvoidingView>
+
+
+</SafeAreaView> */}
