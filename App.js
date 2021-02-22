@@ -33,6 +33,7 @@ import AssocProfil from './app/screens/profils/AssocProfil';
 import ViewAssocProfil from './app/screens/profils/ViewAssocProfil';
 import ChooseTags from './app/screens/profils/ChooseTags';
 import MyTags from './app/screens/profils/MyTags';
+import MailSignupCampoo from "./app/screens/signup/MailSignupCampoo";
 
 import UserModificationPage from './app/screens/profils/UserModificationPage';
 import Navigator from './app/routes/HomeStackCampoo'
@@ -79,9 +80,9 @@ export default class App extends React.Component {
       //
       // <EventItemCampoo />
 
-      <NavigationContainer>
-        <Navigator />
-      </NavigationContainer>
+      // <NavigationContainer>
+      //   <Navigator />
+      // </NavigationContainer>
 
 
 
@@ -150,7 +151,7 @@ export default class App extends React.Component {
 
 
       //----------------------- SIGNUP SCREENS
-      // <MailSignupCampoo />
+      <MailSignupCampoo />
       //<NameSignupCampoo/>
       //<DobSignupCampoo />
       //<PseudoSignupCampoo/>
