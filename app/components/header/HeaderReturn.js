@@ -14,7 +14,7 @@ export default class HeaderReturn extends React.Component {
 
 
 
-                <TouchableOpacity >
+                <TouchableOpacity onPress={this.props.onPress} >
                     <ArrowLSvg />
                 </TouchableOpacity>
 

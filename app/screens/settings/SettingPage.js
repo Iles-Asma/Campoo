@@ -5,93 +5,93 @@ import { StyleSheet, StatusBar, TouchableOpacity, SafeAreaView, ScrollView, View
 import TopNav from "../../components/header/TopNav";
 import ButtonSettings from '../../components/button/ButtonSettings';
 import ButtonCampoo from '../../components/button/ButtonCampoo';
-import ButtonLarge from "../../components/button/ButtonLarge";
-
-export default class SettingPage extends React.Component {
-
-    NamePace() {
-        return
-
-    }
-    render() {
+import ArrowLSvg from '../../components/ArrowLSvg';
 
 
-        return (
-
-            <SafeAreaView style={styles.container}>
-                <TopNav>Réglage</TopNav>
-                <View style={styles.settingsContent}>
-                    <ScrollView style={styles.SizeOnScroll} showsVerticalScrollIndicator={false} >
-
-                        {/* Les differentes rubrique */}
-                        {/* Titre */}
-                        <View style={styles.settingsTitle}>
-                            <Text > Compte </Text>
-                        </View>
-
-                        {/* Rubrique */}
-                        <TouchableOpacity>
-                            <ButtonSettings> Prénom</ButtonSettings>
-                        </TouchableOpacity>
-                        {/* Rubrique */}
-                        <TouchableOpacity>
-                            <ButtonSettings> Mot de passe</ButtonSettings>
-                        </TouchableOpacity>
-                        {/* Rubrique */}
-                        <TouchableOpacity>
-                            <ButtonSettings> Devenir un compte associatif</ButtonSettings>
-                        </TouchableOpacity>
-
-                        {/* Titre de la rubrique */}
-                        <View style={styles.settingsTitle}>
-                            <Text > Contactez-nous </Text>
-                        </View>
-                        {/* Rubrique */}
-                        <TouchableOpacity>
-                            <ButtonSettings> Aide et assistance</ButtonSettings>
-                        </TouchableOpacity>
-
-                        {/* Titre... */}
-                        <View style={styles.settingsTitle}>
-                            <Text > Communauté </Text>
-                        </View>
-                        {/* Rubrique */}
-                        <TouchableOpacity>
-                            <ButtonSettings> Régles de la Communauté</ButtonSettings>
-                        </TouchableOpacity>
-                        {/* Titre */}
-                        <View style={styles.settingsTitle}>
-                            <Text > Mentions légales </Text>
-                        </View>
-                        {/* Rubrique */}
-                        <TouchableOpacity>
-                            <ButtonSettings> Politique de Confidentailité</ButtonSettings>
-                        </TouchableOpacity>
-                        {/* Rubrique */}
-                        <TouchableOpacity>
-                            <ButtonSettings> Conditions générales d’utilisation</ButtonSettings>
-                        </TouchableOpacity>
-                        {/* Titre */}
-                        <View style={styles.GeneraleBtnContainer}>
-                            {/* Btn deconnexion */}
-                            <ButtonCampoo><Text style={styles.logOut}  > Déconnexion</Text></ButtonCampoo>
-
-                            {/* BTN Suppression */}
-                            <TouchableOpacity ><Text style={styles.leaveBtn}> Supprimer mon compte</Text></TouchableOpacity>
+export default function SettingPage({ navigation }) {
 
 
-                        </View>
+    // render() {
 
 
-                    </ScrollView>
+    return (
 
-                </View>
+        <SafeAreaView style={styles.container}>
 
-            </SafeAreaView>
 
-        );
+            <TopNav onPress={() => navigation.goBack()} >Réglage</TopNav>
+            <View style={styles.settingsContent}>
+                <ScrollView style={styles.SizeOnScroll} showsVerticalScrollIndicator={false} >
 
-    }
+                    {/* Les differentes rubrique */}
+                    {/* Titre */}
+                    <View style={styles.settingsTitle}>
+                        <Text > Compte </Text>
+                    </View>
+
+                    {/* Rubrique */}
+                    <TouchableOpacity>
+                        <ButtonSettings> Prénom</ButtonSettings>
+                    </TouchableOpacity>
+                    {/* Rubrique */}
+                    <TouchableOpacity>
+                        <ButtonSettings> Mot de passe</ButtonSettings>
+                    </TouchableOpacity>
+                    {/* Rubrique */}
+                    <TouchableOpacity>
+                        <ButtonSettings> Devenir un compte associatif</ButtonSettings>
+                    </TouchableOpacity>
+
+                    {/* Titre de la rubrique */}
+                    <View style={styles.settingsTitle}>
+                        <Text > Contactez-nous </Text>
+                    </View>
+                    {/* Rubrique */}
+                    <TouchableOpacity>
+                        <ButtonSettings> Aide et assistance</ButtonSettings>
+                    </TouchableOpacity>
+
+                    {/* Titre... */}
+                    <View style={styles.settingsTitle}>
+                        <Text > Communauté </Text>
+                    </View>
+                    {/* Rubrique */}
+                    <TouchableOpacity>
+                        <ButtonSettings> Régles de la Communauté</ButtonSettings>
+                    </TouchableOpacity>
+                    {/* Titre */}
+                    <View style={styles.settingsTitle}>
+                        <Text > Mentions légales </Text>
+                    </View>
+                    {/* Rubrique */}
+                    <TouchableOpacity>
+                        <ButtonSettings> Politique de Confidentailité</ButtonSettings>
+                    </TouchableOpacity>
+                    {/* Rubrique */}
+                    <TouchableOpacity>
+                        <ButtonSettings> Conditions générales d’utilisation</ButtonSettings>
+                    </TouchableOpacity>
+                    {/* Titre */}
+                    <View style={styles.GeneraleBtnContainer}>
+                        {/* Btn deconnexion */}
+                        <ButtonCampoo><Text style={styles.logOut}  > Déconnexion</Text></ButtonCampoo>
+
+                        {/* BTN Suppression */}
+                        <TouchableOpacity ><Text style={styles.leaveBtn}> Supprimer mon compte</Text></TouchableOpacity>
+
+
+                    </View>
+
+
+                </ScrollView>
+
+            </View>
+
+        </SafeAreaView>
+
+    );
+
+    // }
 
 }
 // style generale

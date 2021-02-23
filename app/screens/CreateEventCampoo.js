@@ -14,83 +14,83 @@ import ArrowLSvg from "../components/ArrowLSvg";
 import ButtonCampoo from '../components/button/ButtonCampoo';
 import TextInputAssos from '../components/input/TextInputAssos';
 
-export default class AssocRequest extends React.Component {
+export default function AssocRequest() {
 
-    render() {
 
-        return (
-            // contenu generale
 
-            <SafeAreaView style={styles.container}>
+    return (
+        // contenu generale
 
-                {/* La navigation du haut */}
-                <View style={styles.topNav}>
+        <SafeAreaView style={styles.container}>
 
-                    {/*Le onPress a mettre  */}
-                    <TouchableOpacity >
-                        <ArrowLSvg />
-                    </TouchableOpacity>
-                    <View style={styles.namePage}>
-                        <Text style={styles.secondTitle}>Création d'évenement</Text>
-                    </View>
+            {/* La navigation du haut */}
+            <View style={styles.topNav}>
 
+                {/*Le onPress a mettre  */}
+                <TouchableOpacity >
+                    <ArrowLSvg />
+                </TouchableOpacity>
+                <View style={styles.namePage}>
+                    <Text style={styles.secondTitle}>Création d'évenement</Text>
                 </View>
 
-                {/* Contenaire de information a entree*/}
-                <ScrollView showsVerticalScrollIndicator={false} >
+            </View>
 
-                    <View style={styles.modificationContent}>
+            {/* Contenaire de information a entree*/}
+            <ScrollView showsVerticalScrollIndicator={false} >
 
-                        <LabelCampoo style={styles.nameLabel}>Nom de l'évenement</LabelCampoo>
+                <View style={styles.modificationContent}>
 
-                        {/* Nom de l'event */}
-                        <InputModifProfil placeholder="Asso Uge" />
+                    <LabelCampoo style={styles.nameLabel}>Nom de l'évenement</LabelCampoo>
 
-                        {/* detaill de l'evenent */}
+                    {/* Nom de l'event */}
+                    <InputModifProfil placeholder="Asso Uge" />
 
-                        <LabelCampoo style={styles.nameLabel}>Descriptif de l'évenement</LabelCampoo>
+                    {/* detaill de l'evenent */}
 
-                        <TextInputAssos placeholder='' />
+                    <LabelCampoo style={styles.nameLabel}>Descriptif de l'évenement</LabelCampoo>
 
-                        {/* Date de l'event */}
-                        <LabelCampoo style={styles.nameLabel}>Date de l'évenement</LabelCampoo>
+                    <TextInputAssos placeholder='' />
 
-
-                        <InputModifProfil placeholder="18/07/2020" />
-
-                        {/* heure de l'event */}
-                        <LabelCampoo style={styles.nameLabel}>Heure de l'évenement</LabelCampoo>
-
-                        <InputModifProfil placeholder="18h30" />
+                    {/* Date de l'event */}
+                    <LabelCampoo style={styles.nameLabel}>Date de l'évenement</LabelCampoo>
 
 
+                    <InputModifProfil placeholder="18/07/2020" />
 
-                        {/* Input Option */}
-                        <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo>
+                    {/* heure de l'event */}
+                    <LabelCampoo style={styles.nameLabel}>Heure de l'évenement</LabelCampoo>
 
-                        <PickerBatiments />
-
-                        {/* date et lieu de l'event */}
-                        <LabelCampoo style={styles.nameLabel}>Lieu/adresse</LabelCampoo>
-
-                        <InputBioProfil placeholder='2 rue albert....' />
+                    <InputModifProfil placeholder="18h30" />
 
 
-                        {/* Validation */}
-                        <View style={styles.btnContainer} >
-                            <ButtonCampoo> Valide </ButtonCampoo>
-                        </View>
+
+                    {/* Input Option */}
+                    <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo>
+
+                    <PickerBatiments />
+
+                    {/* date et lieu de l'event */}
+                    <LabelCampoo style={styles.nameLabel}>Lieu/adresse</LabelCampoo>
+
+                    <InputBioProfil placeholder='2 rue albert....' />
 
 
+                    {/* Validation */}
+                    <View style={styles.btnContainer} >
+                        <ButtonCampoo> Valide </ButtonCampoo>
                     </View>
-                </ScrollView>
-            </SafeAreaView>
+
+
+                </View>
+            </ScrollView>
+        </SafeAreaView>
 
 
 
 
-        );
-    }
+    );
+
 };
 
 

@@ -10,11 +10,11 @@ export default class EventButtonCampoo extends React.Component {
         return (
 
 
-            <TouchableOpacity style={[this.props.style]} onPress={this.props.onPress}>
-                <View style={this.props.style}>
-                    <Text style={this.props.style}>{this.props.children}</Text>
-                </View>
-            </TouchableOpacity>
+
+            <View style={this.props.style} onPress={this.props.onPress}>
+                <Text style={this.props.style}>{this.props.children}</Text>
+            </View>
+
 
 
 

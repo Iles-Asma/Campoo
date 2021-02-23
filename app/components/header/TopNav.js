@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 
-import { StyleSheet, StatusBar, SafeAreaView, View, Text } from 'react-native';
+import { StyleSheet, SafeAreaView, View, Text } from 'react-native';
 
 import ArrowLSvg from "../ArrowLSvg";
 
@@ -13,6 +13,8 @@ export default class topNav extends React.Component {
 
     render() {
 
+
+
         return (
             // contenu generale
 
@@ -21,7 +23,7 @@ export default class topNav extends React.Component {
                 <View style={styles.topNav}>
 
                     {/*Le onPress a mettre  */}
-                    <TouchableOpacity >
+                    <TouchableOpacity onPress={this.props.onPress} >
                         <ArrowLSvg />
                     </TouchableOpacity>
                     <View style={styles.namePage}>

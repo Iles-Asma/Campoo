@@ -47,7 +47,7 @@ export default class HomeFeedCampoo extends React.Component {
                         <ShareButton />
                     </TouchableOpacity>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={this.props.onPress}>
                         <CommentButton />
                     </TouchableOpacity>
 

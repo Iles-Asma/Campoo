@@ -44,57 +44,45 @@ import { createStackNavigator } from '@react-navigation/stack';
 import EventUserCampoo from '../screens/EventUserCampoo';
 import EventDetailCampoo from '../screens/EventDetailCampoo';
 import CommentCampoo from '../screens/CommentCampoo';
-
-
-
-// const EventStack = createStackNavigator();
-
-// export default class EventStackScreen extends React.Component {
-//   render() {
-//     return (
-//       <EventStack.Navigator>
-//         <EventStack.Screen name="Settings" component={EventCampoo} />
-//         <EventStack.Screen name="Details" component={EventUserCampoo} />
-//       </EventStack.Navigator>
-//     );
-//   }
-// }
-
-
+import { CAMPOO } from '../../assets/themes/ThemeCampoo';
 
 const HomeStack = createStackNavigator();
 function HomeStackScreen() {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name="feed" component={HomeFeedCampoo} options={{ headerShown: false }} />
-      <HomeStack.Screen name="commentaire" component={CommentCampoo} options={{ headerShown: false }} />
+      <HomeStack.Screen name="HomeFeedCampoo" component={HomeFeedCampoo} options={{ headerShown: false }} />
+      <HomeStack.Screen name="CommentCampoo" component={CommentCampoo} options={{ headerShown: false }} />
 
     </HomeStack.Navigator>
   );
 }
 
 
+
+
+
 const EventStack = createStackNavigator();
 function EventStackScreen() {
   return (
-    <EventStack.Navigator>
-      <EventStack.Screen name="Evenement" component={EventCampoo} options={{ headerShown: false }} />
-      <EventStack.Screen name="Detail de l'evenement" component={EventDetailCampoo} options={{ headerShown: false }} />
-      <EventStack.Screen name="Tes evenements" component={EventUserCampoo} options={{ headerShown: false }} />
+    <EventStack.Navigator >
+      <EventStack.Screen name="EventCampoo" component={EventCampoo} options={{ headerShown: false }} />
+      <EventStack.Screen name="EventUserCampoo" component={EventUserCampoo} options={{ headerShown: false }} />
+      <EventStack.Screen name="EventDetailCampoo" component={EventDetailCampoo} options={{ headerShown: false }} />
     </EventStack.Navigator>
   );
 }
 
 const ProfilStack = createStackNavigator();
-function ProfilStackScreen() {
+export const ProfilStackScreen = () => {
   return (
-    <ProfilStack.Navigator>
-      <ProfilStack.Screen name="mon profil" component={UserProfil} options={{ headerShown: false }} />
-      <ProfilStack.Screen name="modifier mon compte" component={UserModificationPage} options={{ headerShown: false }} />
-      <ProfilStack.Screen name="parametre" component={SettingPage} options={{ headerShown: false }} />
-      <ProfilStack.Screen name="Mes Tags" component={MyTags} options={{ headerShown: false }} />
-      <ProfilStack.Screen name="modifier centre interets" component={CategoriesTags} options={{ headerShown: false }} />
-      <ProfilStack.Screen name="change tes tags" component={ChooseTags} options={{ headerShown: false }} />
+    <ProfilStack.Navigator   >
+      <ProfilStack.Screen name="UserProfil" component={UserProfil} options={{ headerShown: false }} />
+      <ProfilStack.Screen name="SettingPage" component={SettingPage} options={{ headerShown: false }} />
+      <ProfilStack.Screen name="UserModificationPage" component={UserModificationPage} options={{ headerShown: false }} />
+
+      <ProfilStack.Screen name="MyTags" component={MyTags} options={{ headerShown: false }} />
+      <ProfilStack.Screen name="CategoriesTags" component={CategoriesTags} options={{ headerShown: false }} />
+      <ProfilStack.Screen name="ChooseTags" component={ChooseTags} options={{ headerShown: false }} />
     </ProfilStack.Navigator>
   );
 }
@@ -102,64 +90,75 @@ function ProfilStackScreen() {
 
 const Tab = createBottomTabNavigator();
 
-export default class Navigator extends React.Component {
-  render() {
+export default function Navigator() {
+  // render() {
 
-    return (
-      <Tab.Navigator
-      >
-        <Tab.Screen
-          name="accueil"
-          component={HomeStackScreen}
-          options={{
-
-            tabBarLabel: () => { return null },
+  return (
+    <Tab.Navigator
+      initialRouteName="Feed"
+      tabBarOptions={{
+        activeTintColor: '#e91e63',
+        activeBackgroundColor: CAMPOO.secondary,
+      }}
 
 
-            tabBarIcon: () => {
-              return (
-                <HomeIcon />
+
+    >
+      <Tab.Screen
+        name="accueil"
+        component={HomeStackScreen}
+        options={{
+
+          tabBarLabel: () => { return null },
 
 
-              );
-            },
-          }}
-        />
-        <Tab.Screen
-          name="Evenement"
-          component={EventStackScreen}
-          options={{
-            tabBarLabel: () => { return null },
-            tabBarIcon: () => {
-              return (
-                <EventIcon />
+          tabBarIcon: () => {
+            return (
+              <HomeIcon />
 
 
-              );
-            },
-          }}
-
-        />
-
-        <Tab.Screen
-          name="Profil"
-          component={ProfilStackScreen}
-          options={{
-            tabBarLabel: () => { return null },
-
-            tabBarIcon: () => {
-              return (
-                <ProfileIcon />
+            );
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Evenement"
+        component={EventStackScreen}
+        options={{
+          tabBarLabel: () => { return null },
+          tabBarIcon: () => {
+            return (
+              <EventIcon />
 
 
-              );
-            },
-          }}
+            );
+          },
+        }}
 
-        />
-      </Tab.Navigator>
-    );
-  }
+      />
+
+      <Tab.Screen
+        name="mon profil"
+        component={ProfilStackScreen}
+        options={{
+
+
+
+          tabBarLabel: () => { return null },
+
+          tabBarIcon: () => {
+            return (
+              <ProfileIcon />
+
+
+            );
+          },
+        }}
+
+      />
+    </Tab.Navigator>
+  );
+  // }
 }
 
 

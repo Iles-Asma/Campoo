@@ -73,7 +73,7 @@ export default class App extends React.Component {
   render() {
 
 
-    // const Stack = createStackNavigator();
+    const Stack = createStackNavigator();
 
     return (
       //<AssoFeedCampoo />
@@ -82,7 +82,7 @@ export default class App extends React.Component {
       //
       //<EventItemCampoo />
 
-      <NavigationContainer>
+      <NavigationContainer >
         <Navigator />
       </NavigationContainer>
 

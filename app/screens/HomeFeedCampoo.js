@@ -4,44 +4,44 @@ import PostCampoo from "../components/PostCampoo";
 
 
 
-export default class HomeFeedCampoo extends React.Component {
-
-    render() {
-
-        return (
-
-            <SafeAreaView style={styles.container}>
-                <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
-
-                    <View style={styles.containerFeed}>
+export default function HomeFeedCampoo({ navigation }) {
 
 
+    return (
 
+        <SafeAreaView style={styles.container}>
+            <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
-
-                        <PostCampoo
-                            name="Lapin Associe"
-                            description="La description du post" />
-                        <PostCampoo name="Lapin Associe"
-                            description="La description du post" />
-                        <PostCampoo name="Lapin Associe"
-                            description="La description du post" />
-                        <PostCampoo name="Lapin Associe"
-                            description="La description du post" />
+                <View style={styles.containerFeed}>
 
 
 
 
 
-                    </View>
+                    <PostCampoo
+                        name="Lapin Associe"
+                        description="La description du post"
+                        onPress={() => navigation.navigate('CommentCampoo')} />
+                    <PostCampoo name="Lapin Associe"
+                        description="La description du post" />
+                    <PostCampoo name="Lapin Associe"
+                        description="La description du post" />
+                    <PostCampoo name="Lapin Associe"
+                        description="La description du post" />
 
 
 
-                </ScrollView>
-            </SafeAreaView>
 
-        );
-    }
+
+                </View>
+
+
+
+            </ScrollView>
+        </SafeAreaView>
+
+    );
+
 };
 
 
@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
 
         alignItems: 'center',
+        backgroundColor: '#ffffff',
 
 
     },

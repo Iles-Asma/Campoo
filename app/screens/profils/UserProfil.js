@@ -9,88 +9,89 @@ import Tags from '../../components/Tags';
 
 
 
-export default class UserProfil extends React.Component {
 
-    render() {
-
-        return (
-
-            <SafeAreaView style={styles.container}>
-                {/* Contenaire  */}
-                <View style={styles.profilIdContainer}>
-
-                    <View style={[styles.profilSettings, styles.gap]}>
+export default function UserProfil({ navigation }) {
 
 
 
-                        {/* Profil de l'image */}
-                        <Image source={require("../../../assets/imgProfil/Badeaubleu.png")} style={styles.profilPics}></Image>
+    return (
 
-                        <TouchableOpacity style={[styles.profilReglage]}>
-                            <SettingsSvg />
-                        </TouchableOpacity>
+        <SafeAreaView style={styles.container}>
+            {/* Contenaire  */}
+            <View style={styles.profilIdContainer}>
 
-                        <TouchableOpacity style={[styles.profilModif]}>
-                            <PenSvg />
-                        </TouchableOpacity>
-                    </View>
+                <View style={[styles.profilSettings, styles.gap]}>
 
+
+
+                    {/* Profil de l'image */}
+                    <Image source={require("../../../assets/imgProfil/Badeaubleu.png")} style={styles.profilPics}></Image>
+
+                    <TouchableOpacity style={[styles.profilReglage]} onPress={() => navigation.navigate('SettingPage')}>
+                        <SettingsSvg />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={[styles.profilModif]} onPress={() => navigation.navigate('UserModificationPage')}>
+                        <PenSvg />
+                    </TouchableOpacity>
                 </View>
 
-                {/* Le pseudo et nom de l'user */}
-                <View style={styles.profilInfoContainer}>
-                    <Text style={[styles.Pname, styles.colorViolet]}> Entoinee</Text>
+            </View>
 
-                    <Text style={[styles.nickName, styles.colorViolet]}> LeBgDu667</Text>
+            {/* Le pseudo et nom de l'user */}
+            <View style={styles.profilInfoContainer}>
+                <Text style={[styles.Pname, styles.colorViolet]}> Entoinee</Text>
 
-                </View>
+                <Text style={[styles.nickName, styles.colorViolet]}> LeBgDu667</Text>
 
-                {/* l'
+            </View>
+
+            {/* l'
                icone de son batiment et la description du profil */}
-                <View style={styles.BioContainer}>
-                    <Image source={require("../../../assets/imgProfil/esieeIcon.png")} style={[styles.iconsBat, styles.gap]} ></Image>
-                    <Text style={[styles.bioBloc, styles.colorViolet]} > Nouvelle musique disponible sur toutes les platformes allez check  Nouvelle musique disponible sur toutes les platformes allez check Nouvelle musique disponible sur toutes les platformes allez check</Text>
-                </View>
+            <View style={styles.BioContainer}>
+                <Image source={require("../../../assets/imgProfil/esieeIcon.png")} style={[styles.iconsBat, styles.gap]} ></Image>
+                <Text style={[styles.bioBloc, styles.colorViolet]} > Nouvelle musique disponible sur toutes les platformes allez check  Nouvelle musique disponible sur toutes les platformes allez check Nouvelle musique disponible sur toutes les platformes allez check</Text>
+            </View>
 
 
-                <Text style={[styles.colorViolet, styles.tagTitle]}>Centre d'intérêts:</Text>
+            <Text style={[styles.colorViolet, styles.tagTitle]}>Centre d'intérêts:</Text>
 
-                {/* les tags figurants sur le profil utilisateur */}
+            {/* les tags figurants sur le profil utilisateur */}
 
-                <View style={styles.tagsContainer}>
-                    <View style={styles.tagsContent}>
+            <View style={styles.tagsContainer}>
+                <View style={styles.tagsContent}>
 
-                        <Tags> Musique</Tags>
-                        <Tags> Cinema</Tags>
-                        <Tags> Restaux</Tags>
-
-
-
-                        <Tags> Livres</Tags>
-                        <Tags> Musées</Tags>
-                        <Tags> Natation</Tags>
-
-                        <Tags> Musique</Tags>
-                        <Tags> Cinema</Tags>
-                        <Tags> Restaux</Tags>
+                    <Tags>Musique</Tags>
+                    <Tags>Cinema</Tags>
+                    <Tags>Restaux</Tags>
 
 
 
-                        <Tags> Livres</Tags>
-                        <Tags> Musées</Tags>
-                        <Tags> Natation</Tags>
+                    <Tags>Livres</Tags>
+                    <Tags>Musées</Tags>
+                    <Tags>Natation</Tags>
 
-                    </View>
+                    <Tags>Musique</Tags>
+                    <Tags>Cinema</Tags>
+                    <Tags>Restaux</Tags>
+
+
+
+                    <Tags>Livres</Tags>
+                    <Tags>Musées</Tags>
+                    <Tags>Natation</Tags>
 
                 </View>
 
-            </SafeAreaView>
+            </View>
+
+        </SafeAreaView>
 
 
 
 
-        );
-    }
+    );
+
 };
 
 const styles = StyleSheet.create({

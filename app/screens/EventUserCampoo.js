@@ -6,92 +6,92 @@ import { CAMPOO } from '../../assets/themes/ThemeCampoo';
 import EventUserItem from '../components/EventUserItem';
 
 
-export default class EventUserCampoo extends React.Component {
-
-    render() {
-
-        return (
-
-            <SafeAreaView style={styles.container}>
-                <View style={styles.headerContainer}>
-
-                    <TouchableOpacity style={styles.mainButton}>
-                        <EventButtonCampoo >
-                            <Text style={styles.titleButton1}>Evenement du campus</Text>
-
-                        </EventButtonCampoo>
-
-                    </TouchableOpacity>
+export default function EventUserCampoo({ navigation }) {
 
 
-                    <TouchableOpacity style={styles.userButton}>
-                        <EventButtonCampoo >
-                            <Text style={styles.titleButton2} >Tes evenements</Text>
-                        </EventButtonCampoo>
-                    </TouchableOpacity>
+
+    return (
+
+        <SafeAreaView style={styles.container}>
+            <View style={styles.headerContainer}>
+
+                <TouchableOpacity style={styles.mainButton} onPress={() => navigation.navigate('EventCampoo')}>
+                    <EventButtonCampoo >
+                        <Text style={styles.titleButton1}>Evenement du campus</Text>
+
+                    </EventButtonCampoo>
+
+                </TouchableOpacity>
 
 
+                <TouchableOpacity style={styles.userButton}>
+                    <EventButtonCampoo >
+                        <Text style={styles.titleButton2} >Tes evenements</Text>
+                    </EventButtonCampoo>
+                </TouchableOpacity>
+
+
+
+            </View>
+            <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
+
+                <View style={styles.eventContainer}>
 
                 </View>
-                <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
-                    <View style={styles.eventContainer}>
+                <EventUserItem
+                    image={require("../../assets/images/imagePost-Test.png")}
+                    title="TITRE DE L'EVENEMENT"
 
-                    </View>
+                    eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
 
-                    <EventUserItem
-                        image={require("../../assets/images/imagePost-Test.png")}
-                        title="TITRE DE L'EVENEMENT"
+                    date='17/05/2020'
 
-                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+                    hours='18h20'
 
-                        date='17/05/2020'
+                    location='2 rue ta soeur tire au flanc'
 
-                        hours='18h20'
-
-                        location='2 rue ta soeur tire au flanc'
-
-                    />
+                />
 
 
-                    <EventUserItem
-                        image={require("../../assets/images/imagePost-Test.png")}
+                <EventUserItem
+                    image={require("../../assets/images/imagePost-Test.png")}
 
-                        title="TITRE DE L'EVENEMENT"
+                    title="TITRE DE L'EVENEMENT"
 
-                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+                    eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
 
-                        date='17/05/2020'
+                    date='17/05/2020'
 
-                        hours='18h20'
+                    hours='18h20'
 
-                        location='2 rue ta soeur tire au flanc' />
+                    location='2 rue ta soeur tire au flanc' />
 
-                    <EventUserItem
-                        image={require("../../assets/images/imagePost-Test.png")}
+                <EventUserItem
+                    image={require("../../assets/images/imagePost-Test.png")}
 
-                        title="TITRE DE L'EVENEMENT"
+                    title="TITRE DE L'EVENEMENT"
 
-                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+                    eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
 
-                        date='17/05/2020'
+                    date='17/05/2020'
 
-                        hours='18h20'
+                    hours='18h20'
 
-                        location='2 rue ta soeur tire au flanc' />
+                    location='2 rue ta soeur tire au flanc' />
 
-                </ScrollView>
+            </ScrollView>
 
 
 
-            </SafeAreaView>
+        </SafeAreaView>
 
-        );
+    );
 
 
 
 
-    }
+
 
 
 
@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: '#ffffff',
 
 
     },
