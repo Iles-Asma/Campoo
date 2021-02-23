@@ -1,10 +1,10 @@
 import React from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { CAMPOO } from "../../assets/themes/ThemeCampoo";
-import Dots from '../../assets/svg/Dots';
+
 import CommentButton from '../../assets/svg/CommentButton';
 import ShareButton from '../../assets/svg/ShareButton';
-import ProfileHeaderCampoo from './ProfileHeaderCampoo';
+import ProfileHeaderCampoo from './header/ProfileHeaderCampoo';
 
 
 
@@ -21,25 +21,6 @@ export default class HomeFeedCampoo extends React.Component {
             //  post integrale
 
             <View style={styles.containerPost}>
-                {/* 
-                <View style={styles.subcontainerPost}>
-                    <View style={styles.headerPost} >
-
-
-                        <View style={styles.headerPostContent}>
-
-                            <Image source={require("../../assets/images/AssoProfile.png")} />
-
-                            <Text style={styles.postAssoName} >{this.props.AssoName}</Text>
-
-                        </View>
-
-
-                        <TouchableOpacity>
-                            <Dots />
-                        </TouchableOpacity>
-
-                    </View> */}
 
                 <ProfileHeaderCampoo>
                     <Text style={styles.post_AssoName}>{this.props.name}</Text>

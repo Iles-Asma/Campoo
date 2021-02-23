@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native'
-import { CAMPOO } from '../../assets/themes/ThemeCampoo';
-import ArrowLSvg from '../components/ArrowLSvg';
+import { CAMPOO } from '../../../assets/themes/ThemeCampoo';
+import ArrowLSvg from '../ArrowLSvg';
 
 
 

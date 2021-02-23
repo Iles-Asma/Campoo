@@ -1,15 +1,12 @@
 'use strict';
 
 import React, { useState } from 'react';
-
-import { StyleSheet, Picker, ScrollView, TextInput, Image, ImageBackground, StatusBar, SafeAreaView, View, Text } from 'react-native';
-import LabelCampoo from "../../components/LabelCampoo";
-import InputModifProfil from '../../components/InputModifProfil';
-import InputBioProfil from '../../components/input/InputBioProfil';
-import ArrowLSvg from "../../components/ArrowLSvg";
-import TopNav from "../../components/header/TopNav";
-import ButtonCampoo from '../../components/ButtonCampoo';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { StyleSheet, StatusBar, SafeAreaView, View, Text } from 'react-native';
+import LabelCampoo from "../../components/LabelCampoo";
+import InputModifProfil from '../../components/input/InputModifProfil';
+import ArrowLSvg from "../../components/ArrowLSvg";
+import ButtonCampoo from '../../components/button/ButtonCampoo';
 
 export default class ChangeName extends React.Component {
 

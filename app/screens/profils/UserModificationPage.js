@@ -2,16 +2,16 @@
 
 import React, { useState } from 'react';
 
-import { StyleSheet, Picker, ScrollView, TextInput, Image, ImageBackground, StatusBar, SafeAreaView, View, Text } from 'react-native';
+import { StyleSheet, ScrollView, Image, StatusBar, SafeAreaView, View, Text } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import Tags from '../../components/Tags';
 import PickerBatiments from "../../components/PickerBatiments";
-import InputCampoo from "../../components/InputCampoo";
 import LabelCampoo from "../../components/LabelCampoo";
-import InputModifProfil from '../../components/InputModifProfil';
+import InputModifProfil from '../../components/input/InputModifProfil';
 import InputBioProfil from '../../components/input/InputBioProfil';
 import PenSvg from "../../components/PenSvg";
-import ButtonLarge from '../../components/ButtonLarge';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import ButtonLarge from '../../components/button/ButtonLarge';
+
 
 export default class UserModificationPage extends React.Component {
 

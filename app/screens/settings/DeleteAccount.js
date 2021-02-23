@@ -2,15 +2,10 @@
 
 import React, { useState } from 'react';
 
-import { StyleSheet, Picker, ScrollView, TextInput, Image, ImageBackground, StatusBar, SafeAreaView, View, Text } from 'react-native';
-import LabelCampoo from "../../components/LabelCampoo";
-import InputModifProfil from '../../components/InputModifProfil';
-import InputBioProfil from '../../components/input/InputBioProfil';
-import ArrowLSvg from "../../components/ArrowLSvg";
-import TopNav from "../../components/header/TopNav";
-import ButtonCampoo from '../../components/ButtonCampoo';
+import { StyleSheet, StatusBar, SafeAreaView, View, Text } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import ExtraLargeBtn from '../../components/ExtraLargeBtn';
+import ArrowLSvg from "../../components/ArrowLSvg";
+import ExtraLargeBtn from '../../components/button/ExtraLargeBtn';
 
 export default class DeleteAccount extends React.Component {
 
@@ -42,7 +37,7 @@ export default class DeleteAccount extends React.Component {
 
 
                     <View style={styles.btnContainer} >
-                        <ExtraLargeBtn> Non je ne veux pas supprimer mon compte ! </ExtraLargeBtn>
+                        <ExtraLargeBtn>Non je ne veux pas supprimer mon compte !</ExtraLargeBtn>
                     </View>
                     <TouchableOpacity>
                         <Text style={styles.deleteText}>oui je suis sûr, supprimez mon compte </Text>

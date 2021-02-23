@@ -1,9 +1,9 @@
 import React from "react";
 import { View, StyleSheet, SafeAreaView, StatusBar, Platform, Image } from "react-native";
-import ButtonCampoo from "../../components/ButtonCampoo";
+import ButtonCampoo from "../../components/button/ButtonCampoo";
 import SecondaryButtonCampoo from "../../components/button/SecondaryButtonCampoo";
 import LabelCampoo from "../../components/LabelCampoo";
-import InputCampooSignup from "../../components/InputCampooSignup";
+import InputCampooSignup from "../../components/input/InputCampooSignup";
 import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 

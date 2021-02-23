@@ -1,7 +1,7 @@
 import React from 'react'
-import { Text, StyleSheet, View, TouchableOpacity } from 'react-native'
-import ArrowLSvg from '../components/ArrowLSvg';
-import SendButton from '../../assets/svg/SendButton'
+import { StyleSheet, View, TouchableOpacity } from 'react-native'
+import ArrowLSvg from '../ArrowLSvg';
+import SendButton from '../../../assets/svg/SendButton'
 
 
 export default class HeaderAddPost extends React.Component {

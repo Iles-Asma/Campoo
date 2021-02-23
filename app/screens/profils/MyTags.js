@@ -1,10 +1,10 @@
 'use strict';
 
 import React from 'react';
-import { StyleSheet, StatusBar, TouchableOpacity, SafeAreaView, ScrollView, View, Text } from 'react-native';
+import { StyleSheet, StatusBar, SafeAreaView, ScrollView, View, Text } from 'react-native';
 import Tags from '../../components/Tags';
 import TitlePage from '../../components/TitlePage';
-import ButtonLarge from "../../components/ButtonLarge";
+import ButtonLarge from "../../components/button/ButtonLarge";
 export default class MyTags extends React.Component {
 
 

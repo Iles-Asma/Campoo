@@ -1,8 +1,8 @@
 
 import React from 'react'
 import { Text, Image, StyleSheet, View, TouchableOpacity } from 'react-native'
-import { CAMPOO } from "../../assets/themes/ThemeCampoo";
-import Dots from '../../assets/svg/Dots';
+import { CAMPOO } from "../../../assets/themes/ThemeCampoo";
+import Dots from '../../../assets/svg/Dots';
 
 export default class ProfileHeaderCampoo extends React.Component {
     render() {
@@ -12,7 +12,7 @@ export default class ProfileHeaderCampoo extends React.Component {
 
                 <View style={styles.post_AssoProfile}>
 
-                    <Image source={require("../../assets/images/AssoProfile.png")} />
+                    <Image source={require("../../../assets/images/AssoProfile.png")} />
 
                     <Text style={styles.post_AssoName}>{this.props.children}</Text>
 

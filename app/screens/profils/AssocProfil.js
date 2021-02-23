@@ -2,10 +2,10 @@
 
 import React from 'react';
 
-import { StyleSheet, ScrollView, TextInput, Image, ImageBackground, StatusBar, TouchableOpacity, SafeAreaView, View, Text } from 'react-native';
-import SettingsSvg from '../../components/button/SettingsSvg';
+import { StyleSheet, ScrollView, Image, StatusBar, TouchableOpacity, SafeAreaView, View, Text } from 'react-native';
+import SettingsSvg from '../../components/SettingsSvg';
 import PenSvg from '../../components/PenSvg';
-import PostCampoo from '../../components/PostCampoo';
+
 
 
 

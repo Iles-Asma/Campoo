@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, ScrollView, SafeAreaView, StatusBar, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, ScrollView, SafeAreaView, StatusBar, TouchableOpacity } from 'react-native'
 import PostCampoo from '../components/PostCampoo';
 import AddButton from '../../assets/svg/AddButton'
 

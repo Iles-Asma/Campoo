@@ -18,13 +18,13 @@ import HomeFeedCampoo from './app/screens/HomeFeedCampoo';
 import EventCampoo from './app/screens/EventCampoo';
 import CommentCampoo from './app/screens/CommentCampoo';
 import EventDetailCampoo from './app/screens/EventDetailCampoo';
-import TextInputAssos from './app/components/TextInputAssos';
+import TextInputAssos from './app/components/input/TextInputAssos';
 import AssoFeedCampoo from './app/screens/AssoFeedCampoo';
 import ScreenLoginPage from './app/screens/login/ScreenLoginCampoo';
 import MdpOResetCampoo from './app/screens/resetMdp/MdpOResetCampoo';
 
 import AssoEventCampoo from './app/screens/AssoEventCampoo';
-import InputCommentCampoo from "./app/components/InputCommentCampoo";
+import InputCommentCampoo from "./app/components/input/InputCommentCampoo";
 
 import CreateEventCampoo from './app/screens/CreateEventCampoo';
 
@@ -77,10 +77,10 @@ export default class App extends React.Component {
 
     return (
       //<AssoFeedCampoo />
-      // <AssoEventCampoo />
+      //<AssoEventCampoo />
       //<InputCommentCampoo />
       //
-      // <EventItemCampoo />
+      //<EventItemCampoo />
 
       <NavigationContainer>
         <Navigator />

@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { Text, StyleSheet, View, SafeAreaView, StatusBar, Platform, TouchableOpacity } from 'react-native'
 import LabelCampoo from '../components/LabelCampoo';
-import TextInputAssos from '../components/TextInputAssos';
-import ArrowLSvg from '../components/ArrowLSvg'
-import SendButton from '../../assets/svg/SendButton'
-import HeaderAddPost from '../components/HeaderAddPost'
+import TextInputAssos from '../components/input/TextInputAssos';
+
+import HeaderAddPost from '../components/header/HeaderAddPost'
 
 
 export default class AssosAddPost extends Component {

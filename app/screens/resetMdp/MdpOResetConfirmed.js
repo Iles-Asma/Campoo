@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet, View, StatusBar, Platform, SafeAreaView, Image } from 'react-native'
-import ButtonCampoo from "../../components/ButtonCampoo";
+import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 
 export default class MdpOResetConfirmed extends React.Component {

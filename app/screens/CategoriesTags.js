@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { StyleSheet, TouchableOpacity, StatusBar, SafeAreaView, ScrollView, Image, View, Text } from 'react-native';
-import Categorie from '../components/Categorie';
+
 
 export default class CategoriesTags extends React.Component {
 

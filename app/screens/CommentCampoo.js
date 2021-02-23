@@ -1,11 +1,10 @@
 import React from 'react'
-import { StyleSheet, ScrollView, SafeAreaView, Platform, View, KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, ScrollView, SafeAreaView, Platform, } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-
 import PostCampoo from '../components/PostCampoo';
 import UserCommentCampoo from '../components/UserCommentCampoo';
-import InputCommentCampoo from '../components/InputCommentCampoo';
-import HeaderReturn from '../components/HeaderReturn';
+import InputCommentCampoo from '../components/input/InputCommentCampoo';
+import HeaderReturn from '../components/header/HeaderReturn';
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
-import EventButtonCampoo from '../components/EventButtonCampoo';
-import { ScrollView, TouchableOpacity, StyleSheet, SafeAreaView, StatusBar, View, Image, Text, Platform } from 'react-native';
-import EventButtonCampooLight from '../components/button/EventButtonLightCampoo';
+import EventButtonCampoo from '../components/button/EventButtonCampoo';
+import { ScrollView, TouchableOpacity, StyleSheet, SafeAreaView, StatusBar, View, Text, Platform } from 'react-native';
+
 import { CAMPOO } from '../../assets/themes/ThemeCampoo';
 import EventUserItem from '../components/EventUserItem';
 

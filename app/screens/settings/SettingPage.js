@@ -3,9 +3,9 @@
 import React from 'react';
 import { StyleSheet, StatusBar, TouchableOpacity, SafeAreaView, ScrollView, View, Text } from 'react-native';
 import TopNav from "../../components/header/TopNav";
-import ButtonSettings from '../../components/ButtonSettings';
-import ButtonCampoo from '../../components/ButtonCampoo';
-import ButtonLarge from "../../components/ButtonLarge";
+import ButtonSettings from '../../components/button/ButtonSettings';
+import ButtonCampoo from '../../components/button/ButtonCampoo';
+import ButtonLarge from "../../components/button/ButtonLarge";
 
 export default class SettingPage extends React.Component {
 

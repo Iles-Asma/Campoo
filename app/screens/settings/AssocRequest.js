@@ -2,18 +2,15 @@
 
 import React, { useState } from 'react';
 
-import { StyleSheet, Picker, ScrollView, TextInput, Image, ImageBackground, StatusBar, SafeAreaView, View, Text } from 'react-native';
-import Tags from '../../components/Tags';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { StyleSheet, ScrollView, StatusBar, SafeAreaView, View, Text } from 'react-native';
 import PickerBatiments from "../../components/PickerBatiments";
-import InputCampoo from "../../components/InputCampoo";
 import LabelCampoo from "../../components/LabelCampoo";
-import InputModifProfil from '../../components/InputModifProfil';
+import InputModifProfil from '../../components/input/InputModifProfil';
 import InputBioProfil from '../../components/input/InputBioProfil';
 import ArrowLSvg from "../../components/ArrowLSvg";
-import ButtonLarge from '../../components/ButtonLarge';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import ButtonCampoo from '../../components/ButtonCampoo';
-import TextInputAssos from '../../components/TextInputAssos';
+import ButtonCampoo from '../../components/button/ButtonCampoo';
+
 
 export default class AssocRequest extends React.Component {
 

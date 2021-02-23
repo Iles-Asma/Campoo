@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, Alert, StyleSheet, SafeAreaView } from "react-native";
+import { StyleSheet, SafeAreaView } from "react-native";
 // import {Picker} from '@react-native-picker/picker';
 import RNPickerSelect from 'react-native-picker-select';
 

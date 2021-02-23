@@ -1,6 +1,7 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet, Image, View, StatusBar, Text, Platform } from 'react-native';
-import HeaderReturn from '../components/HeaderReturn';
+
+import HeaderReturn from '../components/header/HeaderReturn';
 
 
 
@@ -10,6 +11,8 @@ export default class EventDetailCampoo extends React.Component {
     render() {
 
         return (
+
+
 
             <SafeAreaView style={styles.container}>
 

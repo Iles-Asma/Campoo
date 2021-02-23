@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextInput, StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import { CAMPOO } from '../../assets/themes/ThemeCampoo';
-import IconImage from '../../assets/svg/ImageIcon';
+import { CAMPOO } from '../../../assets/themes/ThemeCampoo';
+import ImageIcon from '../../../assets/svg/ImageIcon';
 
 
 export default class TextInputAssos extends React.Component {
@@ -23,7 +23,7 @@ export default class TextInputAssos extends React.Component {
                     maxLength={300} />
 
                 <TouchableOpacity style={styles.IconTextrea}>
-                    <IconImage />
+                    <ImageIcon />
                 </TouchableOpacity>
                 {/* afffichage limite de caractere */}
 

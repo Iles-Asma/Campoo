@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
-import InputCampooSignup from "../../components/InputCampooSignup"
-import ButtonCampoo from "../../components/ButtonCampoo";
+import InputCampooSignup from "../../components/input/InputCampooSignup"
+import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 

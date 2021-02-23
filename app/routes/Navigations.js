@@ -130,9 +130,6 @@ export default class Navigator extends React.Component {
           component={EventStackScreen}
           options={{
             tabBarLabel: () => { return null },
-
-
-
             tabBarIcon: () => {
               return (
                 <EventIcon />

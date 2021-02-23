@@ -3,7 +3,7 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, StatusBar, SafeAreaView, ScrollView, View, Text } from 'react-native';
 import Tags from '../../components/Tags';
-import TitlePage from '../../components/TitlePage';
+
 export default class ChooseTags extends React.Component {
 
 

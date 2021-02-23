@@ -1,8 +1,7 @@
 import React from 'react'
-import { Text, StyleSheet, View, ScrollView, SafeAreaView, StatusBar, Image, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, ScrollView, SafeAreaView, StatusBar, TouchableOpacity } from 'react-native'
 import AddButton from '../../assets/svg/AddButton'
 import ArrowLSvg from '../components/ArrowLSvg'
-
 import EventItemCampoo from '../components/EventItemCampoo'
 
 export default class AssoEventCampoo extends React.Component {

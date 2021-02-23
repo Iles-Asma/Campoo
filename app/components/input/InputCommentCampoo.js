@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native'
-import { CAMPOO } from '../../assets/themes/ThemeCampoo'
-import SendButton from '../../assets/svg/SendButton'
+import { CAMPOO } from '../../../assets/themes/ThemeCampoo'
+import SendButton from '../../../assets/svg/SendButton'
 
 
 
