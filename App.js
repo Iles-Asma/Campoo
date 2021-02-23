@@ -21,6 +21,7 @@ import EventDetailCampoo from './app/screens/EventDetailCampoo';
 import TextInputAssos from './app/components/TextInputAssos';
 import AssoFeedCampoo from './app/screens/AssoFeedCampoo';
 import ScreenLoginPage from './app/screens/login/ScreenLoginCampoo';
+import MdpOResetCampoo from './app/screens/resetMdp/MdpOResetCampoo';
 
 import AssoEventCampoo from './app/screens/AssoEventCampoo';
 import InputCommentCampoo from "./app/components/InputCommentCampoo";
@@ -36,7 +37,7 @@ import MyTags from './app/screens/profils/MyTags';
 import MailSignupCampoo from "./app/screens/signup/MailSignupCampoo";
 
 import UserModificationPage from './app/screens/profils/UserModificationPage';
-import Navigator from './app/routes/HomeStackCampoo'
+import Navigator from './app/routes/Navigations'
 
 import AssocModificationPage from './app/screens/profils/AssocModificationPage';
 
@@ -48,8 +49,9 @@ import AssocRequest from './app/screens/settings/AssocRequest';
 import EventUserCampoo from './app/screens/EventUserCampoo'
 import EventItemCampoo from './app/components/EventItemCampoo';
 import AssosAddPost from './app/screens/AssosAddPost';
-import HomeStackCampoo from './app/routes/HomeStackCampoo';
-
+import HomeStackCampoo from './app/routes/Navigations';
+import MdpOResetConfirmed from './app/screens/resetMdp/MdpOResetConfirmed';
+import CodeVerifCampoo from './app/screens/resetMdp/CodeVerifCampoo';
 
 
 // La navigation se mettra en place via react-navigation 
@@ -80,12 +82,9 @@ export default class App extends React.Component {
       //
       // <EventItemCampoo />
 
-      // <NavigationContainer>
-      //   <Navigator />
-      // </NavigationContainer>
-
-
-
+      <NavigationContainer>
+        <Navigator />
+      </NavigationContainer>
 
       // ------------------------ Component 
 
@@ -108,6 +107,12 @@ export default class App extends React.Component {
       //<AssoFeedCampoo />
       //<AssoEventCampoo />
       //<AssosAddPost />
+
+      //<MdpOMailCampoo />
+      //<MdpOResetCampoo />
+
+      //<MdpOResetConfirmed />
+      //<CodeVerifCampoo />
 
 
       //<HomeFeedCampoo /> //cote etudiant
@@ -151,7 +156,7 @@ export default class App extends React.Component {
 
 
       //----------------------- SIGNUP SCREENS
-      <MailSignupCampoo />
+      //<MailSignupCampoo />
       //<NameSignupCampoo/>
       //<DobSignupCampoo />
       //<PseudoSignupCampoo/>

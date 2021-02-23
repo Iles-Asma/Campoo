@@ -60,6 +60,8 @@ import CommentCampoo from '../screens/CommentCampoo';
 //   }
 // }
 
+
+
 const HomeStack = createStackNavigator();
 function HomeStackScreen() {
   return (
@@ -88,17 +90,14 @@ function ProfilStackScreen() {
   return (
     <ProfilStack.Navigator>
       <ProfilStack.Screen name="mon profil" component={UserProfil} options={{ headerShown: false }} />
-      <ProfilStack.Screen name="parametre" component={SettingPage} options={{ headerShown: false }} />
       <ProfilStack.Screen name="modifier mon compte" component={UserModificationPage} options={{ headerShown: false }} />
-
+      <ProfilStack.Screen name="parametre" component={SettingPage} options={{ headerShown: false }} />
+      <ProfilStack.Screen name="Mes Tags" component={MyTags} options={{ headerShown: false }} />
+      <ProfilStack.Screen name="modifier centre interets" component={CategoriesTags} options={{ headerShown: false }} />
+      <ProfilStack.Screen name="change tes tags" component={ChooseTags} options={{ headerShown: false }} />
     </ProfilStack.Navigator>
   );
 }
-
-
-
-
-
 
 
 const Tab = createBottomTabNavigator();
@@ -114,6 +113,8 @@ export default class Navigator extends React.Component {
           component={HomeStackScreen}
           options={{
 
+            tabBarLabel: () => { return null },
+
 
             tabBarIcon: () => {
               return (
@@ -128,6 +129,8 @@ export default class Navigator extends React.Component {
           name="Evenement"
           component={EventStackScreen}
           options={{
+            tabBarLabel: () => { return null },
+
 
 
             tabBarIcon: () => {
@@ -145,8 +148,9 @@ export default class Navigator extends React.Component {
           name="Profil"
           component={ProfilStackScreen}
           options={{
+            tabBarLabel: () => { return null },
 
-            tabBarIcon: ({ size, focused, color }) => {
+            tabBarIcon: () => {
               return (
                 <ProfileIcon />
 

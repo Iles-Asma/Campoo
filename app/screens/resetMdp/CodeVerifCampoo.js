@@ -5,29 +5,41 @@ import ButtonCampoo from "../../components/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 
-export default class NameSignupCampoo extends React.Component {
+export default class CVerifSignupCampoo extends React.Component {
 
     render() {
         const { navigation } = this.props;
 
         const pressHandler = () => {
-            navigation.push('DobSignupCampoo');
+            navigation.goBack({ MdpOResetCampoo });
         }
-
 
         return (
 
-            <SafeAreaView style={styles.container}>
+
+            // code de verification 
+
+            // safeAreaview : zone de securite pour telephone a encoche 
+
+            <SafeAreaView style={styles.mainContainer}>
+
 
                 <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
-                <Image style={styles.baloo} source={require("../../../assets/images/Blob-Baloo-Etudiant.png")} />
 
-                <View style={styles.nameView}>
-                    <LabelCampoo style={styles.nameLabel}>Nom</LabelCampoo>
-                    <Text style={styles.textName}>À qui Baloo a-il affaire ?</Text>
-                    <InputCampooSignup style={styles.InputView} />
+                <Image style={styles.baloo} source={require("../../../assets/images/Blob-baloo-phone.png")} />
 
-                    <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
+                <View style={styles.container}>
+
+                    <LabelCampoo style={styles.codeVerifLabel}>Code de vérification</LabelCampoo>
+
+                    <Text style={styles.codeVerif_Text}>Malgré son manque de mains, Baloo, est parvenu à t’envoyer un code de vérification par mail.</Text>
+
+                    <InputCampooSignup style={styles.codeVerifInput} />
+
+                    <ButtonCampoo style={styles.button} onPress={pressHandler}>Valider</ButtonCampoo>
+
+                    <SecondaryButtonCampoo style={styles.resendCode}>Renvoyer un e-mail</SecondaryButtonCampoo>
+
                     <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
 
                 </View>
@@ -43,7 +55,7 @@ export default class NameSignupCampoo extends React.Component {
 
 const styles = StyleSheet.create({
 
-    container: {
+    mainContainer: {
 
         flex: 1,
 
@@ -64,20 +76,20 @@ const styles = StyleSheet.create({
 
     },
 
-    InputView: {
+    codeVerifInput: {
 
         alignSelf: 'center',
 
     },
 
-    nameLabel: {
+    codeVerifLabel: {
         marginBottom: 9,
 
     },
 
 
 
-    nameView: {
+    container: {
 
         top: 138,
         height: 290,
@@ -86,6 +98,7 @@ const styles = StyleSheet.create({
 
 
     },
+
 
     button: {
         marginTop: 57,
@@ -102,9 +115,9 @@ const styles = StyleSheet.create({
         top: 440,
     },
 
-    textName: {
+    codeVerif_Text: {
 
-        fontSize: 11,
+        fontSize: 12,
         textAlign: 'left',
         color: '#9B84D2',
 
@@ -116,6 +129,13 @@ const styles = StyleSheet.create({
         marginTop: 10,
 
     },
+
+    resendCode: {
+        alignSelf: 'center',
+        marginTop: 10,
+
+
+    }
 
 
 

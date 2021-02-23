@@ -5,9 +5,9 @@ import React, { useState } from 'react';
 import { StyleSheet, Picker, ScrollView, TextInput, Image, ImageBackground, StatusBar, SafeAreaView, View, Text } from 'react-native';
 import LabelCampoo from "../../components/LabelCampoo";
 import InputModifProfil from '../../components/InputModifProfil';
-import InputBioProfil from '../../components/InputBioProfil';
+import InputBioProfil from '../../components/input/InputBioProfil';
 import ArrowLSvg from "../../components/ArrowLSvg";
-import TopNav from "../../components/TopNav";
+import TopNav from "../../components/header/TopNav";
 import ButtonCampoo from '../../components/ButtonCampoo';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 

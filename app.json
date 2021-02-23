@@ -21,6 +21,7 @@
     },
     "web": {
       "favicon": "./assets/images/SplashLogoCampoo.png"
-    }
+    },
+    "description": ""
   }
 }

@@ -3,7 +3,7 @@
 import React from 'react';
 
 import { StyleSheet, ScrollView, TextInput, Image, ImageBackground, StatusBar, TouchableOpacity, SafeAreaView, View, Text } from 'react-native';
-import SettingsSvg from '../../components/SettingsSvg';
+import SettingsSvg from '../../components/button/SettingsSvg';
 import PenSvg from '../../components/PenSvg';
 import Tags from '../../components/Tags';
 

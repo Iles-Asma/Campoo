@@ -3,7 +3,7 @@ import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from
 import InputCampooSignup from "../../components/InputCampooSignup"
 import ButtonCampoo from "../../components/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
-import SecondaryButtonCampoo from '../../components/SecondaryButtonCampoo';
+import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 
 
 export default class MailSignupCampoo extends React.Component {

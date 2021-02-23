@@ -5,9 +5,9 @@ import React, { useState } from 'react';
 import { StyleSheet, Picker, ScrollView, TextInput, Image, ImageBackground, StatusBar, SafeAreaView, View, Text } from 'react-native';
 import LabelCampoo from "../../components/LabelCampoo";
 import InputModifProfil from '../../components/InputModifProfil';
-import InputBioProfil from '../../components/InputBioProfil';
+import InputBioProfil from '../../components/input/InputBioProfil';
 import ArrowLSvg from "../../components/ArrowLSvg";
-import TopNav from "../../components/TopNav";
+import TopNav from "../../components/header/TopNav";
 import ButtonCampoo from '../../components/ButtonCampoo';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import ExtraLargeBtn from '../../components/ExtraLargeBtn';
@@ -37,17 +37,17 @@ export default class DeleteAccount extends React.Component {
 
                 {/* Contenu */}
                 <View style={styles.deleteContent}>
-                <Text style={styles.warningText}>Êtes vous sûr.e de vouloir supprimer votre compte ? Pas de retour en arrière possible ! </Text>
+                    <Text style={styles.warningText}>Êtes vous sûr.e de vouloir supprimer votre compte ? Pas de retour en arrière possible ! </Text>
 
 
 
                     <View style={styles.btnContainer} >
                         <ExtraLargeBtn> Non je ne veux pas supprimer mon compte ! </ExtraLargeBtn>
                     </View>
-                        <TouchableOpacity>
-                    <Text style={styles.deleteText}>oui je suis sûr, supprimez mon compte </Text>
+                    <TouchableOpacity>
+                        <Text style={styles.deleteText}>oui je suis sûr, supprimez mon compte </Text>
 
-                        </TouchableOpacity>
+                    </TouchableOpacity>
                 </View>
 
             </SafeAreaView>
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
 
         //  
     },
- 
+
     deleteContent: {
         flex: 1,
         justifyContent: 'center',
@@ -88,20 +88,20 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
 
-    }, 
-    deleteText:{
-        marginTop:30,
+    },
+    deleteText: {
+        marginTop: 30,
         textDecorationLine: 'underline',
 
-color:"#EB7653",
+        color: "#EB7653",
     },
-    warningText:{
+    warningText: {
         fontSize: 36,
-        fontWeight:'200',
-      textAlign:'center',
+        fontWeight: '200',
+        textAlign: 'center',
 
     },
-    
+
     namePage: {
         flex: 0,
         justifyContent: 'center',

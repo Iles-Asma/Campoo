@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Text, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import Dots from '../../assets/svg/Dots'
 import { CAMPOO } from '../../assets/themes/ThemeCampoo'
 import LabelCampoo from './LabelCampoo'
 
-export default class EventItemCampoo extends Component {
+export default class EventItemCampoo extends React.Component {
     render() {
         return (
 

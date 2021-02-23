@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text, Button } from 'react-native';
 import ButtonCampoo from "../../components/ButtonCampoo";
-import SecondaryButtonCampoo from '../../components/SecondaryButtonCampoo';
+import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 import InputCampooSignup from '../../components/InputCampooSignup';
 import LabelCampoo from '../../components/LabelCampoo';
 
@@ -38,7 +38,7 @@ export default class MdpSignupCampoo extends React.Component {
 
 
                     <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() }>Retour</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>Retour</SecondaryButtonCampoo>
                 </View>
 
             </SafeAreaView >

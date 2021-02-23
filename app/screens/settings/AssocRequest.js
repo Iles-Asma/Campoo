@@ -8,7 +8,7 @@ import PickerBatiments from "../../components/PickerBatiments";
 import InputCampoo from "../../components/InputCampoo";
 import LabelCampoo from "../../components/LabelCampoo";
 import InputModifProfil from '../../components/InputModifProfil';
-import InputBioProfil from '../../components/InputBioProfil';
+import InputBioProfil from '../../components/input/InputBioProfil';
 import ArrowLSvg from "../../components/ArrowLSvg";
 import ButtonLarge from '../../components/ButtonLarge';
 import { TouchableOpacity } from 'react-native-gesture-handler';

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { StyleSheet, StatusBar, TouchableOpacity, SafeAreaView, ScrollView, View, Text } from 'react-native';
-import TopNav from "../../components/TopNav";
+import TopNav from "../../components/header/TopNav";
 import ButtonSettings from '../../components/ButtonSettings';
 import ButtonCampoo from '../../components/ButtonCampoo';
 import ButtonLarge from "../../components/ButtonLarge";
@@ -110,9 +110,9 @@ const styles = StyleSheet.create({
 
     },
     settingsContent: {
-        flex:2,
+        flex: 2,
         marginTop: 10,
-        
+
 
     },
     settingsTitle: {

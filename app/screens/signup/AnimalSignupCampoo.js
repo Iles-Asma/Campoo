@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
 import ButtonCampoo from "../../components/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
-import SecondaryButtonCampoo from '../../components/SecondaryButtonCampoo';
+import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 
 export default class AnimalSignupCampoo extends React.Component {
 
@@ -17,12 +17,12 @@ export default class AnimalSignupCampoo extends React.Component {
 
         return (
 
-            <SafeAreaView style={styles.container}>
+            <SafeAreaView style={styles.mainContainer}>
 
                 <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
                 <Image style={styles.baloo} source={require("../../../assets/images/Component-1.png")} />
 
-                <View style={styles.spiritualView}>
+                <View style={styles.container}>
 
                     <LabelCampoo style={styles.spiritLabel}>Animal Spirituel</LabelCampoo>
                     <Text style={styles.textSpiritual}>Baloo te propose de sélectionner, parmi tout un tas d’animaux, celui auquel tu t’associes le plus !</Text>
@@ -35,9 +35,9 @@ export default class AnimalSignupCampoo extends React.Component {
 
                     <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
 
-                    <SecondaryButtonCampoo style={styles.retour1} >Passer</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.skipButton} >Passer</SecondaryButtonCampoo>
 
-                    <SecondaryButtonCampoo style={styles.retour2} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
 
                 </View>
 
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
 
     },
 
-    spiritualView: {
+    container: {
 
         top: 138,
         height: 290,
@@ -127,13 +127,13 @@ const styles = StyleSheet.create({
 
     },
 
-    retour1: {
+    skipButton: {
 
         alignSelf: 'center',
         marginTop: 10,
 
     },
-    retour2: {
+    retour: {
 
         alignSelf: 'center',
         marginTop: 3,

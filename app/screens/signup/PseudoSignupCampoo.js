@@ -3,7 +3,7 @@ import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from
 import InputCampooSignup from "../../components/InputCampooSignup"
 import ButtonCampoo from "../../components/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
-import SecondaryButtonCampoo from '../../components/SecondaryButtonCampoo';
+import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 
 export default class PseudoSignupCampoo extends React.Component {
 
@@ -29,7 +29,7 @@ export default class PseudoSignupCampoo extends React.Component {
                     <InputCampooSignup style={styles.InputView} />
 
                     <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour} onPress={() =>  navigation.goBack() }>retour</SecondaryButtonCampoo>
+                    <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
 
                 </View>
 
