@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     },
     topNav: {
         flex: 0,
-
+        paddingHorizontal: '4%',
         width: '100%',
         height: 40,
         flexDirection: 'row',

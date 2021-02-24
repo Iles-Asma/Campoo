@@ -11,77 +11,77 @@ import PenSvg from "../../components/PenSvg";
 
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-export default class AssocModificationPage extends React.Component {
+export default function AssocModificationPage({ navigation }) {
 
-    render() {
 
-        return (
-            // contenu generale
 
-            <SafeAreaView style={styles.container}>
+    return (
+        // contenu generale
 
-                {/* La navigation du haut */}
-                <View style={styles.topNav}>
-                    {/*Le onPress a mettre  */}
-                    <TouchableOpacity >
-                        <Text> Annuler</Text>
-                    </TouchableOpacity>
-                    <Text style={styles.secondTitle}>Modification du Profil</Text>
-                    <TouchableOpacity >
-                        <Text> OK</Text>
-                    </TouchableOpacity>
+        <SafeAreaView style={styles.container}>
+
+            {/* La navigation du haut */}
+            <View style={styles.topNav}>
+                {/*Le onPress a mettre  */}
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <Text> Annuler</Text>
+                </TouchableOpacity>
+                <Text style={styles.secondTitle}>Modification du Profil</Text>
+                <TouchableOpacity >
+                    <Text> OK</Text>
+                </TouchableOpacity>
+
+            </View>
+
+            {/* Contenaire des information a modifier */}
+            <ScrollView showsVerticalScrollIndicator={false} >
+                {/* Profil de l'image */}
+                <View style={styles.profilModificationContainer}>
+
+                    {/* Shadow Pen */}
+                    <View style={styles.penModif}>
+                        <TouchableOpacity>
+
+                            <PenSvg />
+
+                        </TouchableOpacity>
+                    </View>
+                    {/* Image */}
+                    <Image source={require("../../../assets/imgAssoc/AssocImg.png")} style={styles.profilPics}></Image>
 
                 </View>
 
-                {/* Contenaire des information a modifier */}
-                <ScrollView showsVerticalScrollIndicator={false} >
-                    {/* Profil de l'image */}
-                    <View style={styles.profilModificationContainer}>
+                {/* Input et label pour les odification */}
+                <View style={styles.modificationContent}>
 
-                        {/* Shadow Pen */}
-                        <View style={styles.penModif}>
-                            <TouchableOpacity>
+                    <LabelCampoo style={styles.nameLabel}>Nom de l'association/club</LabelCampoo>
 
-                                <PenSvg />
+                    <InputModifProfil placeholder='BDE Staps' />
 
-                            </TouchableOpacity>
-                        </View>
-                        {/* Image */}
-                        <Image source={require("../../../assets/imgAssoc/AssocImg.png")} style={styles.profilPics}></Image>
+                    <Text style={styles.infoInput}>Votre nom doit rester raisonnable.</Text>
 
+
+                    <LabelCampoo style={styles.nameLabel}>Biographie </LabelCampoo>
+
+                    <InputBioProfil placeholder='Decris toi :)' />
+
+                    <Text style={styles.infoInput}>Ta bio doit te reflèter, ne soit pas vulgaire!</Text>
+
+                    <View style={styles.btnContainer}>
+                        {/* Iput Option */}
+                        <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo>
+
+                        <PickerBatiments />
                     </View>
-
-                    {/* Input et label pour les odification */}
-                    <View style={styles.modificationContent}>
-
-                        <LabelCampoo style={styles.nameLabel}>Nom de l'association/club</LabelCampoo>
-
-                        <InputModifProfil placeholder='BDE Staps' />
-
-                        <Text style={styles.infoInput}>Votre nom doit rester raisonnable.</Text>
-
-
-                        <LabelCampoo style={styles.nameLabel}>Biographie </LabelCampoo>
-
-                        <InputBioProfil placeholder='Decris toi :)' />
-
-                        <Text style={styles.infoInput}>Ta bio doit te reflèter, ne soit pas vulgaire!</Text>
-
-                        <View style={styles.btnContainer}>
-                            {/* Iput Option */}
-                            <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo>
-
-                            <PickerBatiments />
-                        </View>
-                    </View>
-                </ScrollView>
-            </SafeAreaView>
+                </View>
+            </ScrollView>
+        </SafeAreaView>
 
 
 
 
-        );
-    }
+    );
+
 };
 
 

@@ -4,60 +4,54 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity, StatusBar, SafeAreaView, ScrollView, Image, View, Text } from 'react-native';
 
 
-export default class CategoriesTags extends React.Component {
+export default function CategoriesTags({ navigation }) {
 
 
+    return (
+
+        <SafeAreaView style={styles.container}>
+            {/* Titre de l'onglet */}
+            <Text style={styles.titleText}>Choisis une catégorie</Text>
+
+            <ScrollView showsVerticalScrollIndicator={false} >
+
+                {/* Les differentes categories de tags */}
+
+                <View style={styles.categorieContainer}>
+
+                    {/* cinema */}
+                    <TouchableOpacity onPress={() => navigation.navigate('ChooseTags')}>
+
+                        <Image style={styles.categorieShape} source={require("../../assets/categories/cinema.png")}  ></Image>
+
+                    </TouchableOpacity>
+                    {/* jeux video */}
+                    <TouchableOpacity onPress={() => navigation.navigate('ChooseTags')}>
+
+                        <Image style={styles.categorieShape} source={require("../../assets/categories/games.png")}  ></Image>
+
+                    </TouchableOpacity>
+                    {/* sport */}
+                    <TouchableOpacity onPress={() => navigation.navigate('ChooseTags')}>
+
+                        <Image style={styles.categorieShape} source={require("../../assets/categories/sport.png")}  ></Image>
+
+                    </TouchableOpacity>
+                    {/* art */}
+                    <TouchableOpacity onPress={() => navigation.navigate('ChooseTags')}>
+
+                        <Image style={styles.categorieShape} source={require("../../assets/categories/art.png")}  ></Image>
+
+                    </TouchableOpacity>
 
 
+                </View>
 
-    render() {
+            </ScrollView>
+        </SafeAreaView>
 
-        return (
+    );
 
-            <SafeAreaView style={styles.container}>
-                {/* Titre de l'onglet */}
-                <Text style={styles.titleText}>Choisis une catégorie</Text>
-
-                <ScrollView showsVerticalScrollIndicator={false} >
-
-                    {/* Les differentes categories de tags */}
-
-                    <View style={styles.categorieContainer}>
-
-                        {/* cinema */}
-                        <TouchableOpacity>
-
-                            <Image style={styles.categorieShape} source={require("../../assets/categories/cinema.png")}  ></Image>
-
-                        </TouchableOpacity>
-                        {/* jeux video */}
-                        <TouchableOpacity>
-
-                            <Image style={styles.categorieShape} source={require("../../assets/categories/games.png")}  ></Image>
-
-                        </TouchableOpacity>
-                        {/* sport */}
-                        <TouchableOpacity>
-
-                            <Image style={styles.categorieShape} source={require("../../assets/categories/sport.png")}  ></Image>
-
-                        </TouchableOpacity>
-                        {/* art */}
-                        <TouchableOpacity>
-
-                            <Image style={styles.categorieShape} source={require("../../assets/categories/art.png")}  ></Image>
-
-                        </TouchableOpacity>
-
-
-                    </View>
-
-                </ScrollView>
-            </SafeAreaView>
-
-        );
-
-    }
 
 }
 

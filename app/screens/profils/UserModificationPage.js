@@ -95,7 +95,7 @@ export default function UserModificationPage({ navigation }) {
                     </View>
 
                     <View style={styles.btnContainer} >
-                        <ButtonLarge> Modifies es tags </ButtonLarge>
+                        <ButtonLarge onPress={() => navigation.navigate('CategoriesTags')}>Modifies es tags</ButtonLarge>
                     </View>
 
 
@@ -129,12 +129,13 @@ const styles = StyleSheet.create({
     },
     profilModificationContainer: {
         flex: 0,
-        height: '25%',
+        height: 'auto',
         width: '100%',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'white',
+
 
     },
     penModif: {
@@ -212,6 +213,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: '5%',
         width: '100%',
         marginTop: '5%',
+        marginBottom: '5%',
 
         flexDirection: 'row',
 

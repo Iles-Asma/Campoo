@@ -78,8 +78,7 @@ const styles = StyleSheet.create({
         position: 'relative',
         // test pour detecter la platform
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        marginLeft: 15,
-        marginRight: 15,
+
 
         flexDirection: 'column',
         backgroundColor: '#fff',

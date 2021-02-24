@@ -20,8 +20,8 @@ export default function ChangeName({ navigation }) {
             <View style={styles.topNav}>
 
                 {/*Le onPress a mettre  */}
-                <TouchableOpacity >
-                    <ArrowLSvg onPress={() => navigation.goBack()} />
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <ArrowLSvg />
                 </TouchableOpacity>
                 <View style={styles.namePage}>
                     <Text style={styles.secondTitle}>Réglage</Text>
@@ -61,10 +61,11 @@ const styles = StyleSheet.create({
 
     container: {
 
+
         flex: 1,
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        marginLeft: 15,
-        marginRight: 15,
+        paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 40,
+
+
 
         position: 'relative',
         flexDirection: 'column',
@@ -77,6 +78,7 @@ const styles = StyleSheet.create({
     },
     modificationContent: {
         marginTop: 25,
+        paddingHorizontal: '5%',
     },
     btnContainer: {
         flex: 0,
@@ -105,6 +107,10 @@ const styles = StyleSheet.create({
 
         width: '100%',
         height: 40,
+        marginTop: '5%',
+
+        paddingHorizontal: '6%',
+        justifyContent: 'center',
         flexDirection: 'row',
         borderBottomWidth: 2,
         borderColor: 'rgba(158, 150, 150, .3)',

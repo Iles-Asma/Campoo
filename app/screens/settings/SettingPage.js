@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import { StyleSheet, StatusBar, TouchableOpacity, SafeAreaView, ScrollView, View, Text } from 'react-native';
+import { StyleSheet, StatusBar, TouchableOpacity, SafeAreaView, ScrollView, View, Text, Linking } from 'react-native';
 import TopNav from "../../components/header/TopNav";
 import ButtonSettings from '../../components/button/ButtonSettings';
 import ButtonCampoo from '../../components/button/ButtonCampoo';
@@ -24,7 +24,7 @@ export default function SettingPage({ navigation }) {
                     {/* Les differentes rubrique */}
                     {/* Titre */}
                     <View style={styles.settingsTitle}>
-                        <Text > Compte </Text>
+                        <Text>Compte </Text>
                     </View>
 
                     {/* Rubrique */}
@@ -45,7 +45,8 @@ export default function SettingPage({ navigation }) {
                         <Text >Contactez-nous </Text>
                     </View>
                     {/* Rubrique */}
-                    <TouchableOpacity>
+
+                    <TouchableOpacity onPress={() => { Linking.openURL('https://www.campoo.fr/aide') }}>
                         <ButtonSettings>Aide et assistance</ButtonSettings>
                     </TouchableOpacity>
 
@@ -59,14 +60,14 @@ export default function SettingPage({ navigation }) {
                     </TouchableOpacity>
                     {/* Titre */}
                     <View style={styles.settingsTitle}>
-                        <Text > Mentions légales </Text>
+                        <Text >Mentions légales </Text>
                     </View>
                     {/* Rubrique */}
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => { Linking.openURL('https://www.campoo.fr/politique-de-confidentialite') }}>
                         <ButtonSettings>Politique de Confidentailité</ButtonSettings>
                     </TouchableOpacity>
                     {/* Rubrique */}
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => { Linking.openURL('https://www.campoo.fr/condition-generale-utilisation') }}>
                         <ButtonSettings>Conditions générales d’utilisation</ButtonSettings>
                     </TouchableOpacity>
                     {/* Titre */}

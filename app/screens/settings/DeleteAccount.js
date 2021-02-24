@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
 
         flex: 1,
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        marginLeft: 15,
-        marginRight: 15,
+        alignItems: 'center',
+        justifyContent: 'center',
 
         position: 'relative',
         flexDirection: 'column',
@@ -111,12 +111,14 @@ const styles = StyleSheet.create({
     },
     topNav: {
         flex: 0,
-
+        marginTop: '4%',
         width: '100%',
         height: 40,
+        justifyContent: 'center',
         flexDirection: 'row',
         borderBottomWidth: 2,
         borderColor: 'rgba(158, 150, 150, .3)',
+        paddingHorizontal: '5%',
 
     },
 
