@@ -6,7 +6,6 @@ import LabelCampoo from "../../components/LabelCampoo";
 import InputCampooSignup from "../../components/input/InputCampooSignup";
 import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
-
 export default class ScreenLoginPage extends React.Component {
 
    render() {
@@ -21,7 +20,6 @@ export default class ScreenLoginPage extends React.Component {
 
          <SafeAreaView style={styles.container} >
 
-            {/* <Image style={{ width: 115, height: 115, left: 260, top: 0, marginTop: 16, position: 'absolute', }} source={require("../../../assets/images/LogoCampoo.png")} /> */}
             <LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
             <Image style={{ width: 271.64, height: 271.64, left: -102.73, top: 49.27, position: 'absolute' }} source={require("../../../assets/images/Baloo-accueil.png")} />
             <Image style={{ width: 519.75, height: 394.37, left: 86, top: 576, position: 'absolute' }} source={require("../../../assets/images/BAloo-violet.png")} />
@@ -64,13 +62,11 @@ export default class ScreenLoginPage extends React.Component {
 const styles = StyleSheet.create({
 
    container: {
-
       flex: 1,
       paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 1,
       flexDirection: 'column',
       alignItems: 'center',
       backgroundColor: '#ffffff',
-
 
    },
 
@@ -80,27 +76,25 @@ const styles = StyleSheet.create({
    },
 
    labelPseudo: {
-
       marginBottom: -18,
       marginLeft: 27,
 
    },
-   labelMotDePasse: {
 
+   labelMotDePasse: {
       marginBottom: -18,
       marginLeft: 27,
 
    },
 
    loginview: {
-
       top: 227,
       width: 300,
       height: 364,
 
    },
-   InputPseudo: {
 
+   InputPseudo: {
       marginTop: 0,
       paddingTop: 0,
       paddingBottom: 0,
@@ -108,13 +102,11 @@ const styles = StyleSheet.create({
    },
 
    InputMotDePasse: {
-
       marginBottom: 57,
 
    },
 
    connexionText: {
-
       textAlign: 'center',
       marginVertical: 15,
       fontSize: 16,
@@ -123,21 +115,17 @@ const styles = StyleSheet.create({
    },
 
    button: {
-
       alignSelf: 'center',
-
 
    },
 
    secondaryButton1: {
-
       alignSelf: 'center',
       marginTop: 10,
 
    },
 
    secondaryButton2: {
-
       alignSelf: 'center',
       marginTop: 10,
 

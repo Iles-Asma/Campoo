@@ -40,18 +40,15 @@ const styles = StyleSheet.create({
         width: '90%',
         height: 'auto',
         alignSelf: 'center',
-
         flex: 1,
         marginBottom: 0,
 
 
     },
 
-
     caracterLimit: {
         bottom: 40,
         textAlign: 'right',
-
 
     },
 
@@ -59,13 +56,10 @@ const styles = StyleSheet.create({
         bottom: 40,
         padding: 10,
 
-
     },
 
     TextAreaTitle: {
-
         textAlign: 'center',
-
         fontSize: 16,
         fontWeight: 'bold',
         color: CAMPOO.primary,
@@ -74,9 +68,7 @@ const styles = StyleSheet.create({
 
     TextAreaCampoo: {
         marginTop: 5,
-
         color: CAMPOO.primary,
-
         padding: 10,
         textAlignVertical: 'top',
         borderWidth: 2,
@@ -86,13 +78,6 @@ const styles = StyleSheet.create({
         height: 200,
         width: '100%',
     }
-
-
-
-
-
-
-
 
 })
 

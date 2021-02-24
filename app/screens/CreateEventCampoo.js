@@ -1,12 +1,8 @@
 'use strict';
 
-
-import { TouchableOpacity } from 'react-native-gesture-handler';
-
-import { StyleSheet, ScrollView, StatusBar, SafeAreaView, View, Text } from 'react-native';
+import { StyleSheet, ScrollView, StatusBar, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 // import Tags from '../../components/Tags';
 import PickerBatiments from "../components/PickerBatiments";
-import InputCampoo from "../components/input/InputCampoo";
 import LabelCampoo from "../components/LabelCampoo";
 import InputModifProfil from '../components/input/InputModifProfil';
 import InputBioProfil from '../components/input/InputBioProfil';
@@ -14,9 +10,7 @@ import ArrowLSvg from "../components/ArrowLSvg";
 import ButtonCampoo from '../components/button/ButtonCampoo';
 import TextInputAssos from '../components/input/TextInputAssos';
 
-export default function AssocRequest() {
-
-
+export default function CreateEventCampoo({ navigation }) {
 
     return (
         // contenu generale
@@ -28,7 +22,7 @@ export default function AssocRequest() {
 
                 {/*Le onPress a mettre  */}
                 <TouchableOpacity >
-                    <ArrowLSvg />
+                    <ArrowLSvg onPress={() => navigation.goBack()} />
                 </TouchableOpacity>
                 <View style={styles.namePage}>
                     <Text style={styles.secondTitle}>Création d'évenement</Text>

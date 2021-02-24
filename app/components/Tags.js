@@ -1,7 +1,6 @@
 'use strict';
 
 import React from 'react';
-
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 
 export default class Tags extends React.Component {
@@ -38,7 +37,7 @@ const styles = StyleSheet.create({
         borderRadius: 50,
 
         backgroundColor: '#4D3D64',
-        // backgroundColor:'#FFEEE9',
+
 
 
     },

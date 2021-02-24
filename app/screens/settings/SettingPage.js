@@ -96,13 +96,10 @@ const styles = StyleSheet.create({
 
         flex: 1,
         // test pour detecter la platform
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 50,
         flexDirection: 'column',
         position: 'relative',
         justifyContent: 'center',
-
-
-
         backgroundColor: '#fff',
         alignItems: 'center',
 
@@ -110,13 +107,11 @@ const styles = StyleSheet.create({
     settingsContent: {
         flex: 1,
         marginTop: 10,
-
         justifyContent: 'center',
         paddingHorizontal: '5%',
 
-
-
     },
+
     settingsTitle: {
         flex: 1,
         height: 50,
@@ -126,11 +121,13 @@ const styles = StyleSheet.create({
         borderColor: 'rgba(158, 150, 150, .3)',
 
     },
+
     FakePlaceholder: {
         flex: 1,
         width: '100%',
         justifyContent: 'flex-end'
     },
+
     GeneraleBtnContainer: {
         flex: 1,
         width: '100%',
@@ -139,16 +136,16 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         color: '#fff',
     },
+
     logOut: {
         fontWeight: 'bold',
     },
-    leaveBtn: {
 
+    leaveBtn: {
         zIndex: 200,
         marginTop: 15,
         borderRadius: 15,
         color: '#EB7653',
-
 
     }
 

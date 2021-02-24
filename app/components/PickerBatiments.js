@@ -55,10 +55,6 @@ export default class PickerBatiments extends React.Component {
                 },
 
 
-
-
-
-
             ],
         };
     }
@@ -103,11 +99,11 @@ export default class PickerBatiments extends React.Component {
 
 const styles = StyleSheet.create({
     container: {
-
         paddingTop: 40,
         alignItems: "center"
     }
 });
+
 const pickerSelectStyles = StyleSheet.create({
     inputIOS: {
         marginTop: 5,

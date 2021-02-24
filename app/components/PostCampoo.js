@@ -7,8 +7,6 @@ import ShareButton from '../../assets/svg/ShareButton';
 import ProfileHeaderCampoo from './header/ProfileHeaderCampoo';
 
 
-
-
 export default class HomeFeedCampoo extends React.Component {
 
     render() {
@@ -25,7 +23,6 @@ export default class HomeFeedCampoo extends React.Component {
                 <ProfileHeaderCampoo>
                     <Text style={styles.post_AssoName}>{this.props.name}</Text>
                 </ProfileHeaderCampoo>
-
 
                 {/* description du poste  */}
 

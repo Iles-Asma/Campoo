@@ -10,12 +10,6 @@ export default class AssoEventCampoo extends React.Component {
 
             <SafeAreaView style={styles.container}>
 
-
-
-
-
-
-
                 <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
                     <View style={styles.containerEvent}>
@@ -74,15 +68,7 @@ export default class AssoEventCampoo extends React.Component {
 
                             location='2 rue ta soeur tire au flanc' />
 
-
-
-
-
                     </View>
-
-
-
-
 
                 </ScrollView>
                 {/* <View style={styles.addEventAssos}> */}
@@ -92,13 +78,9 @@ export default class AssoEventCampoo extends React.Component {
                     <ArrowLSvg />
                 </TouchableOpacity>
 
-
-
-
                 <TouchableOpacity style={styles.addButton}>
                     <AddButton couleur="red" />
                 </TouchableOpacity>
-
 
                 {/* </View> */}
             </SafeAreaView>
@@ -114,13 +96,7 @@ const styles = StyleSheet.create({
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 1,
         flexDirection: 'column',
         justifyContent: 'center',
-
-
-
         alignItems: 'center',
-
-
-
 
     },
 
@@ -143,7 +119,6 @@ const styles = StyleSheet.create({
         left: '3%',
         padding: 10,
 
-
     },
 
 
@@ -151,39 +126,22 @@ const styles = StyleSheet.create({
         width: '100%',
         paddingTop: 20,
 
-
     },
 
     scrollContainer: {
         width: '90%',
         paddingTop: 30,
 
-
     },
 
     addEventAssos: {
         width: '90%',
         height: 60,
-
         flex: 0,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
 
-
-
-
-
     },
-
-
-
-
-
-
-
-
-
-
 
 })

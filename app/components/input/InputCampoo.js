@@ -30,19 +30,16 @@ export default class InputCampoo extends React.Component {
 const styles = StyleSheet.create({
 
     inputView: {
-
         width: '100%',
 
     },
 
     label: {
-
         marginBottom: 9,
 
     },
 
     textInput: {
-
         paddingHorizontal: 12,
         height: 30,
         borderWidth: 1,
@@ -53,7 +50,6 @@ const styles = StyleSheet.create({
     },
 
     textDescription: {
-
         marginBottom: 25,
         fontSize: 12,
         textAlign: 'left',

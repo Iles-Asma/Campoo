@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Text, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
-import LikeButton from '../../assets/svg/LikeButton'
 import { CAMPOO } from '../../assets/themes/ThemeCampoo'
+import LikeButton from '../../assets/svg/LikeButton';
 import LabelCampoo from './LabelCampoo'
 
-export default class EventItemCampoo extends Component {
+export default class EventItemCampoo extends React.Component {
     render() {
         return (
 
@@ -12,7 +12,6 @@ export default class EventItemCampoo extends Component {
 
                 <View style={styles.subcontainerEvent}>
                     <View style={styles.imageContainer}>
-
 
                         <Image style={styles.eventImage} source={this.props.image} />
 
@@ -77,21 +76,20 @@ const styles = StyleSheet.create({
         marginBottom: 10,
 
     },
+
     eventImage: {
         width: '100%',
         height: 175,
         borderRadius: 5,
 
-
     },
+
     dotsContainer: {
         justifyContent: 'center',
 
     },
 
-
     subcontainerEvent: {
-
         alignSelf: 'center',
         height: "auto",
         width: '100%',
@@ -107,7 +105,6 @@ const styles = StyleSheet.create({
     eventDetail: {
         width: '100%',
         height: 'auto',
-        // alignSelf: 'center',
 
     },
 
@@ -131,11 +128,6 @@ const styles = StyleSheet.create({
         marginTop: 6,
 
     },
-
-
-
-
-
 
 
 })

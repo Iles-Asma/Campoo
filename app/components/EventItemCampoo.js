@@ -13,7 +13,6 @@ export default class EventItemCampoo extends React.Component {
                 <View style={styles.subcontainerEvent}>
                     <View style={styles.imageContainer}>
 
-
                         <Image style={styles.eventImage} source={this.props.image} />
 
                     </View>
@@ -129,11 +128,5 @@ const styles = StyleSheet.create({
         marginTop: 6,
 
     },
-
-
-
-
-
-
 
 })

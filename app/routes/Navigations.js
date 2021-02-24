@@ -1,13 +1,17 @@
-
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import { CAMPOO } from '../../assets/themes/ThemeCampoo';
-import HomeIcon from '../../assets/svg/HomeIcon';
 
+// Color Campoo 
+import { CAMPOO } from '../../assets/themes/ThemeCampoo';
+
+// Icon BottomNav
+
+import HomeIcon from '../../assets/svg/HomeIcon';
 import EventIcon from '../../assets/svg/EventIcon';
 import ProfileIcon from '../../assets/svg/ProfileIcon';
 
+// SignupStack
 
 import ScreenLoginCampoo from '../screens/login/ScreenLoginCampoo';
 import AnimalSignupCampoo from '../screens/signup/AnimalSignupCampoo';
@@ -19,35 +23,38 @@ import PseudoSignupCampoo from '../screens/signup/PseudoSignupCampoo';
 import MdpSignupCampoo from '../screens/signup/MdpSignupCampoo';
 import CodeVerifSignupCampoo from '../screens/signup/CodeVerifSignupCampoo';
 
-import HomeFeedCampoo from '../screens/HomeFeedCampoo';
-import EventCampoo from '../screens/EventCampoo';
+// HomeStack
 
+import HomeFeedCampoo from '../screens/HomeFeedCampoo';
+import CommentCampoo from '../screens/CommentCampoo';
+
+// EventStack
+import EventCampoo from '../screens/EventCampoo';
+import EventUserCampoo from '../screens/EventUserCampoo';
+import EventDetailCampoo from '../screens/EventDetailCampoo';
+
+// ProfilStack
 
 import UserProfil from '../screens/profils/UserProfil';
+import SettingPage from '../screens/settings/SettingPage';
+import CategoriesTags from '../screens/CategoriesTags';
+import UserModificationPage from '../screens/profils/UserModificationPage';
+import ChooseTags from '../screens/profils/ChooseTags';
+import MyTags from '../screens/profils/MyTags';
+
+// SettingStack
+import ChangeName from '../screens/settings/ChangeName';
+import DeleteAccount from '../screens/settings/DeleteAccount'
+import AssocRequest from '../screens/settings/AssocRequest';
+
+
 
 import AssocProfil from '../screens/profils/AssocProfil';
 
-import ChooseTags from '../screens/profils/ChooseTags';
-
-import MyTags from '../screens/profils/MyTags';
-
-import UserModificationPage from '../screens/profils/UserModificationPage';
 
 import AssocModificationPage from '../screens/profils/AssocModificationPage';
 
-import CategoriesTags from '../screens/CategoriesTags';
 
-import SettingPage from '../screens/settings/SettingPage';
-
-import ChangeName from '../screens/settings/ChangeName';
-
-import DeleteAccount from '../screens/settings/DeleteAccount'
-
-import AssocRequest from '../screens/settings/AssocRequest';
-
-import EventUserCampoo from '../screens/EventUserCampoo';
-import EventDetailCampoo from '../screens/EventDetailCampoo';
-import CommentCampoo from '../screens/CommentCampoo';
 
 
 const HomeStack = createStackNavigator();
@@ -77,7 +84,7 @@ function ProfilStackScreen() {
   return (
     <ProfilStack.Navigator   >
       <ProfilStack.Screen name="UserProfil" component={UserProfil} options={{ headerShown: false }} />
-      <ProfilStack.Screen name="Setting" component={SettingStackScreen} options={{ headerShown: false }} />
+      <ProfilStack.Screen name="SettingStackScreen" component={SettingStackScreen} options={{ headerShown: false }} />
       <ProfilStack.Screen name="UserModificationPage" component={UserModificationPage} options={{ headerShown: false }} />
       <ProfilStack.Screen name="CategoriesTags" component={CategoriesTags} options={{ headerShown: false }} />
       <ProfilStack.Screen name="ChooseTags" component={ChooseTags} options={{ headerShown: false }} />
@@ -93,7 +100,6 @@ function SettingStackScreen() {
 
     <SettingStack.Navigator>
       <SettingStack.Screen name="SettingPage" component={SettingPage} options={{ headerShown: false }} />
-
       <SettingStack.Screen name="ChangeName" component={ChangeName} options={{ headerShown: false }} />
       <SettingStack.Screen name="AssocRequest" component={AssocRequest} options={{ headerShown: false }} />
       <SettingStack.Screen name="DeleteAccount" component={DeleteAccount} options={{ headerShown: false }} />

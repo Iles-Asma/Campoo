@@ -1,9 +1,9 @@
 'use strict';
 
-import React, { useState } from 'react';
+import React from 'react';
 
-import { StyleSheet, ScrollView, Image, StatusBar, SafeAreaView, View, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { StyleSheet, ScrollView, Image, StatusBar, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
+import { CAMPOO } from '../../../assets/themes/ThemeCampoo';
 import Tags from '../../components/Tags';
 import PickerBatiments from "../../components/PickerBatiments";
 import LabelCampoo from "../../components/LabelCampoo";
@@ -11,6 +11,7 @@ import InputModifProfil from '../../components/input/InputModifProfil';
 import InputBioProfil from '../../components/input/InputBioProfil';
 import PenSvg from "../../components/PenSvg";
 import ButtonLarge from '../../components/button/ButtonLarge';
+
 
 
 export default function UserModificationPage({ navigation }) {
@@ -103,9 +104,6 @@ export default function UserModificationPage({ navigation }) {
             </ScrollView>
         </SafeAreaView>
 
-
-
-
     );
     // }
 };
@@ -114,7 +112,6 @@ export default function UserModificationPage({ navigation }) {
 const styles = StyleSheet.create({
 
     container: {
-
         flex: 1,
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         flexDirection: 'column',
@@ -124,9 +121,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         //  alignItems: 'center',
     },
+
     colorViolet: {
-        color: '#4D3D64',
+        color: CAMPOO.primary,
     },
+
     profilModificationContainer: {
         flex: 0,
         height: 'auto',
@@ -138,6 +137,7 @@ const styles = StyleSheet.create({
 
 
     },
+
     penModif: {
         position: "absolute",
         zIndex: 100,
@@ -146,16 +146,19 @@ const styles = StyleSheet.create({
         borderRadius: 60 / 1,
 
     },
+
     profilPics: {
         width: 130,
         height: 130,
         borderRadius: 130 / 2,
     },
+
     modificationContent: {
         flex: 1,
         justifyContent: 'flex-start',
         width: '100%',
     },
+
     nameLabel: {
 
         fontSize: 30,
@@ -170,23 +173,23 @@ const styles = StyleSheet.create({
         marginTop: 10,
         alignSelf: "flex-end",
         marginRight: 5,
-        color: '#4D3D64'
+        color: CAMPOO.primary
     },
     btnContainer: {
         flex: 1,
         width: '100%',
-
         marginVertical: 20,
-
         justifyContent: 'center',
         alignItems: 'center',
 
     },
+
     tagsContainer: {
         flex: 1,
         width: '100%',
         marginTop: 5,
     },
+
     tagsContent: {
         flex: 1,
         width: '100%',
@@ -196,6 +199,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+
     tagTitle: {
         height: 30,
         marginTop: 10,
@@ -205,8 +209,9 @@ const styles = StyleSheet.create({
     secondTitle: {
         fontSize: 20,
         fontWeight: 'bold',
-        color: '#4D3D64',
+        color: CAMPOO.primary,
     },
+
     topNav: {
         flex: 0,
         justifyContent: "space-between",
@@ -214,13 +219,9 @@ const styles = StyleSheet.create({
         width: '100%',
         marginTop: '5%',
         marginBottom: '5%',
-
         flexDirection: 'row',
-
         alignItems: 'center',
 
     },
-
-
 
 });

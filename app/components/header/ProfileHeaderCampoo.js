@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Text, Image, StyleSheet, View, TouchableOpacity } from 'react-native'
 import { CAMPOO } from "../../../assets/themes/ThemeCampoo";
@@ -9,7 +8,6 @@ export default class ProfileHeaderCampoo extends React.Component {
         return (
             <View style={styles.containerInfoProfile} >
 
-
                 <View style={styles.post_AssoProfile}>
 
                     <Image source={require("../../../assets/images/AssoProfile.png")} />
@@ -18,15 +16,9 @@ export default class ProfileHeaderCampoo extends React.Component {
 
                 </View>
 
-
                 <TouchableOpacity>
                     <Dots />
                 </TouchableOpacity>
-
-
-
-
-
 
             </View>
         )

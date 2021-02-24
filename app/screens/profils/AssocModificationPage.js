@@ -1,19 +1,16 @@
 'use strict';
 
-import React, { useState } from 'react';
-
-import { StyleSheet, ScrollView, Image, StatusBar, SafeAreaView, View, Text } from 'react-native';
+import React from 'react';
+import { StyleSheet, ScrollView, Image, StatusBar, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import PickerBatiments from "../../components/PickerBatiments";
 import LabelCampoo from "../../components/LabelCampoo";
 import InputModifProfil from '../../components/input/InputModifProfil';
 import InputBioProfil from '../../components/input/InputBioProfil';
 import PenSvg from "../../components/PenSvg";
 
-import { TouchableOpacity } from 'react-native-gesture-handler';
+
 
 export default function AssocModificationPage({ navigation }) {
-
-
 
     return (
         // contenu generale

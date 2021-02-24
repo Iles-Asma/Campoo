@@ -41,47 +41,58 @@ export default function EventCampoo({ navigation }) {
 
                 </View>
 
-                <EventUserItem
+                <TouchableOpacity onPress={() => navigation.push('EventDetailCampoo')}>
+                    <EventUserItem
 
-                    image={require("../../assets/images/imagePost-Test.png")}
-                    title="TITRE DE L'EVENEMENT"
+                        image={require("../../assets/images/imagePost-Test.png")}
+                        title="TITRE DE L'EVENEMENT"
 
-                    eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
 
-                    date='17/05/2020'
+                        date='17/05/2020'
 
-                    hours='18h20'
+                        hours='18h20'
 
-                    location='2 rue ta soeur tire au flanc'
+                        location='2 rue ta soeur tire au flanc'
 
-                />
+                    />
 
+                </TouchableOpacity>
 
-                <EventUserItem
-                    image={require("../../assets/images/imagePost-Test.png")}
+                <TouchableOpacity onPress={() => navigation.push('EventDetailCampoo')}>
+                    <EventUserItem
 
-                    title="TITRE DE L'EVENEMENT"
+                        image={require("../../assets/images/imagePost-Test.png")}
+                        title="TITRE DE L'EVENEMENT"
 
-                    eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
 
-                    date='17/05/2020'
+                        date='17/05/2020'
 
-                    hours='18h20'
+                        hours='18h20'
 
-                    location='2 rue ta soeur tire au flanc' />
+                        location='2 rue ta soeur tire au flanc'
 
-                <EventUserItem
-                    image={require("../../assets/images/imagePost-Test.png")}
+                    />
 
-                    title="TITRE DE L'EVENEMENT"
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.push('EventDetailCampoo')}>
+                    <EventUserItem
 
-                    eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+                        image={require("../../assets/images/imagePost-Test.png")}
+                        title="TITRE DE L'EVENEMENT"
 
-                    date='17/05/2020'
+                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
 
-                    hours='18h20'
+                        date='17/05/2020'
 
-                    location='2 rue ta soeur tire au flanc' />
+                        hours='18h20'
+
+                        location='2 rue ta soeur tire au flanc'
+
+                    />
+
+                </TouchableOpacity>
 
             </ScrollView>
 

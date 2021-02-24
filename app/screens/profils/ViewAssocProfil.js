@@ -4,6 +4,7 @@ import React from 'react';
 import { StyleSheet, ScrollView, Image, StatusBar, SafeAreaView, View, Text } from 'react-native';
 import PostCampoo from '../../components/PostCampoo';
 import MiniBtn from '../../components/button/MiniBtn';
+import { CAMPOO } from '../../../assets/themes/ThemeCampoo';
 
 
 export default function ViewAssocProfil() {
@@ -44,13 +45,9 @@ export default function ViewAssocProfil() {
                     <Text style={[styles.bioBloc, styles.colorViolet]} > Bienvenue sur le profil de l’association de débats de l’ESIEE</Text>
                 </View>
 
-
                 <Text style={[styles.colorViolet, styles.postTitle]}>Post</Text>
 
                 {/* les tags figurants sur le profil utilisateur */}
-
-                {/* <View style={styles.tagsContainer}>
-        <View style={styles.tagsContent}> */}
 
                 <PostCampoo />
                 <PostCampoo />
@@ -73,20 +70,20 @@ const styles = StyleSheet.create({
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         marginLeft: 10,
         marginRight: 15,
-
         position: 'relative',
         flexDirection: 'column',
         backgroundColor: '#fff',
         alignItems: 'center',
     },
+
     colorViolet: {
-        color: '#4D3D64'
+        color: CAMPOO.primary,
     },
+
     assocIdContainer: {
         flex: 1,
         height: '10%',
         width: '100%',
-        // flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'white',
@@ -99,9 +96,9 @@ const styles = StyleSheet.create({
         marginTop: 5,
         alignItems: 'center',
         justifyContent: 'center',
-        // backgroundColor:'white',
 
     },
+
     assocSettings: {
         flex: 1,
         width: '100%',
@@ -117,15 +114,13 @@ const styles = StyleSheet.create({
         height: 130,
         borderRadius: 130 / 2,
     },
+
     profilReglage: {
-        // width: 25,
-        // height: 25,
         position: 'absolute',
         right: 5,
 
-
-
     },
+
     assocModif: {
         width: 25,
         height: 25,
@@ -133,14 +128,17 @@ const styles = StyleSheet.create({
         right: 30,
 
     },
+
     Pname: {
         fontSize: 16,
         marginBottom: 10,
     },
+
     nickName: {
         fontSize: 30,
         fontWeight: 'bold',
     },
+
     BioContainer: {
         flex: 1,
         flexDirection: 'row',
@@ -151,56 +149,34 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         paddingBottom: 15,
         borderColor: 'rgba(158, 150, 150, .5)',
-        // paddingLeft:10,
-        // paddingRight:15,
-
-        // justifyContent: 'space-between',
-        // backgroundColor:'',
 
     },
+
     iconsBat: {
         flex: 0,
-        // position:'relative',
-        // left:7,
         alignSelf: 'center',
         marginLeft: 10,
         width: 75,
         height: 65,
 
     },
-    bioBloc: {
 
+    bioBloc: {
         width: '70%',
         height: '100%',
         alignSelf: 'center',
         fontSize: 14,
         marginLeft: 25,
         marginTop: 15,
-        // textAlign:'justify',
         flexShrink: 1,
 
-
     },
+
     tagsContainer: {
         flex: 1,
-        // width:'100%',
-        // // marginTop:5,
-
-
-
-
 
     },
-    tagsContent: {
-        // flex:1,
-        // width:'100%',
-        // marginBottom:25,
-        // // // flexDirection:'row',
-        // // flexWrap:'wrap',
-        // justifyContent: 'center',
-        // alignItems: 'center',
 
-    },
     postTitle: {
         height: 30,
         fontSize: 17,

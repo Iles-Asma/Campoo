@@ -1,14 +1,9 @@
 
 'use strict';
 
-import React, { useState } from 'react';
-
-import { StyleSheet, SafeAreaView, View, Text } from 'react-native';
-
+import React from 'react';
+import { StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import ArrowLSvg from "../ArrowLSvg";
-
-import { TouchableOpacity } from 'react-native-gesture-handler';
-
 export default class topNav extends React.Component {
 
     render() {
@@ -34,8 +29,6 @@ export default class topNav extends React.Component {
 
 
             </SafeAreaView>
-
-
 
 
         );

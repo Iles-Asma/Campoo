@@ -7,7 +7,6 @@ import TitlePage from '../../components/TitlePage';
 import ButtonLarge from "../../components/button/ButtonLarge";
 
 
-
 export default function MyTags() {
 
     return (
@@ -65,17 +64,16 @@ export default function MyTags() {
 const styles = StyleSheet.create({
 
     container: {
-
         flex: 1,
         // test pour detecter la platform
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         flexDirection: 'column',
         position: 'relative',
-
         backgroundColor: '#fff',
         alignItems: 'center',
 
     },
+
     myTagsContainer: {
         flex: 1.6,
         height: '50%',
@@ -86,6 +84,7 @@ const styles = StyleSheet.create({
         width: '100%'
 
     },
+
     myTagsContent: {
         flex: 1,
         width: '100%',
@@ -95,11 +94,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+
     infoModif: {
         flexDirection: 'column',
         flex: 2,
         width: '100%',
     },
+
     infoTags: {
         fontSize: 12,
         flex: 0,
@@ -108,16 +109,17 @@ const styles = StyleSheet.create({
         marginRight: 5,
         color: '#4D3D64'
     },
+
     btnModifcation: {
         flex: 0.5,
-
-
         justifyContent: 'center',
         alignSelf: 'center',
     },
+
     SizeOnScroll: {
         height: '7%',
     },
+
     BgColor: {
         backgroundColor: '#4D3D64',
     }

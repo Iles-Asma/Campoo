@@ -11,7 +11,6 @@ export default function CodeVerifCampoo({ navigation }) {
 
     return (
 
-
         // code de verification 
 
         // safeAreaview : zone de securite pour telephone a encoche 

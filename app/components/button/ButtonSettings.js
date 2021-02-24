@@ -5,7 +5,6 @@ import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import ArrowRSvg from "../ArrowRSvg";
 // import ButtonLarge  from "../../components/ButtonLarge";
-
 export default class ButtonSettings extends React.Component {
 
 

@@ -4,7 +4,6 @@ import { StatusBar } from 'expo-status-bar';
 import PostCampoo from "../components/PostCampoo";
 
 
-
 export default function HomeFeedCampoo({ navigation }) {
 
 
@@ -15,10 +14,6 @@ export default function HomeFeedCampoo({ navigation }) {
             <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
                 <View style={styles.containerFeed}>
-
-
-
-
 
                     <PostCampoo
                         name="Lapin Associe"
@@ -31,13 +26,7 @@ export default function HomeFeedCampoo({ navigation }) {
                     <PostCampoo name="Lapin Associe"
                         description="La description du post" />
 
-
-
-
-
                 </View>
-
-
 
             </ScrollView>
         </SafeAreaView>

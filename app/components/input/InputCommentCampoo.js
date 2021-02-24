@@ -3,8 +3,6 @@ import { StyleSheet, View, TextInput, TouchableOpacity } from 'react-native'
 import { CAMPOO } from '../../../assets/themes/ThemeCampoo'
 import SendButton from '../../../assets/svg/SendButton'
 
-
-
 export default class InputCommentCampoo extends React.Component {
     render() {
         return (
@@ -17,15 +15,12 @@ export default class InputCommentCampoo extends React.Component {
                         placeholder={""}
                         placeholderTextColor={"#9E9E9E"}
                         maxLength={150}
-
                     />
 
                     <TouchableOpacity>
                         <SendButton />
                     </TouchableOpacity>
                 </View>
-
-
 
             </View>
         )

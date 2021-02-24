@@ -2,10 +2,9 @@
 
 import React from 'react';
 
-import { StyleSheet, View, TextInput } from 'react-native';
+import { StyleSheet, TextInput } from 'react-native';
 
 export default class InputModifProfil extends React.Component {
-
 
     render() {
 

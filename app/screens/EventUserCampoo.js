@@ -2,20 +2,21 @@ import React from 'react'
 import EventButtonCampoo from '../components/button/EventButtonCampoo';
 import { ScrollView, TouchableOpacity, StyleSheet, SafeAreaView, View, Text, Platform } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-
 import { CAMPOO } from '../../assets/themes/ThemeCampoo';
 import EventUserItem from '../components/EventUserItem';
 
 
+// ecran affichant les evnent mis en favoris par l'utilisateurs
+
 export default function EventUserCampoo({ navigation }) {
-
-
 
     return (
 
         <SafeAreaView style={styles.container}>
+            {/* affiche la bar de status ( battery et heure) */}
             <StatusBar style='auto' />
 
+            {/* header contenant les 2 boutons */}
             <View style={styles.headerContainer}>
 
                 <TouchableOpacity style={styles.mainButton} onPress={() => navigation.navigate('EventCampoo')}>
@@ -32,7 +33,6 @@ export default function EventUserCampoo({ navigation }) {
                         <Text style={styles.titleButton2} >Tes evenements</Text>
                     </EventButtonCampoo>
                 </TouchableOpacity>
-
 
 
             </View>
@@ -85,17 +85,9 @@ export default function EventUserCampoo({ navigation }) {
 
             </ScrollView>
 
-
-
         </SafeAreaView>
 
     );
-
-
-
-
-
-
 
 
 }
@@ -111,32 +103,24 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#ffffff',
 
-
     },
+
     userButton: {
         backgroundColor: CAMPOO.primary,
         flex: 0,
         flexDirection: 'row',
-
-
         width: '45%',
         justifyContent: 'center',
         alignItems: 'center',
-
-
         borderRadius: 5,
-
         height: 50,
-
 
     },
+
     titleButton2: {
         height: 50,
-
         fontSize: 16,
         color: 'white',
-
-
 
     },
 
@@ -152,11 +136,9 @@ const styles = StyleSheet.create({
         paddingHorizontal: 40,
         textAlign: 'center',
 
-
-
     },
-    titleButton1: {
 
+    titleButton1: {
         height: 50,
         fontSize: 15,
         color: CAMPOO.primary,
@@ -169,9 +151,7 @@ const styles = StyleSheet.create({
     eventContainer: {
         width: '100%',
 
-
     },
-
 
     headerContainer: {
         width: '90%',
@@ -181,18 +161,6 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
 
-
-
-
-
-
     },
-
-
-
-
-
-
-
 
 })

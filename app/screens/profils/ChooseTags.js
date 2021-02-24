@@ -69,23 +69,21 @@ export default function ChooseTags() {
 const styles = StyleSheet.create({
 
     container: {
-
         flex: 1,
-
         position: 'relative',
         // test pour detecter la platform
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-
-
         flexDirection: 'column',
         backgroundColor: '#fff',
         alignItems: 'center',
 
     },
+
     tagsContainer: {
         flex: 1,
         width: '100%',
     },
+
     tagsContent: {
         flex: 1,
         width: '100%',
@@ -95,17 +93,20 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+
     tagTitle: {
         height: 30,
         marginTop: 10,
         width: '100%',
 
     },
+
     secondTitle: {
         fontSize: 20,
         fontWeight: 'bold',
         color: '#4D3D64',
     },
+
     topNav: {
         flex: 0,
         justifyContent: "space-between",

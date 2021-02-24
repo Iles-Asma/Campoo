@@ -1,94 +1,66 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet, Image, View, Text, Platform } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-
 import HeaderReturn from '../components/header/HeaderReturn';
 
+export default function EventDetailCampoo({ navigation }) {
 
+    return (
 
+        <SafeAreaView style={styles.container}>
+            <StatusBar style='auto' />
 
-export default class EventDetailCampoo extends React.Component {
+            <HeaderReturn onPress={() => navigation.goBack()} />
+            <View>
 
-    render() {
+                {/* FAIRE COMPOSANT IMAGECONTAINER */}
+                <View style={styles.image_Container}>
 
-        return (
+                    <Image style={styles.post_Image} source={require("../../assets/images/imagePost-Test.png")} />
+                    <Text style={styles.TitleEvent1} >BDE ALDBAOI</Text>
 
+                </View>
 
+                <View style={styles.eventDetail} >
+                    <Text style={styles.TitleEvent} >TITRE DE L'EVENEMENT</Text>
 
-            <SafeAreaView style={styles.container}>
-                <StatusBar style='auto' />
+                    <Text style={styles.textDetail} >
 
-                <HeaderReturn />
+                        Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Possibilité
 
+                        d’avoir plus de texte, des images descriptiveDescription de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Possibilité d’avoir plus de texte, des images descriptiveDescription
 
-
-                <View>
-
-                    {/* FAIRE COMPOSANT IMAGECONTAINER */}
-                    <View style={styles.image_Container}>
-
-                        <Image style={styles.post_Image} source={require("../../assets/images/imagePost-Test.png")} />
-                        <Text style={styles.TitleEvent1} >BDE ALDBAOI</Text>
-
-
-
-                    </View>
-
-
-
-                    <View style={styles.eventDetail} >
-                        <Text style={styles.TitleEvent} >TITRE DE L'EVENEMENT</Text>
-
-                        <Text style={styles.textDetail} >
-
-                            Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Possibilité
-
-                            d’avoir plus de texte, des images descriptiveDescription de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Possibilité d’avoir plus de texte, des images descriptiveDescription
-
-                            de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Possibilité d’avoir plus de texte, des images descriptive
-
+                        de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Possibilité d’avoir plus de texte, des images descriptive
 
 
                    </Text>
 
-                        {/*   */}
-
-                    </View>
-
-                    <View style={styles.Meta_like}>
-                        <View>
-                            <Text style={styles.DataHeure} >05/09 - 17h20</Text>
-
-                            <Text style={styles.DataHeure} >Lieu- Adresse</Text>
-
-                        </View>
-
-
-                        <View>
-
-                            <Image style={styles.like_Button} source={require("../../assets/images/Bouton-like.png")} />
-
-
-                        </View>
-
-
-                    </View>
-
+                    {/*   */}
 
                 </View>
 
-            </SafeAreaView>
+                <View style={styles.Meta_like}>
+                    <View>
+                        <Text style={styles.DataHeure} >05/09 - 17h20</Text>
+
+                        <Text style={styles.DataHeure} >Lieu- Adresse</Text>
+
+                    </View>
+
+                    <View>
+
+                        <Image style={styles.like_Button} source={require("../../assets/images/Bouton-like.png")} />
+
+                    </View>
+
+                </View>
+
+            </View>
+
+        </SafeAreaView>
 
 
-        );
-
-
-
-
-    }
-
-
-
+    );
 
 };
 
@@ -97,9 +69,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         // pour detecter la platform 
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 40,
         flexDirection: 'column',
-        borderWidth: 2,
         alignItems: 'center',
         backgroundColor: '#ffffff',
     },
@@ -110,8 +81,6 @@ const styles = StyleSheet.create({
         height: "auto",
         marginTop: 14,
         marginBottom: 23,
-
-
 
 
     },

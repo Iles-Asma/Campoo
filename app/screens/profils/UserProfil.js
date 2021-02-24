@@ -7,6 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import SettingsSvg from '../../components/SettingsSvg';
 import PenSvg from '../../components/PenSvg';
 import Tags from '../../components/Tags';
+import { CAMPOO } from '../../../assets/themes/ThemeCampoo';
 
 
 
@@ -28,7 +29,7 @@ export default function UserProfil({ navigation }) {
                     {/* Profil de l'image */}
                     <Image source={require("../../../assets/imgProfil/Badeaubleu.png")} style={styles.profilPics}></Image>
 
-                    <TouchableOpacity style={[styles.profilReglage]} onPress={() => navigation.navigate('Setting')}>
+                    <TouchableOpacity style={[styles.profilReglage]} onPress={() => navigation.navigate('SettingStackScreen')}>
                         <SettingsSvg />
                     </TouchableOpacity>
 
@@ -98,39 +99,37 @@ export default function UserProfil({ navigation }) {
 const styles = StyleSheet.create({
 
     container: {
-
         flex: 1,
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-
-
         position: 'relative',
         flexDirection: 'column',
         backgroundColor: '#fff',
         alignItems: 'center',
     },
+
     colorViolet: {
-        color: '#4D3D64'
+        color: CAMPOO.primary,
     },
+
     profilIdContainer: {
         flex: 0,
         height: '20%',
         width: '100%',
-        // flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: 'white',
 
     },
+
     profilInfoContainer: {
         flex: 0,
         height: 'auto',
         width: '100%',
-
         alignItems: 'center',
         justifyContent: 'center',
-        // backgroundColor:'white',
 
     },
+
     profilSettings: {
         flex: 1,
         width: '100%',
@@ -152,9 +151,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         right: 75,
 
-
-
     },
+
     profilModif: {
         width: 25,
         height: 25,
@@ -162,14 +160,17 @@ const styles = StyleSheet.create({
         right: 30,
 
     },
+
     Pname: {
         fontSize: 16,
         marginBottom: 10,
     },
+
     nickName: {
         fontSize: 30,
         fontWeight: 'bold',
     },
+
     BioContainer: {
         flex: 0.3,
         flexDirection: 'row',
@@ -180,11 +181,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         paddingBottom: 15,
         borderColor: 'rgba(158, 150, 150, .5)',
-        // paddingLeft:10,
-        // paddingRight:15,
 
-        // justifyContent: 'space-between',
-        // backgroundColor:'',
 
     },
     iconsBat: {
