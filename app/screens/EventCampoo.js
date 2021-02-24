@@ -1,6 +1,7 @@
 import React from 'react'
 import EventButtonCampoo from '../components/button/EventButtonCampoo';
-import { ScrollView, TouchableOpacity, StyleSheet, SafeAreaView, StatusBar, View, Image, Text, Platform } from 'react-native';
+import { ScrollView, TouchableOpacity, StyleSheet, SafeAreaView, View, Text, Platform } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 import { CAMPOO } from '../../assets/themes/ThemeCampoo';
 import EventUserItem from '../components/EventUserItem';
@@ -13,6 +14,7 @@ export default function EventCampoo({ navigation }) {
     return (
 
         <SafeAreaView style={styles.container}>
+            <StatusBar style='auto' />
             <View style={styles.headerContainer}>
 
                 <TouchableOpacity style={styles.mainButton}>
@@ -103,10 +105,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         //  pour detecter la platform
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+        paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 30,
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: '#fff',
 
 
     },

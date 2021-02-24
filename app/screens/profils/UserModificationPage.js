@@ -117,10 +117,9 @@ const styles = StyleSheet.create({
 
         flex: 1,
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        marginLeft: 15,
-        marginRight: 15,
-
-        position: 'relative',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
         flexDirection: 'column',
         backgroundColor: '#fff',
         //  alignItems: 'center',
@@ -210,9 +209,13 @@ const styles = StyleSheet.create({
     topNav: {
         flex: 0,
         justifyContent: "space-between",
+        paddingHorizontal: '5%',
         width: '100%',
-        height: 35,
+        marginTop: '5%',
+
         flexDirection: 'row',
+
+        alignItems: 'center',
 
     },
 

@@ -1,5 +1,6 @@
 import React from 'react'
-import { SafeAreaView, StyleSheet, Image, View, StatusBar, Text, Platform } from 'react-native';
+import { SafeAreaView, StyleSheet, Image, View, Text, Platform } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 import HeaderReturn from '../components/header/HeaderReturn';
 
@@ -15,8 +16,10 @@ export default class EventDetailCampoo extends React.Component {
 
 
             <SafeAreaView style={styles.container}>
+                <StatusBar style='auto' />
 
                 <HeaderReturn />
+
 
 
                 <View>
@@ -74,15 +77,7 @@ export default class EventDetailCampoo extends React.Component {
 
                 </View>
 
-
-
-
             </SafeAreaView>
-
-
-
-
-
 
 
         );

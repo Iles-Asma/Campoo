@@ -3,6 +3,7 @@
 import React from 'react';
 
 import { StyleSheet, Image, StatusBar, TouchableOpacity, SafeAreaView, View, Text } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import SettingsSvg from '../../components/SettingsSvg';
 import PenSvg from '../../components/PenSvg';
 import Tags from '../../components/Tags';
@@ -50,7 +51,7 @@ export default function UserProfil({ navigation }) {
                icone de son batiment et la description du profil */}
             <View style={styles.BioContainer}>
                 <Image source={require("../../../assets/imgProfil/esieeIcon.png")} style={[styles.iconsBat, styles.gap]} ></Image>
-                <Text style={[styles.bioBloc, styles.colorViolet]} > Nouvelle musique disponible sur toutes les platformes allez check  Nouvelle musique disponible sur toutes les platformes allez check Nouvelle musique disponible sur toutes les platformes allez check</Text>
+                <Text style={[styles.bioBloc, styles.colorViolet]} >Nouvelle musique disponible sur toutes les platformes allez check  Nouvelle musique disponible sur toutes les platformes allez check Nouvelle musique disponible sur toutes les platformes allez check</Text>
             </View>
 
 
@@ -100,8 +101,7 @@ const styles = StyleSheet.create({
 
         flex: 1,
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        marginLeft: 10,
-        marginRight: 15,
+
 
         position: 'relative',
         flexDirection: 'column',
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     },
     profilInfoContainer: {
         flex: 0,
-        height: '10%',
+        height: 'auto',
         width: '100%',
 
         alignItems: 'center',
@@ -200,7 +200,7 @@ const styles = StyleSheet.create({
     bioBloc: {
 
         width: '70%',
-        height: '100%',
+        height: 'auto',
         alignSelf: 'center',
         fontSize: 14,
         marginLeft: 25,

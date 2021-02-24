@@ -74,10 +74,10 @@ export default function SettingPage({ navigation }) {
                     {/* Titre */}
                     <View style={styles.GeneraleBtnContainer}>
                         {/* Btn deconnexion */}
-                        <ButtonCampoo><Text style={styles.logOut}  > Déconnexion</Text></ButtonCampoo>
+                        <ButtonCampoo><Text style={styles.logOut}  >Déconnexion</Text></ButtonCampoo>
 
                         {/* BTN Suppression */}
-                        <TouchableOpacity ><Text style={styles.leaveBtn}> Supprimer mon compte</Text></TouchableOpacity>
+                        <TouchableOpacity ><Text style={styles.leaveBtn}>Supprimer mon compte</Text></TouchableOpacity>
 
 
                     </View>
@@ -104,14 +104,21 @@ const styles = StyleSheet.create({
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         flexDirection: 'column',
         position: 'relative',
-        margin: 15,
+        justifyContent: 'center',
+
+
+
         backgroundColor: '#fff',
-        //   alignItems: 'center',
+        alignItems: 'center',
 
     },
     settingsContent: {
-        flex: 2,
+        flex: 1,
         marginTop: 10,
+
+        justifyContent: 'center',
+        paddingHorizontal: '5%',
+
 
 
     },
@@ -122,6 +129,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         justifyContent: 'center',
         borderColor: 'rgba(158, 150, 150, .3)',
+
     },
     FakePlaceholder: {
         flex: 1,
@@ -129,7 +137,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end'
     },
     GeneraleBtnContainer: {
-        flex: 2,
+        flex: 1,
         width: '100%',
         marginTop: 50,
         justifyContent: "center",
