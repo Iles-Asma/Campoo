@@ -5,8 +5,6 @@ import { StyleSheet, StatusBar, TouchableOpacity, SafeAreaView, ScrollView, View
 import TopNav from "../../components/header/TopNav";
 import ButtonSettings from '../../components/button/ButtonSettings';
 import ButtonCampoo from '../../components/button/ButtonCampoo';
-import ArrowLSvg from '../../components/ArrowLSvg';
-
 
 export default function SettingPage({ navigation }) {
 
@@ -30,34 +28,34 @@ export default function SettingPage({ navigation }) {
                     </View>
 
                     {/* Rubrique */}
-                    <TouchableOpacity>
-                        <ButtonSettings> Prénom</ButtonSettings>
+                    <TouchableOpacity onPress={() => navigation.navigate('ChangeName')}>
+                        <ButtonSettings>Prénom</ButtonSettings>
                     </TouchableOpacity>
                     {/* Rubrique */}
-                    <TouchableOpacity>
-                        <ButtonSettings> Mot de passe</ButtonSettings>
+                    <TouchableOpacity >
+                        <ButtonSettings>Mot de passe</ButtonSettings>
                     </TouchableOpacity>
                     {/* Rubrique */}
-                    <TouchableOpacity>
-                        <ButtonSettings> Devenir un compte associatif</ButtonSettings>
+                    <TouchableOpacity onPress={() => navigation.push('AssocRequest')}>
+                        <ButtonSettings>Devenir un compte associatif</ButtonSettings>
                     </TouchableOpacity>
 
                     {/* Titre de la rubrique */}
                     <View style={styles.settingsTitle}>
-                        <Text > Contactez-nous </Text>
+                        <Text >Contactez-nous </Text>
                     </View>
                     {/* Rubrique */}
                     <TouchableOpacity>
-                        <ButtonSettings> Aide et assistance</ButtonSettings>
+                        <ButtonSettings>Aide et assistance</ButtonSettings>
                     </TouchableOpacity>
 
                     {/* Titre... */}
                     <View style={styles.settingsTitle}>
-                        <Text > Communauté </Text>
+                        <Text >Communauté </Text>
                     </View>
                     {/* Rubrique */}
                     <TouchableOpacity>
-                        <ButtonSettings> Régles de la Communauté</ButtonSettings>
+                        <ButtonSettings>Régles de la Communauté</ButtonSettings>
                     </TouchableOpacity>
                     {/* Titre */}
                     <View style={styles.settingsTitle}>
@@ -65,11 +63,11 @@ export default function SettingPage({ navigation }) {
                     </View>
                     {/* Rubrique */}
                     <TouchableOpacity>
-                        <ButtonSettings> Politique de Confidentailité</ButtonSettings>
+                        <ButtonSettings>Politique de Confidentailité</ButtonSettings>
                     </TouchableOpacity>
                     {/* Rubrique */}
                     <TouchableOpacity>
-                        <ButtonSettings> Conditions générales d’utilisation</ButtonSettings>
+                        <ButtonSettings>Conditions générales d’utilisation</ButtonSettings>
                     </TouchableOpacity>
                     {/* Titre */}
                     <View style={styles.GeneraleBtnContainer}>
@@ -77,7 +75,7 @@ export default function SettingPage({ navigation }) {
                         <ButtonCampoo><Text style={styles.logOut}  >Déconnexion</Text></ButtonCampoo>
 
                         {/* BTN Suppression */}
-                        <TouchableOpacity ><Text style={styles.leaveBtn}>Supprimer mon compte</Text></TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.push('DeleteAccount')} ><Text style={styles.leaveBtn}>Supprimer mon compte</Text></TouchableOpacity>
 
 
                     </View>

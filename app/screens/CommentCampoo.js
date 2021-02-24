@@ -74,15 +74,7 @@ export default function CommentCampoo({ navigation }) {
         </SafeAreaView>
 
 
-
-
-
     );
-
-
-
-
-
 
 };
 

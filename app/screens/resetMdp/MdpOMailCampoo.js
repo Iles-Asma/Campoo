@@ -5,41 +5,35 @@ import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 
-export default class MdpOMailCampoo extends React.Component {
+export default function MdpOMailCampoo({ navigation }) {
 
-    render() {
 
-        const { navigation } = this.props;
+    return (
 
-        const pressHandler = () => {
-            navigation.navigate('');
-        };
-        return (
+        <SafeAreaView style={styles.container}>
 
-            <SafeAreaView style={styles.container}>
+            <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
 
-                <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+            <Image style={styles.baloo} source={require("../../../assets/images/Blob-Baloo-Etudiant.png")} />
 
-                <Image style={styles.baloo} source={require("../../../assets/images/Blob-Baloo-Etudiant.png")} />
+            <View style={styles.mailView}>
 
-                <View style={styles.mailView}>
+                <LabelCampoo style={styles.mailLabel}>Email étudiant</LabelCampoo>
 
-                    <LabelCampoo style={styles.mailLabel}>Email étudiant</LabelCampoo>
+                <Text style={styles.textMail}>Pour que Baloo vérifie que tu es bien un étudiant du campus !</Text>
 
-                    <Text style={styles.textMail}>Pour que Baloo vérifie que tu es bien un étudiant du campus !</Text>
+                <InputCampooSignup style={styles.InputView} />
 
-                    <InputCampooSignup style={styles.InputView} />
+                <ButtonCampoo style={styles.button} onPress={() => navigation.push('CodeVerifCampoo')}>Suivant</ButtonCampoo>
 
-                    <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
+                <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
 
-                    <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
+            </View>
 
-                </View>
+        </SafeAreaView>
 
-            </SafeAreaView>
+    );
 
-        );
-    }
 
 
 }

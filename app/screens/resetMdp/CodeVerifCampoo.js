@@ -5,49 +5,44 @@ import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 
-export default class CVerifSignupCampoo extends React.Component {
-
-    render() {
-        const { navigation } = this.props;
-
-        const pressHandler = () => {
-            navigation.goBack({ MdpOResetCampoo });
-        }
-
-        return (
+export default function CodeVerifCampoo({ navigation }) {
 
 
-            // code de verification 
 
-            // safeAreaview : zone de securite pour telephone a encoche 
-
-            <SafeAreaView style={styles.mainContainer}>
+    return (
 
 
-                <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+        // code de verification 
 
-                <Image style={styles.baloo} source={require("../../../assets/images/Blob-baloo-phone.png")} />
+        // safeAreaview : zone de securite pour telephone a encoche 
 
-                <View style={styles.container}>
+        <SafeAreaView style={styles.mainContainer}>
 
-                    <LabelCampoo style={styles.codeVerifLabel}>Code de vérification</LabelCampoo>
 
-                    <Text style={styles.codeVerif_Text}>Malgré son manque de mains, Baloo, est parvenu à t’envoyer un code de vérification par mail.</Text>
+            <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
 
-                    <InputCampooSignup style={styles.codeVerifInput} />
+            <Image style={styles.baloo} source={require("../../../assets/images/Blob-baloo-phone.png")} />
 
-                    <ButtonCampoo style={styles.button} onPress={pressHandler}>Valider</ButtonCampoo>
+            <View style={styles.container}>
 
-                    <SecondaryButtonCampoo style={styles.resendCode}>Renvoyer un e-mail</SecondaryButtonCampoo>
+                <LabelCampoo style={styles.codeVerifLabel}>Code de vérification</LabelCampoo>
 
-                    <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
+                <Text style={styles.codeVerif_Text}>Malgré son manque de mains, Baloo, est parvenu à t’envoyer un code de vérification par mail.</Text>
 
-                </View>
+                <InputCampooSignup style={styles.codeVerifInput} />
 
-            </SafeAreaView>
+                <ButtonCampoo style={styles.button} onPress={() => navigation.push('MdpOResetCampoo')}>Valider</ButtonCampoo>
 
-        );
-    }
+                <SecondaryButtonCampoo style={styles.resendCode}>Renvoyer un e-mail</SecondaryButtonCampoo>
+
+                <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
+
+            </View>
+
+        </SafeAreaView>
+
+    );
+
 
 
 }

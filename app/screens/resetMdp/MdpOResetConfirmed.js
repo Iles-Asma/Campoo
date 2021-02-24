@@ -3,34 +3,29 @@ import { Text, StyleSheet, View, StatusBar, Platform, SafeAreaView, Image } from
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 
-export default class MdpOResetConfirmed extends React.Component {
-    render() {
-        const { navigation } = this.props;
+export default function MdpOResetConfirmed({ navigation }) {
 
-        const pressHandler = () => {
-            navigation.navigate({ ScreenLoginCampoo });
-        };
-        return (
-            <SafeAreaView style={styles.mainContainer}>
-                <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+    return (
+        <SafeAreaView style={styles.mainContainer}>
+            <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
 
-                <Image style={styles.baloo} source={require("../../../assets/images/blob-baloo-fête.png")} />
+            <Image style={styles.baloo} source={require("../../../assets/images/blob-baloo-fête.png")} />
 
 
-                <View style={styles.container}>
+            <View style={styles.container}>
 
-                    <LabelCampoo style={styles.label}>Mot de passe Confirmé</LabelCampoo>
+                <LabelCampoo style={styles.label}>Mot de passe Confirmé</LabelCampoo>
 
-                    <Text style={styles.text}>Ton mot de passe a été modifié, retient le bien! Tu peux maintenant te connecter à bientot!</Text>
+                <Text style={styles.text}>Ton mot de passe a été modifié, retient le bien! Tu peux maintenant te connecter à bientot!</Text>
 
-                    <ButtonCampoo style={styles.button} onPress={pressHandler}>Connexion</ButtonCampoo>
+                <ButtonCampoo style={styles.button} onPress={() => navigation.push('ScreenLoginCampoo')}>Connexion</ButtonCampoo>
 
 
-                </View>
+            </View>
 
-            </SafeAreaView>
-        )
-    }
+        </SafeAreaView>
+    )
+
 }
 
 const styles = StyleSheet.create({

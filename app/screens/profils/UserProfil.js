@@ -28,7 +28,7 @@ export default function UserProfil({ navigation }) {
                     {/* Profil de l'image */}
                     <Image source={require("../../../assets/imgProfil/Badeaubleu.png")} style={styles.profilPics}></Image>
 
-                    <TouchableOpacity style={[styles.profilReglage]} onPress={() => navigation.navigate('SettingPage')}>
+                    <TouchableOpacity style={[styles.profilReglage]} onPress={() => navigation.navigate('Setting')}>
                         <SettingsSvg />
                     </TouchableOpacity>
 

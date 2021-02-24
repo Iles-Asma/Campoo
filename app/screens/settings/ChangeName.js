@@ -8,52 +8,52 @@ import InputModifProfil from '../../components/input/InputModifProfil';
 import ArrowLSvg from "../../components/ArrowLSvg";
 import ButtonCampoo from '../../components/button/ButtonCampoo';
 
-export default class ChangeName extends React.Component {
+export default function ChangeName({ navigation }) {
 
-    render() {
 
-        return (
-            // contenu generale
 
-            <SafeAreaView style={styles.container}>
-                {/* La navigation du haut */}
-                <View style={styles.topNav}>
+    return (
+        // contenu generale
 
-                    {/*Le onPress a mettre  */}
-                    <TouchableOpacity >
-                        <ArrowLSvg />
-                    </TouchableOpacity>
-                    <View style={styles.namePage}>
-                        <Text style={styles.secondTitle}>Réglage</Text>
-                    </View>
+        <SafeAreaView style={styles.container}>
+            {/* La navigation du haut */}
+            <View style={styles.topNav}>
 
+                {/*Le onPress a mettre  */}
+                <TouchableOpacity >
+                    <ArrowLSvg onPress={() => navigation.goBack()} />
+                </TouchableOpacity>
+                <View style={styles.namePage}>
+                    <Text style={styles.secondTitle}>Réglage</Text>
                 </View>
 
-                {/* <TopNav>Réglage</TopNav> */}
+            </View>
 
-                {/* Contenu */}
-                <View style={styles.modificationContent}>
-                    {/* Le label Prénom */}
-                    <LabelCampoo style={styles.nameLabel}>Prénom</LabelCampoo>
+            {/* <TopNav>Réglage</TopNav> */}
 
-                    <InputModifProfil placeholder='Edudd77' />
+            {/* Contenu */}
+            <View style={styles.modificationContent}>
+                {/* Le label Prénom */}
+                <LabelCampoo style={styles.nameLabel}>Prénom</LabelCampoo>
 
-
-
-                    <View style={styles.btnContainer} >
-                        <ButtonCampoo> Valider </ButtonCampoo>
-                    </View>
+                <InputModifProfil placeholder='Edudd77' />
 
 
+
+                <View style={styles.btnContainer} >
+                    <ButtonCampoo> Valider </ButtonCampoo>
                 </View>
 
-            </SafeAreaView>
+
+            </View>
+
+        </SafeAreaView>
 
 
 
 
-        );
-    }
+    );
+
 };
 
 

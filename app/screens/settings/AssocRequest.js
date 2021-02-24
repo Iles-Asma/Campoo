@@ -12,77 +12,77 @@ import ArrowLSvg from "../../components/ArrowLSvg";
 import ButtonCampoo from '../../components/button/ButtonCampoo';
 
 
-export default class AssocRequest extends React.Component {
+export default function AssocRequest({ navigation }) {
 
-    render() {
 
-        return (
-            // contenu generale
 
-            <SafeAreaView style={styles.container}>
+    return (
+        // contenu generale
 
-                {/* La navigation du haut */}
-                <View style={styles.topNav}>
+        <SafeAreaView style={styles.container}>
 
-                    {/*Le onPress a mettre  */}
-                    <TouchableOpacity >
-                        <ArrowLSvg />
-                    </TouchableOpacity>
-                    <View style={styles.namePage}>
-                        <Text style={styles.secondTitle}>Réglage</Text>
-                    </View>
+            {/* La navigation du haut */}
+            <View style={styles.topNav}>
 
+                {/*Le onPress a mettre  */}
+                <TouchableOpacity >
+                    <ArrowLSvg onPress={() => navigation.goBack()} />
+                </TouchableOpacity>
+                <View style={styles.namePage}>
+                    <Text style={styles.secondTitle}>Réglage</Text>
                 </View>
 
-                {/* Contenaire des information a modifier */}
-                <ScrollView showsVerticalScrollIndicator={false} >
+            </View>
 
-                    <View style={styles.modificationContent}>
+            {/* Contenaire des information a modifier */}
+            <ScrollView showsVerticalScrollIndicator={false} >
 
-                        <LabelCampoo style={styles.nameLabel}>Prends en photo le justificatif d’association !</LabelCampoo>
+                <View style={styles.modificationContent}>
 
-                        <InputBioProfil placeholder='Decris toi :)' />
+                    <LabelCampoo style={styles.nameLabel}>Prends en photo le justificatif d’association !</LabelCampoo>
 
-                        <Text style={styles.infoInput}>Pour plus d'iformations sur les documents à transmettre visite notre FAQ</Text>
+                    <InputBioProfil placeholder='Decris toi :)' />
 
-                        {/* Nom de l'asso */}
-                        <LabelCampoo style={styles.nameLabel}>Quel est le nom de l’asso ??</LabelCampoo>
+                    <Text style={styles.infoInput}>Pour plus d'iformations sur les documents à transmettre visite notre FAQ</Text>
 
-
-                        <InputModifProfil placeholder='ex: BDE Staps' />
-
-                        {/* Nom sur campoo ou changement en adresse mail */}
-                        <LabelCampoo style={styles.nameLabel}>Nom sur Campoo </LabelCampoo>
+                    {/* Nom de l'asso */}
+                    <LabelCampoo style={styles.nameLabel}>Quel est le nom de l’asso ??</LabelCampoo>
 
 
-                        <InputModifProfil placeholder='ex: BDE Staps UGE' />
+                    <InputModifProfil placeholder='ex: BDE Staps' />
 
-                        {/* Bio */}
-                        <LabelCampoo style={styles.nameLabel}>Biographie</LabelCampoo>
-
-                        <InputBioProfil placeholder='Decris ton association en quelques mots' />
+                    {/* Nom sur campoo ou changement en adresse mail */}
+                    <LabelCampoo style={styles.nameLabel}>Nom sur Campoo </LabelCampoo>
 
 
-                        {/* Input Option */}
-                        <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo>
+                    <InputModifProfil placeholder='ex: BDE Staps UGE' />
 
-                        <PickerBatiments />
+                    {/* Bio */}
+                    <LabelCampoo style={styles.nameLabel}>Biographie</LabelCampoo>
 
-                        {/* Validation */}
-                        <View style={styles.btnContainer} >
-                            <ButtonCampoo> Valide </ButtonCampoo>
-                        </View>
+                    <InputBioProfil placeholder='Decris ton association en quelques mots' />
 
 
+                    {/* Input Option */}
+                    <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo>
+
+                    <PickerBatiments />
+
+                    {/* Validation */}
+                    <View style={styles.btnContainer} >
+                        <ButtonCampoo> Valide </ButtonCampoo>
                     </View>
-                </ScrollView>
-            </SafeAreaView>
+
+
+                </View>
+            </ScrollView>
+        </SafeAreaView>
 
 
 
 
-        );
-    }
+    );
+
 };
 
 

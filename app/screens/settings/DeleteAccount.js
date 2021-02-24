@@ -7,51 +7,48 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import ArrowLSvg from "../../components/ArrowLSvg";
 import ExtraLargeBtn from '../../components/button/ExtraLargeBtn';
 
-export default class DeleteAccount extends React.Component {
+export default function DeleteAccount({ navigation }) {
 
-    render() {
+    return (
+        // contenu generale
 
-        return (
-            // contenu generale
+        <SafeAreaView style={styles.container}>
+            {/* La navigation du haut */}
+            <View style={styles.topNav}>
 
-            <SafeAreaView style={styles.container}>
-                {/* La navigation du haut */}
-                <View style={styles.topNav}>
-
-                    {/*Le onPress a mettre  */}
-                    <TouchableOpacity >
-                        <ArrowLSvg />
-                    </TouchableOpacity>
-                    <View style={styles.namePage}>
-                        <Text style={styles.secondTitle}>Réglage</Text>
-                    </View>
-
+                {/*Le onPress a mettre  */}
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <ArrowLSvg />
+                </TouchableOpacity>
+                <View style={styles.namePage}>
+                    <Text style={styles.secondTitle}>Réglage</Text>
                 </View>
 
-                {/* <TopNav>Réglage</TopNav> */}
+            </View>
 
-                {/* Contenu */}
-                <View style={styles.deleteContent}>
-                    <Text style={styles.warningText}>Êtes vous sûr.e de vouloir supprimer votre compte ? Pas de retour en arrière possible ! </Text>
+            {/* <TopNav>Réglage</TopNav> */}
+
+            {/* Contenu */}
+            <View style={styles.deleteContent}>
+                <Text style={styles.warningText}>Êtes vous sûr.e de vouloir supprimer votre compte ? Pas de retour en arrière possible ! </Text>
 
 
 
-                    <View style={styles.btnContainer} >
-                        <ExtraLargeBtn>Non je ne veux pas supprimer mon compte !</ExtraLargeBtn>
-                    </View>
-                    <TouchableOpacity>
-                        <Text style={styles.deleteText}>oui je suis sûr, supprimez mon compte </Text>
-
-                    </TouchableOpacity>
+                <View style={styles.btnContainer} >
+                    <ExtraLargeBtn>Non je ne veux pas supprimer mon compte !</ExtraLargeBtn>
                 </View>
+                <TouchableOpacity>
+                    <Text style={styles.deleteText}>oui je suis sûr, supprimez mon compte </Text>
 
-            </SafeAreaView>
+                </TouchableOpacity>
+            </View>
+
+        </SafeAreaView>
 
 
 
 
-        );
-    }
+    );
 };
 
 

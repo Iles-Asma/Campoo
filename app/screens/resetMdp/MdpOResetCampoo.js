@@ -5,46 +5,44 @@ import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo
 import InputCampooSignup from '../../components/input/InputCampooSignup';
 import LabelCampoo from '../../components/LabelCampoo';
 
-export default class MdpSignupCampoo extends React.Component {
+export default function MdpOResetCampoo({ navigation }) {
 
-    render() {
 
-        return (
+    return (
 
-            <SafeAreaView style={styles.container}>
+        <SafeAreaView style={styles.container}>
 
-                <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
-                <Image style={styles.baloo} source={require("../../../assets/images/Baloo-Blob-Securité.png")} />
+            <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+            <Image style={styles.baloo} source={require("../../../assets/images/Baloo-Blob-Securité.png")} />
 
-                <View style={styles.PswdView}>
+            <View style={styles.PswdView}>
 
-                    <View>
+                <View>
 
-                        <LabelCampoo style={styles.Pswd1}>Mot de passe</LabelCampoo>
-                        <Text style={styles.textMdp}>Pour ta sécurité, Baloo te recommande d’utiliser au moins 6 caractères.</Text>
+                    <LabelCampoo style={styles.Pswd1}>Mot de passe</LabelCampoo>
+                    <Text style={styles.textMdp}>Pour ta sécurité, Baloo te recommande d’utiliser au moins 6 caractères.</Text>
 
-                        <InputCampooSignup secure={true} style={styles.InputView1} />
-
-                    </View>
-
-                    <View>
-
-                        <LabelCampoo style={styles.Pswd2}>Vérification</LabelCampoo>
-
-                        <InputCampooSignup secure={true} style={styles.InputView2} />
-
-                    </View>
-
-                    <ButtonCampoo style={styles.button}>Suivant</ButtonCampoo>
-
-                    <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>Retour</SecondaryButtonCampoo>
+                    <InputCampooSignup secure={true} style={styles.InputView1} />
 
                 </View>
 
-            </SafeAreaView>
+                <View>
 
-        );
-    }
+                    <LabelCampoo style={styles.Pswd2}>Vérification</LabelCampoo>
+
+                    <InputCampooSignup secure={true} style={styles.InputView2} />
+
+                </View>
+
+                <ButtonCampoo style={styles.button} onPress={() => navigation.push('MdpOResetConfirmed')}>Suivant</ButtonCampoo>
+
+                <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>Retour</SecondaryButtonCampoo>
+
+            </View>
+
+        </SafeAreaView>
+
+    );
 
 
 }

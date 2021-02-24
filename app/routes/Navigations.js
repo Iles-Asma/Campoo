@@ -39,6 +39,8 @@ import SettingPage from '../screens/settings/SettingPage';
 
 import ChangeName from '../screens/settings/ChangeName';
 
+import DeleteAccount from '../screens/settings/DeleteAccount'
+
 import AssocRequest from '../screens/settings/AssocRequest';
 import { createStackNavigator } from '@react-navigation/stack';
 import EventUserCampoo from '../screens/EventUserCampoo';
@@ -57,10 +59,6 @@ function HomeStackScreen() {
   );
 }
 
-
-
-
-
 const EventStack = createStackNavigator();
 function EventStackScreen() {
   return (
@@ -73,11 +71,11 @@ function EventStackScreen() {
 }
 
 const ProfilStack = createStackNavigator();
-export const ProfilStackScreen = () => {
+function ProfilStackScreen() {
   return (
     <ProfilStack.Navigator   >
       <ProfilStack.Screen name="UserProfil" component={UserProfil} options={{ headerShown: false }} />
-      <ProfilStack.Screen name="SettingPage" component={SettingPage} options={{ headerShown: false }} />
+      <ProfilStack.Screen name="Setting" component={SettingStackScreen} options={{ headerShown: false }} />
       <ProfilStack.Screen name="UserModificationPage" component={UserModificationPage} options={{ headerShown: false }} />
 
       <ProfilStack.Screen name="MyTags" component={MyTags} options={{ headerShown: false }} />
@@ -88,10 +86,26 @@ export const ProfilStackScreen = () => {
 }
 
 
+const SettingStack = createStackNavigator();
+function SettingStackScreen() {
+  return (
+
+    <SettingStack.Navigator>
+      <SettingStack.Screen name="SettingPage" component={SettingPage} options={{ headerShown: false }} />
+
+      <SettingStack.Screen name="ChangeName" component={ChangeName} options={{ headerShown: false }} />
+      <SettingStack.Screen name="AssocRequest" component={AssocRequest} options={{ headerShown: false }} />
+      <SettingStack.Screen name="DeleteAccount" component={DeleteAccount} options={{ headerShown: false }} />
+    </SettingStack.Navigator>
+
+  );
+}
+
+
 const Tab = createBottomTabNavigator();
 
 export default function Navigator() {
-  // render() {
+
 
   return (
     <Tab.Navigator
