@@ -3,36 +3,36 @@ import { StyleSheet, View, ScrollView, SafeAreaView, StatusBar, TouchableOpacity
 import PostCampoo from '../components/PostCampoo';
 import AddButton from '../../assets/svg/AddButton'
 
-export default class AssoFeedCampoo extends Component {
-    render() {
-        return (
-            <SafeAreaView style={styles.container}>
+export default function AssoFeedCampoo() {
+
+    return (
+        <SafeAreaView style={styles.container}>
 
 
-                <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
+            <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
-                    <View style={styles.containerAssoFeed}>
+                <View style={styles.containerAssoFeed}>
 
-                        <PostCampoo
-                            name='Lapin Associe'
-                            description='la description du post' />
-                        <PostCampoo />
-                        <PostCampoo />
-                        <PostCampoo />
+                    <PostCampoo
+                        name='Lapin Associe'
+                        description='la description du post' />
+                    <PostCampoo />
+                    <PostCampoo />
+                    <PostCampoo />
 
-                    </View>
+                </View>
 
-                </ScrollView>
-                <TouchableOpacity style={styles.addButton}>
-                    <AddButton />
-                </TouchableOpacity>
-
-
+            </ScrollView>
+            <TouchableOpacity style={styles.addButton}>
+                <AddButton />
+            </TouchableOpacity>
 
 
-            </SafeAreaView>
-        )
-    };
+
+
+        </SafeAreaView>
+    )
+
 }
 
 const styles = StyleSheet.create({

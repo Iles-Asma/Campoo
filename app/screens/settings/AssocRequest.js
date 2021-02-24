@@ -91,14 +91,12 @@ const styles = StyleSheet.create({
     container: {
 
         flex: 1,
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        marginLeft: 20,
-        marginRight: 20,
-
+        paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 50,
         position: 'relative',
         flexDirection: 'column',
         backgroundColor: '#fff',
-        //  alignItems: 'center',
+        paddingHorizontal: '4%',
+
     },
     colorViolet: {
         color: '#4D3D64',

@@ -6,27 +6,27 @@ import TextInputAssos from '../components/input/TextInputAssos';
 import HeaderAddPost from '../components/header/HeaderAddPost'
 
 
-export default class AssosAddPost extends Component {
-    render() {
-        return (
-            <SafeAreaView style={styles.container}>
+export default function AssosAddPost() {
+
+    return (
+        <SafeAreaView style={styles.container}>
 
 
-                {/* header du screen */}
-                <HeaderAddPost />
+            {/* header du screen */}
+            <HeaderAddPost />
 
-                {/* titre de la zone de texte */}
+            {/* titre de la zone de texte */}
 
-                <LabelCampoo style={styles.labelInput} >Que souhaitez-vous dire ?</LabelCampoo>
+            <LabelCampoo style={styles.labelInput} >Que souhaitez-vous dire ?</LabelCampoo>
 
-                {/* zone d'ecriture de texte */}
+            {/* zone d'ecriture de texte */}
 
-                <TextInputAssos limitCaracter="limit de xxx caracter" />
+            <TextInputAssos limitCaracter="limit de xxx caracter" />
 
-            </SafeAreaView>
+        </SafeAreaView>
 
-        );
-    }
+    );
+
 }
 
 const styles = StyleSheet.create({

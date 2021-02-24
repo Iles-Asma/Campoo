@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 
 import { StyleSheet, StatusBar, SafeAreaView, View, Text } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { CAMPOO } from '../../../assets/themes/ThemeCampoo';
 import ArrowLSvg from "../../components/ArrowLSvg";
 import ExtraLargeBtn from '../../components/button/ExtraLargeBtn';
 
@@ -30,7 +31,7 @@ export default function DeleteAccount({ navigation }) {
 
             {/* Contenu */}
             <View style={styles.deleteContent}>
-                <Text style={styles.warningText}>Êtes vous sûr.e de vouloir supprimer votre compte ? Pas de retour en arrière possible !</Text>
+                <Text style={styles.warningText}>Êtes vous sûre de vouloir supprimer votre compte ? Pas de retour en arrière possible !</Text>
 
                 <View style={styles.btnContainer} >
                     <ExtraLargeBtn>Non je ne veux pas supprimer mon compte !</ExtraLargeBtn>
@@ -56,7 +57,6 @@ const styles = StyleSheet.create({
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         alignItems: 'center',
         justifyContent: 'center',
-
         position: 'relative',
         flexDirection: 'column',
         backgroundColor: '#fff',
@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        paddingHorizontal: '2%',
     },
     btnContainer: {
         flex: 0,
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
 
         fontWeight: 'bold',
-        color: '#4D3D64',
+        color: CAMPOO.primary,
 
     },
     topNav: {

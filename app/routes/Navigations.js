@@ -55,7 +55,15 @@ import AssocProfil from '../screens/profils/AssocProfil';
 import AssocModificationPage from '../screens/profils/AssocModificationPage';
 
 
-
+const AssosHomeStack = createStackNavigator();
+function AssosHomeStackScreen() {
+  return (
+    <AssosHomeStack.Navigator>
+      <AssosHomeStack.Screen name="HomeFeedCampoo" component={HomeFeedCampoo} options={{ headerShown: false }} />
+      <HomeStack.Screen name="CommentCampoo" component={CommentCampoo} options={{ headerShown: false }} />
+    </AssosHomeStack.Navigator>
+  );
+}
 
 const HomeStack = createStackNavigator();
 function HomeStackScreen() {
@@ -63,7 +71,6 @@ function HomeStackScreen() {
     <HomeStack.Navigator>
       <HomeStack.Screen name="HomeFeedCampoo" component={HomeFeedCampoo} options={{ headerShown: false }} />
       <HomeStack.Screen name="CommentCampoo" component={CommentCampoo} options={{ headerShown: false }} />
-
     </HomeStack.Navigator>
   );
 }
@@ -118,7 +125,6 @@ export default function Navigator() {
     <Tab.Navigator
       initialRouteName="Feed"
       tabBarOptions={{
-        activeTintColor: '#e91e63',
         activeBackgroundColor: CAMPOO.secondary,
       }}
 

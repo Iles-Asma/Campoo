@@ -15,7 +15,6 @@ import { CAMPOO } from '../../../assets/themes/ThemeCampoo';
 export default function UserProfil({ navigation }) {
 
 
-
     return (
 
         <SafeAreaView style={styles.container}>
@@ -174,20 +173,17 @@ const styles = StyleSheet.create({
     BioContainer: {
         flex: 0.3,
         flexDirection: 'row',
-        height: '35%',
+        height: 'auto',
         width: '100%',
         alignItems: 'center',
-        position: 'relative',
+        justifyContent: 'center',
         borderBottomWidth: 1,
-        paddingBottom: 15,
+        paddingBottom: '3%',
         borderColor: 'rgba(158, 150, 150, .5)',
-
 
     },
     iconsBat: {
         flex: 0,
-        // position:'relative',
-        // left:7,
         alignSelf: 'center',
         marginLeft: 10,
         width: 75,
@@ -196,7 +192,7 @@ const styles = StyleSheet.create({
     },
     bioBloc: {
 
-        width: '70%',
+        width: '80%',
         height: 'auto',
         alignSelf: 'center',
         fontSize: 14,
@@ -204,6 +200,7 @@ const styles = StyleSheet.create({
         marginTop: 15,
         textAlign: 'justify',
         flexShrink: 1,
+
 
 
     },

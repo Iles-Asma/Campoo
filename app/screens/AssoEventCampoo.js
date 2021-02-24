@@ -4,89 +4,89 @@ import AddButton from '../../assets/svg/AddButton'
 import ArrowLSvg from '../components/ArrowLSvg'
 import EventItemCampoo from '../components/EventItemCampoo'
 
-export default class AssoEventCampoo extends React.Component {
-    render() {
-        return (
+export default function AssoEventCampoo() {
 
-            <SafeAreaView style={styles.container}>
+    return (
 
-                <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
+        <SafeAreaView style={styles.container}>
 
-                    <View style={styles.containerEvent}>
+            <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
-                        <EventItemCampoo
-                            image={require("../../assets/images/imagePost-Test.png")}
+                <View style={styles.containerEvent}>
 
-                            title="TITRE DE L'EVENEMENT"
+                    <EventItemCampoo
+                        image={require("../../assets/images/imagePost-Test.png")}
 
-                            eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+                        title="TITRE DE L'EVENEMENT"
 
-                            date='17/05/2020'
+                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
 
-                            hours='18h20'
+                        date='17/05/2020'
 
-                            location='2 rue ta soeur tire au flanc' />
+                        hours='18h20'
 
-                        <EventItemCampoo
-                            image={require("../../assets/images/imagePost-Test.png")}
+                        location='2 rue ta soeur tire au flanc' />
 
-                            title="TITRE DE L'EVENEMENT"
+                    <EventItemCampoo
+                        image={require("../../assets/images/imagePost-Test.png")}
 
-                            eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+                        title="TITRE DE L'EVENEMENT"
 
-                            date='17/05/2020'
+                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
 
-                            hours='18h20'
+                        date='17/05/2020'
 
-                            location='2 rue ta soeur tire au flanc' />
+                        hours='18h20'
 
-
-                        <EventItemCampoo
-                            image={require("../../assets/images/imagePost-Test.png")}
-
-                            title="TITRE DE L'EVENEMENT"
-
-                            eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
-
-                            date='17/05/2020'
-
-                            hours='18h20'
-
-                            location='2 rue ta soeur tire au flanc' />
+                        location='2 rue ta soeur tire au flanc' />
 
 
-                        <EventItemCampoo
-                            image={require("../../assets/images/imagePost-Test.png")}
+                    <EventItemCampoo
+                        image={require("../../assets/images/imagePost-Test.png")}
 
-                            title="TITRE DE L'EVENEMENT"
+                        title="TITRE DE L'EVENEMENT"
 
-                            eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
 
-                            date='17/05/2020'
+                        date='17/05/2020'
 
-                            hours='18h20'
+                        hours='18h20'
 
-                            location='2 rue ta soeur tire au flanc' />
-
-                    </View>
-
-                </ScrollView>
-                {/* <View style={styles.addEventAssos}> */}
+                        location='2 rue ta soeur tire au flanc' />
 
 
-                <TouchableOpacity style={styles.arrowLeft}>
-                    <ArrowLSvg />
-                </TouchableOpacity>
+                    <EventItemCampoo
+                        image={require("../../assets/images/imagePost-Test.png")}
 
-                <TouchableOpacity style={styles.addButton}>
-                    <AddButton couleur="red" />
-                </TouchableOpacity>
+                        title="TITRE DE L'EVENEMENT"
 
-                {/* </View> */}
-            </SafeAreaView>
+                        eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
 
-        )
-    }
+                        date='17/05/2020'
+
+                        hours='18h20'
+
+                        location='2 rue ta soeur tire au flanc' />
+
+                </View>
+
+            </ScrollView>
+            {/* <View style={styles.addEventAssos}> */}
+
+
+            <TouchableOpacity style={styles.arrowLeft}>
+                <ArrowLSvg />
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.addButton}>
+                <AddButton couleur="red" />
+            </TouchableOpacity>
+
+            {/* </View> */}
+        </SafeAreaView>
+
+    )
+
 }
 
 const styles = StyleSheet.create({
