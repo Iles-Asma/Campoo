@@ -4,68 +4,65 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity, StatusBar, SafeAreaView, ScrollView, View, Text } from 'react-native';
 import Tags from '../../components/Tags';
 
-export default class ChooseTags extends React.Component {
+export default function ChooseTags() {
 
 
+    return (
 
-    render() {
+        <SafeAreaView style={styles.container}>
 
-        return (
+            {/* La navigation du haut */}
+            <View style={styles.topNav}>
+                {/* Le opPress à mettre */}
+                <TouchableOpacity >
+                    <Text>Annuler</Text>
+                </TouchableOpacity>
+                <Text style={styles.secondTitle}>Choisis tes tags</Text>
+                <TouchableOpacity >
+                    <Text>OK</Text>
+                </TouchableOpacity>
 
-            <SafeAreaView style={styles.container}>
+            </View>
+            <ScrollView showsVerticalScrollIndicator={false} >
 
-                {/* La navigation du haut */}
-                <View style={styles.topNav}>
-                    {/* Le opPress à mettre */}
-                    <TouchableOpacity >
-                        <Text> Annuler</Text>
-                    </TouchableOpacity>
-                    <Text style={styles.secondTitle}>Choisis tes tags</Text>
-                    <TouchableOpacity >
-                        <Text> OK</Text>
-                    </TouchableOpacity>
+                {/* Les differents tags */}
 
-                </View>
-                <ScrollView showsVerticalScrollIndicator={false} >
+                <View style={styles.tagsContainer}>
+                    <View style={styles.tagsContent}>
 
-                    {/* Les differents tags */}
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
 
-                    <View style={styles.tagsContainer}>
-                        <View style={styles.tagsContent}>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
 
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
 
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
 
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
 
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
 
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-
-                        </View>
                     </View>
+                </View>
 
-                </ScrollView>
-            </SafeAreaView>
+            </ScrollView>
+        </SafeAreaView>
 
-        );
+    );
 
-    }
+
 
 }
 
@@ -115,6 +112,8 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 35,
         flexDirection: 'row',
+        paddingHorizontal: '5%',
+        alignItems: 'center',
 
     },
 });

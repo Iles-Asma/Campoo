@@ -8,14 +8,9 @@ import ButtonCampoo from '../../components/button/ButtonCampoo';
 
 export default function SettingPage({ navigation }) {
 
-
-    // render() {
-
-
     return (
 
         <SafeAreaView style={styles.container}>
-
 
             <TopNav onPress={() => navigation.goBack()} >Réglage</TopNav>
             <View style={styles.settingsContent}>
@@ -54,8 +49,9 @@ export default function SettingPage({ navigation }) {
                     <View style={styles.settingsTitle}>
                         <Text >Communauté </Text>
                     </View>
+
                     {/* Rubrique */}
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => { Linking.openURL('https://www.campoo.fr/condition-generale-utilisation#R%C3%A8gles') }}>
                         <ButtonSettings>Régles de la Communauté</ButtonSettings>
                     </TouchableOpacity>
                     {/* Titre */}

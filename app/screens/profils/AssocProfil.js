@@ -9,76 +9,74 @@ import PenSvg from '../../components/PenSvg';
 
 
 
-export default class AssocProfil extends React.Component {
-
-    render() {
-
-        return (
-            <ScrollView showsVerticalScrollIndicator={false} >
-                <SafeAreaView style={styles.container}>
-                    {/* Contenaire  */}
-                    <View style={styles.assocIdContainer}>
-
-                        <View style={[styles.assocSettings, styles.gap]}>
+export default function AssocProfil() {
 
 
 
-                            {/* Profil de l'image */}
-                            <Image source={require("../../../assets/imgAssoc/AssocImg.png")} style={styles.profilPics}></Image>
+    return (
+        <ScrollView showsVerticalScrollIndicator={false} >
+            <SafeAreaView style={styles.container}>
+                {/* Contenaire  */}
+                <View style={styles.assocIdContainer}>
 
-                            <TouchableOpacity style={[styles.profilReglage]}>
-                                <SettingsSvg />
-                            </TouchableOpacity>
+                    <View style={[styles.assocSettings, styles.gap]}>
 
-                            <TouchableOpacity style={[styles.assocModif]}>
-                                <PenSvg />
-                            </TouchableOpacity>
-                        </View>
+                        {/* Profil de l'image */}
+                        <Image source={require("../../../assets/imgAssoc/AssocImg.png")} style={styles.profilPics}></Image>
 
+                        <TouchableOpacity style={[styles.profilReglage]}>
+                            <SettingsSvg />
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={[styles.assocModif]}>
+                            <PenSvg />
+                        </TouchableOpacity>
                     </View>
 
-                    {/* Le pseudo et nom de l'user */}
-                    <View style={styles.profilInfoContainer}>
-                        <Text style={[styles.Pname, styles.colorViolet]}>BDE Staps</Text>
+                </View>
 
-                        <Text style={[styles.nickName, styles.colorViolet]}> BDE Staps</Text>
+                {/* Le pseudo et nom de l'user */}
+                <View style={styles.profilInfoContainer}>
+                    <Text style={[styles.Pname, styles.colorViolet]}>BDE Staps</Text>
 
-                    </View>
+                    <Text style={[styles.nickName, styles.colorViolet]}> BDE Staps</Text>
 
-                    {/* l'
+                </View>
+
+                {/* l'
                icone de son batiment et la description du profil */}
-                    <View style={styles.BioContainer}>
-                        <Image source={require("../../../assets/imgProfil/esieeIcon.png")} style={[styles.iconsBat, styles.gap]} ></Image>
+                <View style={styles.BioContainer}>
+                    <Image source={require("../../../assets/imgProfil/esieeIcon.png")} style={[styles.iconsBat, styles.gap]} ></Image>
 
-                        <Text style={[styles.bioBloc, styles.colorViolet]} > Bienvenue sur le profil de l’association de débats de l’ESIEE</Text>
-                    </View>
+                    <Text style={[styles.bioBloc, styles.colorViolet]} > Bienvenue sur le profil de l’association de débats de l’ESIEE</Text>
+                </View>
 
 
-                    <Text style={[styles.colorViolet, styles.postTitle]}>Post</Text>
+                <Text style={[styles.colorViolet, styles.postTitle]}>Post</Text>
 
-                    {/* les posts figurants sur le profil utilisateur */}
+                {/* les posts figurants sur le profil utilisateur */}
 
-                    {/* <View style={styles.postsContainer}>
+                {/* <View style={styles.postsContainer}>
         <View style={styles.postsContent}> */}
 
-                    {/* <PostCampoo/> 
+                {/* <PostCampoo/> 
              <PostCampoo/> */}
-                    {/* <PostCampoo/>   */}
-                    {/* <PostCampoo> </PostCampoo>
+                {/* <PostCampoo/>   */}
+                {/* <PostCampoo> </PostCampoo>
              <PostCampoo> </PostCampoo>      */}
 
-                    {/* 
+                {/* 
         </View>
         
      </View> */}
 
-                </SafeAreaView>
+            </SafeAreaView>
 
-            </ScrollView>
+        </ScrollView>
 
 
-        );
-    }
+    );
+
 };
 
 const styles = StyleSheet.create({

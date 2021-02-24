@@ -20,7 +20,7 @@ export default function CategoriesTags({ navigation }) {
                 <View style={styles.categorieContainer}>
 
                     {/* cinema */}
-                    <TouchableOpacity onPress={() => navigation.navigate('ChooseTags')}>
+                    <TouchableOpacity onPress={() => navigation.navigate('MyTags')}>
 
                         <Image style={styles.categorieShape} source={require("../../assets/categories/cinema.png")}  ></Image>
 
@@ -32,7 +32,7 @@ export default function CategoriesTags({ navigation }) {
 
                     </TouchableOpacity>
                     {/* sport */}
-                    <TouchableOpacity onPress={() => navigation.navigate('ChooseTags')}>
+                    <TouchableOpacity onPress={() => navigation.push('ChooseTags')}>
 
                         <Image style={styles.categorieShape} source={require("../../assets/categories/sport.png")}  ></Image>
 

@@ -1,75 +1,68 @@
 'use strict';
 
 import React from 'react';
-
 import { StyleSheet, ScrollView, Image, StatusBar, SafeAreaView, View, Text } from 'react-native';
 import PostCampoo from '../../components/PostCampoo';
 import MiniBtn from '../../components/button/MiniBtn';
 
 
-export default class ViewAssocProfil extends React.Component {
+export default function ViewAssocProfil() {
 
-    render() {
+    return (
+        <ScrollView showsVerticalScrollIndicator={false} >
+            <SafeAreaView style={styles.container}>
+                {/* Contenaire  */}
+                <View style={styles.assocIdContainer}>
 
-        return (
-            <ScrollView showsVerticalScrollIndicator={false} >
-                <SafeAreaView style={styles.container}>
-                    {/* Contenaire  */}
-                    <View style={styles.assocIdContainer}>
+                    <View style={[styles.assocSettings, styles.gap]}>
 
-                        <View style={[styles.assocSettings, styles.gap]}>
+                        {/* Profil de l'image */}
+                        <Image source={require("../../../assets/imgAssoc/AssocImg.png")} style={styles.profilPics}></Image>
 
-
-
-                            {/* Profil de l'image */}
-                            <Image source={require("../../../assets/imgAssoc/AssocImg.png")} style={styles.profilPics}></Image>
-
-                            <View style={[styles.profilReglage]}>
-                                <MiniBtn>Suivre</MiniBtn>
-                            </View>
-
-
+                        <View style={[styles.profilReglage]}>
+                            <MiniBtn>Suivre</MiniBtn>
                         </View>
 
-                    </View>
-
-                    {/* Le pseudo et nom de l'user */}
-                    <View style={styles.profilInfoContainer}>
-                        <Text style={[styles.Pname, styles.colorViolet]}>BDE Staps</Text>
-
-                        <Text style={[styles.nickName, styles.colorViolet]}> BDE Staps</Text>
 
                     </View>
 
-                    {/* l'
+                </View>
+
+                {/* Le pseudo et nom de l'user */}
+                <View style={styles.profilInfoContainer}>
+                    <Text style={[styles.Pname, styles.colorViolet]}>BDE Staps</Text>
+
+                    <Text style={[styles.nickName, styles.colorViolet]}> BDE Staps</Text>
+
+                </View>
+
+                {/* l'
                icone de son batiment et la description du profil */}
-                    <View style={styles.BioContainer}>
-                        <Image source={require("../../../assets/imgProfil/esieeIcon.png")} style={[styles.iconsBat, styles.gap]} ></Image>
+                <View style={styles.BioContainer}>
+                    <Image source={require("../../../assets/imgProfil/esieeIcon.png")} style={[styles.iconsBat, styles.gap]} ></Image>
 
-                        <Text style={[styles.bioBloc, styles.colorViolet]} > Bienvenue sur le profil de l’association de débats de l’ESIEE</Text>
-                    </View>
+                    <Text style={[styles.bioBloc, styles.colorViolet]} > Bienvenue sur le profil de l’association de débats de l’ESIEE</Text>
+                </View>
 
 
-                    <Text style={[styles.colorViolet, styles.postTitle]}>Post</Text>
+                <Text style={[styles.colorViolet, styles.postTitle]}>Post</Text>
 
-                    {/* les tags figurants sur le profil utilisateur */}
+                {/* les tags figurants sur le profil utilisateur */}
 
-                    {/* <View style={styles.tagsContainer}>
+                {/* <View style={styles.tagsContainer}>
         <View style={styles.tagsContent}> */}
 
-                    <PostCampoo />
-                    <PostCampoo />
-                    <PostCampoo />
+                <PostCampoo />
+                <PostCampoo />
+                <PostCampoo />
+
+            </SafeAreaView>
+
+        </ScrollView>
 
 
+    );
 
-                </SafeAreaView>
-
-            </ScrollView>
-
-
-        );
-    }
 };
 
 const styles = StyleSheet.create({

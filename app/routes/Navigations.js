@@ -1,6 +1,8 @@
 
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+import { CAMPOO } from '../../assets/themes/ThemeCampoo';
 import HomeIcon from '../../assets/svg/HomeIcon';
 
 import EventIcon from '../../assets/svg/EventIcon';
@@ -25,9 +27,9 @@ import UserProfil from '../screens/profils/UserProfil';
 
 import AssocProfil from '../screens/profils/AssocProfil';
 
-import ChooseTags from '../screens/profils/MyTags';
+import ChooseTags from '../screens/profils/ChooseTags';
 
-import MyTags from '../screens/profils/ChooseTags';
+import MyTags from '../screens/profils/MyTags';
 
 import UserModificationPage from '../screens/profils/UserModificationPage';
 
@@ -42,11 +44,11 @@ import ChangeName from '../screens/settings/ChangeName';
 import DeleteAccount from '../screens/settings/DeleteAccount'
 
 import AssocRequest from '../screens/settings/AssocRequest';
-import { createStackNavigator } from '@react-navigation/stack';
+
 import EventUserCampoo from '../screens/EventUserCampoo';
 import EventDetailCampoo from '../screens/EventDetailCampoo';
 import CommentCampoo from '../screens/CommentCampoo';
-import { CAMPOO } from '../../assets/themes/ThemeCampoo';
+
 
 const HomeStack = createStackNavigator();
 function HomeStackScreen() {
@@ -77,10 +79,9 @@ function ProfilStackScreen() {
       <ProfilStack.Screen name="UserProfil" component={UserProfil} options={{ headerShown: false }} />
       <ProfilStack.Screen name="Setting" component={SettingStackScreen} options={{ headerShown: false }} />
       <ProfilStack.Screen name="UserModificationPage" component={UserModificationPage} options={{ headerShown: false }} />
-
-      <ProfilStack.Screen name="MyTags" component={MyTags} options={{ headerShown: false }} />
       <ProfilStack.Screen name="CategoriesTags" component={CategoriesTags} options={{ headerShown: false }} />
       <ProfilStack.Screen name="ChooseTags" component={ChooseTags} options={{ headerShown: false }} />
+      <ProfilStack.Screen name="MyTags" component={MyTags} options={{ headerShown: false }} />
     </ProfilStack.Navigator>
   );
 }

@@ -30,9 +30,7 @@ export default function DeleteAccount({ navigation }) {
 
             {/* Contenu */}
             <View style={styles.deleteContent}>
-                <Text style={styles.warningText}>Êtes vous sûr.e de vouloir supprimer votre compte ? Pas de retour en arrière possible ! </Text>
-
-
+                <Text style={styles.warningText}>Êtes vous sûr.e de vouloir supprimer votre compte ? Pas de retour en arrière possible !</Text>
 
                 <View style={styles.btnContainer} >
                     <ExtraLargeBtn>Non je ne veux pas supprimer mon compte !</ExtraLargeBtn>
@@ -44,8 +42,6 @@ export default function DeleteAccount({ navigation }) {
             </View>
 
         </SafeAreaView>
-
-
 
 
     );

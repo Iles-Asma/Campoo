@@ -5,68 +5,60 @@ import { StyleSheet, StatusBar, SafeAreaView, ScrollView, View, Text } from 'rea
 import Tags from '../../components/Tags';
 import TitlePage from '../../components/TitlePage';
 import ButtonLarge from "../../components/button/ButtonLarge";
-export default class MyTags extends React.Component {
 
 
 
-    render() {
+export default function MyTags() {
 
-        return (
+    return (
 
-            <SafeAreaView style={styles.container}>
-                {/* Titre de l'onglet */}
-                <TitlePage>Tes tags</TitlePage>
+        <SafeAreaView style={styles.container}>
+            {/* Titre de l'onglet */}
+            <TitlePage>Tes tags</TitlePage>
 
-                <View style={styles.myTagsContainer} >
+            <View style={styles.myTagsContainer} >
 
-                    <ScrollView style={styles.SizeOnScroll} showsVerticalScrollIndicator={false} >
+                <ScrollView style={styles.SizeOnScroll} showsVerticalScrollIndicator={false} >
 
-                        {/* Les differents tags */}
+                    {/* Les differents tags */}
 
-
-                        <View style={styles.myTagsContent}>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
-                            <Tags> + Tag</Tags>
+                    <View style={styles.myTagsContent}>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
+                        <Tags> + Tag</Tags>
 
 
-                        </View>
-
-
-
-
-
-
-                    </ScrollView>
-                </View>
-
-                {/*Texte additionnel informatif  */}
-                <View style={styles.infoModif}>
-                    <Text style={styles.infoTags}>Tu peux supprimer tes tags en appuyant dessus !</Text>
-
-                    {/* Composant btn */}
-                    <View style={styles.btnModifcation}>
-                        <ButtonLarge style={styles.BgColor}> Ajouter des tags </ButtonLarge>
                     </View>
+
+                </ScrollView>
+            </View>
+
+            {/*Texte additionnel informatif  */}
+            <View style={styles.infoModif}>
+                <Text style={styles.infoTags}>Tu peux supprimer tes tags en appuyant dessus !</Text>
+
+                {/* Composant btn */}
+                <View style={styles.btnModifcation}>
+                    <ButtonLarge style={styles.BgColor}> Ajouter des tags </ButtonLarge>
                 </View>
-            </SafeAreaView>
+            </View>
+        </SafeAreaView>
 
-        );
+    );
 
-    }
+
 
 }
 // style generale
@@ -79,7 +71,7 @@ const styles = StyleSheet.create({
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         flexDirection: 'column',
         position: 'relative',
-        margin: 15,
+
         backgroundColor: '#fff',
         alignItems: 'center',
 
