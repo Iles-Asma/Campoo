@@ -6,38 +6,34 @@ import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 
-export default class BatSignupCampoo extends React.Component {
+export default function BatSignupCampoo({ navigation }) {
 
     //! mettre un picker 
 
-    render() {
-        const { navigation } = this.props;
-
-        const pressHandler = () => {
-            navigation.push('NameSignupCampoo');
-        }
-
-        return (
-
-            <SafeAreaView style={styles.container}>
 
 
-                <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
-                <Image style={styles.baloo} source={require("../../../assets/images/Blob-Baloo-Etudiant.png")} />
 
-                <View style={styles.batView}>
-                    <LabelCampoo style={styles.batLabel}>Batiment</LabelCampoo>
-                    <Text style={styles.textBat}>Si tu viens d'Harvard, c'est ici qu'il faut le dire.</Text>
-                    <InputCampooSignup style={styles.InputView} />
-                    <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
+    return (
 
-                </View>
+        <SafeAreaView style={styles.container}>
 
-            </SafeAreaView>
 
-        );
-    }
+            <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+            <Image style={styles.baloo} source={require("../../../assets/images/Blob-Baloo-Etudiant.png")} />
+
+            <View style={styles.batView}>
+                <LabelCampoo style={styles.batLabel}>Batiment</LabelCampoo>
+                <Text style={styles.textBat}>Si tu viens d'Harvard, c'est ici qu'il faut le dire.</Text>
+                <InputCampooSignup style={styles.InputView} />
+                <ButtonCampoo style={styles.button} onPress={() => navigation.navigate('MdpSignupCampoo')}>Suivant</ButtonCampoo>
+                <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
+
+            </View>
+
+        </SafeAreaView>
+
+    );
+
 
 
 }

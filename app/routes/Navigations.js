@@ -1,8 +1,6 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-
-// Color Campoo 
 import { CAMPOO } from '../../assets/themes/ThemeCampoo';
 
 // Icon BottomNav
@@ -56,7 +54,8 @@ import AssocProfil from '../screens/profils/AssocProfil';
 import AssocModificationPage from '../screens/profils/AssocModificationPage';
 import ViewAssocProfil from '../screens/profils/ViewAssocProfil';
 
-//Signup Stack
+
+/*========================== SIGNUP STACK =============================*/
 const SignupStack = createStackNavigator();
 export default function SignupStackScreen() {
   return (
@@ -227,7 +226,6 @@ export function Navigator() {
       />
     </Tab.Navigator>
   );
-  // }
 }
 
 

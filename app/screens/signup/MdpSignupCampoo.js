@@ -5,46 +5,39 @@ import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo
 import InputCampooSignup from '../../components/input/InputCampooSignup';
 import LabelCampoo from '../../components/LabelCampoo';
 
-export default class MdpSignupCampoo extends React.Component {
-
-    render() {
-
-        const { navigation } = this.props;
-
-        const pressHandler = () => {
-            navigation.push('AnimalSignupCampoo');
-
-        }
+export default function MdpSignupCampoo({ navigation }) {
 
 
-        return (
-
-            <SafeAreaView style={styles.container}>
-
-                <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
-                <Image style={styles.baloo} source={require("../../../assets/images/Baloo-Blob-Securité.png")} />
-
-                <View style={styles.PswdView}>
-
-                    <LabelCampoo style={styles.Pswd1}>Mot de passe</LabelCampoo>
-
-                    <Text style={styles.textMdp}>Pour ta sécurité, Baloo te recommande d’utiliser au moins 6 caractères.</Text>
-
-                    <InputCampooSignup secure={true} style={styles.InputView1} />
-
-                    <LabelCampoo style={styles.Pswd2}>Vérification</LabelCampoo>
-
-                    <InputCampooSignup secure={true} style={styles.InputView2} />
 
 
-                    <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>Retour</SecondaryButtonCampoo>
-                </View>
+    return (
 
-            </SafeAreaView >
+        <SafeAreaView style={styles.container}>
 
-        );
-    }
+            <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+            <Image style={styles.baloo} source={require("../../../assets/images/Baloo-Blob-Securité.png")} />
+
+            <View style={styles.PswdView}>
+
+                <LabelCampoo style={styles.Pswd1}>Mot de passe</LabelCampoo>
+
+                <Text style={styles.textMdp}>Pour ta sécurité, Baloo te recommande d’utiliser au moins 6 caractères.</Text>
+
+                <InputCampooSignup secure={true} style={styles.InputView1} />
+
+                <LabelCampoo style={styles.Pswd2}>Vérification</LabelCampoo>
+
+                <InputCampooSignup secure={true} style={styles.InputView2} />
+
+
+                <ButtonCampoo style={styles.button} onPress={() => navigation.navigate('CodeVerifSignupCampoo')}>Suivant</ButtonCampoo>
+                <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>Retour</SecondaryButtonCampoo>
+            </View>
+
+        </SafeAreaView >
+
+    );
+
 
 
 }

@@ -5,38 +5,32 @@ import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 
-export default class PseudoSignupCampoo extends React.Component {
-
-    render() {
-        const { navigation } = this.props;
-
-        const pressHandler = () => {
-            navigation.push('MdpSignupCampoo');
-        }
+export default function PseudoSignupCampoo({ navigation }) {
 
 
-        return (
 
-            <SafeAreaView style={styles.container}>
+    return (
+
+        <SafeAreaView style={styles.container}>
 
 
-                <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
-                <Image style={styles.baloo} source={require("../../../assets/images/blob-baloo-fête.png")} />
+            <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+            <Image style={styles.baloo} source={require("../../../assets/images/blob-baloo-fête.png")} />
 
-                <View style={styles.pseudoView}>
-                    <LabelCampoo style={styles.pseudoLabel}>Pseudonyme</LabelCampoo>
-                    <Text style={styles.textPseudo}>C’est ainsi que Baloo te ferais valoir auprès des autres utilisateurs.</Text>
-                    <InputCampooSignup style={styles.InputView} />
+            <View style={styles.pseudoView}>
+                <LabelCampoo style={styles.pseudoLabel}>Pseudonyme</LabelCampoo>
+                <Text style={styles.textPseudo}>C’est ainsi que Baloo te ferais valoir auprès des autres utilisateurs.</Text>
+                <InputCampooSignup style={styles.InputView} />
 
-                    <ButtonCampoo style={styles.button} onPress={pressHandler}>Suivant</ButtonCampoo>
-                    <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
+                <ButtonCampoo style={styles.button} onPress={() => navigation.navigate('DobSignupCampoo')}>Suivant</ButtonCampoo>
+                <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
 
-                </View>
+            </View>
 
-            </SafeAreaView>
+        </SafeAreaView>
 
-        );
-    }
+    );
+
 
 
 }
