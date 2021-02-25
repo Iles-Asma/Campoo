@@ -6,7 +6,7 @@ import { StyleSheet, ScrollView, Image, StatusBar, TouchableOpacity, SafeAreaVie
 import SettingsSvg from '../../components/SettingsSvg';
 import PenSvg from '../../components/PenSvg';
 
-export default function AssocProfil() {
+export default function AssocProfil({ navigation }) {
 
 
 
@@ -21,11 +21,11 @@ export default function AssocProfil() {
                         {/* Profil de l'image */}
                         <Image source={require("../../../assets/imgAssoc/AssocImg.png")} style={styles.profilPics}></Image>
 
-                        <TouchableOpacity style={[styles.profilReglage]}>
+                        <TouchableOpacity style={[styles.profilReglage]} onPress={() => navigation.navigate('SettingPage')}>
                             <SettingsSvg />
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={[styles.assocModif]}>
+                        <TouchableOpacity style={[styles.assocModif]} onPress={() => navigation.navigate('AssocModificationPage')}>
                             <PenSvg />
                         </TouchableOpacity>
                     </View>
