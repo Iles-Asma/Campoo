@@ -56,12 +56,6 @@ import AssocProfil from '../screens/profils/AssocProfil';
 import AssocModificationPage from '../screens/profils/AssocModificationPage';
 import ViewAssocProfil from '../screens/profils/ViewAssocProfil';
 
-
-
-
-
-
-
 //Signup Stack
 const SignupStack = createStackNavigator();
 export default function SignupStackScreen() {
@@ -82,10 +76,10 @@ export default function SignupStackScreen() {
   );
 }
 
-/*==================================== AssosStack  =============================*/
+/*============================== AssosStack ============================*/
 
 const AssosHomeStack = createStackNavigator();
-function AssosHomeStackScreen() {
+export function AssosHomeStackScreen() {
   return (
     <AssosHomeStack.Navigator>
       <AssosHomeStack.Screen name="AssoFeedCampoo" component={AssoFeedCampoo} options={{ headerShown: false }} />
@@ -96,7 +90,7 @@ function AssosHomeStackScreen() {
 }
 
 const AssosEventStack = createStackNavigator();
-function AssosEventStackScreen() {
+export function AssosEventStackScreen() {
   return (
     <AssosEventStack.Navigator>
       <AssosEventStack.Screen name="AssoEventCampoo" component={AssoEventCampoo} options={{ headerShown: false }} />
@@ -106,7 +100,7 @@ function AssosEventStackScreen() {
 }
 
 const AssosProfilStack = createStackNavigator();
-function AssosProfilStackScreen() {
+export function AssosProfilStackScreen() {
   return (
     <AssosProfilStack.Navigator>
       <AssosProfilStack.Screen name="AssocProfil" component={AssocProfil} options={{ headerShown: false }} />
@@ -167,11 +161,10 @@ function SettingStackScreen() {
   );
 }
 
-/*=============== BOTTOM NAVIGATION =================*/
+/*======================== BOTTOM NAVIGATION ======================*/
 
 
 const Tab = createBottomTabNavigator();
-
 export function Navigator() {
 
 
@@ -189,7 +182,7 @@ export function Navigator() {
         name="accueil"
         component={HomeStackScreen}
         options={{
-
+          // enleve le text sous l'icon dans la BOTTOM NAV
           tabBarLabel: () => { return null },
 
 
@@ -222,15 +215,10 @@ export function Navigator() {
         name="mon profil"
         component={ProfilStackScreen}
         options={{
-
-
-
           tabBarLabel: () => { return null },
-
           tabBarIcon: () => {
             return (
               <ProfileIcon />
-
 
             );
           },
