@@ -2,8 +2,8 @@
 
 import React, { useState } from 'react';
 
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { StyleSheet, ScrollView, StatusBar, SafeAreaView, View, Text } from 'react-native';
+// import { TouchableOpacity } from 'react-native-gesture-handler';
+import { StyleSheet, ScrollView, StatusBar, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import PickerBatiments from "../../components/PickerBatiments";
 import LabelCampoo from "../../components/LabelCampoo";
 import InputModifProfil from '../../components/input/InputModifProfil';
@@ -28,6 +28,7 @@ export default function AssocRequest({ navigation }) {
                 <TouchableOpacity >
                     <ArrowLSvg onPress={() => navigation.goBack()} />
                 </TouchableOpacity>
+
                 <View style={styles.namePage}>
                     <Text style={styles.secondTitle}>Réglage</Text>
                 </View>
@@ -94,8 +95,9 @@ const styles = StyleSheet.create({
         paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 50,
         position: 'relative',
         flexDirection: 'column',
+        justifyContent: 'center',
         backgroundColor: '#fff',
-        paddingHorizontal: '4%',
+
 
     },
     colorViolet: {
@@ -120,6 +122,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-start',
         width: '100%',
+        paddingHorizontal: '5%',
     },
     nameLabel: {
 
@@ -162,6 +165,9 @@ const styles = StyleSheet.create({
     },
     topNav: {
         flex: 0,
+        paddingHorizontal: '5%',
+        justifyContent: 'center',
+        marginTop: '5%',
 
         width: '100%',
         height: 40,

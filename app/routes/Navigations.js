@@ -47,23 +47,74 @@ import ChangeName from '../screens/settings/ChangeName';
 import DeleteAccount from '../screens/settings/DeleteAccount'
 import AssocRequest from '../screens/settings/AssocRequest';
 
-
-
+// ASSOS STACK
+import AssoEventCampoo from '../screens/AssoEventCampoo';
+import AssosAddPost from '../screens/AssosAddPost';
+import AssoFeedCampoo from '../screens/AssoFeedCampoo';
+import createEventCampoo from '../screens/CreateEventCampoo';
 import AssocProfil from '../screens/profils/AssocProfil';
-
-
 import AssocModificationPage from '../screens/profils/AssocModificationPage';
+import ViewAssocProfil from '../screens/profils/ViewAssocProfil';
 
+
+
+
+
+
+
+//Signup Stack
+const SignupStack = createStackNavigator();
+function SignupStackScreen() {
+  return (
+    <SignupStack.Navigator>
+      <SignupStack.Screen name="ScreenLoginCampoo" component={ScreenLoginCampoo} options={{ headerShown: false }} />
+      <SignupStack.Screen name="MailSignupCampoo" component={MailSignupCampoo} options={{ headerShown: false }} />
+      <SignupStack.Screen name="NameSignupCampoo" component={NameSignupCampoo} options={{ headerShown: false }} />
+      <SignupStack.Screen name="PseudoSignupCampoo" component={PseudoSignupCampoo} options={{ headerShown: false }} />
+      <SignupStack.Screen name="DobSignupCampoo" component={DobSignupCampoo} options={{ headerShown: false }} />
+      <SignupStack.Screen name="BatSignupCampoo" component={BatSignupCampoo} options={{ headerShown: false }} />
+      <SignupStack.Screen name="AnimalSignupCampoo" component={AnimalSignupCampoo} options={{ headerShown: false }} />
+      <SignupStack.Screen name="MdpSignupCampoo" component={MdpSignupCampoo} options={{ headerShown: false }} />
+      <SignupStack.Screen name="CodeVerifSignupCampoo" component={CodeVerifSignupCampoo} options={{ headerShown: false }} />
+    </SignupStack.Navigator>
+
+  );
+}
+
+/*==================================== AssosStack  =============================*/
 
 const AssosHomeStack = createStackNavigator();
 function AssosHomeStackScreen() {
   return (
     <AssosHomeStack.Navigator>
-      <AssosHomeStack.Screen name="HomeFeedCampoo" component={HomeFeedCampoo} options={{ headerShown: false }} />
+      <AssosHomeStack.Screen name="AssoFeedCampoo" component={AssoFeedCampoo} options={{ headerShown: false }} />
+      <AssosHomeStack.Screen name="AssosAddPost" component={AssosAddPost} options={{ headerShown: false }} />
       <HomeStack.Screen name="CommentCampoo" component={CommentCampoo} options={{ headerShown: false }} />
     </AssosHomeStack.Navigator>
   );
 }
+
+const AssosEventStack = createStackNavigator();
+function AssosEventStackScreen() {
+  return (
+    <AssosEventStack.Navigator>
+      <AssosEventStack.Screen name="AssoEventCampoo" component={AssoEventCampoo} options={{ headerShown: false }} />
+      <AssosEventStack.Screen name="createEventCampoo" component={createEventCampoo} options={{ headerShown: false }} />
+    </AssosEventStack.Navigator>
+  );
+}
+
+const AssosProfilStack = createStackNavigator();
+function AssosProfilStackScreen() {
+  return (
+    <AssosProfilStack.Navigator>
+      <AssosProfilStack.Screen name="AssocProfil" component={AssocProfil} options={{ headerShown: false }} />
+      <AssosProfilStack.Screen name="AssocModificationPage" component={AssocModificationPage} options={{ headerShown: false }} />
+    </AssosProfilStack.Navigator>
+  );
+}
+
+/*=========================== User Stack ==============================*/
 
 const HomeStack = createStackNavigator();
 function HomeStackScreen() {
@@ -114,6 +165,8 @@ function SettingStackScreen() {
 
   );
 }
+
+/*=============== BOTTOM NAVIGATION =================*/
 
 
 const Tab = createBottomTabNavigator();
