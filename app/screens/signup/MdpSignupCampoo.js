@@ -12,7 +12,7 @@ export default class MdpSignupCampoo extends React.Component {
         const { navigation } = this.props;
 
         const pressHandler = () => {
-            navigation.push('QSecretSignupCampoo');
+            navigation.push('AnimalSignupCampoo');
 
         }
 
@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         justifyContent: 'flex-start',
         alignItems: 'center',
-        backgroundColor: '#F0F0F3',
+
+        backgroundColor: '#ffffff',
 
     },
 

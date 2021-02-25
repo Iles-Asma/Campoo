@@ -37,7 +37,7 @@ import MyTags from './app/screens/profils/MyTags';
 import MailSignupCampoo from "./app/screens/signup/MailSignupCampoo";
 
 import UserModificationPage from './app/screens/profils/UserModificationPage';
-import Navigator from './app/routes/Navigations'
+import Navigations from './app/routes/Navigations'
 
 import AssocModificationPage from './app/screens/profils/AssocModificationPage';
 
@@ -83,7 +83,7 @@ export default class App extends React.Component {
       //<EventItemCampoo />
 
       <NavigationContainer >
-        <Navigator />
+        <Navigations />
       </NavigationContainer>
 
       // ------------------------ Component 

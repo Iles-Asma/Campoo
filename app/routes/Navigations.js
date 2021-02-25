@@ -64,10 +64,11 @@ import ViewAssocProfil from '../screens/profils/ViewAssocProfil';
 
 //Signup Stack
 const SignupStack = createStackNavigator();
-function SignupStackScreen() {
+export default function SignupStackScreen() {
   return (
     <SignupStack.Navigator>
       <SignupStack.Screen name="ScreenLoginCampoo" component={ScreenLoginCampoo} options={{ headerShown: false }} />
+      <SignupStack.Screen name="Navigator" component={Navigator} options={{ headerShown: false }} />
       <SignupStack.Screen name="MailSignupCampoo" component={MailSignupCampoo} options={{ headerShown: false }} />
       <SignupStack.Screen name="NameSignupCampoo" component={NameSignupCampoo} options={{ headerShown: false }} />
       <SignupStack.Screen name="PseudoSignupCampoo" component={PseudoSignupCampoo} options={{ headerShown: false }} />
@@ -171,7 +172,7 @@ function SettingStackScreen() {
 
 const Tab = createBottomTabNavigator();
 
-export default function Navigator() {
+export function Navigator() {
 
 
   return (

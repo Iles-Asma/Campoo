@@ -6,56 +6,50 @@ import LabelCampoo from "../../components/LabelCampoo";
 import InputCampooSignup from "../../components/input/InputCampooSignup";
 import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
-export default class ScreenLoginPage extends React.Component {
+export default function ScreenLoginPage({ navigation }) {
 
-   render() {
 
-      const { navigation } = this.props;
 
-      const pressHandler = () => {
-         navigation.navigate('MailSignupCampoo');
-      };
+   return (
 
-      return (
+      <SafeAreaView style={styles.container} >
 
-         <SafeAreaView style={styles.container} >
+         <LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
+         <Image style={{ width: 271.64, height: 271.64, left: -102.73, top: 49.27, position: 'absolute' }} source={require("../../../assets/images/Baloo-accueil.png")} />
+         <Image style={{ width: 519.75, height: 394.37, left: 86, top: 576, position: 'absolute' }} source={require("../../../assets/images/BAloo-violet.png")} />
 
-            <LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
-            <Image style={{ width: 271.64, height: 271.64, left: -102.73, top: 49.27, position: 'absolute' }} source={require("../../../assets/images/Baloo-accueil.png")} />
-            <Image style={{ width: 519.75, height: 394.37, left: 86, top: 576, position: 'absolute' }} source={require("../../../assets/images/BAloo-violet.png")} />
+         <View style={styles.loginview}>
 
-            <View style={styles.loginview}>
+            <View style={styles.pseudo}>
 
-               <View style={styles.pseudo}>
-
-                  <LabelCampoo style={styles.labelPseudo}>Pseudo</LabelCampoo>
-                  <InputCampooSignup name="Pseudo" style={styles.InputPseudo} />
-
-               </View>
-
-               <View>
-
-                  <LabelCampoo style={styles.labelMotDePasse}>Mot de passe</LabelCampoo>
-
-                  <InputCampooSignup name="Mot de passe" secure={true} style={styles.InputMotDePasse} />
-
-                  <ButtonCampoo style={styles.button}>Connexion</ButtonCampoo>
-               </View>
-
-               <View>
-
-                  <SecondaryButtonCampoo style={styles.secondaryButton1} >Mot de passe oublié</SecondaryButtonCampoo>
-
-                  <SecondaryButtonCampoo style={styles.secondaryButton2} onPress={pressHandler}>S'incrire</SecondaryButtonCampoo>
-
-               </View>
+               <LabelCampoo style={styles.labelPseudo}>Pseudo</LabelCampoo>
+               <InputCampooSignup name="Pseudo" style={styles.InputPseudo} />
 
             </View>
 
-         </SafeAreaView>
+            <View>
 
-      );
-   }
+               <LabelCampoo style={styles.labelMotDePasse}>Mot de passe</LabelCampoo>
+
+               <InputCampooSignup name="Mot de passe" secure={true} style={styles.InputMotDePasse} />
+
+               <ButtonCampoo style={styles.button} onPress={() => navigation.navigate('Navigator')}>Connexion</ButtonCampoo>
+            </View>
+
+            <View>
+
+               <SecondaryButtonCampoo style={styles.secondaryButton1} >Mot de passe oublié</SecondaryButtonCampoo>
+
+               <SecondaryButtonCampoo style={styles.secondaryButton2} onPress={() => navigation.navigate('MailSignupCampoo')}>S'incrire</SecondaryButtonCampoo>
+
+            </View>
+
+         </View>
+
+      </SafeAreaView>
+
+   );
+
 
 }
 
