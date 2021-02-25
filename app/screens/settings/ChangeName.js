@@ -1,6 +1,6 @@
 'use strict';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { StyleSheet, StatusBar, SafeAreaView, View, Text } from 'react-native';
 import LabelCampoo from "../../components/LabelCampoo";

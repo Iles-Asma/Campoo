@@ -1,10 +1,8 @@
-'use strict';
-
 import React from 'react';
 import { StyleSheet, TouchableOpacity, StatusBar, SafeAreaView, ScrollView, View, Text } from 'react-native';
 import Tags from '../../components/Tags';
 
-export default function ChooseTags() {
+export default function ChooseTags({ navigation }) {
 
 
     return (

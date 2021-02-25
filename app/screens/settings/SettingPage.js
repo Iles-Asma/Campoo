@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import { StyleSheet, StatusBar, TouchableOpacity, SafeAreaView, ScrollView, View, Text, Linking } from 'react-native';
 import TopNav from "../../components/header/TopNav";

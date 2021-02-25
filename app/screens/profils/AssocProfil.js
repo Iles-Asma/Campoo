@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 
 import { StyleSheet, ScrollView, Image, StatusBar, TouchableOpacity, SafeAreaView, View, Text } from 'react-native';

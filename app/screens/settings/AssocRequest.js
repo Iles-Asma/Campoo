@@ -1,6 +1,6 @@
-'use strict';
 
-import React, { useState } from 'react';
+
+import React from 'react';
 
 // import { TouchableOpacity } from 'react-native-gesture-handler';
 import { StyleSheet, ScrollView, StatusBar, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';

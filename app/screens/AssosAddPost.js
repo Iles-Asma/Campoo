@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import { Text, StyleSheet, View, SafeAreaView, StatusBar, Platform, TouchableOpacity } from 'react-native'
+import React from 'react'
+import { StyleSheet, SafeAreaView, StatusBar, Platform, TouchableOpacity } from 'react-native'
 import LabelCampoo from '../components/LabelCampoo';
 import TextInputAssos from '../components/input/TextInputAssos';
 
 import HeaderAddPost from '../components/header/HeaderAddPost'
 
 
-export default function AssosAddPost() {
+export default function AssosAddPost({ navigation }) {
 
     return (
         <SafeAreaView style={styles.container}>

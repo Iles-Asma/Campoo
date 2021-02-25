@@ -1,5 +1,3 @@
-'use strict';
-
 import { StyleSheet, ScrollView, StatusBar, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 // import Tags from '../../components/Tags';
 import PickerBatiments from "../components/PickerBatiments";

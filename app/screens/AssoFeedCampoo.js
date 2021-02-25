@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { StyleSheet, View, ScrollView, SafeAreaView, StatusBar, TouchableOpacity } from 'react-native'
 import PostCampoo from '../components/PostCampoo';
 import AddButton from '../../assets/svg/AddButton'

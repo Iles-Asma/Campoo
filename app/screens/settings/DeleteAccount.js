@@ -1,9 +1,6 @@
-'use strict';
 
-import React, { useState } from 'react';
-
-import { StyleSheet, StatusBar, SafeAreaView, View, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import React from 'react';
+import { StyleSheet, StatusBar, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import { CAMPOO } from '../../../assets/themes/ThemeCampoo';
 import ArrowLSvg from "../../components/ArrowLSvg";
 import ExtraLargeBtn from '../../components/button/ExtraLargeBtn';

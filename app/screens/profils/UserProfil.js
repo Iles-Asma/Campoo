@@ -1,9 +1,5 @@
-'use strict';
-
 import React from 'react';
-
 import { StyleSheet, Image, StatusBar, TouchableOpacity, SafeAreaView, View, Text } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 import SettingsSvg from '../../components/SettingsSvg';
 import PenSvg from '../../components/PenSvg';
 import Tags from '../../components/Tags';
@@ -22,8 +18,6 @@ export default function UserProfil({ navigation }) {
             <View style={styles.profilIdContainer}>
 
                 <View style={[styles.profilSettings, styles.gap]}>
-
-
 
                     {/* Profil de l'image */}
                     <Image source={require("../../../assets/imgProfil/Badeaubleu.png")} style={styles.profilPics}></Image>

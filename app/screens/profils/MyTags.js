@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import { StyleSheet, StatusBar, SafeAreaView, ScrollView, View, Text } from 'react-native';
 import Tags from '../../components/Tags';
@@ -7,7 +5,7 @@ import TitlePage from '../../components/TitlePage';
 import ButtonLarge from "../../components/button/ButtonLarge";
 
 
-export default function MyTags() {
+export default function MyTags({ navigation }) {
 
     return (
 
