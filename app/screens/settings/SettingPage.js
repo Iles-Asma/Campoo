@@ -12,7 +12,7 @@ export default function SettingPage({ navigation }) {
 
             <TopNav onPress={() => navigation.goBack()} >Réglage</TopNav>
             <View style={styles.settingsContent}>
-                <ScrollView style={styles.SizeOnScroll} showsVerticalScrollIndicator={false} >
+                <ScrollView showsVerticalScrollIndicator={false} >
 
                     {/* Les differentes rubrique */}
                     {/* Titre */}

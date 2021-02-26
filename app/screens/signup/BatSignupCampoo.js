@@ -5,6 +5,7 @@ import InputCampooSignup from "../../components/input/InputCampooSignup"
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
+import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 export default function BatSignupCampoo({ navigation }) {
 
@@ -18,7 +19,7 @@ export default function BatSignupCampoo({ navigation }) {
         <SafeAreaView style={styles.container}>
 
 
-            <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+            <LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
             <Image style={styles.baloo} source={require("../../../assets/images/Blob-Baloo-Etudiant.png")} />
 
             <View style={styles.batView}>

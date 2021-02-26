@@ -1,14 +1,10 @@
-
-'use strict';
-
 import React from 'react';
+
 import { StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import ArrowLSvg from "../ArrowLSvg";
 export default class topNav extends React.Component {
 
     render() {
-
-
 
         return (
             // contenu generale

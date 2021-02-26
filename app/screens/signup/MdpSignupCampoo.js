@@ -4,6 +4,7 @@ import ButtonCampoo from "../../components/button/ButtonCampoo";
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 import InputCampooSignup from '../../components/input/InputCampooSignup';
 import LabelCampoo from '../../components/LabelCampoo';
+import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 export default function MdpSignupCampoo({ navigation }) {
 
@@ -14,7 +15,7 @@ export default function MdpSignupCampoo({ navigation }) {
 
         <SafeAreaView style={styles.container}>
 
-            <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+            <LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
             <Image style={styles.baloo} source={require("../../../assets/images/Baloo-Blob-Securité.png")} />
 
             <View style={styles.PswdView}>
