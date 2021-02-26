@@ -1,9 +1,10 @@
 import React from 'react';
 import { StyleSheet, Image, StatusBar, TouchableOpacity, SafeAreaView, View, Text } from 'react-native';
+import { CAMPOO } from '../../../assets/themes/ThemeCampoo';
 import SettingsSvg from '../../components/SettingsSvg';
 import PenSvg from '../../components/PenSvg';
 import Tags from '../../components/Tags';
-import { CAMPOO } from '../../../assets/themes/ThemeCampoo';
+
 
 
 
@@ -20,7 +21,7 @@ export default function UserProfil({ navigation }) {
                 <View style={[styles.profilSettings, styles.gap]}>
 
                     {/* Profil de l'image */}
-                    <Image source={require("../../../assets/imgProfil/Badeaubleu.png")} style={styles.profilPics}></Image>
+                    <Image source={require("../../../assets/imgProfil/Badeaubleu.png")} style={styles.profilPics} />
 
                     <TouchableOpacity style={[styles.profilReglage]} onPress={() => navigation.navigate('SettingStackScreen')}>
                         <SettingsSvg />
@@ -43,9 +44,14 @@ export default function UserProfil({ navigation }) {
 
             {/* l'
                icone de son batiment et la description du profil */}
-            <View style={styles.BioContainer}>
-                <Image source={require("../../../assets/imgProfil/esieeIcon.png")} style={[styles.iconsBat, styles.gap]} ></Image>
-                <Text style={[styles.bioBloc, styles.colorViolet]} >Nouvelle musique disponible sur toutes les platformes allez check  Nouvelle musique disponible sur toutes les platformes allez check Nouvelle musique disponible sur toutes les platformes allez check</Text>
+            <View style={styles.bioContainer}>
+
+                <View style={styles.bioItem}>
+                    <Image source={require("../../../assets/imgProfil/esieeIcon.png")} style={[styles.iconsBat, styles.gap]} />
+                    <Text style={[styles.bioBloc, styles.colorViolet]} >Nouvelle musique disponible sur toutes les platformes allez check Nouvelle musique disponible sur toutes les platformes allez check Nouvelle musique disponible sur toutes les platformes allez check</Text>
+
+                </View>
+
             </View>
 
 
@@ -164,16 +170,23 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
 
-    BioContainer: {
-        flex: 0.3,
-        flexDirection: 'row',
-        height: 'auto',
+    bioContainer: {
+        paddingHorizontal: '4%',
+        flex: 0.4,
+        flexDirection: 'column',
+        height: '50%',
         width: '100%',
         alignItems: 'center',
         justifyContent: 'center',
         borderBottomWidth: 1,
-        paddingBottom: '3%',
         borderColor: 'rgba(158, 150, 150, .5)',
+
+    },
+    bioItem: {
+        flex: 1,
+        flexDirection: 'row',
+        width: '100%',
+        height: 'auto',
 
     },
     iconsBat: {
