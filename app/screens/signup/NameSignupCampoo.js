@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
 import InputCampooSignup from "../../components/input/InputCampooSignup"
 import ButtonCampoo from "../../components/button/ButtonCampoo";
@@ -7,6 +7,9 @@ import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo
 import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 export default function NameSignupCampoo({ navigation }) {
+    const [name, setName] = useState('');
+    console.log(name);
+
 
 
 
@@ -20,7 +23,7 @@ export default function NameSignupCampoo({ navigation }) {
             <View style={styles.nameView}>
                 <LabelCampoo style={styles.nameLabel}>Nom</LabelCampoo>
                 <Text style={styles.textName}>À qui Baloo a-il affaire ?</Text>
-                <InputCampooSignup style={styles.InputView} />
+                <InputCampooSignup style={styles.InputView} type='name' onChangeText={(text) => setName(text)} value={name} />
 
                 <ButtonCampoo style={styles.button} onPress={() => navigation.push('PseudoSignupCampoo')}>Suivant</ButtonCampoo>
                 <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>

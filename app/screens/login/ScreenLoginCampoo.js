@@ -1,5 +1,6 @@
 import React from "react";
-import { View, StyleSheet, SafeAreaView, StatusBar, Platform, Image } from "react-native";
+import { View, StyleSheet, SafeAreaView, Platform, Image } from "react-native";
+import { StatusBar } from 'expo-status-bar';
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import SecondaryButtonCampoo from "../../components/button/SecondaryButtonCampoo";
 import LabelCampoo from "../../components/LabelCampoo";
@@ -13,6 +14,7 @@ export default function ScreenLoginPage({ navigation }) {
    return (
 
       <SafeAreaView style={styles.container} >
+         <StatusBar style='auto' />
 
          <LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
          <Image style={{ width: 271.64, height: 271.64, left: -102.73, top: 49.27, position: 'absolute' }} source={require("../../../assets/images/Baloo-accueil.png")} />
@@ -57,7 +59,7 @@ const styles = StyleSheet.create({
 
    container: {
       flex: 1,
-      paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 1,
+      paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 40,
       flexDirection: 'column',
       alignItems: 'center',
       backgroundColor: '#ffffff',

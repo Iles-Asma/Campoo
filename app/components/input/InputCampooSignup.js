@@ -5,13 +5,15 @@ export default class InputCampoo extends React.Component {
 
     render() {
 
+
+
         return (
 
             <View style={[styles.inputView, this.props.style]}>
 
                 <Text style={styles.textMail}>{this.props.description}</Text>
 
-                <TextInput style={styles.textInput} secureTextEntry={this.props.secure} maxLength={40} />
+                <TextInput style={styles.textInput} autoCapitalize="none" keyboardType={this.props.keyboardType} type={this.props.type} secureTextEntry={this.props.secure} maxLength={40} onChangeText={this.props.onChangeText} />
 
             </View>
 

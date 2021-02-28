@@ -1,13 +1,79 @@
-import React from 'react';
-import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text, Alert } from 'react-native';
 import InputCampooSignup from "../../components/input/InputCampooSignup"
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
+const apiCampoo = "https://campoo.fr/api/account";
 
-export default function MailSignupCampoo({ navigation }) {
+
+
+
+
+export default function MailSignupCampoo(props, { navigation }) {
+
+    const [data, setData] = useState('');
+    console.log();
+
+
+
+    // async function insertNewFoodToServer(params) {
+    //     try {
+    //         let response = await fetch(apiCampoo, {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/x-www-form-urlencoded',
+    //             },
+    //             body: JSON.stringify(params)
+    //         });
+    //         let responseJson = await response.json();
+    //         return responseJson.email;
+    //     } catch (error) {
+    //         console.error(`error : ${error}`);
+    //     }
+    // }
+
+
+    const submit = () => {
+
+
+
+        fetch("https://campoo.fr/api/account ", {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+
+
+                'email': data
+
+
+            })
+        })
+            .then((response) => response.text())
+            .then((Message) => {
+                alert(Message);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+
+    };
+
+
+
+
+
+
+
+
+
+
 
 
     return (
@@ -22,9 +88,42 @@ export default function MailSignupCampoo({ navigation }) {
 
                 <Text style={styles.textMail}>Pour que Baloo vérifie que tu es bien un étudiant du campus !</Text>
 
-                <InputCampooSignup style={styles.InputView} />
+                <InputCampooSignup type='email' style={styles.InputView} keyboardType='email-address' onChangeText={(data) => setData(data)} value={props.data} />
 
-                <ButtonCampoo style={styles.button} onPress={() => navigation.navigate('NameSignupCampoo')}>Suivant</ButtonCampoo>
+                <ButtonCampoo style={styles.button}
+
+
+
+                    onPress={
+                        submit
+
+
+                        // () => {
+
+
+                        // let params = {
+                        //     email: props.data
+                        // }
+
+
+
+                        // insertNewFoodToServer(params)
+
+                        //     .then((data) => {
+                        //         if (data === 'Haut les pattes imposteur ! Baloo a détecté que tu utilises une adresse mail déjà enregistrée.') {
+                        //             alert(data);
+                        //         } else {
+                        //             console.log('error4')
+                        //         }
+                        //     });
+
+
+
+                        // }
+                    }
+
+
+                >Suivant</ButtonCampoo>
 
                 <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()} >retour</SecondaryButtonCampoo>
 
