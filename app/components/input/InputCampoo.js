@@ -15,7 +15,7 @@ export default class InputCampoo extends React.Component {
 
                 <TextInput style={styles.textInput} secureTextEntry={this.props.secure} maxLength={40} />
 
-                <Text style={styles.textInfo}>{this.props.info}</Text>
+                <Text style={styles.errorText}>{this.props.errorText}</Text>
 
                 <Text style={styles.textDescription} ></Text>
 
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
 
     },
 
-    textInfo: {
+    errorText: {
         marginTop: 25,
         fontSize: 11,
         color: '#EB7653',

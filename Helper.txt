@@ -127,3 +127,60 @@
 
 
                         // // }
+
+
+
+
+    // async function insertNewFoodToServer(params) {
+    //     try {
+    //         let response = await fetch(apiCampoo, {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/x-www-form-urlencoded',
+    //             },
+    //             body: JSON.stringify(params)
+    //         });
+    //         let responseJson = await response.json();
+    //         return responseJson.email;
+    //     } catch (error) {
+    //         console.error(`error : ${error}`);
+    //     }
+    // 
+
+
+
+
+
+    
+                        // () => {
+
+
+                        // let params = {
+                        //     email: props.data
+                        // }
+
+
+
+                        // insertNewFoodToServer(params)
+
+                        //     .then((data) => {
+                        //         if (data === 'Haut les pattes imposteur ! Baloo a détecté que tu utilises une adresse mail déjà enregistrée.') {
+                        //             alert(data);
+                        //         } else {
+                        //             console.log('error4')
+                        //         }
+                        //     });
+
+
+
+                        // }
+
+
+
+
+28/02/20 
+
+faire le reste des vus 
+trouver comment utiliser redux avec token 
+stocker le token des le remplisaage du champs  pour pouvoir continuer les etapes 

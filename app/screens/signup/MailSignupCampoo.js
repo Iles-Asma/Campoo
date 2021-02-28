@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text, Alert } from 'react-native';
 import InputCampooSignup from "../../components/input/InputCampooSignup"
 import ButtonCampoo from "../../components/button/ButtonCampoo";
@@ -6,40 +6,14 @@ import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
-const apiCampoo = "https://campoo.fr/api/account";
-
-
-
-
 
 export default function MailSignupCampoo(props, { navigation }) {
 
-    const [data, setData] = useState('');
-    console.log();
+    const [email, setEmail] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
-
-
-    // async function insertNewFoodToServer(params) {
-    //     try {
-    //         let response = await fetch(apiCampoo, {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Accept': 'application/json',
-    //                 'Content-Type': 'application/x-www-form-urlencoded',
-    //             },
-    //             body: JSON.stringify(params)
-    //         });
-    //         let responseJson = await response.json();
-    //         return responseJson.email;
-    //     } catch (error) {
-    //         console.error(`error : ${error}`);
-    //     }
-    // }
-
-
-    const submit = () => {
-
-
+    // fonction qui envoie au clique 
+    const onSubmit = () => {
 
         fetch("https://campoo.fr/api/account ", {
             method: 'POST',
@@ -49,24 +23,28 @@ export default function MailSignupCampoo(props, { navigation }) {
             },
             body: JSON.stringify({
 
-
-                'email': data
-
+                'email': email
 
             })
         })
-            .then((response) => response.text())
+            .then((response) => response.json())
             .then((Message) => {
-                alert(Message);
+                if (Message.Status === 'Success') {
+
+                    props.navigation.navigate('NameSignupCampoo')
+
+
+                } else {
+
+                    setErrorMessage(Message.Message.email[0]);
+                }
             })
             .catch((error) => {
                 console.error(error);
             });
 
-    };
 
-
-
+    }
 
 
 
@@ -88,44 +66,12 @@ export default function MailSignupCampoo(props, { navigation }) {
 
                 <Text style={styles.textMail}>Pour que Baloo vérifie que tu es bien un étudiant du campus !</Text>
 
-                <InputCampooSignup type='email' style={styles.InputView} keyboardType='email-address' onChangeText={(data) => setData(data)} value={props.data} />
-
-                <ButtonCampoo style={styles.button}
+                <InputCampooSignup type='email' style={styles.InputView} keyboardType='email-address' onChangeText={(text) => setEmail(text)} value={props.email} errorText={errorMessage} />
 
 
+                <ButtonCampoo style={styles.button} onPress={onSubmit} >Suivant</ButtonCampoo>
 
-                    onPress={
-                        submit
-
-
-                        // () => {
-
-
-                        // let params = {
-                        //     email: props.data
-                        // }
-
-
-
-                        // insertNewFoodToServer(params)
-
-                        //     .then((data) => {
-                        //         if (data === 'Haut les pattes imposteur ! Baloo a détecté que tu utilises une adresse mail déjà enregistrée.') {
-                        //             alert(data);
-                        //         } else {
-                        //             console.log('error4')
-                        //         }
-                        //     });
-
-
-
-                        // }
-                    }
-
-
-                >Suivant</ButtonCampoo>
-
-                <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()} >retour</SecondaryButtonCampoo>
+                <SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()} >retour</SecondaryButtonCampoo>
 
             </View>
 

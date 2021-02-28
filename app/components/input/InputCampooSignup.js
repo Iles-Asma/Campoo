@@ -14,6 +14,7 @@ export default class InputCampoo extends React.Component {
                 <Text style={styles.textMail}>{this.props.description}</Text>
 
                 <TextInput style={styles.textInput} autoCapitalize="none" keyboardType={this.props.keyboardType} type={this.props.type} secureTextEntry={this.props.secure} maxLength={40} onChangeText={this.props.onChangeText} />
+                <Text style={styles.errorText}>{this.props.errorText}</Text>
 
             </View>
 
@@ -47,6 +48,12 @@ const styles = StyleSheet.create({
         textAlign: 'left',
         color: '#9B84D2',
         //borderWidth:1,
+
+    },
+    errorText: {
+        marginTop: 25,
+        fontSize: 11,
+        color: '#EB7653',
 
     },
 
