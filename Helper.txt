@@ -177,10 +177,10 @@
                         // }
 
 
-
+/===================================================================================================================================/
 
 28/02/20 
 
 faire le reste des vus 
 trouver comment utiliser redux avec token 
-stocker le token des le remplisaage du champs  pour pouvoir continuer les etapes 
+stocker le token des le remplisaage du champs name pour pouvoir continuer les etapes 

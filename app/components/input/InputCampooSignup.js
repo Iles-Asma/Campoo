@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, StyleSheet, View, TextInput } from 'react-native';
 
+
 export default class InputCampoo extends React.Component {
 
     render() {
@@ -14,7 +15,10 @@ export default class InputCampoo extends React.Component {
                 <Text style={styles.textMail}>{this.props.description}</Text>
 
                 <TextInput style={styles.textInput} autoCapitalize="none" keyboardType={this.props.keyboardType} type={this.props.type} secureTextEntry={this.props.secure} maxLength={40} onChangeText={this.props.onChangeText} />
+
                 <Text style={styles.errorText}>{this.props.errorText}</Text>
+
+
 
             </View>
 
@@ -51,7 +55,7 @@ const styles = StyleSheet.create({
 
     },
     errorText: {
-        marginTop: 25,
+        marginTop: 20,
         fontSize: 11,
         color: '#EB7653',
 

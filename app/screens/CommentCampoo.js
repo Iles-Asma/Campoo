@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
 
     scrollContainer: {
         width: '90%',
-        paddingTop: 20,
+        paddingTop: 10,
 
     },
 

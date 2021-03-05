@@ -1,14 +1,78 @@
 import React, { useState } from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import InputCampooSignup from "../../components/input/InputCampooSignup"
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
-export default function NameSignupCampoo({ navigation }) {
+export default function NameSignupCampoo(props) {
     const [name, setName] = useState('');
-    console.log(name);
+
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const _retrieveData = async () => {
+        try {
+            const value = await AsyncStorage.getItem('token');
+            if (value !== null) {
+                // We have data!!
+                return value;
+            }
+        } catch (error) {
+
+            // Error retrieving data
+        }
+    };
+
+
+
+    // fonction qui fait une requete  en post et qui renvoie une reponse d'erreur  au onPress
+    const onSubmit = async () => {
+
+        const token = await _retrieveData();
+        // console.log(token);
+
+
+
+        fetch("https://campoo.fr/api/account/name", {
+            method: 'PATCH',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+            body: JSON.stringify({
+
+                'name': name
+
+            })
+        })
+            // response.json()
+            .then((response) => response.json())
+            .then((Message) => {
+
+                console.log(Message);
+                if (Message.Status === 'Success') {
+
+
+                    props.navigation.navigate('PseudoSignupCampoo');
+
+
+
+                } else {
+
+                    setErrorMessage(Message.Message.name[0]);
+
+                }
+            })
+            .catch((error) => {
+                // console.error(error);
+            });
+
+
+    }
 
 
 
@@ -23,10 +87,10 @@ export default function NameSignupCampoo({ navigation }) {
             <View style={styles.nameView}>
                 <LabelCampoo style={styles.nameLabel}>Nom</LabelCampoo>
                 <Text style={styles.textName}>À qui Baloo a-il affaire ?</Text>
-                <InputCampooSignup style={styles.InputView} type='name' onChangeText={(text) => setName(text)} value={name} />
+                <InputCampooSignup style={styles.InputView} type='name' onChangeText={(text) => setName(text)} value={props.name} errorText={errorMessage} />
 
-                <ButtonCampoo style={styles.button} onPress={() => navigation.push('PseudoSignupCampoo')}>Suivant</ButtonCampoo>
-                <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
+                <ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>
+                <SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>retour</SecondaryButtonCampoo>
 
             </View>
 

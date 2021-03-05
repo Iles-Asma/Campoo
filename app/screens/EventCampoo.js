@@ -115,7 +115,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         //  pour detecter la platform
-        paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 30,
+        paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 40,
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',

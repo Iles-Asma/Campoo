@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text, Alert } from 'react-native';
+import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text, } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import InputCampooSignup from "../../components/input/InputCampooSignup"
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
@@ -7,19 +8,48 @@ import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo
 import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 
-export default function MailSignupCampoo(props, { navigation }) {
+export default function MailSignupCampoo(props) {
 
     const [email, setEmail] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
+    // var AwesomeProject = React.createClass({
 
-    // fonction qui envoie au clique 
+    // async _onValueChange(item, selectedValue) {
+    //     try {
+    //         await AsyncStorage.setItem(item, selectedValue);
+    //     } catch (error) {
+    //         console.log('AsyncStorage error: ' + error.message);
+    //     }
+    // },
+
+
+
+
+
+    // fonction qui fait une requete  en post et qui renvoie une reponse d'erreur  au onPress
+    const tokenStore = async (Message) => {
+
+        try {
+            await AsyncStorage.setItem('token', Message.Data.token.original.access_token);
+        } catch (error) {
+            console.log('AsyncStorage error: ' + error.message);
+        }
+
+
+
+    }
+
+
     const onSubmit = () => {
 
-        fetch("https://campoo.fr/api/account ", {
+
+        fetch("https://campoo.fr/api/account", {
             method: 'POST',
             headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json'
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+
+
             },
             body: JSON.stringify({
 
@@ -31,12 +61,14 @@ export default function MailSignupCampoo(props, { navigation }) {
             .then((Message) => {
                 if (Message.Status === 'Success') {
 
-                    props.navigation.navigate('NameSignupCampoo')
+                    tokenStore(Message);
 
+                    props.navigation.navigate('NameSignupCampoo');
 
                 } else {
 
                     setErrorMessage(Message.Message.email[0]);
+
                 }
             })
             .catch((error) => {
@@ -45,12 +77,6 @@ export default function MailSignupCampoo(props, { navigation }) {
 
 
     }
-
-
-
-
-
-
 
 
 
