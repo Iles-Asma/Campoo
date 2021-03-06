@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.14.1",
+    "@react-native-community/datetimepicker": "^3.0.0",
     "@react-native-community/masked-view": "0.1.10",
     "@react-native-picker/picker": "^1.9.10",
     "@react-navigation/bottom-tabs": "^5.11.7",
@@ -23,6 +24,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.4.tar.gz",
+    "react-native-date-picker": "^3.2.10",
     "react-native-datepicker": "^1.7.2",
     "react-native-gesture-handler": "~1.7.0",
     "react-native-neu-element": "^1.1.9",
@@ -36,8 +38,7 @@
     "react-navigation": "^4.4.3",
     "react-navigation-stack": "^2.10.2",
     "react-redux": "^7.2.2",
-    "redux": "^4.0.5",
-    "@react-native-community/datetimepicker": "3.0.0"
+    "redux": "^4.0.5"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",

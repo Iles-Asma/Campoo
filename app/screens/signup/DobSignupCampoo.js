@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import InputCampooSignup from "../../components/input/InputCampooSignup"
+
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 import LogoCampoo from '../../../assets/svg/LogoCampoo'
+import PickerDate from '../../components/PickerDate';
+
 
 export default function DobSignupCampoo(props) {
-    const [pseudo, setPseudo] = useState('');
+    const [birthday, setBirthday] = useState('');
+
     const [errorMessage, setErrorMessage] = useState('');
+    console.log(birthday);
 
     const _retrieveData = async () => {
         try {
@@ -42,7 +46,7 @@ export default function DobSignupCampoo(props) {
             },
             body: JSON.stringify({
 
-                'pseudonyme': pseudo
+                'birthday': birthday
 
             })
         })
@@ -53,10 +57,7 @@ export default function DobSignupCampoo(props) {
                 console.log(Message);
                 if (Message.Status === 'Success') {
 
-
                     props.navigation.navigate('BatSignupCampoo');
-
-
 
                 } else {
 
@@ -70,6 +71,7 @@ export default function DobSignupCampoo(props) {
 
 
     }
+
 
 
     //! Mettre un picker
@@ -88,8 +90,21 @@ export default function DobSignupCampoo(props) {
             <View style={styles.dobView}>
                 <LabelCampoo style={styles.dobLabel}>Date de Naissance</LabelCampoo>
                 <Text style={styles.textDob}>Quand est-ce que Baloo doit te célébrer ?</Text>
-                <InputCampooSignup style={styles.InputView} onChangeText={(text) => setPseudo(text)} value={props.pseudo} errorText={errorMessage} />
-                <ButtonCampoo style={styles.button} onPress={obSubmit}>Suivant</ButtonCampoo>
+
+                <PickerDate
+                    date={props.birthday}
+
+
+
+
+                    style={styles.InputView}
+                    errorText={errorMessage}
+                    value={props.birthday}
+                    onDateChange={(birthday) => { setBirthday(birthday) }}
+
+                />
+
+                <ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>
                 <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
 
             </View>

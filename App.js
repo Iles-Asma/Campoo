@@ -2,6 +2,8 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { Provider } from 'react-redux'
+import Store from './app/redux/Store'
 
 
 
@@ -25,6 +27,7 @@ import MdpOResetCampoo from './app/screens/resetMdp/MdpOResetCampoo';
 
 import AssoEventCampoo from './app/screens/AssoEventCampoo';
 import InputCommentCampoo from "./app/components/input/InputCommentCampoo";
+
 
 import CreateEventCampoo from './app/screens/CreateEventCampoo';
 
@@ -52,6 +55,7 @@ import AssosAddPost from './app/screens/AssosAddPost';
 import HomeStackCampoo from './app/routes/Navigations';
 import MdpOResetConfirmed from './app/screens/resetMdp/MdpOResetConfirmed';
 import CodeVerifCampoo from './app/screens/resetMdp/CodeVerifCampoo';
+
 
 
 // La navigation se mettra en place via react-navigation 
@@ -82,9 +86,21 @@ export default class App extends React.Component {
       //
       //<EventItemCampoo />
 
+
+
+      // pour affecter le store a l énsemble de l'application 
+
+      // <Provider store={store}>
+
       <NavigationContainer >
         <Navigations />
       </NavigationContainer>
+
+
+
+      // </Provider>
+
+
 
       // ------------------------ Component 
 
@@ -158,7 +174,7 @@ export default class App extends React.Component {
       //----------------------- SIGNUP SCREENS
       //<MailSignupCampoo />
       //<NameSignupCampoo/>
-      //<DobSignupCampoo />
+      // <DobSignupCampoo />
       //<PseudoSignupCampoo/>
       //<MdpSignupCampoo/>
       //<QSecretSignupCampoo/>
