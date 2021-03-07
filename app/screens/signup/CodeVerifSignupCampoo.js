@@ -6,7 +6,69 @@ import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
-export default function CodeVerifSignupCampoo({ navigation }) {
+export default function CodeVerifSignupCampoo(props) {
+
+    const [code, setCode] = useState('');
+
+    const [errorMessage, setErrorMessage] = useState('');
+    console.log(code);
+
+    const _retrieveData = async () => {
+        try {
+            const value = await AsyncStorage.getItem('token');
+            if (value !== null) {
+                // We have data!!
+                return value;
+            }
+        } catch (error) {
+
+            // Error retrieving data
+        }
+    };
+
+
+    const onSubmit = async () => {
+
+
+        const token = await _retrieveData();
+
+        // console.log(token);
+
+        fetch("https://campoo.fr/api/account/verification", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+            body: JSON.stringify({
+
+                'code': code
+
+            })
+        })
+            // response.json()
+            .then((response) => response.json())
+            .then((Message) => {
+
+                console.log(Message);
+                if (Message.Status === 'Success') {
+
+                    props.navigation.navigate('ScreenLoginCampoo');
+
+                } else {
+
+                    setErrorMessage(Message.Message.code[0]);
+
+                }
+            })
+            .catch((error) => {
+                // console.error(error);
+            });
+
+
+    }
 
 
 
@@ -30,13 +92,13 @@ export default function CodeVerifSignupCampoo({ navigation }) {
 
                 <Text style={styles.codeVerif_Text}>Malgré son manque de mains, Baloo, est parvenu à t’envoyer un code de vérification par mail.</Text>
 
-                <InputCampooSignup style={styles.codeVerif_Input} />
+                <InputCampooSignup style={styles.codeVerif_Input} value={props.code} onChangeText={(text) => setCode(text)} errorText={errorMessage} />
 
-                <ButtonCampoo style={styles.button}>Valider</ButtonCampoo>
+                <ButtonCampoo style={styles.button} onPress={onSubmit}>Valider</ButtonCampoo>
 
-                <SecondaryButtonCampoo style={styles.resend} >Renvoyer un e-mail</SecondaryButtonCampoo>
+                <SecondaryButtonCampoo style={styles.resend}  >Renvoyer un e-mail</SecondaryButtonCampoo>
 
-                <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
+                <SecondaryButtonCampoo style={styles.retour} onPress={props.navigation.goBack()}>retour</SecondaryButtonCampoo>
 
             </View>
 

@@ -59,7 +59,7 @@ export default function PseudoSignupCampoo(props) {
 
                 } else {
 
-                    setErrorMessage(Message.Message.pseudo[0]);
+                    setErrorMessage(Message.Message.pseudonyme[0]);
 
                 }
             })

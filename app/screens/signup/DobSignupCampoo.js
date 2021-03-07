@@ -92,11 +92,7 @@ export default function DobSignupCampoo(props) {
                 <Text style={styles.textDob}>Quand est-ce que Baloo doit te célébrer ?</Text>
 
                 <PickerDate
-                    date={props.birthday}
-
-
-
-
+                    date={props.date}
                     style={styles.InputView}
                     errorText={errorMessage}
                     value={props.birthday}
@@ -105,7 +101,7 @@ export default function DobSignupCampoo(props) {
                 />
 
                 <ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>
-                <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
+                <SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>retour</SecondaryButtonCampoo>
 
             </View>
 

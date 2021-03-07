@@ -55,19 +55,7 @@ import AssosAddPost from './app/screens/AssosAddPost';
 import HomeStackCampoo from './app/routes/Navigations';
 import MdpOResetConfirmed from './app/screens/resetMdp/MdpOResetConfirmed';
 import CodeVerifCampoo from './app/screens/resetMdp/CodeVerifCampoo';
-
-
-
-// La navigation se mettra en place via react-navigation 
-
-// function EventStackScreen() {
-//   return (
-//     <SettingsStack.Navigator>
-//       <SettingsStack.Screen name="Evenement du campus " component={EventCampoo} />
-//       <SettingsStack.Screen name="Tes Evenements" component={EventUserCampoo} />
-//     </SettingsStack.Navigator>
-//   );
-// }
+import PickerDob from './app/components/PickerDob';
 
 
 
@@ -95,6 +83,8 @@ export default class App extends React.Component {
       <NavigationContainer >
         <Navigations />
       </NavigationContainer>
+
+      // <PickerDob />
 
 
 

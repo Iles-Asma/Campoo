@@ -1,12 +1,87 @@
-import React from 'react';
-import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text, Button } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 import InputCampooSignup from '../../components/input/InputCampooSignup';
 import LabelCampoo from '../../components/LabelCampoo';
 import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
-export default function MdpSignupCampoo({ navigation }) {
+
+export default function MdpSignupCampoo(props) {
+
+
+
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    console.log(password, confirmPassword);
+
+    const _retrieveData = async () => {
+        try {
+            const value = await AsyncStorage.getItem('token');
+            if (value !== null) {
+                // We have data!!
+                return value;
+            }
+        } catch (error) {
+
+            // Error retrieving data
+        }
+    };
+
+
+    const onSubmit = async () => {
+
+        const token = await _retrieveData();
+        // console.log(token);
+        fetch("https://campoo.fr/api/account/verification", {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+
+        });
+
+        fetch("https://campoo.fr/api/account/password", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+            body: JSON.stringify({
+
+                'password': password,
+                'confirmPassword': confirmPassword
+
+            })
+        })
+            // response.json()
+            .then((response) => response.json())
+            .then((Message) => {
+
+                console.log(Message);
+                if (Message.Status === 'Success') {
+
+                    props.navigation.navigate('CodeVerifSignupCampoo');
+
+                } else {
+
+                    setErrorMessage(Message.Message.password[0]);
+
+                }
+            })
+            .catch((error) => {
+                // console.error(error);
+            });
+
+
+    }
+
 
 
 
@@ -24,15 +99,15 @@ export default function MdpSignupCampoo({ navigation }) {
 
                 <Text style={styles.textMdp}>Pour ta sécurité, Baloo te recommande d’utiliser au moins 6 caractères.</Text>
 
-                <InputCampooSignup secure={true} style={styles.InputView1} />
+                <InputCampooSignup secure={true} style={styles.InputView1} value={props.password} onChangeText={(text) => setPassword(text)} />
 
-                <LabelCampoo style={styles.Pswd2}>Vérification</LabelCampoo>
+                <LabelCampoo style={styles.Pswd2} >Vérification</LabelCampoo>
 
-                <InputCampooSignup secure={true} style={styles.InputView2} />
+                <InputCampooSignup secure={true} errorText={errorMessage} value={props.confirmPassword} onChangeText={(text) => setConfirmPassword(text)} style={styles.InputView2} />
 
 
-                <ButtonCampoo style={styles.button} onPress={() => navigation.navigate('CodeVerifSignupCampoo')}>Suivant</ButtonCampoo>
-                <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>Retour</SecondaryButtonCampoo>
+                <ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>
+                <SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>Retour</SecondaryButtonCampoo>
             </View>
 
         </SafeAreaView >

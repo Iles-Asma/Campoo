@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet, View, TextInput } from 'react-native';
+import { CAMPOO } from '../../../assets/themes/ThemeCampoo';
 
 
 export default class InputCampoo extends React.Component {
@@ -38,7 +39,7 @@ const styles = StyleSheet.create({
     textInput: {
         paddingHorizontal: 10,
         height: 30,
-        borderColor: '#4D3D64',
+        borderColor: CAMPOO.primary,
         borderWidth: 1,
         width: "100%",
         borderRadius: 10,
@@ -55,9 +56,9 @@ const styles = StyleSheet.create({
 
     },
     errorText: {
-        marginTop: 20,
+        marginTop: 10,
         fontSize: 11,
-        color: '#EB7653',
+        color: CAMPOO.tertiary,
 
     },
 

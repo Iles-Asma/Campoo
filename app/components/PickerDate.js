@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import DatePicker from 'react-native-datepicker'
-import { color } from 'react-native-reanimated'
 import { CAMPOO } from '../../assets/themes/ThemeCampoo'
 
 export default class PickerDate extends Component {
@@ -10,6 +9,7 @@ export default class PickerDate extends Component {
             <DatePicker
                 style={{ width: '100%', marginTop: 10, }}
                 useNativeDriver={true}
+                date={this.props.date}
 
 
                 mode="date"

@@ -12,18 +12,6 @@ export default function MailSignupCampoo(props) {
 
     const [email, setEmail] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    // var AwesomeProject = React.createClass({
-
-    // async _onValueChange(item, selectedValue) {
-    //     try {
-    //         await AsyncStorage.setItem(item, selectedValue);
-    //     } catch (error) {
-    //         console.log('AsyncStorage error: ' + error.message);
-    //     }
-    // },
-
-
-
 
 
     // fonction qui fait une requete  en post et qui renvoie une reponse d'erreur  au onPress
