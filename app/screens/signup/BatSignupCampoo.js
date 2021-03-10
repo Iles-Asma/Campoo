@@ -1,15 +1,79 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
 
-import InputCampooSignup from "../../components/input/InputCampooSignup"
+import PickerBatiments from "../../components/PickerBatiments"
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
-export default function BatSignupCampoo({ navigation }) {
+export default function BatSignupCampoo(props) {
+
+    const [building, setBulding] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const _retrieveData = async () => {
+        try {
+            const value = await AsyncStorage.getItem('token');
+            if (value !== null) {
+                // We have data!!
+                return value;
+            }
+        } catch (error) {
+
+            // Error retrieving data
+        }
+    };
+
+
+    const onSubmit = async () => {
+
+        const token = await _retrieveData();
+        // console.log(token);
+
+
+
+        fetch("https://campoo.fr/api/account/building_id", {
+            method: 'PATCH',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+            body: JSON.stringify({
+
+                'building': building_id
+
+            })
+        })
+            // response.json()
+            .then((response) => response.json())
+            .then((Message) => {
+
+                console.log(Message);
+                if (Message.Status === 'Success') {
+
+                    props.navigation.navigate('MdpSignupCampoo');
+
+                } else {
+
+                    setErrorMessage(Message.Message.building[0]);
+
+                }
+            })
+            .catch((error) => {
+                // console.error(error);
+            });
+
+
+    }
+
 
     //! mettre un picker 
+
+
+
 
 
 
@@ -25,9 +89,9 @@ export default function BatSignupCampoo({ navigation }) {
             <View style={styles.batView}>
                 <LabelCampoo style={styles.batLabel}>Batiment</LabelCampoo>
                 <Text style={styles.textBat}>Si tu viens d'Harvard, c'est ici qu'il faut le dire.</Text>
-                <InputCampooSignup style={styles.InputView} />
-                <ButtonCampoo style={styles.button} onPress={() => navigation.navigate('MdpSignupCampoo')}>Suivant</ButtonCampoo>
-                <SecondaryButtonCampoo style={styles.retour} onPress={() => navigation.goBack()}>retour</SecondaryButtonCampoo>
+                <PickerBatiments style={styles.InputView} value={props.building_id} name={(building_id) => { setBuilding(building_id); }} />
+                <ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>
+                <SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>retour</SecondaryButtonCampoo>
 
             </View>
 

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import InputCampooSignup from "../../components/input/InputCampooSignup"
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
@@ -33,6 +34,18 @@ export default function CodeVerifSignupCampoo(props) {
         const token = await _retrieveData();
 
         // console.log(token);
+
+        fetch("https://campoo.fr/api/account/verification", {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+
+        });
+
 
         fetch("https://campoo.fr/api/account/verification", {
             method: 'POST',

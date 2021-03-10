@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
 import InputCampooSignup from '../../components/input/InputCampooSignup';
@@ -9,12 +10,10 @@ import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 export default function MdpSignupCampoo(props) {
 
-
-
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    console.log(password, confirmPassword);
+    const [errorMessages, setErrorMessages] = useState('');
 
     const _retrieveData = async () => {
         try {
@@ -33,20 +32,12 @@ export default function MdpSignupCampoo(props) {
     const onSubmit = async () => {
 
         const token = await _retrieveData();
-        // console.log(token);
-        fetch("https://campoo.fr/api/account/verification", {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                "Authorization": `Bearer ${token}`
+        console.log(token);
 
-            },
 
-        });
 
         fetch("https://campoo.fr/api/account/password", {
-            method: 'POST',
+            method: 'PATCH',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
@@ -56,7 +47,7 @@ export default function MdpSignupCampoo(props) {
             body: JSON.stringify({
 
                 'password': password,
-                'confirmPassword': confirmPassword
+                'confirmPassword': confirmPassword,
 
             })
         })
@@ -72,6 +63,7 @@ export default function MdpSignupCampoo(props) {
                 } else {
 
                     setErrorMessage(Message.Message.password[0]);
+                    setErrorMessages(Message.Message.confirmPassword[0]);
 
                 }
             })
@@ -80,7 +72,10 @@ export default function MdpSignupCampoo(props) {
             });
 
 
-    }
+    };
+
+
+
 
 
 
@@ -99,11 +94,25 @@ export default function MdpSignupCampoo(props) {
 
                 <Text style={styles.textMdp}>Pour ta sécurité, Baloo te recommande d’utiliser au moins 6 caractères.</Text>
 
-                <InputCampooSignup secure={true} style={styles.InputView1} value={props.password} onChangeText={(text) => setPassword(text)} />
+                <InputCampooSignup
+
+                    secure={true}
+                    style={styles.InputView1}
+                    value={props.password}
+                    onChangeText={(text) => setPassword(text)}
+                    errorText={errorMessage}
+                />
 
                 <LabelCampoo style={styles.Pswd2} >Vérification</LabelCampoo>
 
-                <InputCampooSignup secure={true} errorText={errorMessage} value={props.confirmPassword} onChangeText={(text) => setConfirmPassword(text)} style={styles.InputView2} />
+                <InputCampooSignup
+
+                    secure={true}
+                    value={props.confirmPassword}
+                    onChangeText={(text) => setConfirmPassword(text)}
+                    style={styles.InputView2}
+                    errorText={errorMessages}
+                />
 
 
                 <ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>

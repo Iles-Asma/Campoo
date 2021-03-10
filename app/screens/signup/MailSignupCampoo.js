@@ -14,6 +14,7 @@ export default function MailSignupCampoo(props) {
     const [errorMessage, setErrorMessage] = useState('');
 
 
+
     // fonction qui fait une requete  en post et qui renvoie une reponse d'erreur  au onPress
     const tokenStore = async (Message) => {
 
@@ -47,6 +48,7 @@ export default function MailSignupCampoo(props) {
         })
             .then((response) => response.json())
             .then((Message) => {
+                console.log(Message);
                 if (Message.Status === 'Success') {
 
                     tokenStore(Message);

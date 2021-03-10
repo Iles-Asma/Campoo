@@ -55,7 +55,7 @@ export default function PseudoSignupCampoo(props) {
                 console.log(Message);
                 if (Message.Status === 'Success') {
 
-                    props.navigation.navigate('DobSignupCampoo');
+                    props.navigation.navigate('MdpSignupCampoo');
 
                 } else {
 

@@ -74,7 +74,7 @@ export default class PickerBatiments extends React.Component {
                         value: null,
                     }}
                     items={this.state.items}
-                    onValueChange={(value) => { this.setState({ BatName: value, }); }}
+                    onValueChange={this.props.name}
 
                     style={{ ...pickerSelectStyles }}
                     value={this.state.BatName}

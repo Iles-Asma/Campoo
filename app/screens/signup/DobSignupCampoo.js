@@ -57,7 +57,7 @@ export default function DobSignupCampoo(props) {
                 console.log(Message);
                 if (Message.Status === 'Success') {
 
-                    props.navigation.navigate('BatSignupCampoo');
+                    props.navigation.navigate('MdpSignupCampoo');
 
                 } else {
 
