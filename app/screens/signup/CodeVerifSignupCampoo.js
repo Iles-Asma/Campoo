@@ -105,7 +105,7 @@ export default function CodeVerifSignupCampoo(props) {
 
                 <Text style={styles.codeVerif_Text}>Malgré son manque de mains, Baloo, est parvenu à t’envoyer un code de vérification par mail.</Text>
 
-                <InputCampooSignup style={styles.codeVerif_Input} value={props.code} onChangeText={(text) => setCode(text)} errorText={errorMessage} />
+                <InputCampooSignup style={styles.codeVerif_Input} value={props.code} onChangeText={(number) => setCode(number)} errorText={errorMessage} />
 
                 <ButtonCampoo style={styles.button} onPress={onSubmit}>Valider</ButtonCampoo>
 

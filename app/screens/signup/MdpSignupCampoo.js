@@ -8,7 +8,8 @@ import LabelCampoo from '../../components/LabelCampoo';
 import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 
-export default function MdpSignupCampoo(props) {
+
+export default function MdpSignupCampoo(props, { navigation }) {
 
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -29,7 +30,10 @@ export default function MdpSignupCampoo(props) {
     };
 
 
-    const onSubmit = async () => {
+    console.log(onSubmit())
+
+
+    async function onSubmit() {
 
         const token = await _retrieveData();
         console.log(token);
@@ -55,10 +59,10 @@ export default function MdpSignupCampoo(props) {
             .then((response) => response.json())
             .then((Message) => {
 
-                console.log(Message);
-                if (Message.Status === 'Success') {
 
-                    props.navigation.navigate('CodeVerifSignupCampoo');
+                if (Message.Status === 'Success') {
+                    console.log(Message)
+                    navigation.push('CodeVerifSignupCampoo');
 
                 } else {
 
@@ -73,12 +77,6 @@ export default function MdpSignupCampoo(props) {
 
 
     };
-
-
-
-
-
-
 
 
     return (
@@ -115,7 +113,7 @@ export default function MdpSignupCampoo(props) {
                 />
 
 
-                <ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>
+                <ButtonCampoo style={styles.button} onPress={() => onSubmit()}>Suivant</ButtonCampoo>
                 <SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>Retour</SecondaryButtonCampoo>
             </View>
 

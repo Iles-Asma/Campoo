@@ -3,3 +3,5 @@ vscode
 expo-shared
 expo
 .expo/packager-info.json
+node_modules/.bin/expo
+
