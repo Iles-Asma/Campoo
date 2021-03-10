@@ -59,7 +59,6 @@ export default function MdpSignupCampoo(props, { navigation }) {
             .then((response) => response.json())
             .then((Message) => {
 
-
                 if (Message.Status === 'Success') {
                     console.log(Message)
                     navigation.push('CodeVerifSignupCampoo');
@@ -89,9 +88,7 @@ export default function MdpSignupCampoo(props, { navigation }) {
             <View style={styles.PswdView}>
 
                 <LabelCampoo style={styles.Pswd1}>Mot de passe</LabelCampoo>
-
                 <Text style={styles.textMdp}>Pour ta sécurité, Baloo te recommande d’utiliser au moins 6 caractères.</Text>
-
                 <InputCampooSignup
 
                     secure={true}
@@ -101,8 +98,8 @@ export default function MdpSignupCampoo(props, { navigation }) {
                     errorText={errorMessage}
                 />
 
-                <LabelCampoo style={styles.Pswd2} >Vérification</LabelCampoo>
 
+                <LabelCampoo style={styles.Pswd2} >Vérification</LabelCampoo>
                 <InputCampooSignup
 
                     secure={true}

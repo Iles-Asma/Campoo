@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { CAMPOO } from '../../assets/themes/ThemeCampoo';
 
-// Icon BottomNav
+// Icon BottomNavigation
 
 import HomeIcon from '../../assets/svg/HomeIcon';
 import EventIcon from '../../assets/svg/EventIcon';
@@ -46,6 +46,7 @@ import DeleteAccount from '../screens/settings/DeleteAccount'
 import AssocRequest from '../screens/settings/AssocRequest';
 
 // ASSOS STACK
+
 import AssoEventCampoo from '../screens/AssoEventCampoo';
 import AssosAddPost from '../screens/AssosAddPost';
 import AssoFeedCampoo from '../screens/AssoFeedCampoo';
@@ -56,6 +57,7 @@ import ViewAssocProfil from '../screens/profils/ViewAssocProfil';
 
 
 /*========================== SIGNUP STACK =============================*/
+
 const SignupStack = createStackNavigator();
 export default function SignupStackScreen() {
   return (
@@ -83,7 +85,7 @@ export function AssosHomeStackScreen() {
     <AssosHomeStack.Navigator>
       <AssosHomeStack.Screen name="AssoFeedCampoo" component={AssoFeedCampoo} options={{ headerShown: false }} />
       <AssosHomeStack.Screen name="AssosAddPost" component={AssosAddPost} options={{ headerShown: false }} />
-      <HomeStack.Screen name="CommentCampoo" component={CommentCampoo} options={{ headerShown: false }} />
+      {/* <HomeStack.Screen name="CommentCampoo" component={CommentCampoo} options={{ headerShown: false }} /> */}
     </AssosHomeStack.Navigator>
   );
 }
@@ -116,6 +118,7 @@ function HomeStackScreen() {
     <HomeStack.Navigator>
       <HomeStack.Screen name="HomeFeedCampoo" component={HomeFeedCampoo} options={{ headerShown: false }} />
       <HomeStack.Screen name="CommentCampoo" component={CommentCampoo} options={{ headerShown: false }} />
+      <HomeStack.Screen name="SearchAssos" component={SearchAssos} options={{ headerShown: false }} />
     </HomeStack.Navigator>
   );
 }
