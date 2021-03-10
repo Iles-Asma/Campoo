@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     assocModif: {
         width: 25,
         height: 25,
-        position: 'absolute',
+       // position: 'absolute',
         right: 30,
 
     },

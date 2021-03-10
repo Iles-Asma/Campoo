@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React,{useState} from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { StyleSheet, ScrollView, StatusBar, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import PickerBatiments from "../../components/PickerBatiments";
 import LabelCampoo from "../../components/LabelCampoo";
@@ -7,9 +7,87 @@ import InputModifProfil from '../../components/input/InputModifProfil';
 import InputBioProfil from '../../components/input/InputBioProfil';
 import ArrowLSvg from "../../components/ArrowLSvg";
 import ButtonCampoo from '../../components/button/ButtonCampoo';
+import ButtonGallery from '../../components/button/ButtonGallery';
 
 
-export default function AssocRequest({ navigation }) {
+
+export default function AssocRequest(props) {
+
+    const [name, setName] = useState('');
+    const [campoo_name, setCampooName] = useState('');
+    const [bio, setBio] = useState('');
+    const [docu, setDocu] = useState('');
+    const [batiments, setBatiments] = useState('');
+
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const _retrieveData = async () => {
+        try {
+            const value = await AsyncStorage.getItem('token');
+            if (value !== null) {
+                // We have data!!
+                return value;
+            }
+        } catch (error) {
+
+            // Error retrieving data
+        }
+    };
+
+
+
+    // fonction qui fait une requete  en post et qui renvoie une reponse d'erreur  au onPress
+    const onSubmit = async () => {
+
+        const token = await _retrieveData();
+        // console.log(token);
+
+
+
+        fetch("https://campoo.fr/api/association", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+            body: JSON.stringify({
+
+                'name': name,
+                'campoo_name': campoo_name,
+                'biography': bio,
+                'proof':docu,
+                'bulding':batiments,
+
+
+            })
+        })
+            // response.json()
+            .then((response) => response.json())
+            .then((Message) => {
+
+                console.log(Message);
+                if (Message.Status === 'Success') {
+
+                    console.log("success");
+                    // props.navigation.navigate('SettingPage');
+
+
+
+                } else {
+                    console.error(error);
+
+                    setErrorMessage('erreur');
+
+                }
+            })
+            .catch((error) => {
+                // console.error(error);
+            });
+
+
+    }
 
 
 
@@ -22,7 +100,7 @@ export default function AssocRequest({ navigation }) {
             <View style={styles.topNav}>
 
                 {/*Le onPress a mettre  */}
-                <TouchableOpacity >
+                <TouchableOpacity>
                     <ArrowLSvg onPress={() => navigation.goBack()} />
                 </TouchableOpacity>
 
@@ -39,7 +117,10 @@ export default function AssocRequest({ navigation }) {
 
                     <LabelCampoo style={styles.nameLabel}>Prends en photo le justificatif d’association !</LabelCampoo>
 
-                    <InputBioProfil placeholder='Decris toi :)' />
+
+                    <ButtonGallery onChangeText={(text) => setDocu(text)} value={props.docu} errorText={errorMessage}/>
+
+                    {/* <InputBioProfil placeholder='Dis nous les information de ton association' onChangeText={(text) => setDocu(text)} value={props.docu} errorText={errorMessage}  /> */}
 
                     <Text style={styles.infoInput}>Pour plus d'iformations sur les documents à transmettre visite notre FAQ</Text>
 
@@ -47,28 +128,28 @@ export default function AssocRequest({ navigation }) {
                     <LabelCampoo style={styles.nameLabel}>Quel est le nom de l’asso ??</LabelCampoo>
 
 
-                    <InputModifProfil placeholder='ex: BDE Staps' />
+                    <InputModifProfil placeholder='ex: BDE Staps' type='name' onChangeText={(text) => setName(text)} value={props.name} errorText={errorMessage} />
 
                     {/* Nom sur campoo ou changement en adresse mail */}
                     <LabelCampoo style={styles.nameLabel}>Nom sur Campoo </LabelCampoo>
 
 
-                    <InputModifProfil placeholder='ex: BDE Staps UGE' />
+                    <InputModifProfil placeholder='ex: BDE Staps UGE' onChangeText={(text) =>  setCampooName(text)} value={props.campoo_name} errorText={errorMessage}/>
 
                     {/* Bio */}
                     <LabelCampoo style={styles.nameLabel}>Biographie</LabelCampoo>
 
-                    <InputBioProfil placeholder='Decris ton association en quelques mots' />
+                    <InputBioProfil placeholder='Decris ton association en quelques mots' onChangeText={(text) =>  setBio(text)} value={props.bio} errorText={errorMessage}/>
 
 
                     {/* Input Option */}
                     <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo>
 
-                    <PickerBatiments />
+                    <PickerBatiments  onChangeText={(text) =>  setBatiments(text)} value={props.batiments} errorText={errorMessage}/>
 
                     {/* Validation */}
                     <View style={styles.btnContainer} >
-                        <ButtonCampoo> Valide </ButtonCampoo>
+                        <ButtonCampoo onPress={onSubmit}> Valide </ButtonCampoo>
                     </View>
 
 

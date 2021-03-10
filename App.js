@@ -56,7 +56,7 @@ import HomeStackCampoo from './app/routes/Navigations';
 import MdpOResetConfirmed from './app/screens/resetMdp/MdpOResetConfirmed';
 import CodeVerifCampoo from './app/screens/resetMdp/CodeVerifCampoo';
 import PickerDob from './app/components/PickerDob';
-
+import ButtonGallery from './app/components/button/ButtonGallery';
 
 
 export default class App extends React.Component {
@@ -80,9 +80,9 @@ export default class App extends React.Component {
 
       // <Provider store={store}>
 
-      <NavigationContainer >
-        <Navigations />
-      </NavigationContainer>
+      // <NavigationContainer >
+      //   <Navigations />
+      // </NavigationContainer>
 
       // <PickerDob />
 
@@ -147,11 +147,11 @@ export default class App extends React.Component {
       //<CreateEventCampoo />
 
       //--------------
-
+      //<ButtonGallery/>
 
       // -------------------------SETTINGS
-      //<AssocRequest />
-      // <UserModificationPage />
+      <AssocRequest />
+       // <UserModificationPage />
       //
       // <AssocModificationPage/>
       // <SettingPage />
