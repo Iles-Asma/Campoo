@@ -6,22 +6,39 @@ export default function PhotosDeProfil({ navigation }) {
 
 
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={styles.mainContainer}>
             <StatusBar style='auto' />
 
             <HeaderReturn onPress={() => navigation.goBack()} />
 
 
+            <View style={style.titleContainer}>
 
+                <View style={styles.titleHeader} >
+                    <Text>Changer ta profil</Text>
 
+                </View>
 
-            <View style={style.title}>
+                <View style={styles.subTitleHeader}>
+                    <Text></Text>
+
+                </View>
 
             </View>
 
-            <ScrollView>
+            <View style={styles.container}>
 
-            </ScrollView>
+
+                <ScrollView styles={styles.scrollContainer} showsVerticalScrollIndicator={false}>
+
+
+                </ScrollView>
+
+            </View>
+
+
+
+
 
         </SafeAreaView>
     )
@@ -29,7 +46,7 @@ export default function PhotosDeProfil({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    container: {
+    mainContainer: {
         flex: 1,
         paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
         flexDirection: 'column',
@@ -39,6 +56,35 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         //  alignItems: 'center',
     },
+
+    titleContainer: {
+        borderWidth: 1,
+        borderColor: 'red',
+
+    },
+
+    titleHeader: {
+        borderWidth: 1,
+        borderColor: 'green',
+
+
+    },
+
+    subTitleHeader: {
+        borderWidth: 1,
+        borderColor: 'blue',
+
+    },
+    container: {
+        width: '100%'
+
+    },
+
+    scrollContainer: {
+        width: '90%',
+
+    },
+
 
 
 
