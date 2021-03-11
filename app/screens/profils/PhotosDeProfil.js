@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, StyleSheet, View, SafeAreaView, ScrollView } from 'react-native'
+import { StatusBar } from 'expo-status-bar';
 import HeaderReturn from '../../components/header/HeaderReturn';
 
 export default function PhotosDeProfil({ navigation }) {

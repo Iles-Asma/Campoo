@@ -81,9 +81,9 @@ export default class App extends React.Component {
 
       // <Provider store={store}>
 
-      // <NavigationContainer >
-      //   <Navigations />
-      // </NavigationContainer>
+      <NavigationContainer >
+        <Navigations />
+      </NavigationContainer>
 
       // <PickerDob />
 
@@ -185,7 +185,7 @@ export default class App extends React.Component {
 
       //-------------------------LOGIN
 
-      <PhotosDeProfil />
+      // <PhotosDeProfil />
 
 
       /*

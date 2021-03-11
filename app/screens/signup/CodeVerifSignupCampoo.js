@@ -35,17 +35,6 @@ export default function CodeVerifSignupCampoo(props) {
 
         // console.log(token);
 
-        fetch("https://campoo.fr/api/account/verification", {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                "Authorization": `Bearer ${token}`
-
-            },
-
-        });
-
 
         fetch("https://campoo.fr/api/account/verification", {
             method: 'POST',
@@ -94,7 +83,20 @@ export default function CodeVerifSignupCampoo(props) {
 
         <SafeAreaView style={styles.container}>
 
+            <LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
+            <Image style={styles.baloo} source={require("../../../assets/images/Blob-baloo-phone.png")} />
+            <View style={styles.CfView}>
+                <LabelCampoo style={styles.codeVerif_Label}>Code de vérification</LabelCampoo>
+                <Text style={styles.codeVerif_Text}>Malgré son manque de mains, Baloo, est parvenu à t’envoyer un code de vérification par mail.</Text>
+                <InputCampooSignup style={styles.codeVerifInput} value={props.code} onChangeText={(number) => setCode(number)} errorText={errorMessage} />
+                <ButtonCampoo style={styles.button} onPress={() => onSubmit()}>Valider</ButtonCampoo>
+                <SecondaryButtonCampoo style={styles.resend}  >Renvoyer un e-mail</SecondaryButtonCampoo>
+                <SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>retour</SecondaryButtonCampoo>
+            </View>
 
+
+
+            {/* 
             <LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
 
             <Image style={styles.baloo} source={require("../../../assets/images/Blob-baloo-phone.png")} />
@@ -105,15 +107,15 @@ export default function CodeVerifSignupCampoo(props) {
 
                 <Text style={styles.codeVerif_Text}>Malgré son manque de mains, Baloo, est parvenu à t’envoyer un code de vérification par mail.</Text>
 
-                <InputCampooSignup style={styles.codeVerif_Input} value={props.code} onChangeText={(number) => setCode(number)} errorText={errorMessage} />
+                <InputCampooSignup style={styles.codeVerifInput} value={props.code} onChangeText={(number) => setCode(number)} errorText={errorMessage} />
 
-                <ButtonCampoo style={styles.button} onPress={onSubmit}>Valider</ButtonCampoo>
+                <ButtonCampoo style={styles.button} onPress={() => onSubmit()}>Valider</ButtonCampoo>
 
                 <SecondaryButtonCampoo style={styles.resend}  >Renvoyer un e-mail</SecondaryButtonCampoo>
 
                 <SecondaryButtonCampoo style={styles.retour} onPress={props.navigation.goBack()}>retour</SecondaryButtonCampoo>
 
-            </View>
+            </View> */}
 
         </SafeAreaView>
 
@@ -148,7 +150,7 @@ const styles = StyleSheet.create({
 
     },
 
-    codeVerif_Input: {
+    codeVerifInput: {
 
         alignSelf: 'center',
 

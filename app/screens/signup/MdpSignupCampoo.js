@@ -9,12 +9,11 @@ import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 
 
-export default function MdpSignupCampoo(props, { navigation }) {
+export default function MdpSignupCampoo(props) {
 
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-    const [errorMessages, setErrorMessages] = useState('');
 
     const _retrieveData = async () => {
         try {
@@ -29,16 +28,10 @@ export default function MdpSignupCampoo(props, { navigation }) {
         }
     };
 
-
-    console.log(onSubmit())
-
-
     async function onSubmit() {
 
         const token = await _retrieveData();
         console.log(token);
-
-
 
         fetch("https://campoo.fr/api/account/password", {
             method: 'PATCH',
@@ -61,17 +54,34 @@ export default function MdpSignupCampoo(props, { navigation }) {
 
                 if (Message.Status === 'Success') {
                     console.log(Message)
-                    navigation.push('CodeVerifSignupCampoo');
 
-                } else {
+                    fetch("https://campoo.fr/api/account/verification", {
+                        method: 'GET',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json',
+                            "Authorization": `Bearer ${token}`
 
+                        },
+                    })
+                        .then((response) => response.json())
+                        .then((response) => {
+                            console.log(response)
+                            if (response.Status === 'Success') {
+                                props.navigation.push('CodeVerifSignupCampoo');
+
+                            } else {
+                                console.log(response);
+                            }
+                        })
+                }
+                else {
                     setErrorMessage(Message.Message.password[0]);
-                    setErrorMessages(Message.Message.confirmPassword[0]);
 
                 }
             })
             .catch((error) => {
-                // console.error(error);
+                console.error(error);
             });
 
 
@@ -95,7 +105,7 @@ export default function MdpSignupCampoo(props, { navigation }) {
                     style={styles.InputView1}
                     value={props.password}
                     onChangeText={(text) => setPassword(text)}
-                    errorText={errorMessage}
+
                 />
 
 
@@ -106,7 +116,7 @@ export default function MdpSignupCampoo(props, { navigation }) {
                     value={props.confirmPassword}
                     onChangeText={(text) => setConfirmPassword(text)}
                     style={styles.InputView2}
-                    errorText={errorMessages}
+                    errorText={errorMessage}
                 />
 
 
