@@ -68,19 +68,19 @@ export default function AssocRequest(props) {
             .then((Message) => {
 
                 console.log(Message);
-                if (Message.Status === 'Success') {
+                // if (Message.Status === 'Success') {
 
-                    console.log("success");
-                    // props.navigation.navigate('SettingPage');
+                //     console.log("success");
+                //     // props.navigation.navigate('SettingPage');
 
 
 
-                } else {
-                    console.error(error);
+                // } else {
+                //     console.error(error);
 
-                    setErrorMessage('erreur');
+                //     setErrorMessage('erreur');
 
-                }
+                // }
             })
             .catch((error) => {
                 // console.error(error);
