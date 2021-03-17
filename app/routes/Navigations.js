@@ -8,6 +8,7 @@ import { CAMPOO } from '../../assets/themes/ThemeCampoo';
 import HomeIcon from '../../assets/svg/HomeIcon';
 import EventIcon from '../../assets/svg/EventIcon';
 import ProfileIcon from '../../assets/svg/ProfileIcon';
+import SearchIcon from '../../assets/svg/SearchIcon';
 
 // SignupStack
 
@@ -21,10 +22,11 @@ import PseudoSignupCampoo from '../screens/signup/PseudoSignupCampoo';
 import MdpSignupCampoo from '../screens/signup/MdpSignupCampoo';
 import CodeVerifSignupCampoo from '../screens/signup/CodeVerifSignupCampoo';
 
-// HomeStack
+// HomeSFeedtack
 
 import HomeFeedCampoo from '../screens/HomeFeedCampoo';
 import CommentCampoo from '../screens/CommentCampoo';
+import SearchAssosCampoo from '../screens/SearchAssosCampoo';
 
 // EventStack
 import EventCampoo from '../screens/EventCampoo';
@@ -118,7 +120,7 @@ function HomeStackScreen() {
     <HomeStack.Navigator>
       <HomeStack.Screen name="HomeFeedCampoo" component={HomeFeedCampoo} options={{ headerShown: false }} />
       <HomeStack.Screen name="CommentCampoo" component={CommentCampoo} options={{ headerShown: false }} />
-      <HomeStack.Screen name="SearchAssos" component={SearchAssos} options={{ headerShown: false }} />
+      <HomeStack.Screen name="SearchAssosCampoo" component={SearchAssosCampoo} options={{ headerShown: false }} />
     </HomeStack.Navigator>
   );
 }
@@ -132,7 +134,7 @@ function EventStackScreen() {
       <EventStack.Screen name="EventDetailCampoo" component={EventDetailCampoo} options={{ headerShown: false }} />
     </EventStack.Navigator>
   );
-}
+};
 
 const ProfilStack = createStackNavigator();
 function ProfilStackScreen() {
@@ -146,7 +148,7 @@ function ProfilStackScreen() {
       <ProfilStack.Screen name="MyTags" component={MyTags} options={{ headerShown: false }} />
     </ProfilStack.Navigator>
   );
-}
+};
 
 
 const SettingStack = createStackNavigator();
@@ -161,7 +163,7 @@ function SettingStackScreen() {
     </SettingStack.Navigator>
 
   );
-}
+};
 
 /*======================== BOTTOM NAVIGATION ======================*/
 
@@ -186,12 +188,25 @@ export function Navigator() {
         options={{
           // enleve le text sous l'icon dans la BOTTOM NAV
           tabBarLabel: () => { return null },
-
-
           tabBarIcon: () => {
             return (
               <HomeIcon />
 
+
+            );
+          },
+        }}
+      />
+
+      <Tab.Screen
+        name="Rechercher des assos"
+        component={SearchAssosCampoo}
+        options={{
+          // enleve le text sous l'icon dans la BOTTOM NAV
+          tabBarLabel: () => { return null },
+          tabBarIcon: () => {
+            return (
+              <SearchIcon />
 
             );
           },
@@ -205,7 +220,6 @@ export function Navigator() {
           tabBarIcon: () => {
             return (
               <EventIcon />
-
 
             );
           },

@@ -63,158 +63,185 @@ import PhotosDeProfil from './app/screens/profils/PhotosDeProfil';
 export default class App extends React.Component {
 
 
-  render() {
+	render() {
 
 
 
 
-    return (
-      //<AssoFeedCampoo />
-      //<AssoEventCampoo />
-      //<InputCommentCampoo />
-      //
-      //<EventItemCampoo />
+		return (
+
+
+			// if (state.isLoading) {
+			// 	// We haven't finished checking for the token yet
+			// 	return <SplashScreen />;
+			//   }
+
+			//   return (
+			// 	<Stack.Navigator>
+			// 	  {state.userToken == null ? (
+			// 		// No token found, user isn't signed in
+			// 		<Stack.Screen
+			// 		  name="SignIn"
+			// 		  component={SignInScreen}
+			// 		  options={{
+			// 			title: 'Sign in',
+			// 			// When logging out, a pop animation feels intuitive
+			// 			// You can remove this if you want the default 'push' animation
+			// 			animationTypeForReplace: state.isSignout ? 'pop' : 'push',
+			// 		  }}
+			// 		/>
+			// 	  ) : (
+			// 		// User is signed in
+			// 		<Stack.Screen name="Home" component={HomeScreen} />
+			// 	  )}
+			// 	</Stack.Navigator>
+			//   );
+			//<AssoFeedCampoo />
+			//<AssoEventCampoo />
+			//<InputCommentCampoo />
+			//
+			//<EventItemCampoo />
 
 
 
-      // pour affecter le store a l énsemble de l'application 
+			// pour affecter le store a l énsemble de l'application 
 
-      // <Provider store={store}>
+			// <Provider store={store}>
 
-      <NavigationContainer >
-        <Navigations />
-      </NavigationContainer>
+			<NavigationContainer >
+				<Navigations />
+			</NavigationContainer>
 
-      // <PickerDob />
-
-
-
-      // </Provider>
+			// <PickerDob />
 
 
 
-      // ------------------------ Component 
-
-      //<InputCommentCampoo />
-
-
-      //<CommentCampoo />
-
-      //<CommentCampoo />
-      //<EventDetailCampoo/>
-
-      //<TextInputAssos />
-
-
-      // ------------------------ Component 
-
-
-      //------------------------screeens 
-
-      //<AssoFeedCampoo />
-      //<AssoEventCampoo />
-      //<AssosAddPost />
-
-      //<MdpOMailCampoo />
-      //<MdpOResetCampoo />
-
-      //<MdpOResetConfirmed />
-      //<CodeVerifCampoo />
-
-
-      //<HomeFeedCampoo /> //cote etudiant
-      //<EventCampoo />
-      //<EventUserCampoo />
-      //<Navigator />
-
-      //<EventDetailCampoo />
-
-
-      //------------------------screeens 
-
-      //<CategoriesTags />
-      // <ChooseTags/>
-      //<MyTags />
-      //<UserProfil />
-      // <CategoriesTags/>
-      // <ChooseTags/>
-      // <MyTags />
-
-      // <UserProfil/>  
-      // <AssocProfil/>
-      // <ViewAssocProfil/>
-      //------------
-
-      //<CreateEventCampoo />
-
-      //--------------
-
-
-      // -------------------------SETTINGS
-      //<AssocRequest />
-      // <UserModificationPage />
-      //
-      // <AssocModificationPage/>
-      // <SettingPage />
-      //<ChangeName />
-      //
-      //  <DeleteAccount/>
-      //  -------------------------SETTINGS
-
-
-      //----------------------- SIGNUP SCREENS
-      //<MailSignupCampoo />
-      //<NameSignupCampoo/>
-      // <DobSignupCampoo />
-      //<PseudoSignupCampoo/>
-      //<MdpSignupCampoo/>
-      //<QSecretSignupCampoo/>
-      //<RSecretSignupCampoo/>
-      //<CVerifSignupCampoo/>
-      //<MdpOQSecretCampoo/>
-      //<MdpOResetCampoo/>
-      //<MdpOMailCampoo/>
-      //<BatSignupCampoo />
-
-      //----------------------- SIGNUP S SCREENS
-
-
-      //-------------------------LOGIN
-
-      //<ScreenLoginPage />
-
-      //-------------------------LOGIN
-
-      // <PhotosDeProfil />
-
-
-      /*
-      ================================================
-      
-          Permet de Setup la naviagtion  dans ce fichier 
-                         
-      =================================================
-      
-      */
+			// </Provider>
 
 
 
-      // <NavigationContainer>
-      //   <Stack.Navigator>
-      //     <Stack.Screen
-      //       options={{ headerShown: false, }}
-      //       name="CAMPOO" component={ScreenLoginPage} />
+			// ------------------------ Component 
 
-      //     <Stack.Screen name="Accueil" component={HomeFeedCampoo} />
-      //     <Stack.Screen name="Evenement" component={EventStackScreen} />
-      //     <Stack.Screen name="Profil" component={UserProfil} />
-
-      //   </Stack.Navigator>
-      // </NavigationContainer>
-
-    );
+			//<InputCommentCampoo />
 
 
-  }
+			//<CommentCampoo />
+
+			//<CommentCampoo />
+			//<EventDetailCampoo/>
+
+			//<TextInputAssos />
+
+
+			// ------------------------ Component 
+
+
+			//------------------------screeens 
+
+			//<AssoFeedCampoo />
+			//<AssoEventCampoo />
+			//<AssosAddPost />
+
+			//<MdpOMailCampoo />
+			//<MdpOResetCampoo />
+
+			//<MdpOResetConfirmed />
+			//<CodeVerifCampoo />
+
+
+			//<HomeFeedCampoo /> //cote etudiant
+			//<EventCampoo />
+			//<EventUserCampoo />
+			//<Navigator />
+
+			//<EventDetailCampoo />
+
+
+			//------------------------screeens 
+
+			//<CategoriesTags />
+			// <ChooseTags/>
+			//<MyTags />
+			//<UserProfil />
+			// <CategoriesTags/>
+			// <ChooseTags/>
+			// <MyTags />
+
+			// <UserProfil/>  
+			// <AssocProfil/>
+			// <ViewAssocProfil/>
+			//------------
+
+			//<CreateEventCampoo />
+
+			//--------------
+
+
+			// -------------------------SETTINGS
+			//<AssocRequest />
+			// <UserModificationPage />
+			//
+			// <AssocModificationPage/>
+			// <SettingPage />
+			//<ChangeName />
+			//
+			//  <DeleteAccount/>
+			//  -------------------------SETTINGS
+
+
+			//----------------------- SIGNUP SCREENS
+			//<MailSignupCampoo />
+			//<NameSignupCampoo/>
+			// <DobSignupCampoo />
+			//<PseudoSignupCampoo/>
+			//<MdpSignupCampoo/>
+			//<QSecretSignupCampoo/>
+			//<RSecretSignupCampoo/>
+			//<CVerifSignupCampoo/>
+			//<MdpOQSecretCampoo/>
+			//<MdpOResetCampoo/>
+			//<MdpOMailCampoo/>
+			//<BatSignupCampoo />
+
+			//----------------------- SIGNUP S SCREENS
+
+
+			//-------------------------LOGIN
+
+			//<ScreenLoginPage />
+
+			//-------------------------LOGIN
+
+			// <PhotosDeProfil />
+
+
+			/*
+			================================================
+		    
+				Permet de Setup la naviagtion  dans ce fichier 
+							   
+			=================================================
+		    
+			*/
+
+
+
+			// <NavigationContainer>
+			//   <Stack.Navigator>
+			//     <Stack.Screen
+			//       options={{ headerShown: false, }}
+			//       name="CAMPOO" component={ScreenLoginPage} />
+
+			//     <Stack.Screen name="Accueil" component={HomeFeedCampoo} />
+			//     <Stack.Screen name="Evenement" component={EventStackScreen} />
+			//     <Stack.Screen name="Profil" component={UserProfil} />
+
+			//   </Stack.Navigator>
+			// </NavigationContainer>
+
+		);
+
+
+	}
 
 }

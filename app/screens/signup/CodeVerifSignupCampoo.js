@@ -9,117 +9,96 @@ import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 export default function CodeVerifSignupCampoo(props) {
 
-    const [code, setCode] = useState('');
+	const [code, setCode] = useState('');
 
-    const [errorMessage, setErrorMessage] = useState('');
-    console.log(code);
+	const [errorMessage, setErrorMessage] = useState('');
+	console.log(code);
 
-    const _retrieveData = async () => {
-        try {
-            const value = await AsyncStorage.getItem('token');
-            if (value !== null) {
-                // We have data!!
-                return value;
-            }
-        } catch (error) {
+	const _retrieveData = async () => {
+		try {
+			const value = await AsyncStorage.getItem('token');
+			if (value !== null) {
+				// We have data!!
+				return value;
+			}
+		} catch (error) {
 
-            // Error retrieving data
-        }
-    };
-
-
-    const onSubmit = async () => {
+			// Error retrieving data
+		}
+	};
 
 
-        const token = await _retrieveData();
-
-        // console.log(token);
+	const onSubmit = async () => {
 
 
-        fetch("https://campoo.fr/api/account/verification", {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                "Authorization": `Bearer ${token}`
+		const token = await _retrieveData();
 
-            },
-            body: JSON.stringify({
-
-                'code': code
-
-            })
-        })
-            // response.json()
-            .then((response) => response.json())
-            .then((Message) => {
-
-                console.log(Message);
-                if (Message.Status === 'Success') {
-
-                    props.navigation.navigate('ScreenLoginCampoo');
-
-                } else {
-
-                    setErrorMessage(Message.Message.code[0]);
-
-                }
-            })
-            .catch((error) => {
-                // console.error(error);
-            });
+		// console.log(token);
 
 
-    }
+		fetch("https://campoo.fr/api/account/verification", {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+				"Authorization": `Bearer ${token}`
+
+			},
+			body: JSON.stringify({
+
+				'code': code
+
+			})
+		})
+			// response.json()
+			.then((response) => response.json())
+			.then((Message) => {
+
+				console.log(Message);
+				if (Message.Status === 'Success') {
+
+					props.navigation.push('ScreenLoginCampoo');
+
+				} else {
+
+					setErrorMessage(Message.Message.code[0]);
 
 
 
-    return (
+				}
+			})
+			.catch((error) => {
+				// console.error(error);
+			});
 
 
-        // code de verification 
-
-        // safeAreaview : zone de securite pour telephone a encoche 
-
-        <SafeAreaView style={styles.container}>
-
-            <LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
-            <Image style={styles.baloo} source={require("../../../assets/images/Blob-baloo-phone.png")} />
-            <View style={styles.CfView}>
-                <LabelCampoo style={styles.codeVerif_Label}>Code de vérification</LabelCampoo>
-                <Text style={styles.codeVerif_Text}>Malgré son manque de mains, Baloo, est parvenu à t’envoyer un code de vérification par mail.</Text>
-                <InputCampooSignup style={styles.codeVerifInput} value={props.code} onChangeText={(number) => setCode(number)} errorText={errorMessage} />
-                <ButtonCampoo style={styles.button} onPress={() => onSubmit()}>Valider</ButtonCampoo>
-                <SecondaryButtonCampoo style={styles.resend}  >Renvoyer un e-mail</SecondaryButtonCampoo>
-                <SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>retour</SecondaryButtonCampoo>
-            </View>
+	}
 
 
 
-            {/* 
-            <LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
+	return (
 
-            <Image style={styles.baloo} source={require("../../../assets/images/Blob-baloo-phone.png")} />
 
-            <View style={styles.CfView}>
+		// code de verification 
 
-                <LabelCampoo style={styles.codeVerif_Label}>Code de vérification</LabelCampoo>
+		// safeAreaview : zone de securite pour telephone a encoche 
 
-                <Text style={styles.codeVerif_Text}>Malgré son manque de mains, Baloo, est parvenu à t’envoyer un code de vérification par mail.</Text>
+		<SafeAreaView style={styles.container}>
 
-                <InputCampooSignup style={styles.codeVerifInput} value={props.code} onChangeText={(number) => setCode(number)} errorText={errorMessage} />
+			<LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
+			<Image style={styles.baloo} source={require("../../../assets/images/Blob-baloo-phone.png")} />
+			<View style={styles.CfView}>
+				<LabelCampoo style={styles.codeVerif_Label}>Code de vérification</LabelCampoo>
+				<Text style={styles.codeVerif_Text}>Malgré son manque de mains, Baloo, est parvenu à t’envoyer un code de vérification par mail.</Text>
+				<InputCampooSignup style={styles.codeVerifInput} value={props.code} onChangeText={(number) => setCode(number)} errorText={errorMessage} />
+				<ButtonCampoo style={styles.button} onPress={() => onSubmit()}>Valider</ButtonCampoo>
+				<SecondaryButtonCampoo style={styles.resend}  >Renvoyer un e-mail</SecondaryButtonCampoo>
+				<SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>retour</SecondaryButtonCampoo>
+			</View>
 
-                <ButtonCampoo style={styles.button} onPress={() => onSubmit()}>Valider</ButtonCampoo>
+		</SafeAreaView>
 
-                <SecondaryButtonCampoo style={styles.resend}  >Renvoyer un e-mail</SecondaryButtonCampoo>
-
-                <SecondaryButtonCampoo style={styles.retour} onPress={props.navigation.goBack()}>retour</SecondaryButtonCampoo>
-
-            </View> */}
-
-        </SafeAreaView>
-
-    );
+	);
 
 
 
@@ -128,88 +107,88 @@ export default function CodeVerifSignupCampoo(props) {
 
 const styles = StyleSheet.create({
 
-    container: {
+	container: {
 
-        flex: 1,
+		flex: 1,
 
-        // test pour detecter la platform
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        flexDirection: 'column',
-        backgroundColor: '#ffffff',
-
-
-    },
-
-    logoCampoo: {
-        position: 'absolute',
-        width: 115,
-        height: 115,
-        marginTop: 20,
-        left: 260
+		// test pour detecter la platform
+		paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+		flexDirection: 'column',
+		backgroundColor: '#ffffff',
 
 
-    },
+	},
 
-    codeVerifInput: {
-
-        alignSelf: 'center',
-
-    },
-
-    codeVerif_Label: {
-        marginBottom: 9,
-
-    },
+	logoCampoo: {
+		position: 'absolute',
+		width: 115,
+		height: 115,
+		marginTop: 20,
+		left: 260
 
 
+	},
 
-    CfView: {
+	codeVerifInput: {
 
-        top: 138,
-        height: 290,
-        width: 300,
-        alignSelf: 'center',
+		alignSelf: 'center',
 
+	},
 
-    },
+	codeVerif_Label: {
+		marginBottom: 9,
 
-
-    button: {
-        marginTop: 57,
-        alignSelf: 'center',
+	},
 
 
-    },
 
-    baloo: {
-        position: "absolute",
-        width: 559,
-        height: 438,
-        left: 50,
-        top: 440,
-    },
+	CfView: {
 
-    codeVerif_Text: {
-
-        fontSize: 12,
-        textAlign: 'left',
-        color: '#9B84D2',
-
-    },
-
-    retour: {
-
-        alignSelf: 'center',
-        marginTop: 10,
-
-    },
-
-    resend: {
-        alignSelf: 'center',
-        marginTop: 10,
+		top: 138,
+		height: 290,
+		width: 300,
+		alignSelf: 'center',
 
 
-    }
+	},
+
+
+	button: {
+		marginTop: 57,
+		alignSelf: 'center',
+
+
+	},
+
+	baloo: {
+		position: "absolute",
+		width: 559,
+		height: 438,
+		left: 50,
+		top: 440,
+	},
+
+	codeVerif_Text: {
+
+		fontSize: 12,
+		textAlign: 'left',
+		color: '#9B84D2',
+
+	},
+
+	retour: {
+
+		alignSelf: 'center',
+		marginTop: 10,
+
+	},
+
+	resend: {
+		alignSelf: 'center',
+		marginTop: 10,
+
+
+	}
 
 
 

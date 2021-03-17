@@ -9,95 +9,89 @@ import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 export default function BatSignupCampoo(props) {
 
-    const [building, setBulding] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+	const [building_id, setBuilding_id] = useState('');
+	const [errorMessage, setErrorMessage] = useState('');
 
-    const _retrieveData = async () => {
-        try {
-            const value = await AsyncStorage.getItem('token');
-            if (value !== null) {
-                // We have data!!
-                return value;
-            }
-        } catch (error) {
+	const _retrieveData = async () => {
+		try {
+			const value = await AsyncStorage.getItem('token');
+			if (value !== null) {
+				// We have data!!
+				return value;
+			}
+		} catch (error) {
 
-            // Error retrieving data
-        }
-    };
-
-
-    const onSubmit = async () => {
-
-        const token = await _retrieveData();
-        // console.log(token);
+			// Error retrieving data
+		}
+	};
 
 
+	const onSubmit = async () => {
 
-        fetch("https://campoo.fr/api/account/building_id", {
-            method: 'PATCH',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                "Authorization": `Bearer ${token}`
-
-            },
-            body: JSON.stringify({
-
-                'building': building_id
-
-            })
-        })
-            // response.json()
-            .then((response) => response.json())
-            .then((Message) => {
-
-                console.log(Message);
-                if (Message.Status === 'Success') {
-
-                    props.navigation.navigate('MdpSignupCampoo');
-
-                } else {
-
-                    setErrorMessage(Message.Message.building[0]);
-
-                }
-            })
-            .catch((error) => {
-                // console.error(error);
-            });
-
-
-    }
-
-
-    //! mettre un picker 
+		const token = await _retrieveData();
+		// console.log(token);
 
 
 
+		fetch("https://campoo.fr/api/account/building_id", 'building_id', {
+			method: 'PATCH',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+				"Authorization": `Bearer ${token}`
+
+			},
+			body: JSON.stringify({
+
+				'building_id': building_id
+
+			})
+		})
+			// response.json()
+			.then((response) => response.json())
+			.then((Message) => {
+
+				console.log(Message);
+				if (Message.Status === 'Success') {
+
+					props.navigation.navigate('MdpSignupCampoo');
+
+				} else {
+
+					setErrorMessage(Message.Message.building[0]);
+
+				}
+			})
+			.catch((error) => {
+				// console.error(error);
+			});
 
 
+	}
 
 
-    return (
+	//! mettre un picker 
 
-        <SafeAreaView style={styles.container}>
+	return (
+
+		<SafeAreaView style={styles.container}>
 
 
-            <LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
-            <Image style={styles.baloo} source={require("../../../assets/images/Blob-Baloo-Etudiant.png")} />
+			<LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
+			<Image style={styles.baloo} source={require("../../../assets/images/Blob-Baloo-Etudiant.png")} />
 
-            <View style={styles.batView}>
-                <LabelCampoo style={styles.batLabel}>Batiment</LabelCampoo>
-                <Text style={styles.textBat}>Si tu viens d'Harvard, c'est ici qu'il faut le dire.</Text>
-                <PickerBatiments style={styles.InputView} value={props.building_id} name={(building_id) => { setBuilding(building_id); }} />
-                <ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>
-                <SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>retour</SecondaryButtonCampoo>
+			<View style={styles.batView}>
+				<LabelCampoo style={styles.batLabel}>Batiment</LabelCampoo>
+				<Text style={styles.textBat}>Si tu viens d'Harvard, c'est ici qu'il faut le dire.</Text>
+				<PickerBatiments style={styles.InputView} value={props.building_id} name={(building) => { setBuilding_id(building); }} />
+				<ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>
+				<SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>retour</SecondaryButtonCampoo>
 
-            </View>
+			</View>
 
-        </SafeAreaView>
+		</SafeAreaView>
 
-    );
+	);
 
 
 
@@ -106,79 +100,79 @@ export default function BatSignupCampoo(props) {
 
 const styles = StyleSheet.create({
 
-    container: {
+	container: {
 
-        flex: 1,
+		flex: 1,
 
-        // test pour detecter la platform
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        flexDirection: 'column',
-        backgroundColor: '#ffffff',
-
-
-    },
-
-    logoCampoo: {
-        position: 'absolute',
-        width: 115,
-        height: 115,
-        marginTop: 20,
-        left: 260
+		// test pour detecter la platform
+		paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+		flexDirection: 'column',
+		backgroundColor: '#ffffff',
 
 
-    },
+	},
 
-    InputView: {
-
-        alignSelf: 'center',
-
-    },
-
-    batLabel: {
-        marginBottom: 9,
-
-    },
+	logoCampoo: {
+		position: 'absolute',
+		width: 115,
+		height: 115,
+		marginTop: 20,
+		left: 260
 
 
+	},
 
-    batView: {
+	InputView: {
 
-        top: 138,
-        height: 290,
-        width: 300,
-        alignSelf: 'center',
+		alignSelf: 'center',
+
+	},
+
+	batLabel: {
+		marginBottom: 9,
+
+	},
 
 
-    },
 
-    button: {
-        marginTop: 57,
-        alignSelf: 'center',
+	batView: {
 
-    },
+		top: 138,
+		height: 290,
+		width: 300,
+		alignSelf: 'center',
 
-    baloo: {
-        position: "absolute",
-        width: 559,
-        height: 438,
-        left: 50,
-        top: 440,
-    },
 
-    textBat: {
+	},
 
-        fontSize: 11,
-        textAlign: 'left',
-        color: '#9B84D2',
+	button: {
+		marginTop: 57,
+		alignSelf: 'center',
 
-    },
+	},
 
-    retour: {
+	baloo: {
+		position: "absolute",
+		width: 559,
+		height: 438,
+		left: 50,
+		top: 440,
+	},
 
-        alignSelf: 'center',
-        marginTop: 10,
+	textBat: {
 
-    },
+		fontSize: 11,
+		textAlign: 'left',
+		color: '#9B84D2',
+
+	},
+
+	retour: {
+
+		alignSelf: 'center',
+		marginTop: 10,
+
+	},
 
 
 

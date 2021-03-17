@@ -7,53 +7,53 @@ import ButtonLarge from "../../components/button/ButtonLarge";
 
 export default function MyTags({ navigation }) {
 
-    return (
+	return (
 
-        <SafeAreaView style={styles.container}>
-            {/* Titre de l'onglet */}
-            <TitlePage>Tes tags</TitlePage>
+		<SafeAreaView style={styles.container}>
+			{/* Titre de l'onglet */}
+			<TitlePage>Tes tags</TitlePage>
 
-            <View style={styles.myTagsContainer} >
+			<View style={styles.myTagsContainer} >
 
-                <ScrollView style={styles.SizeOnScroll} showsVerticalScrollIndicator={false} >
+				<ScrollView style={styles.SizeOnScroll} showsVerticalScrollIndicator={false} >
 
-                    {/* Les differents tags */}
+					{/* Les differents tags */}
 
-                    <View style={styles.myTagsContent}>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
-                        <Tags> + Tag</Tags>
+					<View style={styles.myTagsContent}>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
+						<Tags> + Tag</Tags>
 
 
-                    </View>
+					</View>
 
-                </ScrollView>
-            </View>
+				</ScrollView>
+			</View>
 
-            {/*Texte additionnel informatif  */}
-            <View style={styles.infoModif}>
-                <Text style={styles.infoTags}>Tu peux supprimer tes tags en appuyant dessus !</Text>
+			{/*Texte additionnel informatif  */}
+			<View style={styles.infoModif}>
+				<Text style={styles.infoTags}>Tu peux supprimer tes tags en appuyant dessus !</Text>
 
-                {/* Composant btn */}
-                <View style={styles.btnModifcation}>
-                    <ButtonLarge style={styles.BgColor}> Ajouter des tags </ButtonLarge>
-                </View>
-            </View>
-        </SafeAreaView>
+				{/* Composant btn */}
+				<View style={styles.btnModifcation}>
+					<ButtonLarge style={styles.BgColor}> Ajouter des tags </ButtonLarge>
+				</View>
+			</View>
+		</SafeAreaView>
 
-    );
+	);
 
 
 
@@ -61,65 +61,65 @@ export default function MyTags({ navigation }) {
 // style generale
 const styles = StyleSheet.create({
 
-    container: {
-        flex: 1,
-        // test pour detecter la platform
-        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
-        flexDirection: 'column',
-        position: 'relative',
-        backgroundColor: '#fff',
-        alignItems: 'center',
+	container: {
+		flex: 1,
+		// test pour detecter la platform
+		paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+		flexDirection: 'column',
+		position: 'relative',
+		backgroundColor: '#fff',
+		alignItems: 'center',
 
-    },
+	},
 
-    myTagsContainer: {
-        flex: 1.6,
-        height: '50%',
-        borderWidth: 1,
-        borderRadius: 15,
-        padding: 5,
-        borderColor: 'rgba(158, 150, 150, .3)',
-        width: '100%'
+	myTagsContainer: {
+		flex: 1.6,
+		height: '50%',
+		borderWidth: 1,
+		borderRadius: 15,
+		padding: 5,
+		borderColor: 'rgba(158, 150, 150, .3)',
+		width: '100%'
 
-    },
+	},
 
-    myTagsContent: {
-        flex: 1,
-        width: '100%',
-        marginBottom: 25,
-        flexWrap: 'wrap',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
+	myTagsContent: {
+		flex: 1,
+		width: '100%',
+		marginBottom: 25,
+		flexWrap: 'wrap',
+		flexDirection: 'row',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
 
-    infoModif: {
-        flexDirection: 'column',
-        flex: 2,
-        width: '100%',
-    },
+	infoModif: {
+		flexDirection: 'column',
+		flex: 2,
+		width: '100%',
+	},
 
-    infoTags: {
-        fontSize: 12,
-        flex: 0,
-        marginTop: 20,
-        alignSelf: "flex-end",
-        marginRight: 5,
-        color: '#4D3D64'
-    },
+	infoTags: {
+		fontSize: 12,
+		flex: 0,
+		marginTop: 20,
+		alignSelf: "flex-end",
+		marginRight: 5,
+		color: '#4D3D64'
+	},
 
-    btnModifcation: {
-        flex: 0.5,
-        justifyContent: 'center',
-        alignSelf: 'center',
-    },
+	btnModifcation: {
+		flex: 0.5,
+		justifyContent: 'center',
+		alignSelf: 'center',
+	},
 
-    SizeOnScroll: {
-        height: '7%',
-    },
+	SizeOnScroll: {
+		height: '7%',
+	},
 
-    BgColor: {
-        backgroundColor: '#4D3D64',
-    }
+	BgColor: {
+		backgroundColor: '#4D3D64',
+	}
 
 });
