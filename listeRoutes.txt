@@ -72,3 +72,4 @@ Route::middleware('jwt.auth')->group(function() { //Routes for authenticate user
 });
 
 
+test
