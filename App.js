@@ -72,11 +72,11 @@ export default class App extends React.Component {
 
 
 		return (
-      // <AssoFeedCampoo />
-      //<AssoEventCampoo />
-      //<InputCommentCampoo />
-      //
-      // <EventItemCampoo />
+			// <AssoFeedCampoo />
+			//<AssoEventCampoo />
+			//<InputCommentCampoo />
+			//
+			// <EventItemCampoo />
 
 
 			// if (state.isLoading) {
@@ -111,9 +111,9 @@ export default class App extends React.Component {
 			//<EventItemCampoo />
 
 
-      // <NavigationContainer >
-      //   <Navigations />
-      // </NavigationContainer>
+			<NavigationContainer >
+				<Navigations />
+			</NavigationContainer>
 
 			// pour affecter le store a l énsemble de l'application 
 
@@ -128,7 +128,7 @@ export default class App extends React.Component {
 
 
 
-      // <InputCommentCampoo />
+			// <InputCommentCampoo />
 
 
 
@@ -136,12 +136,12 @@ export default class App extends React.Component {
 
 			//<InputCommentCampoo />
 
-     //  <BatimentUpem/>
+			//  <BatimentUpem/>
 
-      // <PhotoProfiles/>
+			// <PhotoProfiles/>
 
 
-      // ------------------------ Component 
+			// ------------------------ Component 
 
 			//<CommentCampoo />
 			//<EventDetailCampoo/>
