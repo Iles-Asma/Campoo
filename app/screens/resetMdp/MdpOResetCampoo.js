@@ -12,7 +12,7 @@ export default function MdpOResetCampoo({ navigation }) {
 
         <SafeAreaView style={styles.container}>
 
-            <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+            <LogoCampoo />
             <Image style={styles.baloo} source={require("../../../assets/images/Baloo-Blob-Securité.png")} />
 
             <View style={styles.PswdView}>

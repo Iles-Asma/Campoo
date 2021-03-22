@@ -2,8 +2,9 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-
-
+import { Provider } from 'react-redux'
+import Store from './app/redux/Store'
+import BatimentUpem from './app/screens/BatimentUpem'
 
 
 
@@ -58,6 +59,7 @@ import CodeVerifCampoo from './app/screens/resetMdp/CodeVerifCampoo';
 import PickerDob from './app/components/PickerDob';
 import ButtonGallery from './app/components/button/ButtonGallery';
 import PhotosDeProfil from './app/screens/profils/PhotosDeProfil';
+import PhotoProfiles from './app/screens/profils/PhotoProfiles'
 
 
 
@@ -70,9 +72,11 @@ export default class App extends React.Component {
 
 
 		return (
-			<NavigationContainer >
-				<Navigations />
-			</NavigationContainer>
+      // <AssoFeedCampoo />
+      //<AssoEventCampoo />
+      //<InputCommentCampoo />
+      //
+      // <EventItemCampoo />
 
 
 			// if (state.isLoading) {
@@ -107,6 +111,9 @@ export default class App extends React.Component {
 			//<EventItemCampoo />
 
 
+      // <NavigationContainer >
+      //   <Navigations />
+      // </NavigationContainer>
 
 			// pour affecter le store a l énsemble de l'application 
 
@@ -121,7 +128,7 @@ export default class App extends React.Component {
 
 
 
-			// </Provider>
+      // <InputCommentCampoo />
 
 
 
@@ -129,8 +136,12 @@ export default class App extends React.Component {
 
 			//<InputCommentCampoo />
 
+     //  <BatimentUpem/>
 
-			//<CommentCampoo />
+      // <PhotoProfiles/>
+
+
+      // ------------------------ Component 
 
 			//<CommentCampoo />
 			//<EventDetailCampoo/>

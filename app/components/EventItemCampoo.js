@@ -2,7 +2,7 @@ import React from 'react'
 import { Text, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import { CAMPOO } from '../../assets/themes/ThemeCampoo'
 import Dots from '../../assets/svg/Dots'
-import LabelCampoo from './LabelCampoo'
+import LabelCampoo from './LabelCampoo' 
 
 export default class EventItemCampoo extends React.Component {
     render() {

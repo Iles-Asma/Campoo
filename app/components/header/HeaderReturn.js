@@ -28,7 +28,9 @@ const styles = StyleSheet.create({
         paddingHorizontal: '5%',
         alignItems: 'center',
         width: '100%',
-        height: 50,
+        position : "relative",  //changer ça positiion de arrow en fonction de l'ecran
+        top : 20,
+        height: 50
 
 
     },

@@ -3,5 +3,4 @@ vscode
 expo-shared
 expo
 .expo/packager-info.json
-node_modules/.bin/expo
-
+node_modules/react-native/Libraries/BatchedBridge/MessageQueue.js

@@ -8,8 +8,6 @@ import HeaderReturn from '../components/header/HeaderReturn';
 
 
 
-
-
 export default function CommentCampoo({ navigation }) {
 
 
