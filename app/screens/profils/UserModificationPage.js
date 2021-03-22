@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, ScrollView, Image, StatusBar, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import { CAMPOO } from '../../../assets/themes/ThemeCampoo';
 import Tags from '../../components/Tags';
@@ -8,10 +8,72 @@ import InputModifProfil from '../../components/input/InputModifProfil';
 import InputBioProfil from '../../components/input/InputBioProfil';
 import PenSvg from "../../components/PenSvg";
 import ButtonLarge from '../../components/button/ButtonLarge';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+
+export default function UserModificationPage( props ) {
+
+
+    const [pseudo, setPseudo] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const _retrieveData = async () => {
+        try {
+            const value = await AsyncStorage.getItem('token');
+            if (value !== null) {
+                // We have data!!
+                return value;
+            }
+        } catch (error) {
+
+            // Error retrieving data
+        }
+    };
+
+
+    const onSubmit = async () => {
+
+        const token = await _retrieveData();
+        // console.log(token);
 
 
 
-export default function UserModificationPage({ navigation }) {
+        fetch("https://campoo.fr/api/account/pseudonyme", {
+            method: 'PATCH',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+            body: JSON.stringify({
+
+                'pseudonyme': pseudo
+
+            })
+        })
+            // response.json()
+            .then((response) => response.json())
+            .then((Message) => {
+
+                console.log(Message);
+                if (Message.Status === 'Success') {
+
+                    props.navigation.navigate('UserProfil');
+
+                } else {
+
+                    setErrorMessage(Message.Message.pseudonyme[0]);
+
+                }
+            })
+            .catch((error) => {
+                // console.error(error);
+            });
+
+
+    }
+
 
     // render() {
 
@@ -26,8 +88,10 @@ export default function UserModificationPage({ navigation }) {
                 <TouchableOpacity onPress={() => navigation.goBack()}>
                     <Text> Annuler</Text>
                 </TouchableOpacity>
+
                 <Text style={styles.secondTitle}>Modification du Profil</Text>
-                <TouchableOpacity >
+
+                <TouchableOpacity  onPress={onSubmit} >
                     <Text> OK</Text>
                 </TouchableOpacity>
 
@@ -56,7 +120,8 @@ export default function UserModificationPage({ navigation }) {
 
                     <LabelCampoo style={styles.nameLabel}>Pseudonyme</LabelCampoo>
 
-                    <InputModifProfil placeholder='Edudd77' />
+                    <InputModifProfil placeholder='Edudd77' 
+                     onChangeText={(text) => setPseudo(text)} value={props.pseudo} errorText={errorMessage} />
 
                     <Text style={styles.infoInput}>Ton pseudo doit rester raisonnable.</Text>
 

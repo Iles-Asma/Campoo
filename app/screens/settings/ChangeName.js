@@ -1,6 +1,5 @@
-'use strict';
-
-import React from 'react';
+import React, { useState } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { StyleSheet, StatusBar, SafeAreaView, View, Text } from 'react-native';
 import LabelCampoo from "../../components/LabelCampoo";
@@ -8,7 +7,72 @@ import InputModifProfil from '../../components/input/InputModifProfil';
 import ArrowLSvg from "../../components/ArrowLSvg";
 import ButtonCampoo from '../../components/button/ButtonCampoo';
 
-export default function ChangeName({ navigation }) {
+export default function ChangeName(props) {
+    const [name, setName] = useState('');
+
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const _retrieveData = async () => {
+        try {
+            const value = await AsyncStorage.getItem('token');
+            if (value !== null) {
+                // We have data!!
+                return value;
+            }
+        } catch (error) {
+
+            // Error retrieving data
+        }
+    };
+
+
+
+    // fonction qui fait une requete  en post et qui renvoie une reponse d'erreur  au onPress
+    const onSubmit = async () => {
+
+        const token = await _retrieveData();
+        // console.log(token);
+
+
+
+        fetch("https://campoo.fr/api/account/name", {
+            method: 'PATCH',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+            body: JSON.stringify({
+
+                'name': name
+
+            })
+        })
+            // response.json()
+            .then((response) => response.json())
+            .then((Message) => {
+
+                console.log(Message);
+                if (Message.Status === 'Success') {
+
+
+                    props.navigation.navigate('SettingPage');
+
+
+
+                } else {
+
+                    setErrorMessage(Message.Message.name[0]);
+
+                }
+            })
+            .catch((error) => {
+                // console.error(error);
+            });
+
+
+    }
 
 
 
@@ -36,12 +100,12 @@ export default function ChangeName({ navigation }) {
                 {/* Le label Prénom */}
                 <LabelCampoo style={styles.nameLabel}>Prénom</LabelCampoo>
 
-                <InputModifProfil placeholder='Edudd77' />
+                <InputModifProfil placeholder='Edudd77' type='name' onChangeText={(text) => setName(text)} value={props.name} errorText={errorMessage} />
 
 
 
                 <View style={styles.btnContainer} >
-                    <ButtonCampoo> Valider </ButtonCampoo>
+                    <ButtonCampoo onPress={onSubmit}> Valider </ButtonCampoo>
                 </View>
 
 
