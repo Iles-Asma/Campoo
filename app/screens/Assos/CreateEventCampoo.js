@@ -1,12 +1,12 @@
 import { StyleSheet, ScrollView, StatusBar, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 // import Tags from '../../components/Tags';
-import PickerBatiments from "../components/PickerBatiments";
-import LabelCampoo from "../components/LabelCampoo";
-import InputModifProfil from '../components/input/InputModifProfil';
-import InputBioProfil from '../components/input/InputBioProfil';
-import ArrowLSvg from "../components/ArrowLSvg";
-import ButtonCampoo from '../components/button/ButtonCampoo';
-import TextInputAssos from '../components/input/TextInputAssos';
+import PickerBatiments from "../../components/PickerBatiments";
+import LabelCampoo from "../../components/LabelCampoo";
+import InputModifProfil from '../../components/input/InputModifProfil';
+import InputBioProfil from '../../components/input/InputBioProfil';
+import ArrowLSvg from "../../components/ArrowLSvg";
+import ButtonCampoo from '../../components/button/ButtonCampoo';
+import TextInputAssos from '../../components/input/TextInputAssos';
 
 export default function CreateEventCampoo({ navigation }) {
 

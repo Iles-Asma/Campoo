@@ -83,7 +83,10 @@ export default function BatSignupCampoo(props) {
 			<View style={styles.batView}>
 				<LabelCampoo style={styles.batLabel}>Batiment</LabelCampoo>
 				<Text style={styles.textBat}>Si tu viens d'Harvard, c'est ici qu'il faut le dire.</Text>
-				<PickerBatiments style={styles.InputView} value={props.building_id} name={(building) => { setBuilding_id(building); }} />
+				<PickerBatiments
+					style={styles.InputView}
+					value={props.building_id}
+					onValueChange={(value) => { setBuilding_i(value) }} />
 				<ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>
 				<SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>retour</SecondaryButtonCampoo>
 

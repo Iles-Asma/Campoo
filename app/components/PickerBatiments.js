@@ -93,6 +93,11 @@ export default class PickerBatiments extends React.Component {
 }
 
 
+
+
+
+
+
 const styles = StyleSheet.create({
 	container: {
 		paddingTop: 40,

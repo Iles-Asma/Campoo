@@ -21,15 +21,15 @@ import EventCampoo from './app/screens/EventCampoo';
 import CommentCampoo from './app/screens/CommentCampoo';
 import EventDetailCampoo from './app/screens/EventDetailCampoo';
 import TextInputAssos from './app/components/input/TextInputAssos';
-import AssoFeedCampoo from './app/screens/AssoFeedCampoo';
+import AssoFeedCampoo from './app/screens/Assos/AssoFeedCampoo';
 import ScreenLoginPage from './app/screens/login/ScreenLoginCampoo';
 import MdpOResetCampoo from './app/screens/resetMdp/MdpOResetCampoo';
 
-import AssoEventCampoo from './app/screens/AssoEventCampoo';
+import AssoEventCampoo from './app/screens/Assos/AssoEventCampoo';
 import InputCommentCampoo from "./app/components/input/InputCommentCampoo";
 
 
-import CreateEventCampoo from './app/screens/CreateEventCampoo';
+import CreateEventCampoo from './app/screens/Assos/CreateEventCampoo';
 
 import UserProfil from './app/screens/profils/UserProfil';
 
@@ -44,14 +44,14 @@ import Navigations from './app/routes/Navigations'
 
 import AssocModificationPage from './app/screens/profils/AssocModificationPage';
 
-import CategoriesTags from './app/screens/CategoriesTags';
+
 import SettingPage from './app/screens/settings/SettingPage';
 import DeleteAccount from './app/screens/settings/DeleteAccount';
 import ChangeName from './app/screens/settings/ChangeName';
 import AssocRequest from './app/screens/settings/AssocRequest';
 import EventUserCampoo from './app/screens/EventUserCampoo'
 import EventItemCampoo from './app/components/EventItemCampoo';
-import AssosAddPost from './app/screens/AssosAddPost';
+import AssosAddPost from './app/screens/Assos/AssosAddPost';
 import HomeStackCampoo from './app/routes/Navigations';
 import MdpOResetConfirmed from './app/screens/resetMdp/MdpOResetConfirmed';
 import CodeVerifCampoo from './app/screens/resetMdp/CodeVerifCampoo';
@@ -69,6 +69,9 @@ export default class App extends React.Component {
 
 
 		return (
+			<NavigationContainer >
+				<Navigations />
+			</NavigationContainer>
 
 
 			// if (state.isLoading) {
@@ -108,9 +111,7 @@ export default class App extends React.Component {
 
 			// <Provider store={store}>
 
-			<NavigationContainer >
-				<Navigations />
-			</NavigationContainer>
+
 
 			// <PickerDob />
 
