@@ -7,10 +7,10 @@ export default function MdpOResetConfirmed({ navigation }) {
 
     return (
         <SafeAreaView style={styles.mainContainer}>
-            <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+
+            <LabelCampoo></LabelCampoo>
 
             <Image style={styles.baloo} source={require("../../../assets/images/blob-baloo-fête.png")} />
-
 
             <View style={styles.container}>
 

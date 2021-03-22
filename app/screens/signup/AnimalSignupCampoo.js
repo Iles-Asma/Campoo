@@ -3,6 +3,7 @@ import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
+import LogoCampoo from '../../../assets/svg/LogoCampoo';
 
 export default class AnimalSignupCampoo extends React.Component {
 
@@ -13,13 +14,11 @@ export default class AnimalSignupCampoo extends React.Component {
             navigation.push('CodeVerifSignupCampoo');
         }
 
-
-
         return (
 
             <SafeAreaView style={styles.mainContainer}>
 
-                <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+                <LogoCampoo />
                 <Image style={styles.baloo} source={require("../../../assets/images/Component-1.png")} />
 
                 <View style={styles.container}>

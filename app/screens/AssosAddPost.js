@@ -2,7 +2,6 @@ import React from 'react'
 import { StyleSheet, SafeAreaView, StatusBar, Platform, TouchableOpacity } from 'react-native'
 import LabelCampoo from '../components/LabelCampoo';
 import TextInputAssos from '../components/input/TextInputAssos';
-
 import HeaderAddPost from '../components/header/HeaderAddPost'
 
 

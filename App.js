@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Provider } from 'react-redux'
 import Store from './app/redux/Store'
+import BatimentUpem from './app/screens/BatimentUpem'
 
 
 
@@ -56,6 +57,7 @@ import HomeStackCampoo from './app/routes/Navigations';
 import MdpOResetConfirmed from './app/screens/resetMdp/MdpOResetConfirmed';
 import CodeVerifCampoo from './app/screens/resetMdp/CodeVerifCampoo';
 import PickerDob from './app/components/PickerDob';
+import PhotoProfiles from './app/screens/profils/PhotoProfiles'
 
 
 
@@ -68,11 +70,11 @@ export default class App extends React.Component {
 
 
     return (
-      //<AssoFeedCampoo />
+      // <AssoFeedCampoo />
       //<AssoEventCampoo />
       //<InputCommentCampoo />
       //
-      //<EventItemCampoo />
+      // <EventItemCampoo />
 
 
 
@@ -80,9 +82,9 @@ export default class App extends React.Component {
 
       // <Provider store={store}>
 
-      <NavigationContainer >
-        <Navigations />
-      </NavigationContainer>
+      // <NavigationContainer >
+      //   <Navigations />
+      // </NavigationContainer>
 
       // <PickerDob />
 
@@ -94,7 +96,7 @@ export default class App extends React.Component {
 
       // ------------------------ Component 
 
-      //<InputCommentCampoo />
+      // <InputCommentCampoo />
 
 
       //<CommentCampoo />
@@ -104,7 +106,11 @@ export default class App extends React.Component {
 
       //<TextInputAssos />
 
+      <BatimentUpem/>
 
+      // <PhotoProfiles/>
+
+      
       // ------------------------ Component 
 
 

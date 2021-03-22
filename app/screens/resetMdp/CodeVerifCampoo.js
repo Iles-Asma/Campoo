@@ -4,6 +4,7 @@ import InputCampooSignup from "../../components/input/InputCampooSignup"
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
+import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 export default function CodeVerifCampoo({ navigation }) {
 
@@ -17,8 +18,7 @@ export default function CodeVerifCampoo({ navigation }) {
 
         <SafeAreaView style={styles.mainContainer}>
 
-
-            <Image style={styles.logoCampoo} source={require("../../../assets/images/LogoCampoo.png")} />
+            <LogoCampoo />
 
             <Image style={styles.baloo} source={require("../../../assets/images/Blob-baloo-phone.png")} />
 
