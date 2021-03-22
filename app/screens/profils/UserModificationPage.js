@@ -11,10 +11,10 @@ import ButtonLarge from '../../components/button/ButtonLarge';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-export default function UserModificationPage( props ) {
-
-
+export default function UserModificationPage(props) {
     const [pseudo, setPseudo] = useState('');
+    const [bio, setBio] = useState('');
+
     const [errorMessage, setErrorMessage] = useState('');
 
     const _retrieveData = async () => {
@@ -29,15 +29,14 @@ export default function UserModificationPage( props ) {
             // Error retrieving data
         }
     };
-
-
+    // fonction qui fait une requete  en post et qui renvoie une reponse d'erreur  au onPress
     const onSubmit = async () => {
 
         const token = await _retrieveData();
         // console.log(token);
 
 
-
+Promise.all([
         fetch("https://campoo.fr/api/account/pseudonyme", {
             method: 'PATCH',
             headers: {
@@ -48,32 +47,52 @@ export default function UserModificationPage( props ) {
             },
             body: JSON.stringify({
 
-                'pseudonyme': pseudo
+                'pseudonyme': pseudo,
+                
+
+
+            })
+        }),
+        fetch("https://campoo.fr/api/account/biography", {
+            method: 'PATCH',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+            body: JSON.stringify({
+
+                
+                'biography': bio,
+
 
             })
         })
-            // response.json()
+    ])      
             .then((response) => response.json())
             .then((Message) => {
 
                 console.log(Message);
                 if (Message.Status === 'Success') {
 
+
                     props.navigation.navigate('UserProfil');
+
+
 
                 } else {
 
-                    setErrorMessage(Message.Message.pseudonyme[0]);
+                    // setErrorMessage(Message.Message.[0]);
 
                 }
             })
-            .catch((error) => {
-                // console.error(error);
-            });
+            // .catch((error) => {
+            //     // console.error(error);
+            // });
 
 
     }
-
 
     // render() {
 
@@ -128,7 +147,7 @@ export default function UserModificationPage( props ) {
 
                     <LabelCampoo style={styles.nameLabel}>Biographie </LabelCampoo>
 
-                    <InputBioProfil placeholder='Decris toi :)' />
+                    <InputBioProfil placeholder='Decris toi :)' onChangeText={(text) => setBio(text)} value={props.bio} />
 
                     <Text style={styles.infoInput}>Ta bio doit te reflèter, ne soit pas vulgaire!</Text>
 
@@ -136,7 +155,7 @@ export default function UserModificationPage( props ) {
                     {/* Iput Option */}
                     <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo>
 
-                    <PickerBatiments />
+                    {/* <PickerBatiments /> */}
 
                     {/* Parti Modification de tags */}
 
@@ -158,7 +177,7 @@ export default function UserModificationPage( props ) {
                     </View>
 
                     <View style={styles.btnContainer} >
-                        <ButtonLarge onPress={() => navigation.navigate('CategoriesTags')}>Modifies es tags</ButtonLarge>
+                        <ButtonLarge onPress={() => navigation.navigate('CategoriesTags')}>Modifies mes tags</ButtonLarge>
                     </View>
 
 

@@ -12,11 +12,10 @@ import ButtonGallery from '../../components/button/ButtonGallery';
 
 
 export default function AssocRequest(props) {
-
+    const [docu, setDocu] = useState('');
     const [name, setName] = useState('');
     const [campoo_name, setCampooName] = useState('');
     const [bio, setBio] = useState('');
-    const [docu, setDocu] = useState('');
     const [batiments, setBatiments] = useState('');
 
     const [errorMessage, setErrorMessage] = useState('');
@@ -33,9 +32,6 @@ export default function AssocRequest(props) {
             // Error retrieving data
         }
     };
-
-
-
     // fonction qui fait une requete  en post et qui renvoie une reponse d'erreur  au onPress
     const onSubmit = async () => {
 
@@ -43,8 +39,25 @@ export default function AssocRequest(props) {
         // console.log(token);
 
 
+Promise.all([
 
-        fetch("https://campoo.fr/api/association", {
+    fetch("https://campoo.fr/api/association/proof", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+            body: JSON.stringify({
+
+                
+                'proof': docu,
+
+
+            })
+        }),
+        fetch("https://campoo.fr/api/association/name", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -55,36 +68,79 @@ export default function AssocRequest(props) {
             body: JSON.stringify({
 
                 'name': name,
+                
+
+
+            })
+        }),
+        fetch("https://campoo.fr/api/association/campoo_name", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+            body: JSON.stringify({
+
+                
                 'campoo_name': campoo_name,
+
+
+            })
+        }),
+        fetch("https://campoo.fr/api/association/biography", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+            body: JSON.stringify({
+
+                
                 'biography': bio,
-                'proof':docu,
-                'bulding':batiments,
+
+
+            })
+        }),fetch("https://campoo.fr/api/association/bulding", {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${token}`
+
+            },
+            body: JSON.stringify({
+
+                
+                'bulding': batiments,
 
 
             })
         })
-            // response.json()
+    ])      
             .then((response) => response.json())
             .then((Message) => {
 
                 console.log(Message);
-                // if (Message.Status === 'Success') {
-
-                //     console.log("success");
-                //     // props.navigation.navigate('SettingPage');
+                if (Message.Status === 'Success') {
 
 
+                    // props.navigation.navigate('UserProfil');
 
-                // } else {
-                //     console.error(error);
 
-                //     setErrorMessage('erreur');
 
-                // }
+                } else {
+
+                      setErrorMessage(Message.Message.proof[0]);
+
+                }
             })
             .catch((error) => {
-                // console.error(error);
-            });
+            //     // console.error(error);
+             });
 
 
     }
@@ -118,7 +174,7 @@ export default function AssocRequest(props) {
                     <LabelCampoo style={styles.nameLabel}>Prends en photo le justificatif d’association !</LabelCampoo>
 
 
-                    <ButtonGallery onChangeText={(text) => setDocu(text)} value={props.docu} errorText={errorMessage}/>
+                    <ButtonGallery onChange={() => setDocu()} value={props.docu} errorText={errorMessage}/>
 
                     {/* <InputBioProfil placeholder='Dis nous les information de ton association' onChangeText={(text) => setDocu(text)} value={props.docu} errorText={errorMessage}  /> */}
 
@@ -145,7 +201,7 @@ export default function AssocRequest(props) {
                     {/* Input Option */}
                     <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo>
 
-                    <PickerBatiments  onChangeText={(text) =>  setBatiments(text)} value={props.batiments} errorText={errorMessage}/>
+                    <PickerBatiments  onValueChange={() =>  setBatiments()} value={props.batiments} errorText={errorMessage}/>
 
                     {/* Validation */}
                     <View style={styles.btnContainer} >

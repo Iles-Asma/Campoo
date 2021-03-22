@@ -155,7 +155,7 @@ export default class App extends React.Component {
       //
       // <AssocModificationPage/>
       // <SettingPage />
-      //<ChangeName />
+     // <ChangeName />
       //
       //  <DeleteAccount/>
       //  -------------------------SETTINGS
@@ -163,7 +163,7 @@ export default class App extends React.Component {
 
       //----------------------- SIGNUP SCREENS
       //<MailSignupCampoo />
-      //<NameSignupCampoo/>
+     // <NameSignupCampoo/>
       // <DobSignupCampoo />
       //<PseudoSignupCampoo/>
       //<MdpSignupCampoo/>
