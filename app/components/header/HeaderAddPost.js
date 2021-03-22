@@ -5,35 +5,35 @@ import SendButton from '../../../assets/svg/SendButton'
 
 
 export default class HeaderAddPost extends React.Component {
-    render() {
-        return (
+	render() {
+		return (
 
-            <View style={styles.headerAddPost}>
+			<View style={styles.headerAddPost}>
 
-                <TouchableOpacity >
-                    <ArrowLSvg />
-                </TouchableOpacity>
+				<TouchableOpacity onPress={this.props.onPress}>
+					<ArrowLSvg />
+				</TouchableOpacity>
 
-                <TouchableOpacity>
-                    <SendButton />
-                </TouchableOpacity>
+				<TouchableOpacity onPress={this.props.onPress}>
+					<SendButton />
+				</TouchableOpacity>
 
-            </View>
+			</View>
 
-        )
-    }
+		)
+	}
 }
 
 const styles = StyleSheet.create({
-    headerAddPost: {
+	headerAddPost: {
 
-        flex: 0,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        paddingHorizontal: '5%',
-        alignItems: 'center',
-        width: '100%',
-        height: 50,
+		flex: 0,
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		paddingHorizontal: '5%',
+		alignItems: 'center',
+		width: '100%',
+		height: 50,
 
-    },
+	},
 })

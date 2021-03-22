@@ -1,0 +1,8 @@
+root = true
+
+[*]
+
+indent_size = 5
+indent_style = tab
+end_of_line = crlf  #""crlf si on est sur windows lf si c linux
+charset = utf-8
