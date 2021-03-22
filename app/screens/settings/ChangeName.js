@@ -57,13 +57,13 @@ export default function ChangeName(props) {
                 if (Message.Status === 'Success') {
 
 
-                    props.navigation.navigate('SettingPage');
+                    // props.navigation.navigate('PseudoSignupCampoo');
 
 
 
                 } else {
 
-                    setErrorMessage(Message.Message.name[0]);
+                    // setErrorMessage(Message.Message.name[0]);
 
                 }
             })
@@ -73,7 +73,6 @@ export default function ChangeName(props) {
 
 
     }
-
 
 
     return (

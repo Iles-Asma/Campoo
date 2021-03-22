@@ -11,69 +11,88 @@ import ButtonLarge from '../../components/button/ButtonLarge';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-export default function UserModificationPage( props ) {
+export default function UserModificationPage(props) {
+	const [pseudo, setPseudo] = useState('');
+	const [bio, setBio] = useState('');
+
+	const [errorMessage, setErrorMessage] = useState('');
+
+	const _retrieveData = async () => {
+		try {
+			const value = await AsyncStorage.getItem('token');
+			if (value !== null) {
+				// We have data!!
+				return value;
+			}
+		} catch (error) {
+
+			// Error retrieving data
+		}
+	};
+	// fonction qui fait une requete  en post et qui renvoie une reponse d'erreur  au onPress
+	const onSubmit = async () => {
+
+		const token = await _retrieveData();
+		// console.log(token);
 
 
-    const [pseudo, setPseudo] = useState('');
-    const [errorMessage, setErrorMessage] = useState('');
+		Promise.all([
+			fetch("https://campoo.fr/api/account/pseudonyme", {
+				method: 'PATCH',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json',
+					"Authorization": `Bearer ${token}`
 
-    const _retrieveData = async () => {
-        try {
-            const value = await AsyncStorage.getItem('token');
-            if (value !== null) {
-                // We have data!!
-                return value;
-            }
-        } catch (error) {
+				},
+				body: JSON.stringify({
 
-            // Error retrieving data
-        }
-    };
-
-
-    const onSubmit = async () => {
-
-        const token = await _retrieveData();
-        // console.log(token);
+					'pseudonyme': pseudo,
 
 
 
-        fetch("https://campoo.fr/api/account/pseudonyme", {
-            method: 'PATCH',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                "Authorization": `Bearer ${token}`
+				})
+			}),
+			fetch("https://campoo.fr/api/account/biography", {
+				method: 'PATCH',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json',
+					"Authorization": `Bearer ${token}`
 
-            },
-            body: JSON.stringify({
-
-                'pseudonyme': pseudo
-
-            })
-        })
-            // response.json()
-            .then((response) => response.json())
-            .then((Message) => {
-
-                console.log(Message);
-                if (Message.Status === 'Success') {
-
-                    props.navigation.navigate('UserProfil');
-
-                } else {
-
-                    setErrorMessage(Message.Message.pseudonyme[0]);
-
-                }
-            })
-            .catch((error) => {
-                // console.error(error);
-            });
+				},
+				body: JSON.stringify({
 
 
-    }
+					'biography': bio,
 
+
+				})
+			})
+		])
+			.then((response) => response.json())
+			.then((Message) => {
+
+				console.log(Message);
+				if (Message.Status === 'Success') {
+
+
+					props.navigation.navigate('UserProfil');
+
+
+
+				} else {
+
+					// setErrorMessage(Message.Message.[0]);
+
+				}
+			})
+		// .catch((error) => {
+		//     // console.error(error);
+		// });
+
+
+	}
 
 	// render() {
 
@@ -118,15 +137,15 @@ export default function UserModificationPage( props ) {
 
 					<LabelCampoo style={styles.nameLabel}>Pseudonyme</LabelCampoo>
 
-                    <InputModifProfil placeholder='Edudd77' 
-                     onChangeText={(text) => setPseudo(text)} value={props.pseudo} errorText={errorMessage} />
+					<InputModifProfil placeholder='Edudd77'
+						onChangeText={(text) => setPseudo(text)} value={props.pseudo} errorText={errorMessage} />
 
 					<Text style={styles.infoInput}>Ton pseudo doit rester raisonnable.</Text>
 
 
 					<LabelCampoo style={styles.nameLabel}>Biographie </LabelCampoo>
 
-					<InputBioProfil placeholder='Decris toi :)' />
+					<InputBioProfil placeholder='Decris toi :)' onChangeText={(text) => setBio(text)} value={props.bio} />
 
 					<Text style={styles.infoInput}>Ta bio doit te reflèter, ne soit pas vulgaire!</Text>
 
@@ -134,7 +153,7 @@ export default function UserModificationPage( props ) {
 					{/* Iput Option */}
 					<LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo>
 
-					<PickerBatiments />
+					{/* <PickerBatiments /> */}
 
 					{/* Parti Modification de tags */}
 
@@ -156,7 +175,7 @@ export default function UserModificationPage( props ) {
 					</View>
 
 					<View style={styles.btnContainer} >
-						<ButtonLarge onPress={() => navigation.navigate('CategoriesTags')}>Modifies es tags</ButtonLarge>
+						<ButtonLarge onPress={() => navigation.navigate('CategoriesTags')}>Modifies mes tags</ButtonLarge>
 					</View>
 
 

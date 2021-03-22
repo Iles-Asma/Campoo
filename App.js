@@ -190,7 +190,7 @@ export default class App extends React.Component {
 			//
 			// <AssocModificationPage/>
 			// <SettingPage />
-			//<ChangeName />
+			// <ChangeName />
 			//
 			//  <DeleteAccount/>
 			//  -------------------------SETTINGS
@@ -209,7 +209,19 @@ export default class App extends React.Component {
 			//<MdpOMailCampoo/>
 			//<BatSignupCampoo />
 
-			//----------------------- SIGNUP S SCREENS
+			//----------------------- SIGNUP SCREENS
+			//<MailSignupCampoo />
+			// <NameSignupCampoo/>
+			// <DobSignupCampoo />
+			//<PseudoSignupCampoo/>
+			//<MdpSignupCampoo/>
+			//<QSecretSignupCampoo/>
+			//<RSecretSignupCampoo/>
+			//<CVerifSignupCampoo/>
+			//<MdpOQSecretCampoo/>
+			//<MdpOResetCampoo/>
+			//<MdpOMailCampoo/>
+			//<BatSignupCampoo />
 
 
 			//-------------------------LOGIN
