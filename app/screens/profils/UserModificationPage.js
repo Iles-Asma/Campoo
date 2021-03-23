@@ -175,7 +175,7 @@ export default function UserModificationPage(props) {
 					</View>
 
 					<View style={styles.btnContainer} >
-						<ButtonLarge onPress={() => navigation.navigate('CategoriesTags')}>Modifies mes tags</ButtonLarge>
+						<ButtonLarge onPress={() => props.navigation.navigate('CategoriesTags')}>Modifies mes tags</ButtonLarge>
 					</View>
 
 

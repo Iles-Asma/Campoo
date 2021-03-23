@@ -18,25 +18,25 @@ export default function CategoriesTags({ navigation }) {
 				<View style={styles.categorieContainer}>
 
 					{/* cinema */}
-					<TouchableOpacity onPress={() => navigation.navigate('MyTags')}>
+					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags', {category_id: 1})}>
 
 						<Image style={styles.categorieShape} source={require("../../../assets/categories/cinema.png")}  ></Image>
 
 					</TouchableOpacity>
 					{/* jeux video */}
-					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags')}>
+					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags', {category_id: 2})}>
 
 						<Image style={styles.categorieShape} source={require("../../../assets/categories/games.png")}  ></Image>
 
 					</TouchableOpacity>
 					{/* sport */}
-					<TouchableOpacity onPress={() => navigation.push('ChooseTags')}>
+					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags', {category_id: 3})}>
 
 						<Image style={styles.categorieShape} source={require("../../../assets/categories/sport.png")}  ></Image>
 
 					</TouchableOpacity>
 					{/* art */}
-					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags')}>
+					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags', {category_id: 4})}>
 
 						<Image style={styles.categorieShape} source={require("../../../assets/categories/art.png")}  ></Image>
 

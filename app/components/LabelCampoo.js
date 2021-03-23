@@ -1,36 +1,28 @@
 import React from 'react';
 
-import {
-	Text,
-	StyleSheet
-} from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 
 export default class LabelCampoo extends React.Component {
 
-	render() {
+    render() {
 
-		return (
+        return (
 
-			<
-			Text style = {
-				[this.props.style, styles.label]
-			} > {
-				this.props.children
-			} < /Text>
+            <Text style={[this.props.style, styles.label]} >{this.props.children}</Text>
 
-		);
+        );
 
-	}
+    }
 
 }
 
 const styles = StyleSheet.create({
-	label: {
+    label: {
 
-		fontSize: 25.89,
-		color: '#4D3D64'
+        fontSize: 25.89,
+        color: '#4D3D64',
 
-	},
+    },
 
 
 })

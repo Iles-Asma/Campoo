@@ -5,12 +5,23 @@ import { StyleSheet, TouchableOpacity, Text } from 'react-native';
 
 export default class Tags extends React.Component {
 
+	constructor(props){
+		super(props);
+
+		this.handlePress = this.handlePress.bind(this);
+	}
+
+	handlePress(){
+		this.props.onPress 
+		? this.props.onPress(this.props.tag)
+		:'';
+	}
 
 	render() {
 
 		return (
 			// creation du composant unique tag static
-			<TouchableOpacity style={styles.tagShape} >
+			<TouchableOpacity style={styles.tagShape} onPress={this.handlePress}>
 				<Text style={styles.tagName}>{this.props.children}</Text>
 			</TouchableOpacity>
 
@@ -43,7 +54,7 @@ const styles = StyleSheet.create({
 	},
 	// Le choix de mettre un nom ou pas(donc icons)
 	tagName: {
-		fontSize: 20,
+		fontSize: 11,
 		fontWeight: 'bold',
 		color: 'white'
 	}
