@@ -33,7 +33,6 @@ export default function UserModificationPage(props) {
 	const onSubmit = async () => {
 
 		const token = await _retrieveData();
-		// console.log(token);
 
 
 		Promise.all([

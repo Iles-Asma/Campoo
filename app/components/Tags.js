@@ -25,7 +25,6 @@ export default class Tags extends React.Component {
 				<Text style={styles.tagName}>{this.props.children}</Text>
 			</TouchableOpacity>
 
-
 		);
 
 	}

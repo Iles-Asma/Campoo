@@ -11,54 +11,23 @@ export default class PickerBatiments extends React.Component {
 
 		this.state = {
 			BatName: undefined,
-			items: [
-				{
-					label: 'Aucun',
-					value: 'Aucun',
-				},
-				{
-					label: 'Alexandra Davis Neel',
-					value: 'Alexandra Davis Neel',
-				},
-				{
-					label: 'Albert Camus',
-					value: 'Albert Camus',
-				},
-				{
-					label: "Bois de l'étang",
-					value: "Bois de l'étang",
-				},
-				{
-					label: 'Clément Ader',
-					value: 'Clément Ader',
-				},
-				{
-					label: 'Copernic',
-					value: 'Copernic',
-				},
-				{
-					label: 'ESIEE',
-					value: 'ESIEE',
-				},
-				{
-					label: 'IUT',
-					value: 'IUT',
-				},
-				{
-					label: 'Lavoisier',
-					value: 'Lavoisier',
-				},
-
-				{
-					label: 'Pont & Chaussées',
-					value: 'Pont & Chaussées',
-				},
-
-
-			],
+			items: [],
 		};
 	}
 
+	componentDidMount(){
+		fetch("https://campoo.fr/api/building")
+			.then(res => res.json())
+			.then(json => this.setState({items: json.Data}))
+			.then(()=>{
+				 this.setState({items: this.state.items.map(item => ({
+					key: item.id,
+					label: item.name,
+					value: item.id,
+			}))})
+				
+			})
+	}
 
 
 	render() {
@@ -77,7 +46,7 @@ export default class PickerBatiments extends React.Component {
 					onValueChange={this.props.onValueChange}
 
 					style={{ ...pickerSelectStyles }}
-					value={this.state.BatName}
+					value={this.state.items.name}
 					ref={(el) => {
 						this.inputRefs.picker = el;
 					}}
