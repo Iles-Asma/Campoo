@@ -29,18 +29,19 @@ export default function AssocRequest(props) {
 			// Error retrieving data
 		}
 	};
+
 	// fonction qui fait une requete  en post et qui renvoie une reponse d'erreur  au onPress
 	const onSubmit = async () => {
 		const token = await _retrieveData();
-		// console.log(token);
+		console.log(token);
 
-		Promise.all([
+		await Promise.all([
 			fetch("https://campoo.fr/api/association/proof", {
 				method: "POST",
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json",
-					Authorization: `Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY0MjIzMzQsImV4cCI6MTYxNjQyNTkzNCwibmJmIjoxNjE2NDIyMzM0LCJqdGkiOiIxZ1dvVjhtemJma1VxU091Iiwic3ViIjoyNiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.3y_P5QHqnDw0qlWb56LZpHMbwK20FmmxRBeNLYjyy4A`,
+					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1MjMxNTMsImV4cCI6MTYxNjUyNjc1MywibmJmIjoxNjE2NTIzMTUzLCJqdGkiOiJXY29ITXhVOHJxcXdWRExGIiwic3ViIjoyOSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0WTrJ36xYBWGR8-Kk5UKUqmL2oRtP2a38__S-kV9tp8`,
 				},
 				body: JSON.stringify({
 					proof: docu,
@@ -51,7 +52,7 @@ export default function AssocRequest(props) {
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json",
-					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY0MjIzMzQsImV4cCI6MTYxNjQyNTkzNCwibmJmIjoxNjE2NDIyMzM0LCJqdGkiOiIxZ1dvVjhtemJma1VxU091Iiwic3ViIjoyNiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.3y_P5QHqnDw0qlWb56LZpHMbwK20FmmxRBeNLYjyy4AeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY0MjIzMzQsImV4cCI6MTYxNjQyNTkzNCwibmJmIjoxNjE2NDIyMzM0LCJqdGkiOiIxZ1dvVjhtemJma1VxU091Iiwic3ViIjoyNiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.3y_P5QHqnDw0qlWb56LZpHMbwK20FmmxRBeNLYjyy4A`,
+					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1MjMxNTMsImV4cCI6MTYxNjUyNjc1MywibmJmIjoxNjE2NTIzMTUzLCJqdGkiOiJXY29ITXhVOHJxcXdWRExGIiwic3ViIjoyOSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0WTrJ36xYBWGR8-Kk5UKUqmL2oRtP2a38__S-kV9tp8`,
 				},
 				body: JSON.stringify({
 					name: name,
@@ -62,7 +63,7 @@ export default function AssocRequest(props) {
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json",
-					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY0MjIzMzQsImV4cCI6MTYxNjQyNTkzNCwibmJmIjoxNjE2NDIyMzM0LCJqdGkiOiIxZ1dvVjhtemJma1VxU091Iiwic3ViIjoyNiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.3y_P5QHqnDw0qlWb56LZpHMbwK20FmmxRBeNLYjyy4A`,
+					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1MjMxNTMsImV4cCI6MTYxNjUyNjc1MywibmJmIjoxNjE2NTIzMTUzLCJqdGkiOiJXY29ITXhVOHJxcXdWRExGIiwic3ViIjoyOSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0WTrJ36xYBWGR8-Kk5UKUqmL2oRtP2a38__S-kV9tp8`,
 				},
 				body: JSON.stringify({
 					campoo_name: campoo_name,
@@ -73,7 +74,7 @@ export default function AssocRequest(props) {
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json",
-					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY0MjIzMzQsImV4cCI6MTYxNjQyNTkzNCwibmJmIjoxNjE2NDIyMzM0LCJqdGkiOiIxZ1dvVjhtemJma1VxU091Iiwic3ViIjoyNiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.3y_P5QHqnDw0qlWb56LZpHMbwK20FmmxRBeNLYjyy4A`,
+					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1MjMxNTMsImV4cCI6MTYxNjUyNjc1MywibmJmIjoxNjE2NTIzMTUzLCJqdGkiOiJXY29ITXhVOHJxcXdWRExGIiwic3ViIjoyOSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0WTrJ36xYBWGR8-Kk5UKUqmL2oRtP2a38__S-kV9tp8`,
 				},
 				body: JSON.stringify({
 					biography: bio,
@@ -84,24 +85,26 @@ export default function AssocRequest(props) {
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json",
-					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY0MjIzMzQsImV4cCI6MTYxNjQyNTkzNCwibmJmIjoxNjE2NDIyMzM0LCJqdGkiOiIxZ1dvVjhtemJma1VxU091Iiwic3ViIjoyNiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.3y_P5QHqnDw0qlWb56LZpHMbwK20FmmxRBeNLYjyy4A`,
+					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1MjMxNTMsImV4cCI6MTYxNjUyNjc1MywibmJmIjoxNjE2NTIzMTUzLCJqdGkiOiJXY29ITXhVOHJxcXdWRExGIiwic3ViIjoyOSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0WTrJ36xYBWGR8-Kk5UKUqmL2oRtP2a38__S-kV9tp8`,
 				},
 				body: JSON.stringify({
 					bulding: batiments,
 				}),
 			}),
 		])
-			.then((response) => response.json())
+			.then((responses) => Promise.all(responses.map((rep) => rep.json())))
 			.then((Message) => {
 				console.log(Message);
 				if (Message.Status === "Success") {
+					console.log("Xas");
 					// props.navigation.navigate('UserProfil');
 				} else {
-					setErrorMessage(Message.Message.proof[0]);
+					setErrorMessage(Message.Message[0]);
 				}
 			})
 			.catch((error) => {
-				//     // console.error(error);
+				//console.error(error);
+				//console.log("erreur");
 			});
 	};
 
