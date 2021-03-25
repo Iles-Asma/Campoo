@@ -1,316 +1,243 @@
-import React,{useState} from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { StyleSheet, ScrollView, StatusBar, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
+import React, { useState } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { StyleSheet, ScrollView, StatusBar, SafeAreaView, View, Text, TouchableOpacity } from "react-native";
 import PickerBatiments from "../../components/PickerBatiments";
 import LabelCampoo from "../../components/LabelCampoo";
-import InputModifProfil from '../../components/input/InputModifProfil';
-import InputBioProfil from '../../components/input/InputBioProfil';
+import InputModifProfil from "../../components/input/InputModifProfil";
+import InputBioProfil from "../../components/input/InputBioProfil";
 import ArrowLSvg from "../../components/ArrowLSvg";
-import ButtonCampoo from '../../components/button/ButtonCampoo';
-import ButtonGallery from '../../components/button/ButtonGallery';
-
-
+import ButtonCampoo from "../../components/button/ButtonCampoo";
+import ButtonGallery from "../../components/button/ButtonGallery";
 
 export default function AssocRequest(props) {
-    const [docu, setDocu] = useState('');
-    const [name, setName] = useState('');
-    const [campoo_name, setCampooName] = useState('');
-    const [bio, setBio] = useState('');
-    const [batiments, setBatiments] = useState('');
-
-    const [errorMessage, setErrorMessage] = useState('');
+	const [docu, setDocu] = useState("");
+	const [name, setName] = useState("");
+	const [campoo_name, setCampooName] = useState("");
+	const [bio, setBio] = useState("");
+	const [batiments, setBatiments] = useState("");
+
+	const [errorMessage, setErrorMessage] = useState("");
+
+	const _retrieveData = async () => {
+		try {
+			const value = await AsyncStorage.getItem("token");
+			if (value !== null) {
+				// We have data!!
+				return value;
+			}
+		} catch (error) {
+			// Error retrieving data
+		}
+	};
+	// fonction qui fait une requete  en post et qui renvoie une reponse d'erreur  au onPress
+	const onSubmit = async () => {
+		const token = await _retrieveData();
+		// console.log(token);
+
+		Promise.all([
+			fetch("https://campoo.fr/api/association/proof", {
+				method: "POST",
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json",
+					Authorization: `Bearer ${token}`,
+				},
+				body: JSON.stringify({
+					proof: docu,
+				}),
+			}),
+			fetch("https://campoo.fr/api/association/name", {
+				method: "POST",
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json",
+					Authorization: `Bearer ${token}`,
+				},
+				body: JSON.stringify({
+					name: name,
+				}),
+			}),
+			fetch("https://campoo.fr/api/association/campoo_name", {
+				method: "POST",
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json",
+					Authorization: `Bearer ${token}`,
+				},
+				body: JSON.stringify({
+					campoo_name: campoo_name,
+				}),
+			}),
+			fetch("https://campoo.fr/api/association/biography", {
+				method: "POST",
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json",
+					Authorization: `Bearer ${token}`,
+				},
+				body: JSON.stringify({
+					biography: bio,
+				}),
+			}),
+			fetch("https://campoo.fr/api/association/bulding", {
+				method: "POST",
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json",
+					Authorization: `Bearer ${token}`,
+				},
+				body: JSON.stringify({
+					bulding: batiments,
+				}),
+			}),
+		])
+			.then((response) => response.json())
+			.then((Message) => {
+				console.log(Message);
+				if (Message.Status === "Success") {
+					// props.navigation.navigate('UserProfil');
+				} else {
+					setErrorMessage(Message.Message.proof[0]);
+				}
+			})
+			.catch((error) => {
+				//     // console.error(error);
+			});
+	};
+
+	return (
+		// contenu generale
+
+		<SafeAreaView style={styles.container}>
+			{/* La navigation du haut */}
+			<View style={styles.topNav}>
+				{/*Le onPress a mettre  */}
+				<TouchableOpacity>
+					<ArrowLSvg onPress={() => navigation.goBack()} />
+				</TouchableOpacity>
 
-    const _retrieveData = async () => {
-        try {
-            const value = await AsyncStorage.getItem('token');
-            if (value !== null) {
-                // We have data!!
-                return value;
-            }
-        } catch (error) {
+				<View style={styles.namePage}>
+					<Text style={styles.secondTitle}>Réglage</Text>
+				</View>
+			</View>
 
-            // Error retrieving data
-        }
-    };
-    // fonction qui fait une requete  en post et qui renvoie une reponse d'erreur  au onPress
-    const onSubmit = async () => {
+			{/* Contenaire des information a modifier */}
+			<ScrollView showsVerticalScrollIndicator={false}>
+				<View style={styles.modificationContent}>
+					<LabelCampoo style={styles.nameLabel}>Prends en photo le justificatif d’association !</LabelCampoo>
 
-        const token = await _retrieveData();
-        // console.log(token);
+					<ButtonGallery onChange={() => setDocu()} value={props.docu} errorText={errorMessage} />
 
+					{/* <InputBioProfil placeholder='Dis nous les information de ton association' onChangeText={(text) => setDocu(text)} value={props.docu} errorText={errorMessage}  /> */}
 
-Promise.all([
+					<Text style={styles.infoInput}>Pour plus d'iformations sur les documents à transmettre visite notre FAQ</Text>
 
-    fetch("https://campoo.fr/api/association/proof", {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                "Authorization": `Bearer ${token}`
+					{/* Nom de l'asso */}
+					<LabelCampoo style={styles.nameLabel}>Quel est le nom de l’asso ??</LabelCampoo>
 
-            },
-            body: JSON.stringify({
+					<InputModifProfil placeholder="ex: BDE Staps" type="name" onChangeText={(text) => setName(text)} value={props.name} errorText={errorMessage} />
 
-                
-                'proof': docu,
+					{/* Nom sur campoo ou changement en adresse mail */}
+					<LabelCampoo style={styles.nameLabel}>Nom sur Campoo </LabelCampoo>
 
+					<InputModifProfil placeholder="ex: BDE Staps UGE" onChangeText={(text) => setCampooName(text)} value={props.campoo_name} errorText={errorMessage} />
 
-            })
-        }),
-        fetch("https://campoo.fr/api/association/name", {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                "Authorization": `Bearer ${token}`
+					{/* Bio */}
+					<LabelCampoo style={styles.nameLabel}>Biographie</LabelCampoo>
 
-            },
-            body: JSON.stringify({
+					<InputBioProfil placeholder="Decris ton association en quelques mots" onChangeText={(text) => setBio(text)} value={props.bio} errorText={errorMessage} />
 
-                'name': name,
-                
+					{/* Input Option */}
+					<LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo>
 
+					<PickerBatiments onValueChange={() => setBatiments()} value={props.batiments} errorText={errorMessage} />
 
-            })
-        }),
-        fetch("https://campoo.fr/api/association/campoo_name", {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                "Authorization": `Bearer ${token}`
-
-            },
-            body: JSON.stringify({
-
-                
-                'campoo_name': campoo_name,
-
-
-            })
-        }),
-        fetch("https://campoo.fr/api/association/biography", {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                "Authorization": `Bearer ${token}`
-
-            },
-            body: JSON.stringify({
-
-                
-                'biography': bio,
-
-
-            })
-        }),fetch("https://campoo.fr/api/association/bulding", {
-            method: 'POST',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                "Authorization": `Bearer ${token}`
-
-            },
-            body: JSON.stringify({
-
-                
-                'bulding': batiments,
-
-
-            })
-        })
-    ])      
-            .then((response) => response.json())
-            .then((Message) => {
-
-                console.log(Message);
-                if (Message.Status === 'Success') {
-
-
-                    // props.navigation.navigate('UserProfil');
-
-
-
-                } else {
-
-                      setErrorMessage(Message.Message.proof[0]);
-
-                }
-            })
-            .catch((error) => {
-            //     // console.error(error);
-             });
-
-
-    }
-
-
-
-    return (
-        // contenu generale
-
-        <SafeAreaView style={styles.container}>
-
-            {/* La navigation du haut */}
-            <View style={styles.topNav}>
-
-                {/*Le onPress a mettre  */}
-                <TouchableOpacity>
-                    <ArrowLSvg onPress={() => navigation.goBack()} />
-                </TouchableOpacity>
-
-                <View style={styles.namePage}>
-                    <Text style={styles.secondTitle}>Réglage</Text>
-                </View>
-
-            </View>
-
-            {/* Contenaire des information a modifier */}
-            <ScrollView showsVerticalScrollIndicator={false} >
-
-                <View style={styles.modificationContent}>
-
-                    <LabelCampoo style={styles.nameLabel}>Prends en photo le justificatif d’association !</LabelCampoo>
-
-
-                    <ButtonGallery onChange={() => setDocu()} value={props.docu} errorText={errorMessage}/>
-
-                    {/* <InputBioProfil placeholder='Dis nous les information de ton association' onChangeText={(text) => setDocu(text)} value={props.docu} errorText={errorMessage}  /> */}
-
-                    <Text style={styles.infoInput}>Pour plus d'iformations sur les documents à transmettre visite notre FAQ</Text>
-
-                    {/* Nom de l'asso */}
-                    <LabelCampoo style={styles.nameLabel}>Quel est le nom de l’asso ??</LabelCampoo>
-
-
-                    <InputModifProfil placeholder='ex: BDE Staps' type='name' onChangeText={(text) => setName(text)} value={props.name} errorText={errorMessage} />
-
-                    {/* Nom sur campoo ou changement en adresse mail */}
-                    <LabelCampoo style={styles.nameLabel}>Nom sur Campoo </LabelCampoo>
-
-
-                    <InputModifProfil placeholder='ex: BDE Staps UGE' onChangeText={(text) =>  setCampooName(text)} value={props.campoo_name} errorText={errorMessage}/>
-
-                    {/* Bio */}
-                    <LabelCampoo style={styles.nameLabel}>Biographie</LabelCampoo>
-
-                    <InputBioProfil placeholder='Decris ton association en quelques mots' onChangeText={(text) =>  setBio(text)} value={props.bio} errorText={errorMessage}/>
-
-
-                    {/* Input Option */}
-                    <LabelCampoo style={styles.nameLabel}>Bâtiment Universitaire :</LabelCampoo>
-
-                    <PickerBatiments  onValueChange={() =>  setBatiments()} value={props.batiments} errorText={errorMessage}/>
-
-                    {/* Validation */}
-                    <View style={styles.btnContainer} >
-                        <ButtonCampoo onPress={onSubmit}> Valide </ButtonCampoo>
-                    </View>
-
-
-                </View>
-            </ScrollView>
-        </SafeAreaView>
-
-
-
-
-    );
-
-};
-
+					{/* Validation */}
+					<View style={styles.btnContainer}>
+						<ButtonCampoo onPress={onSubmit}> Valide </ButtonCampoo>
+					</View>
+				</View>
+			</ScrollView>
+		</SafeAreaView>
+	);
+}
 
 const styles = StyleSheet.create({
+	container: {
+		flex: 1,
+		paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 50,
+		position: "relative",
+		flexDirection: "column",
+		justifyContent: "center",
+		backgroundColor: "#fff",
+	},
+	colorViolet: {
+		color: "#4D3D64",
+	},
+	profilModificationContainer: {
+		flex: 0,
+		height: "25%",
+		width: "100%",
+		// flexDirection: 'row',
+		alignItems: "center",
+		justifyContent: "center",
+		backgroundColor: "white",
+	},
+	profilPics: {
+		width: 130,
+		height: 130,
+		borderRadius: 130 / 2,
+	},
+	modificationContent: {
+		flex: 1,
+		justifyContent: "flex-start",
+		width: "100%",
+		paddingHorizontal: "5%",
+	},
+	nameLabel: {
+		fontSize: 30,
+		marginTop: 20,
+		marginBottom: 5,
+		fontWeight: "bold",
+	},
 
-    container: {
+	infoInput: {
+		fontSize: 12,
+		flex: 0,
+		marginTop: 10,
+		alignSelf: "flex-end",
+		marginRight: 5,
+		color: "#4D3D64",
+	},
+	btnContainer: {
+		flex: 2,
+		width: "100%",
+		marginVertical: 20,
+		justifyContent: "center",
+		alignItems: "center",
+	},
+	namePage: {
+		flex: 0,
+		justifyContent: "center",
+		width: "100%",
+		flexDirection: "row",
+	},
+	secondTitle: {
+		fontSize: 20,
 
-        flex: 1,
-        paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 50,
-        position: 'relative',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        backgroundColor: '#fff',
+		fontWeight: "bold",
+		color: "#4D3D64",
+	},
+	topNav: {
+		flex: 0,
+		paddingHorizontal: "5%",
+		justifyContent: "center",
+		marginTop: "5%",
 
-
-    },
-    colorViolet: {
-        color: '#4D3D64',
-    },
-    profilModificationContainer: {
-        flex: 0,
-        height: '25%',
-        width: '100%',
-        // flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'white',
-
-    },
-    profilPics: {
-        width: 130,
-        height: 130,
-        borderRadius: 130 / 2,
-    },
-    modificationContent: {
-        flex: 1,
-        justifyContent: 'flex-start',
-        width: '100%',
-        paddingHorizontal: '5%',
-    },
-    nameLabel: {
-
-        fontSize: 30,
-        marginTop: 20,
-        marginBottom: 5,
-        fontWeight: 'bold',
-    },
-
-    infoInput: {
-        fontSize: 12,
-        flex: 0,
-        marginTop: 10,
-        alignSelf: "flex-end",
-        marginRight: 5,
-        color: '#4D3D64'
-    },
-    btnContainer: {
-        flex: 2,
-        width: '100%',
-        marginVertical: 20,
-        justifyContent: 'center',
-        alignItems: 'center',
-
-    },
-    namePage: {
-        flex: 0,
-        justifyContent: 'center',
-        width: '100%',
-        flexDirection: 'row',
-
-    },
-    secondTitle: {
-
-        fontSize: 20,
-
-        fontWeight: 'bold',
-        color: '#4D3D64',
-
-    },
-    topNav: {
-        flex: 0,
-        paddingHorizontal: '5%',
-        justifyContent: 'center',
-        marginTop: '5%',
-
-        width: '100%',
-        height: 40,
-        flexDirection: 'row',
-        borderBottomWidth: 2,
-        borderColor: 'rgba(158, 150, 150, .3)',
-
-    },
-
-
-
+		width: "100%",
+		height: 40,
+		flexDirection: "row",
+		borderBottomWidth: 2,
+		borderColor: "rgba(158, 150, 150, .3)",
+	},
 });
