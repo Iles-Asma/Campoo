@@ -173,7 +173,7 @@ export default class App extends React.Component {
 			//<AssocRequest />
 			// <UserModificationPage />
 			//
-			// <AssocModificationPage/>
+			//<AssocModificationPage />
 			// <SettingPage />
 			// <ChangeName />
 			//

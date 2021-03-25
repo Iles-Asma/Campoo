@@ -34,7 +34,7 @@ export default function MdpOResetCampoo(props) {
 			headers: {
 				Accept: "application/json",
 				"Content-Type": "application/json",
-				Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1MjY3ODMsImV4cCI6MTYxNjUzMDM4MywibmJmIjoxNjE2NTI2NzgzLCJqdGkiOiJFMndGZmduWWNMY2RNSGRtIiwic3ViIjozMCwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.v7p72loQnCD88260Jg5ebPQQ9FNtVoHA2mWCjHnjsog`,
+				Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY2NjY3OTksImV4cCI6MTYxNjY3MDM5OSwibmJmIjoxNjE2NjY2Nzk5LCJqdGkiOiJMM1ZxQld4U3VUTThxUDVEIiwic3ViIjo0NSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.tOG_x_r-3RiTAtXbF3vzpKc0NoNkjKNr0BjqHNXYdpY`,
 			},
 			body: JSON.stringify({
 				password: password,
@@ -52,7 +52,7 @@ export default function MdpOResetCampoo(props) {
 						headers: {
 							Accept: "application/json",
 							"Content-Type": "application/json",
-							Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1MjY3ODMsImV4cCI6MTYxNjUzMDM4MywibmJmIjoxNjE2NTI2NzgzLCJqdGkiOiJFMndGZmduWWNMY2RNSGRtIiwic3ViIjozMCwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.v7p72loQnCD88260Jg5ebPQQ9FNtVoHA2mWCjHnjsog`,
+							Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY2NjY3OTksImV4cCI6MTYxNjY3MDM5OSwibmJmIjoxNjE2NjY2Nzk5LCJqdGkiOiJMM1ZxQld4U3VUTThxUDVEIiwic3ViIjo0NSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.tOG_x_r-3RiTAtXbF3vzpKc0NoNkjKNr0BjqHNXYdpY`,
 						},
 					})
 						.then((response) => response.json())
@@ -67,7 +67,7 @@ export default function MdpOResetCampoo(props) {
 						});
 				} else {
 					setErrorMessage(Message.Message.password[0]);
-					setErrorMessages(Message.Message.building_id[0]);
+					setErrorMessages(Message.Message[0]);
 				}
 			})
 			.catch((error) => {
