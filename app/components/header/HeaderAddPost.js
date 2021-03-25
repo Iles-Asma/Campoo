@@ -10,7 +10,7 @@ export default class HeaderAddPost extends React.Component {
 
 			<View style={styles.headerAddPost}>
 
-				<TouchableOpacity onPress={this.props.onPress}>
+				<TouchableOpacity onPress={this.props.onReturn}>
 					<ArrowLSvg />
 				</TouchableOpacity>
 

@@ -118,11 +118,10 @@ export default class App extends React.Component {
 			// pour affecter le store a l énsemble de l'application 
 
 			// <Provider store={store}>
+			// <AssosAddPost />
 
 
-			// <NavigationContainer >
-			//   <Navigations />
-			// </NavigationContainer>
+
 
 			// <PickerDob />
 

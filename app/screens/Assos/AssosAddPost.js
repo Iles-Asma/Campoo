@@ -1,18 +1,86 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, SafeAreaView, StatusBar, Platform } from 'react-native'
+import AddImage from '../../components/button/AddImage'
 import LabelCampoo from '../../components/LabelCampoo';
 import TextInputAssos from '../../components/input/TextInputAssos';
 import HeaderAddPost from '../../components/header/HeaderAddPost'
 
 
-export default function AssosAddPost({ navigation }) {
+
+export default function AssosAddPost(props) {
+
+	const [postText, setPostText] = useState('');
+	const [postImage, setPostImage] = useState('');
+	const [errorMessage, setErrorMessage] = useState('');
+
+
+	const _retrieveData = async () => {
+		try {
+			const value = await AsyncStorage.getItem('token');
+			if (value !== null) {
+				// We have data!!
+				return value;
+			}
+		} catch (error) {
+
+			// Error retrieving data
+		}
+	};
+
+
+
+
+	const onSubmit = async () => {
+		const token = await _retrieveData();
+
+
+
+		fetch("https://campoo.fr/api/post", {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+				"Authorization": `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1OTU5NTMsImV4cCI6MTYxNjU5OTU1MywibmJmIjoxNjE2NTk1OTUzLCJqdGkiOiJsZGZtVDhnMVdZVjE0bHJ4Iiwic3ViIjozMiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.j-1dbogU82A0sSxrxP6LYjBiVxY0fUWEzq2XnilbaFM`
+
+			},
+			body: JSON.stringify({
+
+				'postText': postText,
+				'postImage': postImage,
+
+			})
+		})
+			// response.json()
+			.then((response) => response.json())
+			.then((Message) => {
+
+				console.log(Message);
+				if (Message.Status === 'Success') {
+
+					props.navigation.navigate('AssosFeedCampoo');
+
+				} else {
+
+					setErrorMessage(Message.Message.post[0]);
+
+				}
+			})
+			.catch((error) => {
+				// console.error(error);
+			});
+	}
+
+
 
 	return (
 		<SafeAreaView style={styles.container}>
 
 
 			{/* header du screen */}
-			<HeaderAddPost onPress={() => navigation.goBack()} />
+			<HeaderAddPost
+				onReturn={() => props.navigation.goBack()}
+				onPress={onSubmit}
+			/>
 
 			{/* titre de la zone de texte */}
 
@@ -20,7 +88,24 @@ export default function AssosAddPost({ navigation }) {
 
 			{/* zone d'ecriture de texte */}
 
-			<TextInputAssos limitCaracter="limit de xxx caracter" />
+			<TextInputAssos
+				onChangeText={(text) => setPostText(text)}
+				// compteur de caracter 
+				limit={`${postText.length}/300`}
+				value={props.postText}
+				errorText={errorMessage}
+			>
+
+				{/* bouton acces a la galerie photo du telephone  */}
+
+				<AddImage onChange={(value) => setPostImage(value)} value={props.postImage} />
+
+
+			</TextInputAssos>
+
+
+
+
 
 		</SafeAreaView>
 
@@ -33,7 +118,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		//  pour detecter la platform
-		paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 1,
+		paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 40,
 		flexDirection: 'column',
 		justifyContent: 'center',
 		backgroundColor: '#ffffff',
@@ -42,6 +127,12 @@ const styles = StyleSheet.create({
 
 
 	},
+	caracterLimit: {
+
+		textAlign: 'right',
+
+	},
+
 
 	headerAddPost: {
 

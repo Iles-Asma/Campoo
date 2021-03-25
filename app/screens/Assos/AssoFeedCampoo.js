@@ -1,13 +1,13 @@
 import React from 'react'
 import { StyleSheet, View, ScrollView, SafeAreaView, StatusBar, TouchableOpacity } from 'react-native'
+
 import PostCampoo from '../../components/PostCampoo';
 import AddButton from '../../../assets/svg/AddButton'
 
-export default function AssoFeedCampoo() {
+export default function AssoFeedCampoo({ navigation }) {
 
 	return (
 		<SafeAreaView style={styles.container}>
-
 
 			<ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
@@ -23,7 +23,7 @@ export default function AssoFeedCampoo() {
 				</View>
 
 			</ScrollView>
-			<TouchableOpacity style={styles.addButton}>
+			<TouchableOpacity style={styles.addButton} onPress={() => navigation.push('AssosAddPost')}>
 				<AddButton />
 			</TouchableOpacity>
 

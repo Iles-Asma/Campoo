@@ -184,7 +184,7 @@ export function Navigator() {
 		>
 			<Tab.Screen
 				name="accueil"
-				component={HomeStackScreen}
+				component={AssosHomeStackScreen}
 				options={{
 					// enleve le text sous l'icon dans la BOTTOM NAV
 					tabBarLabel: () => { return null },

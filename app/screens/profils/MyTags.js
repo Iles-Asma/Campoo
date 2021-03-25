@@ -11,7 +11,14 @@ export default function MyTags({ navigation }) {
 
 		<SafeAreaView style={styles.container}>
 			{/* Titre de l'onglet */}
+
+
+
+
 			<TitlePage>Tes tags</TitlePage>
+
+
+
 
 			<View style={styles.myTagsContainer} >
 

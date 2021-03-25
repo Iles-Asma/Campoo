@@ -86,7 +86,8 @@ export default function BatSignupCampoo(props) {
 				<PickerBatiments
 					style={styles.InputView}
 					value={props.building_id}
-					onValueChange={(value) => { setBuilding_i(value) }} />
+					onValueChange={(value) => { setBuilding_id(value) }}
+					errorText={errorMessage} />
 				<ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>
 				<SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>retour</SecondaryButtonCampoo>
 
