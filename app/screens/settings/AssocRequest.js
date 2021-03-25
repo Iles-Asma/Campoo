@@ -41,7 +41,7 @@ export default function AssocRequest(props) {
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json",
-					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1MjMxNTMsImV4cCI6MTYxNjUyNjc1MywibmJmIjoxNjE2NTIzMTUzLCJqdGkiOiJXY29ITXhVOHJxcXdWRExGIiwic3ViIjoyOSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0WTrJ36xYBWGR8-Kk5UKUqmL2oRtP2a38__S-kV9tp8`,
+					Authorization:`Bearer ${token}`,
 				},
 				body: JSON.stringify({
 					proof: docu,
@@ -52,7 +52,7 @@ export default function AssocRequest(props) {
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json",
-					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1MjMxNTMsImV4cCI6MTYxNjUyNjc1MywibmJmIjoxNjE2NTIzMTUzLCJqdGkiOiJXY29ITXhVOHJxcXdWRExGIiwic3ViIjoyOSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0WTrJ36xYBWGR8-Kk5UKUqmL2oRtP2a38__S-kV9tp8`,
+					Authorization: `Bearer ${token}`,
 				},
 				body: JSON.stringify({
 					name: name,
@@ -63,7 +63,7 @@ export default function AssocRequest(props) {
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json",
-					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1MjMxNTMsImV4cCI6MTYxNjUyNjc1MywibmJmIjoxNjE2NTIzMTUzLCJqdGkiOiJXY29ITXhVOHJxcXdWRExGIiwic3ViIjoyOSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0WTrJ36xYBWGR8-Kk5UKUqmL2oRtP2a38__S-kV9tp8`,
+					Authorization: `Bearer ${token}`,
 				},
 				body: JSON.stringify({
 					campoo_name: campoo_name,
@@ -74,7 +74,7 @@ export default function AssocRequest(props) {
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json",
-					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1MjMxNTMsImV4cCI6MTYxNjUyNjc1MywibmJmIjoxNjE2NTIzMTUzLCJqdGkiOiJXY29ITXhVOHJxcXdWRExGIiwic3ViIjoyOSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0WTrJ36xYBWGR8-Kk5UKUqmL2oRtP2a38__S-kV9tp8`,
+					Authorization: `Bearer ${token}`,
 				},
 				body: JSON.stringify({
 					biography: bio,
@@ -85,7 +85,7 @@ export default function AssocRequest(props) {
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json",
-					Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1MjMxNTMsImV4cCI6MTYxNjUyNjc1MywibmJmIjoxNjE2NTIzMTUzLCJqdGkiOiJXY29ITXhVOHJxcXdWRExGIiwic3ViIjoyOSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.0WTrJ36xYBWGR8-Kk5UKUqmL2oRtP2a38__S-kV9tp8`,
+					Authorization: `Bearer ${token}`,
 				},
 				body: JSON.stringify({
 					bulding: batiments,

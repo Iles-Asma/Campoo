@@ -11,6 +11,20 @@ import Tags from '../../components/Tags';
 
 export default function UserProfil({ navigation }) {
 
+	const _retrieveData = async () => {
+		try {
+			const value = await AsyncStorage.getItem('users');
+			if (value !== null) {
+				// We have data!!
+				console.log(value);
+				return value;
+			}
+		} catch (error) {
+
+			// Error retrieving data
+		}
+	};
+
 
     return (
 

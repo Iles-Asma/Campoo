@@ -34,7 +34,7 @@ export default function MdpOResetCampoo(props) {
 			headers: {
 				Accept: "application/json",
 				"Content-Type": "application/json",
-				Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY2NjY3OTksImV4cCI6MTYxNjY3MDM5OSwibmJmIjoxNjE2NjY2Nzk5LCJqdGkiOiJMM1ZxQld4U3VUTThxUDVEIiwic3ViIjo0NSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.tOG_x_r-3RiTAtXbF3vzpKc0NoNkjKNr0BjqHNXYdpY`,
+				Authorization: `Bearer ${token}`,
 			},
 			body: JSON.stringify({
 				password: password,
@@ -52,7 +52,7 @@ export default function MdpOResetCampoo(props) {
 						headers: {
 							Accept: "application/json",
 							"Content-Type": "application/json",
-							Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY2NjY3OTksImV4cCI6MTYxNjY3MDM5OSwibmJmIjoxNjE2NjY2Nzk5LCJqdGkiOiJMM1ZxQld4U3VUTThxUDVEIiwic3ViIjo0NSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.tOG_x_r-3RiTAtXbF3vzpKc0NoNkjKNr0BjqHNXYdpY`,
+							Authorization: `Bearer ${token}`,
 						},
 					})
 						.then((response) => response.json())
