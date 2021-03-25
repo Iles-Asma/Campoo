@@ -87,6 +87,7 @@ export function AssosHomeStackScreen() {
 		<AssosHomeStack.Navigator>
 			<AssosHomeStack.Screen name="AssoFeedCampoo" component={AssoFeedCampoo} options={{ headerShown: false }} />
 			<AssosHomeStack.Screen name="AssosAddPost" component={AssosAddPost} options={{ headerShown: false }} />
+
 			{/* <HomeStack.Screen name="CommentCampoo" component={CommentCampoo} options={{ headerShown: false }} /> */}
 		</AssosHomeStack.Navigator>
 	);

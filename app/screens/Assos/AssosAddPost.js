@@ -40,13 +40,13 @@ export default function AssosAddPost(props) {
 			headers: {
 				'Accept': 'application/json',
 				'Content-Type': 'application/json',
-				"Authorization": `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY1OTU5NTMsImV4cCI6MTYxNjU5OTU1MywibmJmIjoxNjE2NTk1OTUzLCJqdGkiOiJsZGZtVDhnMVdZVjE0bHJ4Iiwic3ViIjozMiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.j-1dbogU82A0sSxrxP6LYjBiVxY0fUWEzq2XnilbaFM`
+				"Authorization": `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY2NjcxMDUsImV4cCI6MTYxNjY3MDcwNSwibmJmIjoxNjE2NjY3MTA1LCJqdGkiOiJxU05kVGc1aWhhbjBXWENNIiwic3ViIjo0NywicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TLWxPA-_TDBVadBbetb94czi3r0O98sbSPmW6SE5U4`
 
 			},
 			body: JSON.stringify({
 
-				'postText': postText,
-				'postImage': postImage,
+				'content': postText,
+				'image': null,
 
 			})
 		})
@@ -57,7 +57,7 @@ export default function AssosAddPost(props) {
 				console.log(Message);
 				if (Message.Status === 'Success') {
 
-					props.navigation.navigate('AssosFeedCampoo');
+					props.navigation.goBack('AssosFeedCampoo');
 
 				} else {
 
@@ -132,7 +132,6 @@ const styles = StyleSheet.create({
 		textAlign: 'right',
 
 	},
-
 
 	headerAddPost: {
 

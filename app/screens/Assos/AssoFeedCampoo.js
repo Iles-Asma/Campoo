@@ -6,6 +6,48 @@ import AddButton from '../../../assets/svg/AddButton'
 
 export default function AssoFeedCampoo({ navigation }) {
 
+
+
+	fetch("https://campoo.fr/api/account/building_id", {
+		method: 'PATCH',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json',
+
+		},
+
+	})
+		// response.json()
+		.then((response) => response.json())
+		.then((Message) => {
+
+			console.log(Message);
+			if (Message.Status === 'Success') {
+
+				props.navigation.navigate('MdpSignupCampoo');
+
+			} else {
+
+				setErrorMessage(Message.Message.building[0]);
+
+			}
+		})
+		.catch((error) => {
+			// console.error(error);
+		});
+
+
+
+
+
+
+
+
+
+
+
+
+
 	return (
 		<SafeAreaView style={styles.container}>
 
@@ -14,7 +56,7 @@ export default function AssoFeedCampoo({ navigation }) {
 				<View style={styles.containerAssoFeed}>
 
 					<PostCampoo
-						name='Lapin Associe'
+						name=''
 						description='la description du post' />
 					<PostCampoo />
 					<PostCampoo />
@@ -44,6 +86,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
+		backgroundColor: 'white',
 
 	},
 
