@@ -14,6 +14,7 @@ export default function AssosAddPost(props) {
 	const [errorMessage, setErrorMessage] = useState('');
 
 
+	// pour recuperer le token stocker on locale sur le télephone
 	const _retrieveData = async () => {
 		try {
 			const value = await AsyncStorage.getItem('token');
@@ -29,7 +30,7 @@ export default function AssosAddPost(props) {
 
 
 
-
+	//  envoie une requete pour cree un post
 	const onSubmit = async () => {
 		const token = await _retrieveData();
 
@@ -40,7 +41,7 @@ export default function AssosAddPost(props) {
 			headers: {
 				'Accept': 'application/json',
 				'Content-Type': 'application/json',
-				"Authorization": `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvY2FtcG9vLmZyXC9hcGlcL2FjY291bnQiLCJpYXQiOjE2MTY2NjcxMDUsImV4cCI6MTYxNjY3MDcwNSwibmJmIjoxNjE2NjY3MTA1LCJqdGkiOiJxU05kVGc1aWhhbjBXWENNIiwic3ViIjo0NywicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.4TLWxPA-_TDBVadBbetb94czi3r0O98sbSPmW6SE5U4`
+				"Authorization": `Bearer ${token}`
 
 			},
 			body: JSON.stringify({
@@ -55,11 +56,14 @@ export default function AssosAddPost(props) {
 			.then((Message) => {
 
 				console.log(Message);
+
+				// renvoie a l'écran affichant les posts si Success
 				if (Message.Status === 'Success') {
 
 					props.navigation.goBack('AssosFeedCampoo');
 
 				} else {
+
 
 					setErrorMessage(Message.Message.post[0]);
 
@@ -75,7 +79,6 @@ export default function AssosAddPost(props) {
 	return (
 		<SafeAreaView style={styles.container}>
 
-
 			{/* header du screen */}
 			<HeaderAddPost
 				onReturn={() => props.navigation.goBack()}
@@ -90,7 +93,7 @@ export default function AssosAddPost(props) {
 
 			<TextInputAssos
 				onChangeText={(text) => setPostText(text)}
-				// compteur de caracter 
+				// compteur de caractère 
 				limit={`${postText.length}/300`}
 				value={props.postText}
 				errorText={errorMessage}

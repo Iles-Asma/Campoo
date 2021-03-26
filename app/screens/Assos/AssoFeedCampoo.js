@@ -4,12 +4,15 @@ import { StyleSheet, View, ScrollView, SafeAreaView, StatusBar, TouchableOpacity
 import PostCampoo from '../../components/PostCampoo';
 import AddButton from '../../../assets/svg/AddButton'
 
+
+// écran affichant les posts à la manière d'instagramm pour un compte associé
+
 export default function AssoFeedCampoo({ navigation }) {
 
 
-
-	fetch("https://campoo.fr/api/account/building_id", {
-		method: 'PATCH',
+	// requête a l'API DE campoo recuperant les posts en BDD
+	fetch("https://campoo.fr/api/post", {
+		method: 'GET',
 		headers: {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json',
@@ -17,35 +20,23 @@ export default function AssoFeedCampoo({ navigation }) {
 		},
 
 	})
-		// response.json()
+
 		.then((response) => response.json())
 		.then((Message) => {
 
 			console.log(Message);
 			if (Message.Status === 'Success') {
 
-				props.navigation.navigate('MdpSignupCampoo');
 
 			} else {
 
-				setErrorMessage(Message.Message.building[0]);
+
 
 			}
 		})
 		.catch((error) => {
 			// console.error(error);
 		});
-
-
-
-
-
-
-
-
-
-
-
 
 
 	return (

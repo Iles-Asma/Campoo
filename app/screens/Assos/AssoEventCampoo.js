@@ -4,7 +4,9 @@ import AddButton from '../../../assets/svg/AddButton'
 import ArrowLSvg from '../../components/ArrowLSvg'
 import EventItemCampoo from '../../components/EventItemCampoo'
 
-export default function AssoEventCampoo() {
+// écran affichant les evenement pour un compte associé 
+
+export default function AssoEventCampoo(props) {
 
 	return (
 
@@ -14,6 +16,8 @@ export default function AssoEventCampoo() {
 
 				<View style={styles.containerEvent}>
 
+
+					{/* composant contenant un evement  */}
 					<EventItemCampoo
 						image={require("../../../assets/images/imagePost-Test.png")}
 
@@ -74,12 +78,13 @@ export default function AssoEventCampoo() {
 			{/* <View style={styles.addEventAssos}> */}
 
 
-			<TouchableOpacity style={styles.arrowLeft}>
+			<TouchableOpacity style={styles.arrowLeft} onPress={() => props.navigation.goBack()}>
 				<ArrowLSvg />
 			</TouchableOpacity>
 
-			<TouchableOpacity style={styles.addButton}>
-				<AddButton couleur="red" />
+
+			<TouchableOpacity style={styles.addButton} onPress={() => props.navigation.navigate('CreateEventCampoo')} >
+				<AddButton />
 			</TouchableOpacity>
 
 			{/* </View> */}

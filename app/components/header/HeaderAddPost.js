@@ -3,7 +3,7 @@ import { StyleSheet, View, TouchableOpacity } from 'react-native'
 import ArrowLSvg from '../ArrowLSvg';
 import SendButton from '../../../assets/svg/SendButton'
 
-
+// HEADER CONTENANT BOUTON RETOUR ET ENVOIE POUR L'ECRAN DE CREATION DE POST
 export default class HeaderAddPost extends React.Component {
 	render() {
 		return (

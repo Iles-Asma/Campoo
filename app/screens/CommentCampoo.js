@@ -12,67 +12,43 @@ export default function CommentCampoo({ navigation }) {
 
 
 
-    return (
+	return (
 
 
 
+		// zone de securite de pour téléphone à encoche
+
+		<SafeAreaView style={styles.container}>
+			<StatusBar style='auto' />
+
+			<HeaderReturn onPress={() => navigation.goBack()} />
+
+			{/* element qui permet le scroll */}
+			<ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
 
-        <SafeAreaView style={styles.container}>
-            <StatusBar style='auto' />
+				<PostCampoo name='Lapin Associe'
+				/>
+				{/* commentaire utilisateur */}
+				<UserCommentCampoo
 
-            <HeaderReturn onPress={() => navigation.goBack()} />
-
-
-
-
-
-
-            <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
-
-                <PostCampoo name='Lapin Associe'
-                />
+					name='Lapin Associe'
+					comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
 
 
-
-                <UserCommentCampoo
-
-                    name='Lapin Associe'
-                    comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-                <UserCommentCampoo
-                    name='Lapin Associe'
-                    comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+			</ScrollView>
 
 
-                <UserCommentCampoo
-                    name='Lapin Associe'
-                    comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+			{/* input pour ecrire un commentaire */}
+			{/* fonctionne très bien sur Android*/}
+			{/* sur iphone le clavier passe au dessus de l'input  */}
+			<InputCommentCampoo />
 
 
-                <UserCommentCampoo
-                    name='Lapin Associe'
-                    comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-
-                <UserCommentCampoo
-                    comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-
-                <UserCommentCampoo
-                    comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+		</SafeAreaView>
 
 
-
-
-            </ScrollView>
-
-
-
-            <InputCommentCampoo />
-
-
-        </SafeAreaView>
-
-
-    );
+	);
 
 };
 
@@ -81,24 +57,24 @@ const styles = StyleSheet.create({
 
 
 
-    container: {
-        flex: 1,
-        //  pour detecter la platform
-        paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 30,
+	container: {
+		flex: 1,
+		//  pour detecter la platform 
+		paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 30,
 
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#fff',
+		flexDirection: 'column',
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor: '#fff',
 
 
-    },
+	},
 
-    scrollContainer: {
-        width: '90%',
-        paddingTop: 10,
+	scrollContainer: {
+		width: '90%',
+		paddingTop: 10,
 
-    },
+	},
 
 
 

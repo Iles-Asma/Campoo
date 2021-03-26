@@ -5,7 +5,7 @@ import { CAMPOO } from "../../../assets/themes/ThemeCampoo";
 import ArrowLSvg from "../../components/ArrowLSvg";
 import ExtraLargeBtn from "../../components/button/ExtraLargeBtn";
 
-export default function DeleteAccount(props, { navigation }) {
+export default function DeleteAccount(props) {
 	const _retrieveData = async () => {
 		try {
 			const value = await AsyncStorage.getItem("token");
@@ -22,6 +22,7 @@ export default function DeleteAccount(props, { navigation }) {
 		const token = await _retrieveData();
 
 		// console.log(token);
+
 
 		fetch("https://campoo.fr/api/account/", {
 			method: "DELETE",
@@ -41,7 +42,7 @@ export default function DeleteAccount(props, { navigation }) {
 				if (Message.Status === "Success") {
 					props.navigation.push("ScreenLoginCampoo");
 				} else {
-					setErrorMessage(Message.Message.code[0]);
+					setErrorMessage(Message.Message.delete[0]);
 				}
 			})
 			.catch((error) => {
