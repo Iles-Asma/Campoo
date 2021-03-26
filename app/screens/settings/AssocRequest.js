@@ -29,12 +29,13 @@ export default function AssocRequest(props) {
 			// Error retrieving data
 		}
 	};
+
 	// fonction qui fait une requete  en post et qui renvoie une reponse d'erreur  au onPress
 	const onSubmit = async () => {
 		const token = await _retrieveData();
-		// console.log(token);
+		console.log(token);
 
-		Promise.all([
+		await Promise.all([
 			fetch("https://campoo.fr/api/association/proof", {
 				method: "POST",
 				headers: {
@@ -91,17 +92,19 @@ export default function AssocRequest(props) {
 				}),
 			}),
 		])
-			.then((response) => response.json())
+			.then((responses) => Promise.all(responses.map((rep) => rep.json())))
 			.then((Message) => {
 				console.log(Message);
 				if (Message.Status === "Success") {
+					console.log("Xas");
 					// props.navigation.navigate('UserProfil');
 				} else {
-					setErrorMessage(Message.Message.proof[0]);
+					setErrorMessage(Message.Message[0]);
 				}
 			})
 			.catch((error) => {
-				//     // console.error(error);
+				//console.error(error);
+				//console.log("erreur");
 			});
 	};
 
