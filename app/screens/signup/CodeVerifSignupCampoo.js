@@ -12,7 +12,17 @@ export default function CodeVerifSignupCampoo(props) {
 	const [code, setCode] = useState('');
 
 	const [errorMessage, setErrorMessage] = useState('');
-	console.log(code);
+
+	const userStore = async (Message) => {
+
+		try {
+		    await AsyncStorage.setItem('user', Message.Data);
+		} catch (error) {
+		    console.log('AsyncStorage error: ' + error.message);
+		}
+  
+  
+	 }
 
 	const _retrieveData = async () => {
 		try {
@@ -32,7 +42,6 @@ export default function CodeVerifSignupCampoo(props) {
 
 
 		const token = await _retrieveData();
-
 		// console.log(token);
 
 
@@ -56,7 +65,7 @@ export default function CodeVerifSignupCampoo(props) {
 
 				console.log(Message);
 				if (Message.Status === 'Success') {
-
+                         userStore(Message);
 					props.navigation.push('ScreenLoginCampoo');
 
 				} else {

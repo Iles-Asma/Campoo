@@ -4,6 +4,7 @@ import { StyleSheet, TouchableOpacity, StatusBar, SafeAreaView, ScrollView, View
 import Tags from '../../components/Tags';
 
 export default function ChooseTags({ route, navigation }) {
+
 	const CATEGORY_ID = route.params.category_id;
 	const [tags,setTags] = useState([]);
 
