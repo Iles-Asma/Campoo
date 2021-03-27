@@ -9,7 +9,6 @@ import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 export default function NameSignupCampoo(props) {
     const [name, setName] = useState('');
-
     const [errorMessage, setErrorMessage] = useState('');
 
     const _retrieveData = async () => {
@@ -87,6 +86,7 @@ export default function NameSignupCampoo(props) {
             <View style={styles.nameView}>
                 <LabelCampoo style={styles.nameLabel}>Nom</LabelCampoo>
                 <Text style={styles.textName}>À qui Baloo a-il affaire ?</Text>
+
                 <InputCampooSignup style={styles.InputView} type='name' onChangeText={(text) => setName(text)} value={props.name} errorText={errorMessage} />
 
                 <ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>

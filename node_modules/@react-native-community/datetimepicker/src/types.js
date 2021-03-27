@@ -119,6 +119,11 @@ export type IOSNativeProps = $ReadOnly<{|
    * Sets the preferredDatePickerStyle for picker
    */
   display?: IOSDisplay,
+
+  /**
+   * Is this picker disabled?
+   */
+  disabled?: boolean,
 |}>;
 
 export type AndroidNativeProps = $ReadOnly<{|
@@ -136,6 +141,14 @@ export type AndroidNativeProps = $ReadOnly<{|
    */
   display: Display,
 
+  /**
+   * Timezone offset in minutes.
+   *
+   * By default, the date picker will use the device's timezone. With this
+   * parameter, it is possible to force a certain timezone offset. For
+   * instance, to show times in Pacific Standard Time, pass -7 * 60.
+   */
+  timeZoneOffsetInMinutes?: ?number,
   /**
    * The interval at which minutes can be selected.
    */
