@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import PickerBatiments from "../../components/PickerBatiments"
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
@@ -9,7 +9,7 @@ import LogoCampoo from '../../../assets/svg/LogoCampoo'
 
 export default function BatSignupCampoo(props) {
 
-	const [building_id, setBuilding_id] = useState('');
+	const [building_id, setBuildingId] = useState('');
 	const [errorMessage, setErrorMessage] = useState('');
 
 	const _retrieveData = async () => {
@@ -27,13 +27,10 @@ export default function BatSignupCampoo(props) {
 
 
 	const onSubmit = async () => {
-
+		
 		const token = await _retrieveData();
-		// console.log(token);
 
-
-
-		fetch("https://campoo.fr/api/account/building_id", 'building_id', {
+		fetch("https://campoo.fr/api/account/building_id", {
 			method: 'PATCH',
 			headers: {
 				'Accept': 'application/json',
@@ -85,8 +82,7 @@ export default function BatSignupCampoo(props) {
 				<Text style={styles.textBat}>Si tu viens d'Harvard, c'est ici qu'il faut le dire.</Text>
 				<PickerBatiments
 					style={styles.InputView}
-					value={props.building_id}
-					onValueChange={(value) => { setBuilding_i(value) }} />
+					onValueChange={(value) => { setBuildingId(value) }} />
 				<ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>
 				<SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>retour</SecondaryButtonCampoo>
 

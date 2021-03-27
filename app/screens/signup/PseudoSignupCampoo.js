@@ -30,7 +30,7 @@ export default function PseudoSignupCampoo(props) {
 	const onSubmit = async () => {
 
 		const token = await _retrieveData();
-		// console.log(token);
+		console.log(token);
 
 
 

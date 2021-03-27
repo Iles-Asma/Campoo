@@ -1,8 +1,56 @@
-import React from 'react';
+import React,{useState} from 'react';
+import { useEffect } from 'react';
 import { StyleSheet, TouchableOpacity, StatusBar, SafeAreaView, ScrollView, View, Text } from 'react-native';
 import Tags from '../../components/Tags';
 
-export default function ChooseTags({ navigation }) {
+export default function ChooseTags({ route, navigation }) {
+	const CATEGORY_ID = route.params.category_id;
+	const [tags,setTags] = useState([]);
+
+	useEffect(()=>{
+		async function getTags(){
+			const RES = await fetch("https://campoo.fr/api/tag/" + CATEGORY_ID);
+			const TAGS = await RES.json();
+			setTags(TAGS.Data);
+		}
+		getTags()
+			.catch(err => console.error(err));
+		
+	}, [CATEGORY_ID]);
+
+	const _retrieveData = async () => {
+		try {
+			const value = await AsyncStorage.getItem('token');
+			if (value !== null) {
+				// We have data!!
+				return value;
+			}
+		} catch (error) {
+
+			// Error retrieving data
+		}
+	};
+
+	async function addTag(tag){
+		const TOKEN = await _retrieveData();
+
+		const ADDED_POST = await fetch("https://campoo.fr/api/tag/" + tag.id, {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+				"Authorization": `Bearer ${TOKEN}`
+			}
+		})
+
+		let pos = tags.findIndex((list) => list.id === tag.id);
+		if(pos > -1){
+			tags.splice(pos, 1);
+
+			setTags([...tags]);
+		}
+	}
+
 
 
 	return (
@@ -27,30 +75,11 @@ export default function ChooseTags({ navigation }) {
 
 				<View style={styles.tagsContainer}>
 					<View style={styles.tagsContent}>
-
-						<Tags> + Tag</Tags>
-						<Tags> + Tag</Tags>
-						<Tags> + Tag</Tags>
-
-						<Tags> + Tag</Tags>
-						<Tags> + Tag</Tags>
-						<Tags> + Tag</Tags>
-
-						<Tags> + Tag</Tags>
-						<Tags> + Tag</Tags>
-						<Tags> + Tag</Tags>
-						<Tags> + Tag</Tags>
-
-						<Tags> + Tag</Tags>
-						<Tags> + Tag</Tags>
-
-						<Tags> + Tag</Tags>
-						<Tags> + Tag</Tags>
-						<Tags> + Tag</Tags>
-
-						<Tags> + Tag</Tags>
-						<Tags> + Tag</Tags>
-						<Tags> + Tag</Tags>
+						{console.log(tags)}
+						{tags.map((tag => (
+							<Tags key={tag.id} onPress={addTag} tag={tag}> + {tag.name}</Tags>
+						)))}
+						
 
 					</View>
 				</View>
