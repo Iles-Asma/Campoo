@@ -1,21 +1,21 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { StyleSheet, TouchableOpacity, StatusBar, SafeAreaView, ScrollView, View, Text } from 'react-native';
 import Tags from '../../components/Tags';
 
 export default function ChooseTags({ route, navigation }) {
 	const CATEGORY_ID = route.params.category_id;
-	const [tags,setTags] = useState([]);
+	const [tags, setTags] = useState([]);
 
-	useEffect(()=>{
-		async function getTags(){
+	useEffect(() => {
+		async function getTags() {
 			const RES = await fetch("https://campoo.fr/api/tag/" + CATEGORY_ID);
 			const TAGS = await RES.json();
 			setTags(TAGS.Data);
 		}
 		getTags()
 			.catch(err => console.error(err));
-		
+
 	}, [CATEGORY_ID]);
 
 	const _retrieveData = async () => {
@@ -31,7 +31,7 @@ export default function ChooseTags({ route, navigation }) {
 		}
 	};
 
-	async function addTag(tag){
+	async function addTag(tag) {
 		const TOKEN = await _retrieveData();
 
 		const ADDED_POST = await fetch("https://campoo.fr/api/tag/" + tag.id, {
@@ -44,7 +44,7 @@ export default function ChooseTags({ route, navigation }) {
 		})
 
 		let pos = tags.findIndex((list) => list.id === tag.id);
-		if(pos > -1){
+		if (pos > -1) {
 			tags.splice(pos, 1);
 
 			setTags([...tags]);
@@ -60,11 +60,11 @@ export default function ChooseTags({ route, navigation }) {
 			{/* La navigation du haut */}
 			<View style={styles.topNav}>
 				{/* Le opPress à mettre */}
-				<TouchableOpacity >
+				<TouchableOpacity onPress={() => navigation.goBack()}>
 					<Text>Annuler</Text>
 				</TouchableOpacity>
 				<Text style={styles.secondTitle}>Choisis tes tags</Text>
-				<TouchableOpacity >
+				<TouchableOpacity onPress={() => navigation.navigate('UserProfil')}>
 					<Text>OK</Text>
 				</TouchableOpacity>
 
@@ -79,7 +79,7 @@ export default function ChooseTags({ route, navigation }) {
 						{tags.map((tag => (
 							<Tags key={tag.id} onPress={addTag} tag={tag}> + {tag.name}</Tags>
 						)))}
-						
+
 
 					</View>
 				</View>

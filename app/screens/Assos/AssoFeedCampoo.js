@@ -3,15 +3,17 @@ import { StyleSheet, View, ScrollView, SafeAreaView, StatusBar, TouchableOpacity
 import PostCampoo from '../../components/PostCampoo';
 import AddButton from '../../../assets/svg/AddButton'
 
-export default function AssoFeedCampoo() {
+// affiche les post pour un compte associé
+export default function AssoFeedCampoo(props) {
 
 	return (
 		<SafeAreaView style={styles.container}>
 
-
+			{/* pour pouvoir scroller verticalement */}
 			<ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
 				<View style={styles.containerAssoFeed}>
+
 
 					<PostCampoo
 						name='Lapin Associe'
@@ -23,7 +25,7 @@ export default function AssoFeedCampoo() {
 				</View>
 
 			</ScrollView>
-			<TouchableOpacity style={styles.addButton}>
+			<TouchableOpacity style={styles.addButton} onPress={() => props.navigation.navigate('CreateEventCampoo')}>
 				<AddButton />
 			</TouchableOpacity>
 

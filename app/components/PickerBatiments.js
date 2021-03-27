@@ -15,17 +15,19 @@ export default class PickerBatiments extends React.Component {
 		};
 	}
 
-	componentDidMount(){
+	componentDidMount() {
 		fetch("https://campoo.fr/api/building")
 			.then(res => res.json())
-			.then(json => this.setState({items: json.Data}))
-			.then(()=>{
-				 this.setState({items: this.state.items.map(item => ({
-					key: item.id,
-					label: item.name,
-					value: item.id,
-			}))})
-				
+			.then(json => this.setState({ items: json.Data }))
+			.then(() => {
+				this.setState({
+					items: this.state.items.map(item => ({
+						key: item.id,
+						label: item.name,
+						value: item.id,
+					}))
+				})
+
 			})
 	}
 

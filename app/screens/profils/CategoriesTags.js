@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, StatusBar, SafeAreaView, ScrollView, Image, View, Text } from 'react-native';
+import HeaderReturn from '../../components/header/HeaderReturn';
 
 
 export default function CategoriesTags({ navigation }) {
@@ -8,6 +9,7 @@ export default function CategoriesTags({ navigation }) {
 	return (
 
 		<SafeAreaView style={styles.container}>
+			<HeaderReturn onPress={() => navigation.goBack()} />
 			{/* Titre de l'onglet */}
 			<Text style={styles.titleText}>Choisis une catégorie</Text>
 
@@ -18,25 +20,25 @@ export default function CategoriesTags({ navigation }) {
 				<View style={styles.categorieContainer}>
 
 					{/* cinema */}
-					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags', {category_id: 1})}>
+					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags', { category_id: 1 })}>
 
 						<Image style={styles.categorieShape} source={require("../../../assets/categories/cinema.png")}  ></Image>
 
 					</TouchableOpacity>
 					{/* jeux video */}
-					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags', {category_id: 2})}>
+					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags', { category_id: 2 })}>
 
 						<Image style={styles.categorieShape} source={require("../../../assets/categories/games.png")}  ></Image>
 
 					</TouchableOpacity>
 					{/* sport */}
-					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags', {category_id: 3})}>
+					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags', { category_id: 3 })}>
 
 						<Image style={styles.categorieShape} source={require("../../../assets/categories/sport.png")}  ></Image>
 
 					</TouchableOpacity>
 					{/* art */}
-					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags', {category_id: 4})}>
+					<TouchableOpacity onPress={() => navigation.navigate('ChooseTags', { category_id: 4 })}>
 
 						<Image style={styles.categorieShape} source={require("../../../assets/categories/art.png")}  ></Image>
 

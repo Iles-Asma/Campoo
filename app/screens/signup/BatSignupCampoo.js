@@ -27,7 +27,7 @@ export default function BatSignupCampoo(props) {
 
 
 	const onSubmit = async () => {
-		
+
 		const token = await _retrieveData();
 
 		fetch("https://campoo.fr/api/account/building_id", {
@@ -51,11 +51,11 @@ export default function BatSignupCampoo(props) {
 				console.log(Message);
 				if (Message.Status === 'Success') {
 
-					props.navigation.navigate('MdpSignupCampoo');
+					props.navigation.navigate('DobSignupCampoo');
 
 				} else {
 
-					setErrorMessage(Message.Message.building[0]);
+					setErrorMessage(Message.Message.dob[0]);
 
 				}
 			})

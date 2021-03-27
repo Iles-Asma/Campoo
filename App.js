@@ -56,7 +56,6 @@ import AssosAddPost from './app/screens/Assos/AssosAddPost';
 import HomeStackCampoo from './app/routes/Navigations';
 import MdpOResetConfirmed from './app/screens/resetMdp/MdpOResetConfirmed';
 import CodeVerifCampoo from './app/screens/resetMdp/CodeVerifCampoo';
-import PickerDob from './app/components/PickerDob';
 import ButtonGallery from './app/components/button/ButtonGallery';
 import PhotosDeProfil from './app/screens/profils/PhotosDeProfil';
 import PhotoProfiles from './app/screens/profils/PhotoProfiles'

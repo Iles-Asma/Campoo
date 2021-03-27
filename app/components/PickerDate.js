@@ -1,12 +1,12 @@
-import React from 'react';
-import { View, Button, Platform } from 'react-native';
+import React, { useState } from 'react';
+import { View, Button, Platform, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
 
 export default function PickerDate() {
 	const [date, setDate] = useState(new Date(1598051730000));
 	const [mode, setMode] = useState('date');
-	const [show, setShow] = useState(false);
+	const [show, setShow] = useState(true);
 
 	const onChange = (event, selectedDate) => {
 		const currentDate = selectedDate || date;
@@ -19,31 +19,23 @@ export default function PickerDate() {
 		setMode(currentMode);
 	};
 
-	const showDatepicker = () => {
-		showMode('date');
-	};
 
-	const showTimepicker = () => {
-		showMode('time');
-	};
+
+
 
 
 	return (
 
 
-		<View>
-			<View>
-				<Button onPress={showDatepicker} title="Show date picker!" />
-			</View>
-			<View>
-				<Button onPress={showTimepicker} title="Show time picker!" />
-			</View>
+		<View style={styles.pickerContainer}>
+
+
 			{show && (
-				<DateTimePicker
-					testID="dateTimePicker"
+				<DateTimePicker style={styles.picker}
+					Format="year month day"
 					value={date}
-					mode={mode}
-					is24Hour={true}
+					mode="date"
+
 					display="default"
 					onChange={onChange}
 				/>
@@ -51,13 +43,24 @@ export default function PickerDate() {
 		</View>
 
 
-
-
-
-
-
-
-
-
 	);
 }
+
+const styles = StyleSheet.create({
+	pickerContainer: {
+		width: '100%',
+		flex: 1,
+		borderWidth: 2,
+	},
+
+	picker: {
+		width: '100%',
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		marginTop: 30
+
+
+	},
+
+})

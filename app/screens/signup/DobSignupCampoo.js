@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Image, StatusBar, SafeAreaView, View, Platform, Text } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
+import PickerDate from '../../components/PickerDate'
 import ButtonCampoo from "../../components/button/ButtonCampoo";
 import LabelCampoo from '../../components/LabelCampoo';
 import SecondaryButtonCampoo from '../../components/button/SecondaryButtonCampoo';
@@ -90,7 +90,7 @@ export default function DobSignupCampoo(props) {
 			<View style={styles.dobView}>
 				<LabelCampoo style={styles.dobLabel}>Date de Naissance</LabelCampoo>
 				<Text style={styles.textDob}>Quand est-ce que Baloo doit te célébrer ?</Text>
-
+				<PickerDate />
 
 				<ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>
 				<SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>retour</SecondaryButtonCampoo>
