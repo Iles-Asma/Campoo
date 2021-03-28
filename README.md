@@ -1,5 +1,6 @@
 # Comment démarrer le frontend de Campoo si vous n'utilisez pas l'apk oui ipa
-Avoir une version Node.js LTS ou une version supérieure
+Avoir une version Node.js LTS ou une version supérieure.
+
 Rentrer sur un éditeur de code avec le dossier campoo à la racine
 Si vous n'avez pas expo CLI taper cette ligne de commande: ` npm install --global expo-cli `
 Puis faite un `npm install`
