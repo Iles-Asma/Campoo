@@ -22,6 +22,10 @@
     "web": {
       "favicon": "./assets/images/SplashLogoCampoo.png"
     },
-    "description": ""
+    "description": "",
+    "android": {
+      "package": "com.campoo.campoo",
+	 "versionCode": 1
+    }
   }
 }
