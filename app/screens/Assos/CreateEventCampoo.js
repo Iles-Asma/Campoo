@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 import { StyleSheet, ScrollView, StatusBar, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 // import Tags from '../../components/Tags';
 import PickerBatiments from "../../components/PickerBatiments";
@@ -9,6 +12,30 @@ import ButtonCampoo from '../../components/button/ButtonCampoo';
 import TextInputAssos from '../../components/input/TextInputAssos';
 
 export default function CreateEventCampoo({ navigation }) {
+
+	const [eventName, setEventName] = useState('');
+	const [eventDesciptif, setEventDescriptif] = useState('');
+	const [eventDate, setEventDate] = useState('');
+	const [eventHours, setEventHours] = useState('');
+	const [building, setBuilding] = useState('');
+	const [location, setLocation] = useState('');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	return (
 		// contenu generale
@@ -36,7 +63,11 @@ export default function CreateEventCampoo({ navigation }) {
 					<LabelCampoo style={styles.nameLabel}>Nom de l'évenement</LabelCampoo>
 
 					{/* Nom de l'event */}
-					<InputModifProfil placeholder="Asso Uge" />
+					<InputModifProfil
+
+						placeholder="Asso Uge"
+						// onChangeText={ (text) => setEventName(text) } 
+						value={props.eventName} />
 
 					{/* detaill de l'evenent */}
 

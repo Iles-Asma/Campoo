@@ -10,9 +10,17 @@ export default function EventCampoo({ navigation }) {
 
 
 
+
+
 	return (
 
+
+
+
+		// lq sqfeareaview permet d' eviter les probleme d'affichage du au telphone avec encoche (iphone x et certain android )
 		<SafeAreaView style={styles.container}>
+
+			{/* stylise automatiquement la barre de status en fonction des couleurs de l'application  */}
 			<StatusBar style='auto' />
 			<View style={styles.headerContainer}>
 
@@ -111,8 +119,6 @@ export default function EventCampoo({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-	// le flex par default est colonne
-	// la position par default est relative
 
 	container: {
 		flex: 1,
@@ -129,19 +135,14 @@ const styles = StyleSheet.create({
 		backgroundColor: CAMPOO.secondary,
 		flex: 0,
 		flexDirection: 'row',
-
-
 		width: '45%',
 		justifyContent: 'center',
 		alignItems: 'center',
-
-
 		borderRadius: 5,
-
 		height: 50,
 
-
 	},
+
 	titleButton2: {
 		height: 50,
 

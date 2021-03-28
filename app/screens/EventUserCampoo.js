@@ -8,7 +8,7 @@ import EventUserItem from '../components/EventUserItem';
 
 // ecran affichant les evnent mis en favoris par l'utilisateurs
 
-export default function EventUserCampoo({ navigation }) {
+export default function EventUserCampoo(props, { navigation }) {
 
 	return (
 
@@ -93,8 +93,6 @@ export default function EventUserCampoo({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-	// le flex par default est colonne
-	// la position par default est relative
 
 	container: {
 		flex: 1,

@@ -3,6 +3,7 @@ import { Text, Image, StyleSheet, View, TouchableOpacity } from 'react-native'
 import { CAMPOO } from "../../../assets/themes/ThemeCampoo";
 import Dots from '../../../assets/svg/Dots';
 
+// header contenant la photo de profile et le nom du compte assoié
 export default class ProfileHeaderCampoo extends React.Component {
 	render() {
 		return (
@@ -16,6 +17,8 @@ export default class ProfileHeaderCampoo extends React.Component {
 
 				</View>
 
+
+				{/* bouton pour afficher une pop up  */}
 				<TouchableOpacity onPress={this.props.onPress}>
 					<Dots />
 				</TouchableOpacity>

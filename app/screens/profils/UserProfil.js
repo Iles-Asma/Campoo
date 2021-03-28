@@ -1,15 +1,65 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { StyleSheet, Image, StatusBar, TouchableOpacity, SafeAreaView, View, Text } from 'react-native';
 import { CAMPOO } from '../../../assets/themes/ThemeCampoo';
 import SettingsSvg from '../../components/SettingsSvg';
 import PenSvg from '../../components/PenSvg';
 import Tags from '../../components/Tags';
+import { counterEvent } from 'react-native/Libraries/Performance/Systrace';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
 
 
 export default function UserProfil({ navigation }) {
+	const [tags,setTags] = useState([]);
+
+
+	useEffect(()=>{
+		async function getTags(){
+			const USER = await _retrieveUser();
+			const TOKEN = await _retrieveData();
+			console.log(USER);
+			const RES = await fetch("https://campoo.fr/api/tag/" + USER.id, {
+				method: 'GET',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json',
+					"Authorization": `Bearer ${TOKEN}`
+				}
+			})
+			const TAGS = await RES.json();
+			setTags(TAGS.Data);
+		}
+		getTags()
+			.catch(err => console.error(err));
+		
+	}, []);
+	const _retrieveData = async () => {
+		try {
+			const value = await AsyncStorage.getItem('token');
+			if (value !== null) {
+				// We have data!!
+				return value;
+			}
+		} catch (error) {
+
+			// Error retrieving data
+		}
+	};
+	const _retrieveUser = async () => {
+		try {
+			const value = await AsyncStorage.getItem('user');
+			if (value !== null) {
+				// We have data!!
+				console.log(value);
+				return value;
+			}
+		} catch (error) {
+
+			// Error retrieving data
+		}
+	};
 
 
     return (

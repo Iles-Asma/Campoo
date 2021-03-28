@@ -60,7 +60,7 @@ export default function ChooseTags({ route, navigation }) {
 			{/* La navigation du haut */}
 			<View style={styles.topNav}>
 				{/* Le opPress à mettre */}
-				<TouchableOpacity onPress={() => navigation.goBack()}>
+				<TouchableOpacity onPress={() => navigation.navigate('CategoriesTags')}>
 					<Text>Annuler</Text>
 				</TouchableOpacity>
 				<Text style={styles.secondTitle}>Choisis tes tags</Text>

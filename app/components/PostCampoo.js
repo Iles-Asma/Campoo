@@ -19,7 +19,7 @@ export default class HomeFeedCampoo extends React.Component {
 			//  post integrale
 
 			<View style={styles.containerPost}>
-
+				{/* header du post  */}
 				<ProfileHeaderCampoo>
 					<Text style={styles.post_AssoName}>{this.props.name}</Text>
 				</ProfileHeaderCampoo>

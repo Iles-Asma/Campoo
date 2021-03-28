@@ -10,7 +10,7 @@ export default function SearchAssosCampoo(props) {
 		<SafeAreaView style={style.bloc}>
 			<View style={{ position: "relative", top: 24 }}>
 
-				<HeaderReturn onPress={() => props.navigation.goBack()} />
+				<HeaderReturn onPress={() => navigation.goBack()} />
 
 			</View>
 			<View style={{ position: "relative", left: 20, bottom: 10 }}>

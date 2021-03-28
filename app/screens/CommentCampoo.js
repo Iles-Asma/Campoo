@@ -16,61 +16,36 @@ export default function CommentCampoo({ navigation }) {
 
 
 
-
+		// zone de securite de pour téléphone à encoche
 
 		<SafeAreaView style={styles.container}>
 			<StatusBar style='auto' />
 
 			<HeaderReturn onPress={() => navigation.goBack()} />
 
-
-
-
-
-
+			{/* element qui permet le scroll */}
 			<ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
+
 
 				<PostCampoo name='Lapin Associe'
 				/>
-
-
-
+				{/* commentaire utilisateur */}
 				<UserCommentCampoo
 
 					name='Lapin Associe'
 					comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-				<UserCommentCampoo
-					name='Lapin Associe'
-					comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-
-
-				<UserCommentCampoo
-					name='Lapin Associe'
-					comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-
-
-				<UserCommentCampoo
-					name='Lapin Associe'
-					comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-
-				<UserCommentCampoo
-					comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-
-				<UserCommentCampoo
-					comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-
-
 
 
 			</ScrollView>
 
 
-
+			{/* input pour ecrire un commentaire */}
+			{/* fonctionne très bien sur Android*/}
+			{/* sur iphone le clavier passe au dessus de l'input  */}
 			<InputCommentCampoo />
 
 
 		</SafeAreaView>
-
 
 	);
 
@@ -85,7 +60,7 @@ const styles = StyleSheet.create({
 
 	container: {
 		flex: 1,
-		//  pour detecter la platform
+		//  pour detecter la platform 
 		paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 30,
 
 		flexDirection: 'column',

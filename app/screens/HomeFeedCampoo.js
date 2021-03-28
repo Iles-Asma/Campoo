@@ -4,21 +4,17 @@ import { StatusBar } from 'expo-status-bar';
 import PostCampoo from "../components/PostCampoo";
 
 
-export default function HomeFeedCampoo({ navigation }) {
+export default function HomeFeedCampoo(props, { navigation }) {
 
 
 	return (
 
-
-		// zone de sécurite pour télephone à encoche
 		<SafeAreaView style={styles.container}>
 			<StatusBar style='auto' />
-
-			{/* permet de scroller sur l'ecran */}
 			<ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
 				<View style={styles.containerFeed}>
-					{/*  affiche les posts */}
+
 					<PostCampoo
 						name="Lapin Associe"
 						description="La description du post"
@@ -42,12 +38,9 @@ export default function HomeFeedCampoo({ navigation }) {
 
 const styles = StyleSheet.create({
 
-	// le flex par default est colonne
-	// la position par default est relative
-
 	container: {
 		flex: 1,
-		//  pour detecter la platform : applique un paddingTop de 40px
+		//  pour detecter la platform
 		paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 40,
 		flexDirection: 'column',
 		justifyContent: 'center',

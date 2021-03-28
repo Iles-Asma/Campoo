@@ -13,7 +13,6 @@ import SearchIcon from '../../assets/svg/SearchIcon';
 // SignupStack
 
 import ScreenLoginCampoo from '../screens/login/ScreenLoginCampoo';
-import AnimalSignupCampoo from '../screens/signup/AnimalSignupCampoo';
 import MailSignupCampoo from '../screens/signup/MailSignupCampoo';
 import BatSignupCampoo from '../screens/signup/BatSignupCampoo';
 import NameSignupCampoo from '../screens/signup/NameSignupCampoo';
@@ -57,21 +56,24 @@ import AssocProfil from '../screens/profils/AssocProfil';
 import AssocModificationPage from '../screens/profils/AssocModificationPage';
 import ViewAssocProfil from '../screens/profils/ViewAssocProfil';
 
+// React navigation fontcionne avec un systeme de d'écran empilés 
+
 
 /*========================== SIGNUP STACK =============================*/
 
+// navigation de des étapes de creation de compte utilisateurs 
 const SignupStack = createStackNavigator();
 export default function SignupStackScreen() {
 	return (
 		<SignupStack.Navigator>
 			<SignupStack.Screen name="ScreenLoginCampoo" component={ScreenLoginCampoo} options={{ headerShown: false }} />
+			{/* Navigator contient le menu de navigation en postion bottom  */}
 			<SignupStack.Screen name="Navigator" component={Navigator} options={{ headerShown: false }} />
 			<SignupStack.Screen name="MailSignupCampoo" component={MailSignupCampoo} options={{ headerShown: false }} />
 			<SignupStack.Screen name="NameSignupCampoo" component={NameSignupCampoo} options={{ headerShown: false }} />
 			<SignupStack.Screen name="PseudoSignupCampoo" component={PseudoSignupCampoo} options={{ headerShown: false }} />
 			<SignupStack.Screen name="DobSignupCampoo" component={DobSignupCampoo} options={{ headerShown: false }} />
 			<SignupStack.Screen name="BatSignupCampoo" component={BatSignupCampoo} options={{ headerShown: false }} />
-			<SignupStack.Screen name="AnimalSignupCampoo" component={AnimalSignupCampoo} options={{ headerShown: false }} />
 			<SignupStack.Screen name="MdpSignupCampoo" component={MdpSignupCampoo} options={{ headerShown: false }} />
 			<SignupStack.Screen name="CodeVerifSignupCampoo" component={CodeVerifSignupCampoo} options={{ headerShown: false }} />
 		</SignupStack.Navigator>
@@ -112,11 +114,13 @@ export function AssosHomeStackScreen() {
 		<AssosHomeStack.Navigator>
 			<AssosHomeStack.Screen name="AssoFeedCampoo" component={AssoFeedCampoo} options={{ headerShown: false }} />
 			<AssosHomeStack.Screen name="AssosAddPost" component={AssosAddPost} options={{ headerShown: false }} />
+
 			{/* <HomeStack.Screen name="CommentCampoo" component={CommentCampoo} options={{ headerShown: false }} /> */}
 		</AssosHomeStack.Navigator>
 	);
 }
 
+// navigation de l'oonglet evenement pour un compte associé 
 const AssosEventStack = createStackNavigator();
 export function AssosEventStackScreen() {
 	return (
@@ -126,6 +130,8 @@ export function AssosEventStackScreen() {
 		</AssosEventStack.Navigator>
 	);
 }
+
+// navigation de l'onglet profil pour un compte associé
 
 const AssosProfilStack = createStackNavigator();
 export function AssosProfilStackScreen() {
@@ -139,6 +145,7 @@ export function AssosProfilStackScreen() {
 
 /*=========================== User Stack ==============================*/
 
+// navigation de l'onglet feed aussi accueil de l'application d'un compte utilisateurs classqiue 
 const HomeStack = createStackNavigator();
 function HomeStackScreen() {
 	return (
@@ -150,6 +157,8 @@ function HomeStackScreen() {
 	);
 }
 
+
+// nav igation de la l'onglet evenement pour compte associé
 const EventStack = createStackNavigator();
 function EventStackScreen() {
 	return (
@@ -161,6 +170,7 @@ function EventStackScreen() {
 	);
 };
 
+// navigation de l'onglet du profil utilisateur 
 const ProfilStack = createStackNavigator();
 function ProfilStackScreen() {
 	return (
@@ -175,6 +185,7 @@ function ProfilStackScreen() {
 	);
 };
 
+// navigation de l'onglet parametre dans
 
 const SettingStack = createStackNavigator();
 function SettingStackScreen() {
@@ -193,6 +204,8 @@ function SettingStackScreen() {
 /*======================== BOTTOM NAVIGATION ======================*/
 
 
+
+
 const Tab = createBottomTabNavigator();
 export function Navigator() {
 
@@ -205,9 +218,8 @@ export function Navigator() {
 				activeBackgroundColor: CAMPOO.secondary,
 			}}
 
-
-
 		>
+			{/*  il faut afficher la AssosHomeStackScreen si l'user est assoscié */}
 			<Tab.Screen
 				name="accueil"
 				component={HomeStackScreen}
@@ -238,6 +250,7 @@ export function Navigator() {
 					},
 				}}
 			/>
+			{/*  il faut afficher la AssosEventStackScreen si l'user est assoscié */}
 			<Tab.Screen
 				name="Evenement"
 				component={EventStackScreen}
