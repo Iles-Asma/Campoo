@@ -79,6 +79,31 @@ export default function SignupStackScreen() {
 	);
 }
 
+/*=====================RESET PASSWORD STACK===========================*/
+
+const SignupStack = createStackNavigator();
+export default function SignupStackScreen() {
+	return (
+		<SignupStack.Navigator>
+			<SignupStack.Screen name="ScreenLoginCampoo" component={ScreenLoginCampoo} options={{ headerShown: false }} />
+			<SignupStack.Screen name="Navigator" component={Navigator} options={{ headerShown: false }} />
+			<SignupStack.Screen name="MailSignupCampoo" component={MailSignupCampoo} options={{ headerShown: false }} />
+			<SignupStack.Screen name="NameSignupCampoo" component={NameSignupCampoo} options={{ headerShown: false }} />
+			<SignupStack.Screen name="PseudoSignupCampoo" component={PseudoSignupCampoo} options={{ headerShown: false }} />
+			<SignupStack.Screen name="DobSignupCampoo" component={DobSignupCampoo} options={{ headerShown: false }} />
+			<SignupStack.Screen name="BatSignupCampoo" component={BatSignupCampoo} options={{ headerShown: false }} />
+			<SignupStack.Screen name="AnimalSignupCampoo" component={AnimalSignupCampoo} options={{ headerShown: false }} />
+			<SignupStack.Screen name="MdpSignupCampoo" component={MdpSignupCampoo} options={{ headerShown: false }} />
+			<SignupStack.Screen name="CodeVerifSignupCampoo" component={CodeVerifSignupCampoo} options={{ headerShown: false }} />
+		</SignupStack.Navigator>
+
+	);
+}
+
+
+
+
+
 /*============================== AssosStack ============================*/
 
 const AssosHomeStack = createStackNavigator();
@@ -175,6 +200,7 @@ export function Navigator() {
 	return (
 		<Tab.Navigator
 			initialRouteName="Feed"
+			// change l'arrier plan de l'onglet seclectionné
 			tabBarOptions={{
 				activeBackgroundColor: CAMPOO.secondary,
 			}}

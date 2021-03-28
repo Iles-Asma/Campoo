@@ -82,16 +82,17 @@ export default function DobSignupCampoo(props) {
 
 		<SafeAreaView style={styles.container}>
 
-			{/* () => navigation.navigate('BatSignupCampoo') */}
 
+			{/* logo */}
 			<LogoCampoo style={{ right: '5%', top: 49, marginTop: 16, position: 'absolute', }} />
 			<Image style={styles.baloo} source={require("../../../assets/images/blob-baloo-fête.png")} />
 
 			<View style={styles.dobView}>
 				<LabelCampoo style={styles.dobLabel}>Date de Naissance</LabelCampoo>
 				<Text style={styles.textDob}>Quand est-ce que Baloo doit te célébrer ?</Text>
+				{/* composant de selection de la date de naissance  */}
 				<PickerDate />
-
+				{/* boutton retour */}
 				<ButtonCampoo style={styles.button} onPress={onSubmit}>Suivant</ButtonCampoo>
 				<SecondaryButtonCampoo style={styles.retour} onPress={() => props.navigation.goBack()}>retour</SecondaryButtonCampoo>
 

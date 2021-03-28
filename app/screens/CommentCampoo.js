@@ -12,93 +12,95 @@ export default function CommentCampoo({ navigation }) {
 
 
 
-    return (
+	return (
 
 
 
 
 
-        <SafeAreaView style={styles.container}>
-            <StatusBar style='auto' />
+		<SafeAreaView style={styles.container}>
+			<StatusBar style='auto' />
 
-            <HeaderReturn onPress={() => navigation.goBack()} />
-
-
+			<HeaderReturn onPress={() => navigation.goBack()} />
 
 
 
 
-            <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
-
-                <PostCampoo name='Lapin Associe'
-                />
 
 
+			<ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
-                <UserCommentCampoo
-
-                    name='Lapin Associe'
-                    comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-                <UserCommentCampoo
-                    name='Lapin Associe'
-                    comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-
-
-                <UserCommentCampoo
-                    name='Lapin Associe'
-                    comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-
-
-                <UserCommentCampoo
-                    name='Lapin Associe'
-                    comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-
-                <UserCommentCampoo
-                    comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-
-                <UserCommentCampoo
-                    comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+				<PostCampoo name='Lapin Associe'
+				/>
 
 
 
+				<UserCommentCampoo
 
-            </ScrollView>
-
-
-
-            <InputCommentCampoo />
-
-
-        </SafeAreaView>
+					name='Lapin Associe'
+					comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+				<UserCommentCampoo
+					name='Lapin Associe'
+					comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
 
 
-    );
+				<UserCommentCampoo
+					name='Lapin Associe'
+					comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+
+				<UserCommentCampoo
+					name='Lapin Associe'
+					comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+				<UserCommentCampoo
+					comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+				<UserCommentCampoo
+					comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+
+
+
+
+			</ScrollView>
+
+
+
+			<InputCommentCampoo />
+
+
+		</SafeAreaView>
+
+
+	);
 
 };
 
 
 const styles = StyleSheet.create({
+	// le flex par default est colonne
+	// la position par default est relative
 
 
 
-    container: {
-        flex: 1,
-        //  pour detecter la platform
-        paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 30,
+	container: {
+		flex: 1,
+		//  pour detecter la platform
+		paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 30,
 
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#fff',
+		flexDirection: 'column',
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor: '#fff',
 
 
-    },
+	},
 
-    scrollContainer: {
-        width: '90%',
-        paddingTop: 10,
+	scrollContainer: {
+		width: '90%',
+		paddingTop: 10,
 
-    },
+	},
 
 
 

@@ -7,61 +7,68 @@ import PostCampoo from "../components/PostCampoo";
 export default function HomeFeedCampoo({ navigation }) {
 
 
-    return (
+	return (
 
-        <SafeAreaView style={styles.container}>
-            <StatusBar style='auto' />
-            <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
-                <View style={styles.containerFeed}>
+		// zone de sécurite pour télephone à encoche
+		<SafeAreaView style={styles.container}>
+			<StatusBar style='auto' />
 
-                    <PostCampoo
-                        name="Lapin Associe"
-                        description="La description du post"
-                        onPress={() => navigation.navigate('CommentCampoo')} />
-                    <PostCampoo name="Lapin Associe"
-                        description="La description du post" />
-                    <PostCampoo name="Lapin Associe"
-                        description="La description du post" />
-                    <PostCampoo name="Lapin Associe"
-                        description="La description du post" />
+			{/* permet de scroller sur l'ecran */}
+			<ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={false}>
 
-                </View>
+				<View style={styles.containerFeed}>
+					{/*  affiche les posts */}
+					<PostCampoo
+						name="Lapin Associe"
+						description="La description du post"
+						onPress={() => navigation.navigate('CommentCampoo')} />
+					<PostCampoo name="Lapin Associe"
+						description="La description du post" />
+					<PostCampoo name="Lapin Associe"
+						description="La description du post" />
+					<PostCampoo name="Lapin Associe"
+						description="La description du post" />
 
-            </ScrollView>
-        </SafeAreaView>
+				</View>
 
-    );
+			</ScrollView>
+		</SafeAreaView>
+
+	);
 
 };
 
 
 const styles = StyleSheet.create({
 
-    container: {
-        flex: 1,
-        //  pour detecter la platform
-        paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 40,
-        flexDirection: 'column',
-        justifyContent: 'center',
+	// le flex par default est colonne
+	// la position par default est relative
 
-        alignItems: 'center',
-        backgroundColor: '#ffffff',
+	container: {
+		flex: 1,
+		//  pour detecter la platform : applique un paddingTop de 40px
+		paddingTop: Platform.OS === "ios" ? StatusBar.currentHeight : 40,
+		flexDirection: 'column',
+		justifyContent: 'center',
 
-
-    },
-
-    scrollContainer: {
-        width: '90%',
-
-    },
-
-    containerFeed: {
-        width: '100%',
+		alignItems: 'center',
+		backgroundColor: '#ffffff',
 
 
+	},
 
-    },
+	scrollContainer: {
+		width: '90%',
+
+	},
+
+	containerFeed: {
+		width: '100%',
+
+
+
+	},
 
 
 

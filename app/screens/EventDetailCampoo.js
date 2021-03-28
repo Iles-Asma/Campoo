@@ -65,6 +65,8 @@ export default function EventDetailCampoo({ navigation }) {
 };
 
 const styles = StyleSheet.create({
+	// le flex par default est colonne
+	// la position par default est relative
 
 	container: {
 		flex: 1,
