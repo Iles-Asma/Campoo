@@ -1,10 +1,8 @@
-node_modules
-vscode
-expo-shared
-expo
-.expo/packager-info.json
-node_modules/react-native/Libraries/BatchedBridge/MessageQueue.js
 
+.vscode
+.expo-shared
+.expo
+.expo/packager-info.json
 prettierc
 editorconfig
 node_modules
