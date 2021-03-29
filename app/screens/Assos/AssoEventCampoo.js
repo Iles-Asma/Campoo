@@ -29,7 +29,7 @@ export default function AssoEventCampoo(props) {
 
 						hours='18h20'
 
-						location='2 rue ta soeur tire au flanc' />
+						location="2 rue l'eglantine" />
 
 					<EventItemCampoo
 						image={require("../../../assets/images/imagePost-Test.png")}
@@ -42,21 +42,7 @@ export default function AssoEventCampoo(props) {
 
 						hours='18h20'
 
-						location='2 rue ta soeur tire au flanc' />
-
-
-					<EventItemCampoo
-						image={require("../../../assets/images/imagePost-Test.png")}
-
-						title="TITRE DE L'EVENEMENT"
-
-						eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
-
-						date='17/05/2020'
-
-						hours='18h20'
-
-						location='2 rue ta soeur tire au flanc' />
+						location="2 rue l'eglantine" />
 
 
 					<EventItemCampoo
@@ -70,7 +56,21 @@ export default function AssoEventCampoo(props) {
 
 						hours='18h20'
 
-						location='2 rue ta soeur tire au flanc' />
+						location="2 rue l'eglantine" />
+
+
+					<EventItemCampoo
+						image={require("../../../assets/images/imagePost-Test.png")}
+
+						title="TITRE DE L'EVENEMENT"
+
+						eventText="Description de l’evenement Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad "
+
+						date='17/05/2020'
+
+						hours='18h20'
+
+						location="2 rue l'eglantine" />
 
 				</View>
 

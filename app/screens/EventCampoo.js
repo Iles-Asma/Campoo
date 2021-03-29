@@ -60,7 +60,7 @@ export default function EventCampoo({ navigation }) {
 
 						hours='18h20'
 
-						location='2 rue ta soeur tire au flanc'
+						location="2 rue de l'eglantine"
 
 					/>
 
@@ -78,7 +78,7 @@ export default function EventCampoo({ navigation }) {
 
 						hours='18h20'
 
-						location='2 rue ta soeur tire au flanc'
+						location="2 rue de l'eglantine"
 
 					/>
 
@@ -95,8 +95,7 @@ export default function EventCampoo({ navigation }) {
 
 						hours='18h20'
 
-						location='2 rue ta soeur tire au flanc'
-
+						location="2 rue de l'eglantine"
 					/>
 
 				</TouchableOpacity>

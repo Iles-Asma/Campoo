@@ -52,7 +52,7 @@ export default function EventUserCampoo(props, { navigation }) {
 
 					hours='18h20'
 
-					location='2 rue ta soeur tire au flanc'
+					location="2 rue l'eglantine"
 
 				/>
 
@@ -68,7 +68,7 @@ export default function EventUserCampoo(props, { navigation }) {
 
 					hours='18h20'
 
-					location='2 rue ta soeur tire au flanc' />
+					location="2 rue l'eglantine" />
 
 				<EventUserItem
 					image={require("../../assets/images/imagePost-Test.png")}
@@ -81,7 +81,7 @@ export default function EventUserCampoo(props, { navigation }) {
 
 					hours='18h20'
 
-					location='2 rue ta soeur tire au flanc' />
+					location="2 rue l'eglantine" />
 
 			</ScrollView>
 
