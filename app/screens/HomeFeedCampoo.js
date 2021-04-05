@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import PostCampoo from "../components/PostCampoo";
 
 
-export default function HomeFeedCampoo(props, { navigation }) {
+export default function HomeFeedCampoo({ navigation }) {
 
 
 	return (
@@ -20,7 +20,8 @@ export default function HomeFeedCampoo(props, { navigation }) {
 						description="La description du post"
 						onPress={() => navigation.navigate('CommentCampoo')} />
 					<PostCampoo name="Lapin Associe"
-						description="La description du post" />
+						description="La description du post"
+						onPress={() => navigation.navigate('CommentCampoo')} />
 					<PostCampoo name="Lapin Associe"
 						description="La description du post" />
 					<PostCampoo name="Lapin Associe"

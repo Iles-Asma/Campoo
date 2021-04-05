@@ -8,7 +8,7 @@ import EventUserItem from '../components/EventUserItem';
 
 // ecran affichant les evnent mis en favoris par l'utilisateurs
 
-export default function EventUserCampoo(props, { navigation }) {
+export default function EventUserCampoo(props) {
 
 	return (
 
@@ -19,7 +19,7 @@ export default function EventUserCampoo(props, { navigation }) {
 			{/* header contenant les 2 boutons */}
 			<View style={styles.headerContainer}>
 
-				<TouchableOpacity style={styles.mainButton} onPress={() => navigation.navigate('EventCampoo')}>
+				<TouchableOpacity style={styles.mainButton} onPress={() => props.navigation.goBack()}>
 					<EventButtonCampoo >
 						<Text style={styles.titleButton1}>Evenement du campus</Text>
 
