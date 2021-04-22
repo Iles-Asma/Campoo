@@ -103,7 +103,7 @@ export default function UserModificationPage(props) {
 			{/* La navigation du haut */}
 			<View style={styles.topNav}>
 				{/*Le onPress a mettre  */}
-				<TouchableOpacity onPress={() => navigation.goBack()}>
+				<TouchableOpacity onPress={() => props.navigation.goBack()}>
 					<Text> Annuler</Text>
 				</TouchableOpacity>
 				<Text style={styles.secondTitle}>Modification du Profil</Text>
