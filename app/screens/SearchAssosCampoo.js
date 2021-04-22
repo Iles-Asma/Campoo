@@ -1,12 +1,17 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity } from "react-native";
-
+import HeaderReturn from "../components/header/HeaderReturn";
 import InputCommentCampoo from "../components/input/InputCommentCampoo";
 
 export default function SearchAssosCampoo() {
 
 	return (
 		<SafeAreaView style={style.bloc}>
+			<View style={{ position: "relative", top: 24 }}>
+
+				<HeaderReturn onPress={() => props.navigation.goBack()} />
+
+			</View>
 
 
 			<View style={{ position: "relative", left: 20, bottom: 10 }}>
